@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 4
+Sheet 1 5
 Title ""
 Date ""
 Rev ""
@@ -30,5 +30,11 @@ S 900  1900 500  150
 U 5EDA585D
 F0 "PhotompultiplierInputCircuit" 50
 F1 "PhotompultiplierInputCircuit.sch" 50
+$EndSheet
+$Sheet
+S 4000 1950 500  150 
+U 5EF1F288
+F0 "DataProcessing" 50
+F1 "DataProcessing.sch" 50
 $EndSheet
 $EndSCHEMATC
