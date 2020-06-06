@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name PhotomultiplierRadioactivityDetector)(type KiCad)(uri ${KIPRJMOD}/PhotomultiplierRadioactivityDetector.pretty)(options "")(descr ""))
+)

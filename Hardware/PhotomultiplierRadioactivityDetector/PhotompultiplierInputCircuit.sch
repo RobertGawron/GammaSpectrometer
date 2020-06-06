@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5EDAB7C9
-P 3050 2450
-F 0 "J2" H 2900 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 2550 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 3050 2450 50  0001 C CNN
-F 3 "~" H 3050 2450 50  0001 C CNN
-	1    3050 2450
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R24
 U 1 1 5EDAB7CF
 P 3350 3700
@@ -60,25 +49,12 @@ $EndComp
 Wire Wire Line
 	3050 4100 3050 4050
 Wire Wire Line
-	3050 2650 3050 3700
-Wire Wire Line
 	3200 3700 3050 3700
 Connection ~ 3050 3700
 Wire Wire Line
 	3050 3700 3050 3750
 Wire Wire Line
 	3050 3700 2950 3700
-$Comp
-L Connector:Conn_01x01_Male J3
-U 1 1 5EDAB7E7
-P 3600 2450
-F 0 "J3" H 3450 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 3100 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 3600 2450 50  0001 C CNN
-F 3 "~" H 3600 2450 50  0001 C CNN
-	1    3600 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R25
 U 1 1 5EDAB7ED
@@ -115,25 +91,12 @@ $EndComp
 Wire Wire Line
 	3600 4100 3600 4050
 Wire Wire Line
-	3600 2650 3600 3700
-Wire Wire Line
 	3750 3700 3600 3700
 Connection ~ 3600 3700
 Wire Wire Line
 	3600 3700 3600 3750
 Wire Wire Line
 	3600 3700 3500 3700
-$Comp
-L Connector:Conn_01x01_Male J4
-U 1 1 5EDAB805
-P 4150 2450
-F 0 "J4" H 4000 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 3650 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 4150 2450 50  0001 C CNN
-F 3 "~" H 4150 2450 50  0001 C CNN
-	1    4150 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R26
 U 1 1 5EDAB80B
@@ -170,25 +133,12 @@ $EndComp
 Wire Wire Line
 	4150 4100 4150 4050
 Wire Wire Line
-	4150 2650 4150 3700
-Wire Wire Line
 	4300 3700 4150 3700
 Connection ~ 4150 3700
 Wire Wire Line
 	4150 3700 4150 3750
 Wire Wire Line
 	4150 3700 4050 3700
-$Comp
-L Connector:Conn_01x01_Male J5
-U 1 1 5EDAB823
-P 4700 2450
-F 0 "J5" H 4550 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 4200 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 4700 2450 50  0001 C CNN
-F 3 "~" H 4700 2450 50  0001 C CNN
-	1    4700 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R27
 U 1 1 5EDAB829
@@ -214,25 +164,12 @@ $EndComp
 Wire Wire Line
 	4700 4100 4700 4050
 Wire Wire Line
-	4700 2650 4700 3700
-Wire Wire Line
 	4850 3700 4700 3700
 Connection ~ 4700 3700
 Wire Wire Line
 	4700 3700 4700 3750
 Wire Wire Line
 	4700 3700 4600 3700
-$Comp
-L Connector:Conn_01x01_Male J6
-U 1 1 5EDAB841
-P 5250 2450
-F 0 "J6" H 5100 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 4750 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 5250 2450 50  0001 C CNN
-F 3 "~" H 5250 2450 50  0001 C CNN
-	1    5250 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R28
 U 1 1 5EDAB847
@@ -278,17 +215,6 @@ Wire Wire Line
 Wire Wire Line
 	5250 3700 5150 3700
 $Comp
-L Connector:Conn_01x01_Male J7
-U 1 1 5EDAB85F
-P 5800 2450
-F 0 "J7" H 5650 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 5300 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 5800 2450 50  0001 C CNN
-F 3 "~" H 5800 2450 50  0001 C CNN
-	1    5800 2450
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R29
 U 1 1 5EDAB865
 P 6100 3700
@@ -333,17 +259,6 @@ Wire Wire Line
 Wire Wire Line
 	5800 3700 5700 3700
 $Comp
-L Connector:Conn_01x01_Male J8
-U 1 1 5EDAB87D
-P 6350 2450
-F 0 "J8" H 6200 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 5850 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 6350 2450 50  0001 C CNN
-F 3 "~" H 6350 2450 50  0001 C CNN
-	1    6350 2450
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R30
 U 1 1 5EDAB883
 P 6650 3700
@@ -379,25 +294,12 @@ $EndComp
 Wire Wire Line
 	6350 4100 6350 4050
 Wire Wire Line
-	6350 2650 6350 3700
-Wire Wire Line
 	6500 3700 6350 3700
 Connection ~ 6350 3700
 Wire Wire Line
 	6350 3700 6350 3750
 Wire Wire Line
 	6350 3700 6250 3700
-$Comp
-L Connector:Conn_01x01_Male J9
-U 1 1 5EDAB89B
-P 6900 2450
-F 0 "J9" H 6750 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 6400 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 6900 2450 50  0001 C CNN
-F 3 "~" H 6900 2450 50  0001 C CNN
-	1    6900 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R31
 U 1 1 5EDAB8A1
@@ -434,25 +336,12 @@ $EndComp
 Wire Wire Line
 	6900 4100 6900 4050
 Wire Wire Line
-	6900 2650 6900 3700
-Wire Wire Line
 	7000 3700 6900 3700
 Connection ~ 6900 3700
 Wire Wire Line
 	6900 3700 6900 3750
 Wire Wire Line
 	6900 3700 6800 3700
-$Comp
-L Connector:Conn_01x01_Male J10
-U 1 1 5EDAB8B9
-P 7450 2450
-F 0 "J10" H 7300 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 6950 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 7450 2450 50  0001 C CNN
-F 3 "~" H 7450 2450 50  0001 C CNN
-	1    7450 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:R R34
 U 1 1 5EDAB8BF
@@ -556,21 +445,6 @@ Wire Wire Line
 	2600 4550 2100 4550
 Text GLabel 2100 4550 0    50   Input ~ 0
 TUBE_POWER_SUPPLY_NEGATIVE
-Wire Wire Line
-	2600 3700 2600 1600
-Wire Wire Line
-	2600 1600 2750 1600
-$Comp
-L Connector:Conn_01x01_Male J1
-U 1 1 5ED7B685
-P 2950 1600
-F 0 "J1" H 2800 1600 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 2450 1650 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 2950 1600 50  0001 C CNN
-F 3 "~" H 2950 1600 50  0001 C CNN
-	1    2950 1600
-	-1   0    0    1   
-$EndComp
 $Comp
 L Device:R R35
 U 1 1 5ED7BBBD
@@ -633,32 +507,8 @@ Wire Wire Line
 Connection ~ 8450 3700
 Wire Wire Line
 	8450 3700 8500 3700
-$Comp
-L Connector:Conn_01x01_Male J12
-U 1 1 5ED81517
-P 8450 2450
-F 0 "J12" H 8300 2450 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 7950 2500 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 8450 2450 50  0001 C CNN
-F 3 "~" H 8450 2450 50  0001 C CNN
-	1    8450 2450
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8450 2650 8450 3700
 Wire Bus Line
 	11200 2550 11200 2600
-$Comp
-L Connector:Conn_01x01_Male J11
-U 1 1 5ED82C8D
-P 8450 1600
-F 0 "J11" H 8300 1600 50  0000 L CNN
-F 1 "Conn_01x01_Male" H 7950 1650 50  0000 L CNN
-F 2 "Connector_Pin:Pin_D1.1mm_L10.2mm_W3.5mm_Flat" H 8450 1600 50  0001 C CNN
-F 3 "~" H 8450 1600 50  0001 C CNN
-	1    8450 1600
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR044
 U 1 1 5ED86EAF
@@ -677,10 +527,6 @@ Wire Wire Line
 Connection ~ 8900 3700
 Wire Wire Line
 	8900 3700 8900 2800
-Wire Wire Line
-	8650 1600 8900 1600
-Wire Wire Line
-	8900 1600 8900 2350
 $Comp
 L Device:R R33
 U 1 1 5ED91025
@@ -724,8 +570,6 @@ Connection ~ 7450 3150
 Wire Wire Line
 	7450 3150 7450 3100
 Wire Wire Line
-	7450 2800 7450 2650
-Wire Wire Line
 	8900 2800 10100 2800
 Wire Wire Line
 	10100 2800 10100 5200
@@ -755,4 +599,79 @@ F 3 "~" H 4700 3900 50  0001 C CNN
 	1    4700 3900
 	1    0    0    -1  
 $EndComp
+$Comp
+L PhotomultiplierRadioactivityDetector:Photomultiplier EL1
+U 1 1 5EE61F2A
+P 5450 1300
+F 0 "EL1" H 5525 1615 50  0000 C CNN
+F 1 "Photomultiplier" H 5525 1524 50  0000 C CNN
+F 2 "PhotomultiplierRadioactivityDetector:PhotomultiplierGeneric" H 5450 1550 50  0001 C CNN
+F 3 "" H 5450 1550 50  0001 C CNN
+	1    5450 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1900 4850 1900
+Wire Wire Line
+	4850 1900 4850 1550
+Wire Wire Line
+	3050 1900 3050 3700
+Wire Wire Line
+	3600 2100 5000 2100
+Wire Wire Line
+	5000 2100 5000 1550
+Wire Wire Line
+	3600 2100 3600 3700
+Wire Wire Line
+	4150 2250 5150 2250
+Wire Wire Line
+	5150 2250 5150 1550
+Wire Wire Line
+	4150 2250 4150 3700
+Wire Wire Line
+	4700 2400 5300 2400
+Wire Wire Line
+	5300 2400 5300 1550
+Wire Wire Line
+	4700 2400 4700 3700
+Wire Wire Line
+	5450 2650 5450 1550
+Wire Wire Line
+	5250 2650 5450 2650
+Wire Wire Line
+	5600 2650 5600 1550
+Wire Wire Line
+	5600 2650 5800 2650
+Wire Wire Line
+	6350 2400 5750 2400
+Wire Wire Line
+	5750 2400 5750 1550
+Wire Wire Line
+	6350 2400 6350 3700
+Wire Wire Line
+	6900 2200 5900 2200
+Wire Wire Line
+	5900 2200 5900 1550
+Wire Wire Line
+	6900 2200 6900 3700
+Wire Wire Line
+	7450 2050 6050 2050
+Wire Wire Line
+	6050 2050 6050 1550
+Wire Wire Line
+	7450 2050 7450 2800
+Wire Wire Line
+	8450 1850 6200 1850
+Wire Wire Line
+	6200 1850 6200 1550
+Wire Wire Line
+	8450 1850 8450 3700
+Wire Wire Line
+	2600 1300 4600 1300
+Wire Wire Line
+	6450 1300 8900 1300
+Wire Wire Line
+	2600 1300 2600 3700
+Wire Wire Line
+	8900 1300 8900 2350
 $EndSCHEMATC
