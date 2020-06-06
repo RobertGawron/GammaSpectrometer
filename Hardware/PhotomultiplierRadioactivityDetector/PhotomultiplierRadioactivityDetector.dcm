@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP LM3488
+F https://www.ti.com/lit/ds/symlink/lm3488.pdf?ts=1591443135460&ref_url=https://www.ti.com/store/ti/en/p/product/?p%3DLM3488MM
+$ENDCMP
+#
 #End Doc Library
