@@ -40,8 +40,8 @@ $EndSheet
 $Sheet
 S 2550 1700 500  150 
 U 5EE61922
-F0 " ContinuousMode" 50
-F1 " ContinuousMode.sch" 50
+F0 "ContinuousMode" 50
+F1 "ContinuousMode.sch" 50
 $EndSheet
 $Sheet
 S 2550 2450 500  150 
