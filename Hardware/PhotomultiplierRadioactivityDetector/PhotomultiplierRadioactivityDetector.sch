@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -38,9 +38,15 @@ F0 "DataProcessing" 50
 F1 "DataProcessing.sch" 50
 $EndSheet
 $Sheet
-S 2550 1950 500  150 
-U 5EFA52FA
-F0 "Amplification" 50
-F1 "Amplification.sch" 50
+S 2550 1700 500  150 
+U 5EE61922
+F0 " ContinuousMode" 50
+F1 " ContinuousMode.sch" 50
+$EndSheet
+$Sheet
+S 2550 2450 500  150 
+U 5EE9D63B
+F0 "PulseMode" 50
+F1 "PulseMode.sch" 50
 $EndSheet
 $EndSCHEMATC
