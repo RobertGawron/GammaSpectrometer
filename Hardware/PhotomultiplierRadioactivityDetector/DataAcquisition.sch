@@ -25,28 +25,6 @@ F 3 "~" H 1950 1400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Analog_ADC:MCP3425A0T-ECH U3
-U 1 1 5CE375F5
-P 9450 3150
-F 0 "U3" H 9150 3650 50  0000 C CNN
-F 1 "MCP3425A0T-ECH" H 9100 3550 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 9450 3150 50  0001 C CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22072b.pdf" H 9450 3150 50  0001 C CNN
-	1    9450 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C5
-U 1 1 5CE37F43
-P 9650 2000
-F 0 "C5" V 9905 2000 50  0000 C CNN
-F 1 "10u" V 9814 2000 50  0000 C CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 9688 1850 50  0001 C CNN
-F 3 "~" H 9650 2000 50  0001 C CNN
-	1    9650 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:R R11
 U 1 1 5CE3AD8E
 P 3700 2300
@@ -57,95 +35,10 @@ F 3 "~" H 3700 2300 50  0001 C CNN
 	1    3700 2300
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:+5V #PWR013
-U 1 1 5CEC5BB5
-P 9450 1850
-F 0 "#PWR013" H 9450 1700 50  0001 C CNN
-F 1 "+5V" H 9392 1887 50  0000 R CNN
-F 2 "" H 9450 1850 50  0001 C CNN
-F 3 "" H 9450 1850 50  0001 C CNN
-	1    9450 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5CEC60FD
-P 9900 2100
-F 0 "#PWR015" H 9900 1850 50  0001 C CNN
-F 1 "GND" H 9905 1927 50  0000 C CNN
-F 2 "" H 9900 2100 50  0001 C CNN
-F 3 "" H 9900 2100 50  0001 C CNN
-	1    9900 2100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 2000 9500 2000
-Wire Wire Line
-	9800 2000 9900 2000
-Wire Wire Line
-	9900 2000 9900 2100
-Wire Wire Line
-	9450 2000 9450 1850
-Connection ~ 9450 2000
-$Comp
-L power:GND #PWR014
-U 1 1 5CFAD0BC
-P 9450 3600
-F 0 "#PWR014" H 9450 3350 50  0001 C CNN
-F 1 "GND" V 9455 3472 50  0000 R CNN
-F 2 "" H 9450 3600 50  0001 C CNN
-F 3 "" H 9450 3600 50  0001 C CNN
-	1    9450 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 3600 9450 3550
 Text GLabel 800  1850 1    50   Input ~ 0
 analog_output
-Wire Wire Line
-	9950 3050 10100 3050
-Wire Wire Line
-	9950 3150 10100 3150
-Text Label 10100 3050 2    50   ~ 0
-SCL
-Text Label 10100 3150 2    50   ~ 0
-SDA
 Text Label 4250 2300 0    50   ~ 0
 RST_PEAK
-Wire Wire Line
-	9900 2450 9900 2500
-Wire Wire Line
-	9800 2450 9900 2450
-Wire Wire Line
-	9450 2450 9450 2000
-Connection ~ 9450 2450
-Wire Wire Line
-	9500 2450 9450 2450
-Wire Wire Line
-	9450 2750 9450 2450
-$Comp
-L power:GND #PWR016
-U 1 1 5CEC6490
-P 9900 2500
-F 0 "#PWR016" H 9900 2250 50  0001 C CNN
-F 1 "GND" H 9905 2327 50  0000 C CNN
-F 2 "" H 9900 2500 50  0001 C CNN
-F 3 "" H 9900 2500 50  0001 C CNN
-	1    9900 2500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C6
-U 1 1 5CE37B6C
-P 9650 2450
-F 0 "C6" V 9398 2450 50  0000 C CNN
-F 1 "100n" V 9489 2450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9688 2300 50  0001 C CNN
-F 3 "~" H 9650 2450 50  0001 C CNN
-	1    9650 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:D D2
 U 1 1 5ED825FA
@@ -332,51 +225,6 @@ Wire Wire Line
 Connection ~ 3400 2300
 Wire Wire Line
 	3400 2300 3550 2300
-$Comp
-L Device:R R14
-U 1 1 5ED790F7
-P 8750 3050
-F 0 "R14" V 8543 3050 50  0000 C CNN
-F 1 "0R" V 8634 3050 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8680 3050 50  0001 C CNN
-F 3 "~" H 8750 3050 50  0001 C CNN
-	1    8750 3050
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5ED79958
-P 8750 3250
-F 0 "R15" V 8865 3250 50  0000 C CNN
-F 1 "0R" V 8956 3250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 8680 3250 50  0001 C CNN
-F 3 "~" H 8750 3250 50  0001 C CNN
-	1    8750 3250
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR012
-U 1 1 5ED79DB5
-P 8400 3550
-F 0 "#PWR012" H 8400 3300 50  0001 C CNN
-F 1 "GND" V 8405 3422 50  0000 R CNN
-F 2 "" H 8400 3550 50  0001 C CNN
-F 3 "" H 8400 3550 50  0001 C CNN
-	1    8400 3550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8950 3250 8900 3250
-Wire Wire Line
-	8600 3250 8400 3250
-Wire Wire Line
-	8400 3250 8400 3550
-Wire Wire Line
-	8950 3050 8900 3050
-Wire Wire Line
-	8600 3050 8400 3050
-Wire Wire Line
-	8400 3050 8400 2250
 $Comp
 L Amplifier_Operational:TL074 U1
 U 1 1 5ED99C75
