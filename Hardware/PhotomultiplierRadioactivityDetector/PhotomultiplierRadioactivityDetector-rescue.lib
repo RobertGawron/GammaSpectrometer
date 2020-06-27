@@ -1,0 +1,33 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector
+#
+DEF RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector Rel 0 40 Y Y 1 F N
+F0 "Rel" 0 50 50 H V C CNN
+F1 "RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector" 0 0 50 H V C CNN
+F2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+A -300 -625 25 -899 899 0 1 0 N -300 -650 -300 -600
+A -300 -575 25 -899 899 0 1 0 N -300 -600 -300 -550
+A -300 -525 25 -899 899 0 1 0 N -300 -550 -300 -500
+S -350 -400 200 -750 0 1 0 f
+P 2 0 1 0 -300 -750 -300 -650 N
+P 2 0 1 0 -300 -400 -300 -500 N
+P 4 0 1 0 150 -750 150 -600 -150 -600 -150 -650 N
+P 4 0 1 0 150 -400 150 -550 -150 -550 -150 -500 N
+P 6 0 1 0 0 -500 0 -400 0 -500 -50 -500 -150 -450 -150 -400 N
+P 6 1 1 0 0 -650 0 -750 0 -650 -50 -650 -150 -700 -150 -750 N
+X ~ 1 -300 -850 100 U 50 50 1 1 I
+X ~ 2 -150 -850 100 U 50 50 1 1 B
+X ~ 3 0 -850 100 U 50 50 1 1 B
+X ~ 4 150 -850 100 U 50 50 1 1 B
+X ~ 5 150 -300 100 D 50 50 1 1 B
+X ~ 6 0 -300 100 D 50 50 1 1 B
+X ~ 7 -150 -300 100 D 50 50 1 1 B
+X ~ 8 -300 -300 100 D 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

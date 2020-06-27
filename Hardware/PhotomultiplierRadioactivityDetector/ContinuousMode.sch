@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 7
+Sheet 6 7
 Title ""
 Date ""
 Rev ""
@@ -376,12 +376,80 @@ F 3 "" H 3200 2500 50  0001 C CNN
 	1    3200 2500
 	1    0    0    -1  
 $EndComp
-Text GLabel 2600 3450 0    50   Input ~ 0
+Text GLabel 2050 3150 0    50   Input ~ 0
 ANODE_OUTPUT
 Wire Wire Line
 	4350 3350 4850 3350
-Wire Wire Line
-	2600 3450 3400 3450
 Text GLabel 6450 3250 2    50   Input ~ 0
 CONTONOUS_MODE_OUTPUT
+$Comp
+L power:GND #PWR?
+U 1 1 5EF7B700
+P 2450 4050
+AR Path="/5EF1F288/5EF7B700" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA53F3/5EF7B700" Ref="#PWR?"  Part="1" 
+AR Path="/5EFA52FA/5EF7B700" Ref="#PWR?"  Part="1" 
+AR Path="/5EE9D63B/5EF7B700" Ref="#PWR?"  Part="1" 
+AR Path="/5EE61922/5EF7B700" Ref="#PWR069"  Part="1" 
+F 0 "#PWR069" H 2450 3800 50  0001 C CNN
+F 1 "GND" H 2455 3877 50  0000 C CNN
+F 2 "" H 2450 4050 50  0001 C CNN
+F 3 "" H 2450 4050 50  0001 C CNN
+	1    2450 4050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EF7B706
+P 2450 2750
+AR Path="/5EFA52FA/5EF7B706" Ref="#PWR?"  Part="1" 
+AR Path="/5EE9D63B/5EF7B706" Ref="#PWR?"  Part="1" 
+AR Path="/5EE61922/5EF7B706" Ref="#PWR068"  Part="1" 
+F 0 "#PWR068" H 2450 2600 50  0001 C CNN
+F 1 "VCC" H 2465 2923 50  0000 C CNN
+F 2 "" H 2450 2750 50  0001 C CNN
+F 3 "" H 2450 2750 50  0001 C CNN
+	1    2450 2750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EF7B70C
+P 2450 3750
+AR Path="/5EFA52FA/5EF7B70C" Ref="R?"  Part="1" 
+AR Path="/5EE9D63B/5EF7B70C" Ref="R?"  Part="1" 
+AR Path="/5EE61922/5EF7B70C" Ref="R58"  Part="1" 
+F 0 "R58" V 2530 3750 50  0000 C CNN
+F 1 "10k" V 2450 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2380 3750 50  0001 C CNN
+F 3 "" H 2450 3750 50  0001 C CNN
+	1    2450 3750
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:Q_NJFET_DGS Q?
+U 1 1 5EF7B712
+P 2350 3150
+AR Path="/5EE9D63B/5EF7B712" Ref="Q?"  Part="1" 
+AR Path="/5EE61922/5EF7B712" Ref="Q6"  Part="1" 
+F 0 "Q6" H 2541 3104 50  0000 L CNN
+F 1 "Q_NJFET_DGS" H 2541 3195 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SC-59" H 2550 3250 50  0001 C CNN
+F 3 "~" H 2350 3150 50  0001 C CNN
+	1    2350 3150
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2450 3450 2450 3350
+Wire Wire Line
+	2450 3600 2450 3450
+Connection ~ 2450 3450
+Wire Wire Line
+	2450 4050 2450 3900
+Wire Wire Line
+	2450 2950 2450 2750
+Wire Wire Line
+	2050 3150 2150 3150
+Wire Wire Line
+	2450 3450 3400 3450
 $EndSCHEMATC
