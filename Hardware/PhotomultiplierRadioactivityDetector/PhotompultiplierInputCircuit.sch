@@ -161,43 +161,8 @@ F 3 "~" H 3950 1400 50  0001 C CNN
 	1    3950 1400
 	-1   0    0    1   
 $EndComp
-$Comp
-L Device:R R22
-U 1 1 5ED76D14
-P 2400 1200
-F 0 "R22" V 2607 1200 50  0000 C CNN
-F 1 "150k" V 2516 1200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 2330 1200 50  0001 C CNN
-F 3 "~" H 2400 1200 50  0001 C CNN
-	1    2400 1200
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C18
-U 1 1 5ED772BA
-P 2650 1450
-F 0 "C18" H 2535 1496 50  0000 R CNN
-F 1 "10n/3kV" H 2535 1405 50  0000 R CNN
-F 2 "Capacitor_THT:C_Disc_D11.0mm_W5.0mm_P7.50mm" H 2688 1300 50  0001 C CNN
-F 3 "~" H 2650 1450 50  0001 C CNN
-	1    2650 1450
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR034
-U 1 1 5ED77786
-P 2650 1650
-F 0 "#PWR034" H 2650 1400 50  0001 C CNN
-F 1 "GND" H 2655 1477 50  0000 C CNN
-F 2 "" H 2650 1650 50  0001 C CNN
-F 3 "" H 2650 1650 50  0001 C CNN
-	1    2650 1650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3950 1250 3950 1200
-Wire Wire Line
-	2550 1200 2650 1200
 Connection ~ 3950 1200
 Text GLabel 2100 1200 0    50   Input ~ 0
 TUBE_POWER_SUPPLY_NEGATIVE
@@ -268,11 +233,6 @@ Wire Wire Line
 	6350 1200 6350 3200
 Wire Wire Line
 	6350 1200 3950 1200
-Wire Wire Line
-	2650 1650 2650 1600
-Wire Wire Line
-	2650 1300 2650 1200
-Connection ~ 2650 1200
 $Comp
 L Device:C C26
 U 1 1 5EE3B51D
@@ -290,7 +250,6 @@ Wire Wire Line
 	3350 1650 3350 1550
 Wire Wire Line
 	3350 1250 3350 1200
-Connection ~ 3350 1200
 Wire Wire Line
 	3350 1200 3950 1200
 $Comp
@@ -420,8 +379,6 @@ Wire Wire Line
 	3950 7050 3350 7050
 Wire Wire Line
 	3350 7050 3350 6950
-Wire Wire Line
-	2250 1200 2100 1200
 Connection ~ 1650 6600
 Wire Wire Line
 	1650 6600 1450 6600
@@ -545,8 +502,6 @@ Wire Wire Line
 Wire Wire Line
 	6350 6950 6350 7050
 Wire Wire Line
-	2650 1200 3350 1200
-Wire Wire Line
 	6350 6550 6800 6550
 Wire Wire Line
 	6800 6550 6800 7450
@@ -592,4 +547,24 @@ Wire Wire Line
 	1650 6600 1650 6800
 Wire Wire Line
 	1650 6600 2850 6600
+Wire Wire Line
+	2100 1200 3350 1200
+Connection ~ 3350 1200
+Text GLabel 2100 1700 0    50   Input ~ 0
+TUBE_POWER_SUPPLY_POSITIVE
+$Comp
+L power:GND #PWR013
+U 1 1 5F0BAFBA
+P 2300 1900
+F 0 "#PWR013" H 2300 1650 50  0001 C CNN
+F 1 "GND" H 2305 1727 50  0000 C CNN
+F 2 "" H 2300 1900 50  0001 C CNN
+F 3 "" H 2300 1900 50  0001 C CNN
+	1    2300 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1700 2300 1700
+Wire Wire Line
+	2300 1700 2300 1900
 $EndSCHEMATC
