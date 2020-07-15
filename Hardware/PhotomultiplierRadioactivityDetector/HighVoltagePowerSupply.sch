@@ -49,12 +49,12 @@ $EndComp
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5EDBC7E8
-P 9300 1950
-F 0 "TP1" H 9358 2068 50  0000 L CNN
-F 1 "TestPoint" H 9358 1977 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded" H 9500 1950 50  0001 C CNN
-F 3 "~" H 9500 1950 50  0001 C CNN
-	1    9300 1950
+P 9300 1650
+F 0 "TP1" H 9358 1768 50  0000 L CNN
+F 1 "TestPoint" H 9358 1677 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded" H 9500 1650 50  0001 C CNN
+F 3 "~" H 9500 1650 50  0001 C CNN
+	1    9300 1650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -329,7 +329,7 @@ P 1300 3400
 AR Path="/5EDA53F3/5EDD7666" Ref="R?"  Part="1" 
 AR Path="/5EDA5628/5EDD7666" Ref="R16"  Part="1" 
 F 0 "R16" H 1370 3446 50  0000 L CNN
-F 1 "10k" H 1370 3355 50  0000 L CNN
+F 1 "1k" H 1370 3355 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1230 3400 50  0001 C CNN
 F 3 "~" H 1300 3400 50  0001 C CNN
 	1    1300 3400
@@ -438,7 +438,7 @@ U 1 1 5EDF01EC
 P 6850 2000
 F 0 "D5" H 6850 1783 50  0000 C CNN
 F 1 "D" H 6850 1874 50  0000 C CNN
-F 2 "Diode_SMD:D_MELF" H 6850 2000 50  0001 C CNN
+F 2 "Diode_THT:D_DO-27_P15.24mm_Horizontal" H 6850 2000 50  0001 C CNN
 F 3 "~" H 6850 2000 50  0001 C CNN
 	1    6850 2000
 	-1   0    0    1   
@@ -449,8 +449,6 @@ Wire Wire Line
 	7650 2100 7650 2000
 Wire Wire Line
 	8200 2100 8200 2000
-Wire Wire Line
-	9300 2000 9300 1950
 Wire Wire Line
 	7100 2000 7100 2100
 Wire Wire Line
@@ -587,24 +585,7 @@ Wire Wire Line
 	8200 2000 8350 2000
 Wire Wire Line
 	8650 2000 8750 2000
-$Comp
-L Device:R R?
-U 1 1 5EEA3B44
-P 9000 2000
-AR Path="/5EDA53F3/5EEA3B44" Ref="R?"  Part="1" 
-AR Path="/5EDA5628/5EEA3B44" Ref="R35"  Part="1" 
-F 0 "R35" V 8793 2000 50  0000 C CNN
-F 1 "510R" V 8884 2000 50  0000 C CNN
-F 2 "Resistor_SMD:R_MELF_MMB-0207" V 8930 2000 50  0001 C CNN
-F 3 "~" H 9000 2000 50  0001 C CNN
-	1    9000 2000
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	8750 2000 8850 2000
 Connection ~ 8750 2000
-Wire Wire Line
-	9150 2000 9300 2000
 $Comp
 L PhotomultiplierRadioactivityDetector:750311771 TR1
 U 1 1 5EF92A84
@@ -616,8 +597,6 @@ F 3 "http://www.farnell.com/datasheets/1337718.pdf?_ga=2.65563566.1225228608.159
 	1    5900 1950
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 2650 8750 2650
 Connection ~ 7100 2650
 Connection ~ 7650 2650
 Wire Wire Line
@@ -625,7 +604,6 @@ Wire Wire Line
 Connection ~ 8200 2650
 Wire Wire Line
 	8200 2650 7650 2650
-Connection ~ 8750 2650
 Wire Wire Line
 	8750 2650 8200 2650
 $Comp
@@ -728,8 +706,8 @@ L power:GND #PWR?
 U 1 1 5F0C936E
 P 4150 2400
 AR Path="/5EDA53F3/5F0C936E" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/5F0C936E" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4150 2150 50  0001 C CNN
+AR Path="/5EDA5628/5F0C936E" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 4150 2150 50  0001 C CNN
 F 1 "GND" H 4155 2227 50  0000 C CNN
 F 2 "" H 4150 2400 50  0001 C CNN
 F 3 "" H 4150 2400 50  0001 C CNN
@@ -741,8 +719,8 @@ L power:GND #PWR?
 U 1 1 5F0C9858
 P 4600 2400
 AR Path="/5EDA53F3/5F0C9858" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/5F0C9858" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 4600 2150 50  0001 C CNN
+AR Path="/5EDA5628/5F0C9858" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 4600 2150 50  0001 C CNN
 F 1 "GND" H 4605 2227 50  0000 C CNN
 F 2 "" H 4600 2400 50  0001 C CNN
 F 3 "" H 4600 2400 50  0001 C CNN
@@ -754,8 +732,8 @@ L power:GND #PWR?
 U 1 1 5F0C9B1D
 P 5050 2400
 AR Path="/5EDA53F3/5F0C9B1D" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/5F0C9B1D" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 5050 2150 50  0001 C CNN
+AR Path="/5EDA5628/5F0C9B1D" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 5050 2150 50  0001 C CNN
 F 1 "GND" H 5055 2227 50  0000 C CNN
 F 2 "" H 5050 2400 50  0001 C CNN
 F 3 "" H 5050 2400 50  0001 C CNN
@@ -783,4 +761,85 @@ Wire Wire Line
 	4600 2400 4600 2300
 Wire Wire Line
 	5050 2400 5050 2300
+$Comp
+L Device:R R?
+U 1 1 5F0A8402
+P 9000 2000
+AR Path="/5EDA585D/5F0A8402" Ref="R?"  Part="1" 
+AR Path="/5EDA5628/5F0A8402" Ref="R13"  Part="1" 
+F 0 "R13" V 9207 2000 50  0000 C CNN
+F 1 "150k" V 9116 2000 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 8930 2000 50  0001 C CNN
+F 3 "~" H 9000 2000 50  0001 C CNN
+	1    9000 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F0A8408
+P 9300 2250
+AR Path="/5EDA585D/5F0A8408" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/5F0A8408" Ref="C3"  Part="1" 
+F 0 "C3" H 9185 2296 50  0000 R CNN
+F 1 "10n/3kV" H 9185 2205 50  0000 R CNN
+F 2 "Capacitor_THT:C_Disc_D11.0mm_W5.0mm_P7.50mm" H 9338 2100 50  0001 C CNN
+F 3 "~" H 9300 2250 50  0001 C CNN
+	1    9300 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9150 2000 9300 2000
+Wire Wire Line
+	9300 2100 9300 2000
+Connection ~ 9300 2000
+Wire Wire Line
+	9300 2000 9950 2000
+Text GLabel 9900 2650 2    50   Input ~ 0
+TUBE_POWER_SUPPLY_NEGATIVE
+Text GLabel 9950 2000 2    50   Input ~ 0
+TUBE_POWER_SUPPLY_POSITIVE
+Wire Wire Line
+	8750 2000 8850 2000
+$Comp
+L Device:R R?
+U 1 1 5F0CDD8A
+P 9000 2650
+AR Path="/5EDA585D/5F0CDD8A" Ref="R?"  Part="1" 
+AR Path="/5EDA5628/5F0CDD8A" Ref="R14"  Part="1" 
+F 0 "R14" V 9207 2650 50  0000 C CNN
+F 1 "150k" V 9116 2650 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P12.70mm_Horizontal" V 8930 2650 50  0001 C CNN
+F 3 "~" H 9000 2650 50  0001 C CNN
+	1    9000 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9300 2400 9300 2650
+Wire Wire Line
+	8750 2650 8850 2650
+Connection ~ 8750 2650
+Wire Wire Line
+	9150 2650 9300 2650
+Connection ~ 9300 2650
+Wire Wire Line
+	9300 2000 9300 1650
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5F0E6C9A
+P 9800 1650
+F 0 "TP8" H 9858 1768 50  0000 L CNN
+F 1 "TestPoint" H 9858 1677 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded" H 10000 1650 50  0001 C CNN
+F 3 "~" H 10000 1650 50  0001 C CNN
+	1    9800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 1650 9800 2800
+Wire Wire Line
+	9800 2800 9300 2800
+Wire Wire Line
+	9300 2800 9300 2650
+Wire Wire Line
+	9300 2650 9900 2650
 $EndSCHEMATC
