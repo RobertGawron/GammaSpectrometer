@@ -47,17 +47,6 @@ F 3 "~" H 1300 2950 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint TP1
-U 1 1 5EDBC7E8
-P 9300 1650
-F 0 "TP1" H 9358 1768 50  0000 L CNN
-F 1 "TestPoint" H 9358 1677 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded" H 9500 1650 50  0001 C CNN
-F 3 "~" H 9500 1650 50  0001 C CNN
-	1    9300 1650
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R?
 U 1 1 5EDC2B06
 P 6350 4600
@@ -821,25 +810,6 @@ Connection ~ 8750 2650
 Wire Wire Line
 	9150 2650 9300 2650
 Connection ~ 9300 2650
-Wire Wire Line
-	9300 2000 9300 1650
-$Comp
-L Connector:TestPoint TP8
-U 1 1 5F0E6C9A
-P 9800 1650
-F 0 "TP8" H 9858 1768 50  0000 L CNN
-F 1 "TestPoint" H 9858 1677 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Loop_D2.60mm_Drill0.9mm_Beaded" H 10000 1650 50  0001 C CNN
-F 3 "~" H 10000 1650 50  0001 C CNN
-	1    9800 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 1650 9800 2800
-Wire Wire Line
-	9800 2800 9300 2800
-Wire Wire Line
-	9300 2800 9300 2650
 Wire Wire Line
 	9300 2650 9900 2650
 $EndSCHEMATC
