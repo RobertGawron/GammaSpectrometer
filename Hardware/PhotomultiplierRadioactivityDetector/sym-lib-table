@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name PhotomultiplierRadioactivityDetector)(type Legacy)(uri ${KIPRJMOD}/PhotomultiplierRadioactivityDetector.lib)(options "")(descr ""))
+  (lib (name PhotomultiplierRadioactivityDetector-rescue)(type Legacy)(uri ${KIPRJMOD}/PhotomultiplierRadioactivityDetector-rescue.lib)(options "")(descr ""))
 )

@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP 750311771
+F http://www.farnell.com/datasheets/1337718.pdf?_ga=2.65563566.1225228608.1593261089-1855792729.1592068583
+$ENDCMP
+#
 $CMP LM3488
 F https://www.ti.com/lit/ds/symlink/lm3488.pdf?ts=1591443135460&ref_url=https://www.ti.com/store/ti/en/p/product/?p%3DLM3488MM
 $ENDCMP
