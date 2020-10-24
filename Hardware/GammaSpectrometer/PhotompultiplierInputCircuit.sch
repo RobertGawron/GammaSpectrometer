@@ -169,12 +169,12 @@ TUBE_POWER_SUPPLY_NEGATIVE
 Text GLabel 1450 6600 0    50   Input ~ 0
 ANODE_OUTPUT
 $Comp
-L PhotomultiplierRadioactivityDetector:Photomultiplier EL1
+L GammaSpectrometer:Photomultiplier EL1
 U 1 1 5EE61F2A
 P 6350 4050
 F 0 "EL1" H 6425 4365 50  0000 C CNN
 F 1 "Photomultiplier" H 6425 4274 50  0000 C CNN
-F 2 "PhotomultiplierRadioactivityDetector:PhotomultiplierGeneric" H 6350 4300 50  0001 C CNN
+F 2 "GammaSpectrometer:PhotomultiplierGeneric" H 6350 4300 50  0001 C CNN
 F 3 "" H 6350 4300 50  0001 C CNN
 	1    6350 4050
 	0    1    1    0   

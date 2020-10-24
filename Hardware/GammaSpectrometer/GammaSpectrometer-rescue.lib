@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector
+# RSM850B-6112-85-1005-GammaSpectrometer
 #
-DEF RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector Rel 0 40 Y Y 1 F N
+DEF RSM850B-6112-85-1005-GammaSpectrometer Rel 0 40 Y Y 1 F N
 F0 "Rel" 0 50 50 H V C CNN
-F1 "RSM850B-6112-85-1005-PhotomultiplierRadioactivityDetector" 0 0 50 H V C CNN
+F1 "RSM850B-6112-85-1005-GammaSpectrometer" 0 0 50 H V C CNN
 F2 "Relay_THT:Relay_DPDT_Omron_G6K-2P-Y" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
