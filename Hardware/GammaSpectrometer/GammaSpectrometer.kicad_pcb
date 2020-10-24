@@ -897,7 +897,7 @@
     )
   )
 
-  (module PhotomultiplierRadioactivityDetector:L_7.3x7.3_H3.5 (layer F.Cu) (tedit 5F119A9D) (tstamp 5F1217DD)
+  (module GammaSpectrometer:L_7.3x7.3_H3.5 (layer F.Cu) (tedit 5F119A9D) (tstamp 5F1217DD)
     (at 82.344 161.544 180)
     (descr "Choke, SMD, 7.3x7.3mm 3.5mm height")
     (tags "Choke SMD")
@@ -3365,7 +3365,7 @@
     )
   )
 
-  (module PhotomultiplierRadioactivityDetector:750311771 (layer F.Cu) (tedit 5F0EDACE) (tstamp 5F0F9B6B)
+  (module GammaSpectrometer:750311771 (layer F.Cu) (tedit 5F0EDACE) (tstamp 5F0F9B6B)
     (at 50.8 176.276 270)
     (path /5EDA5628/5EF92A84)
     (attr smd)
@@ -5369,7 +5369,7 @@
     )
   )
 
-  (module PhotomultiplierRadioactivityDetector:PhotomultiplierGeneric (layer F.Cu) (tedit 5EDBAB24) (tstamp 5EE4EB8B)
+  (module GammaSpectrometer:PhotomultiplierGeneric (layer F.Cu) (tedit 5EDBAB24) (tstamp 5EE4EB8B)
     (at 52 116 180)
     (path /5EDA585D/5EE61F2A)
     (fp_text reference EL1 (at 0 -18.545) (layer F.SilkS)
