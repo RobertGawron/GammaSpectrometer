@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L PhotomultiplierRadioactivityDetector:LM3488 U4
+L GammaSpectrometer:LM3488 U4
 U 1 1 5EDBA656
 P 3950 3100
 F 0 "U4" H 3950 2600 50  0000 C CNN
@@ -544,12 +544,12 @@ Wire Wire Line
 	8900 1950 9000 1950
 Connection ~ 9000 1950
 $Comp
-L PhotomultiplierRadioactivityDetector:750311771 TR1
+L GammaSpectrometer:750311771 TR1
 U 1 1 5EF92A84
 P 6150 1900
 F 0 "TR1" H 6250 2075 50  0000 C CNN
 F 1 "750311771" H 6250 1984 50  0000 C CNN
-F 2 "PhotomultiplierRadioactivityDetector:750311771" H 6150 2050 50  0001 C CNN
+F 2 "GammaSpectrometer:750311771" H 6150 2050 50  0001 C CNN
 F 3 "http://www.farnell.com/datasheets/1337718.pdf?_ga=2.65563566.1225228608.1593261089-1855792729.1592068583" H 6150 2050 50  0001 C CNN
 	1    6150 1900
 	-1   0    0    -1  
@@ -906,7 +906,7 @@ U 1 1 5F1FFB15
 P 1600 1850
 F 0 "L5" V 1825 1850 50  0000 C CNN
 F 1 "L_Core_Ferrite" V 1734 1850 50  0000 C CNN
-F 2 "PhotomultiplierRadioactivityDetector:L_7.3x7.3_H3.5" H 1600 1850 50  0001 C CNN
+F 2 "GammaSpectrometer:L_7.3x7.3_H3.5" H 1600 1850 50  0001 C CNN
 F 3 "~" H 1600 1850 50  0001 C CNN
 	1    1600 1850
 	0    -1   -1   0   
