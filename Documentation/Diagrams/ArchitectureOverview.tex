@@ -27,7 +27,7 @@
 		\node (discriminator) [component, below=of amplifier] {Impulse Amplitude Discriminator};
 
 		\node (peakssurement) [component, below=of discriminator, xshift=-4cm] {Amplitude Meassurement\\  (ADC: MCP3425A0T-ECH)};
-		\node (trigger) [component, below=of discriminator, xshift=4cm] {Acquisition};
+		\node (trigger) [component, below=of discriminator, xshift=4cm] {Acquisition Trigger};
 
 		\node (cpu) [component, below=of peakssurement, xshift=4cm] {Acquisition\\ (STM8S003F3P6TR)};
 		\node (gui) [component, right=of cpu] {User Interface\\ (3xLED)};
