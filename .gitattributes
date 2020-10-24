@@ -1,0 +1,2 @@
+# GitHub's language statistics module can't recognize LTSpice files, so just ignore them.
+Simulation/LTSPice/* linguist-vendored
