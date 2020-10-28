@@ -67,97 +67,124 @@ $fn=100;
 DISTANSE_TO_FIRST_SHIELD_HOLDER = PHOTOMULTIPLIER_SHIELD_LENGTH *0.1;
 DISTANSE_TO_SECOOND_SHIELD_HOLDER = PHOTOMULTIPLIER_SHIELD_LENGTH *0.9;
 
-rotate([90,0,0])
-    translate([0, 0, PCB_THICKNESS])
-        Photomultiplier_Shield(PHOTOMULTIPLIER_SHIELD_INNER_RADIUS, 
-                            PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
-                            PHOTOMULTIPLIER_SHIELD_LENGTH);
-
-
-// first ph holder
-translate([0, -DISTANSE_TO_FIRST_SHIELD_HOLDER, 0])
+module Render_Photomultiplier_Shield()
+{
     rotate([90,0,0])
-        Photomultiplier_Shield_Holder(ROD_OFFSET_X, 
-                                    ROD_OFFSET_Y, 
-                                    PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
-                                    SHIELD_MOUNTING_BAR_THICKNESS) ;
+        translate([0, 0, PCB_THICKNESS])
+            Photomultiplier_Shield(PHOTOMULTIPLIER_SHIELD_INNER_RADIUS, 
+                                PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
+                                PHOTOMULTIPLIER_SHIELD_LENGTH);
+}
 
+module Render_Photomultiplier_First_Shield()
+{
+    // first ph holder
+    translate([0, -DISTANSE_TO_FIRST_SHIELD_HOLDER, 0])
+        rotate([90,0,0])
+            Photomultiplier_Shield_Holder(ROD_OFFSET_X, 
+                                        ROD_OFFSET_Y, 
+                                        PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
+                                        SHIELD_MOUNTING_BAR_THICKNESS) ;
+}
 
-// second ph holder
-translate([0, -DISTANSE_TO_SECOOND_SHIELD_HOLDER, 0])
+module Render_Photomultiplier_Second_Shield()
+{
+    // second ph holder
+    translate([0, -DISTANSE_TO_SECOOND_SHIELD_HOLDER, 0])
+        rotate([90,0,0])
+            Photomultiplier_Shield_Holder(ROD_OFFSET_X, 
+                                        ROD_OFFSET_Y, 
+                                        PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
+                                        SHIELD_MOUNTING_BAR_THICKNESS) ;
+}
+
+module Render_Horizontal_Rods_Rods()
+{
+    // Rods
     rotate([90,0,0])
-        Photomultiplier_Shield_Holder(ROD_OFFSET_X, 
-                                    ROD_OFFSET_Y, 
-                                    PHOTOMULTIPLIER_SHIELD_OUTER_RADIUS, 
-                                    SHIELD_MOUNTING_BAR_THICKNESS) ;
+        translate([0, 0, -PCB_CHASIS_X_TOTAL - ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH])
+            Horizontal_Rods_Rods(ROD_LENGTH);
+}
 
-
-// Rods
-rotate([90,0,0])
-    translate([0, 0, -PCB_CHASIS_X_TOTAL - ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH])
-        Horizontal_Rods_Rods(ROD_LENGTH);
-
-
-rotate([90,90,0])
+module Render_Photomultiplier_PCB_Connector()
+{
+    rotate([90,90,0])
     translate([PHOTOMULTIPLIER_LEFT_CONNECTOR_DISTANCE_PCB_CENTER, 0, 0])
         Photomultiplier_PCB_Connector(PCB_THICKNESS);
+}
 
+module Render_HV_Power_Supply()
+{
+    // HV power supply
+    rotate([0,0,90])
+        translate([PCB_CHASIS_X_TOTAL/2.0 + ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH, 0, 0]) // TODO
+            PCB_Chassis (PCB_CHASIS_X_TOTAL, 
+                        PCB_CHASIS_Y_TOTAL, 
+                        PCB_CHASIS_Z_TOTAL, 
+                        PCB_CHASIS_X_INSIDE, 
+                        PCB_CHASIS_Y_INSIDE,
+                        PCB_CHASIS_Z_INSIDE,
+                        PCB_CHASIS_LID_HEIGH,
+                        SCREW_HOLE_1_X_OFFSET,
+                        SCREW_HOLE_2_X_OFFSET,
+                        SCREW_RADIUS ); 
+}
 
-// HV power supply
-rotate([0,0,90])
-    translate([PCB_CHASIS_X_TOTAL/2.0 + ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH, 0, 0]) // TODO
-        PCB_Chassis (PCB_CHASIS_X_TOTAL, 
-                    PCB_CHASIS_Y_TOTAL, 
-                    PCB_CHASIS_Z_TOTAL, 
-                    PCB_CHASIS_X_INSIDE, 
-                    PCB_CHASIS_Y_INSIDE,
-                    PCB_CHASIS_Z_INSIDE,
-                    PCB_CHASIS_LID_HEIGH,
-                    SCREW_HOLE_1_X_OFFSET,
-                    SCREW_HOLE_2_X_OFFSET,
-                    SCREW_RADIUS ); 
+module Render_Data_Acquissition()
+{
+    // data acquissition
+    rotate([0,0,90])
+        translate([PCB_CHASIS_X_TOTAL/2 + ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH,0, -(PCB_CHASIS_Z_TOTAL+DISTANCE_BETWEEN_PCB_CHASSIS)])
+            PCB_Chassis (PCB_CHASIS_X_TOTAL, 
+                        PCB_CHASIS_Y_TOTAL, 
+                        PCB_CHASIS_Z_TOTAL, 
+                        PCB_CHASIS_X_INSIDE, 
+                        PCB_CHASIS_Y_INSIDE,
+                        PCB_CHASIS_Z_INSIDE,
+                        PCB_CHASIS_LID_HEIGH,
+                        SCREW_HOLE_1_X_OFFSET,
+                        SCREW_HOLE_2_X_OFFSET,
+                        SCREW_RADIUS ); 
+}
 
+module Render_PCB_First_Chassis_Holder()
+{
+    // first pcb chassis holder
+    translate([0, ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH + SHIELD_MOUNTING_BAR_HEIGHT/2 + SCREW_HOLE_1_X_OFFSET, 0])
+        rotate([90,0,0])
+            PCB_Chassis_Holder(ROD_OFFSET_X,ROD_OFFSET_Y, 
+                        PCB_CHASIS_X_TOTAL, 
+                        PCB_CHASIS_Y_TOTAL,
+                        SHIELD_MOUNTING_BAR_HEIGHT, 
+                        SHIELD_MOUNTING_BAR_THICKNESS,
+                        SCREW_HOLE_1_Y_OFFSET,
+                        SCREW_HOLE_2_Y_OFFSET,
+                        SCREW_RADIUS);
+}
 
-// data acquissition
-rotate([0,0,90])
-    translate([PCB_CHASIS_X_TOTAL/2 + ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH,0, -(PCB_CHASIS_Z_TOTAL+DISTANCE_BETWEEN_PCB_CHASSIS)])
-        PCB_Chassis (PCB_CHASIS_X_TOTAL, 
-                    PCB_CHASIS_Y_TOTAL, 
-                    PCB_CHASIS_Z_TOTAL, 
-                    PCB_CHASIS_X_INSIDE, 
-                    PCB_CHASIS_Y_INSIDE,
-                    PCB_CHASIS_Z_INSIDE,
-                    PCB_CHASIS_LID_HEIGH,
-                    SCREW_HOLE_1_X_OFFSET,
-                    SCREW_HOLE_2_X_OFFSET,
-                    SCREW_RADIUS ); 
+module Render_PCB_Second_Chassis_Holder()
+{
+    // second pcb chassis holder
+    translate([0, ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH + SHIELD_MOUNTING_BAR_HEIGHT/2 + SCREW_HOLE_2_X_OFFSET, 0])
+        rotate([90,0,0])
+            PCB_Chassis_Holder(ROD_OFFSET_X,ROD_OFFSET_Y, 
+                        PCB_CHASIS_X_TOTAL, 
+                        PCB_CHASIS_Y_TOTAL,
+                        SHIELD_MOUNTING_BAR_HEIGHT, 
+                        SHIELD_MOUNTING_BAR_THICKNESS,
+                        SCREW_HOLE_1_Y_OFFSET,
+                        SCREW_HOLE_2_Y_OFFSET,
+                        SCREW_RADIUS);
+}
 
-
-// first pcb chassis holder
-translate([0, ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH + SHIELD_MOUNTING_BAR_HEIGHT/2 + SCREW_HOLE_1_X_OFFSET, 0])
-    rotate([90,0,0])
-        PCB_Chassis_Holder(ROD_OFFSET_X,ROD_OFFSET_Y, 
-                    PCB_CHASIS_X_TOTAL, 
-                    PCB_CHASIS_Y_TOTAL,
-                    SHIELD_MOUNTING_BAR_HEIGHT, 
-                    SHIELD_MOUNTING_BAR_THICKNESS,
-                    SCREW_HOLE_1_Y_OFFSET,
-                    SCREW_HOLE_2_Y_OFFSET,
-                    SCREW_RADIUS);
-
-
-// second pcb chassis holder
-translate([0, ASSEMBLED_PHOTOMULTIPLIER_CONNECTOR_HEIGH + SHIELD_MOUNTING_BAR_HEIGHT/2 + SCREW_HOLE_2_X_OFFSET, 0])
-    rotate([90,0,0])
-        PCB_Chassis_Holder(ROD_OFFSET_X,ROD_OFFSET_Y, 
-                    PCB_CHASIS_X_TOTAL, 
-                    PCB_CHASIS_Y_TOTAL,
-                    SHIELD_MOUNTING_BAR_HEIGHT, 
-                    SHIELD_MOUNTING_BAR_THICKNESS,
-                    SCREW_HOLE_1_Y_OFFSET,
-                    SCREW_HOLE_2_Y_OFFSET,
-                    SCREW_RADIUS);
-
-
-
-               
+/*
+Render_Photomultiplier_Shield();
+Render_Photomultiplier_First_Shield();
+Render_Photomultiplier_Second_Shield();
+Render_Horizontal_Rods_Rods();
+Render_Photomultiplier_PCB_Connector();
+Render_HV_Power_Supply();
+Render_Data_Acquissition();
+Render_PCB_First_Chassis_Holder();
+Render_PCB_Second_Chassis_Holder();
+*/

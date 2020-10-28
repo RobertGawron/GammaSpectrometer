@@ -1,6 +1,6 @@
 # GammaSpectrometer
 
-[![Docs Generation](https://github.com/RobertGawron/PhotomultiplierRadioactivityDetector/workflows/Docs%20Generation/badge.svg)](https://github.com/RobertGawron/PhotomultiplierRadioactivityDetector/actions?query=workflow%3A%22Docs+Generation%22)
+[![Docs Generation](https://github.com/RobertGawron/GammaSpectrometer/workflows/Docs%20Generation/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions?query=workflow%3A%22Docs+Generation%22) [![Static Code Analysis](https://github.com/RobertGawron/GammaSpectrometer/workflows/Static%20Code%20Analysis/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions?query=workflow%3A%22Static+Code+Analysis%22)
 
 **This project is unfinished.**
 
@@ -18,6 +18,10 @@ It is designed in a way that the device can work remotely, e.g. no connection vi
 
 <img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
 
+
+## Overwiew of the mechanical design
+
+![render of the device](./Documentation/Pictures/render_28_10_2020.png)
 
 ## Hardware
 
