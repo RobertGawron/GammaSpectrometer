@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 7
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -168,17 +168,6 @@ Text GLabel 2100 1200 0    50   Input ~ 0
 TUBE_POWER_SUPPLY_NEGATIVE
 Text GLabel 1450 6600 0    50   Input ~ 0
 ANODE_OUTPUT
-$Comp
-L GammaSpectrometer:Photomultiplier EL1
-U 1 1 5EE61F2A
-P 6350 4050
-F 0 "EL1" H 6425 4365 50  0000 C CNN
-F 1 "Photomultiplier" H 6425 4274 50  0000 C CNN
-F 2 "GammaSpectrometer:PhotomultiplierGeneric" H 6350 4300 50  0001 C CNN
-F 3 "" H 6350 4300 50  0001 C CNN
-	1    6350 4050
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5750 1650 5750 3450
 Wire Wire Line
@@ -519,6 +508,7 @@ P 1650 6950
 AR Path="/5EDA53F3/5EE7139E" Ref="D?"  Part="1" 
 AR Path="/5EFA52FA/5EE7139E" Ref="D?"  Part="1" 
 AR Path="/5EDA585D/5EE7139E" Ref="D11"  Part="1" 
+AR Path="/5EE7139E" Ref="D11"  Part="1" 
 F 0 "D11" H 1650 7166 50  0000 C CNN
 F 1 "1n148" H 1650 7075 50  0000 C CNN
 F 2 "Diode_SMD:D_MELF" H 1650 6950 50  0001 C CNN
@@ -534,6 +524,7 @@ AR Path="/5EF1F288/5EE713AA" Ref="#PWR?"  Part="1"
 AR Path="/5EDA53F3/5EE713AA" Ref="#PWR?"  Part="1" 
 AR Path="/5EFA52FA/5EE713AA" Ref="#PWR?"  Part="1" 
 AR Path="/5EDA585D/5EE713AA" Ref="#PWR02"  Part="1" 
+AR Path="/5EE713AA" Ref="#PWR02"  Part="1" 
 F 0 "#PWR02" H 1650 6950 50  0001 C CNN
 F 1 "GND" H 1655 7027 50  0000 C CNN
 F 2 "" H 1650 7200 50  0001 C CNN
@@ -569,4 +560,15 @@ Wire Wire Line
 	2300 1700 2300 1900
 Text Notes 2050 2000 0    50   ~ 0
 todo fix later
+$Comp
+L PhotomultiplierConnector:Photomultiplier EL1
+U 1 1 5FA1B808
+P 6350 4050
+F 0 "EL1" V 6379 4228 50  0000 L CNN
+F 1 "Photomultiplier" V 6470 4228 50  0000 L CNN
+F 2 "PhotomultiplierConnector:PhotomultiplierGeneric" H 6350 4300 50  0001 C CNN
+F 3 "" H 6350 4300 50  0001 C CNN
+	1    6350 4050
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC

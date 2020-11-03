@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name GammaSpectrometer)(type Legacy)(uri ${KIPRJMOD}/GammaSpectrometer.lib)(options "")(descr ""))
-  (lib (name GammaSpectrometer-rescue)(type Legacy)(uri ${KIPRJMOD}/GammaSpectrometer-rescue.lib)(options "")(descr ""))
-)
