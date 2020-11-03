@@ -23,6 +23,12 @@ It is designed in a way that the device can work remotely, e.g. no connection vi
 
 ![render of the device](./Documentation/Pictures/render_28_10_2020.png)
 
+On a left side of the above image is a shield for photomultiplier tube - it's needed to protect the detector from external sources of light and EMI. 
+The detector is connected to a small PCB, visible in the center, it contains circuit for polarization of the tube and connectors.
+On the right side, on the bottom is visible shield for high voltage generator, on the top is visible shield for data acquisition. 
+
+Parts for 3D printing and model of the whole device were designed in OpenSCAD. Above renderer was done in Blender.
+
 ## Hardware
 
 PCB was created using KiCAD.
@@ -30,9 +36,8 @@ PCB was created using KiCAD.
 
 ## Software
 
-TODO
-
+TBD
 
 ## Hazards
 
-* **The device exposes high voltage to user, although maximum current is limited, it still poses health risk if the sensor external electrode would be touch.**
+* **The device exposes high voltage to user, although maximum current is limited, it still poses health risk.
