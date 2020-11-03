@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 7
+Sheet 1 1
 Title ""
 Date ""
 Rev ""
@@ -13,17 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L GammaSpectrometer:LM3488 U4
-U 1 1 5EDBA656
-P 3950 3100
-F 0 "U4" H 3950 2600 50  0000 C CNN
-F 1 "LM3488" H 3950 2500 50  0000 C CNN
-F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 3950 3100 50  0001 C CNN
-F 3 "https://www.ti.com/lit/ds/symlink/lm3488.pdf?ts=1591443135460&ref_url=https://www.ti.com/store/ti/en/p/product/?p%3DLM3488MM" H 3950 3100 50  0001 C CNN
-	1    3950 3100
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:Q_NMOS_GDS Q3
 U 1 1 5EDBB1D8
@@ -543,17 +532,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 1950 9000 1950
 Connection ~ 9000 1950
-$Comp
-L GammaSpectrometer:750311771 TR1
-U 1 1 5EF92A84
-P 6150 1900
-F 0 "TR1" H 6250 2075 50  0000 C CNN
-F 1 "750311771" H 6250 1984 50  0000 C CNN
-F 2 "GammaSpectrometer:750311771" H 6150 2050 50  0001 C CNN
-F 3 "http://www.farnell.com/datasheets/1337718.pdf?_ga=2.65563566.1225228608.1593261089-1855792729.1592068583" H 6150 2050 50  0001 C CNN
-	1    6150 1900
-	-1   0    0    -1  
-$EndComp
 Connection ~ 7350 2600
 Connection ~ 7900 2600
 Wire Wire Line
@@ -906,7 +884,7 @@ U 1 1 5F1FFB15
 P 1600 1850
 F 0 "L5" V 1825 1850 50  0000 C CNN
 F 1 "L_Core_Ferrite" V 1734 1850 50  0000 C CNN
-F 2 "GammaSpectrometer:L_7.3x7.3_H3.5" H 1600 1850 50  0001 C CNN
+F 2 "DataAcquisition:L_7.3x7.3_H3.5" H 1600 1850 50  0001 C CNN
 F 3 "~" H 1600 1850 50  0001 C CNN
 	1    1600 1850
 	0    -1   -1   0   
@@ -1021,4 +999,26 @@ Text Label 2150 5950 1    50   ~ 0
 12V_HV_PowerSupply
 Text Label 1300 5950 1    50   ~ 0
 12V_HV_PowerSupply
+$Comp
+L HighVoltagePowerSupply:750311771 TR?
+U 1 1 5FA1AC0B
+P 6150 1900
+F 0 "TR?" H 6250 2075 50  0000 C CNN
+F 1 "750311771" H 6250 1984 50  0000 C CNN
+F 2 "HighVoltagePowerSupply:750311771" H 6150 2050 50  0001 C CNN
+F 3 "" H 6150 2050 50  0001 C CNN
+	1    6150 1900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L HighVoltagePowerSupply:LM3488 U?
+U 1 1 5FA1EE2B
+P 3950 3100
+F 0 "U?" H 3950 3225 50  0000 C CNN
+F 1 "LM3488" H 3950 3134 50  0000 C CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 3950 3100 50  0001 C CNN
+F 3 "" H 3950 3100 50  0001 C CNN
+	1    3950 3100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
