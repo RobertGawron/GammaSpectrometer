@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name DataAcquisition)(type KiCad)(uri ${KIPRJMOD}/DataAcquisition.pretty)(options "")(descr ""))
+)
