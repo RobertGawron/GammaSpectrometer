@@ -8,16 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-    - uses: actions/checkout@v1    
-    - name: install cppcheck and run tests
-      run: |
-        sudo apt-get install -y cppcheck 
-        cd ./ContinousIntegration       
-        chmod +x ./run_c_static_code_analysis.sh
-        ls run_c_static_code_analysis.sh
-        ./run_c_static_code_analysis.sh
-        
+       
     - uses: actions/checkout@v1    
     - name: install flake8 and run tests
       if: always()
@@ -34,10 +25,4 @@ jobs:
       with:
         name: Report for Python sources
         path: ./ContinousIntegration/python_lint_repport/
-
-    - name: Archive C results
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: Report for C sources
-        path: ./ContinousIntegration/C_Lint_*.txt     
+ 
