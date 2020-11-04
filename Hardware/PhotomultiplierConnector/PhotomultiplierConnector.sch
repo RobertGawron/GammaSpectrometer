@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 6
 Title ""
 Date ""
 Rev ""
@@ -36,5 +36,11 @@ S 5400 4850 500  150
 U 5FD9E6AA
 F0 "OutputSignalConnector" 50
 F1 "OutputSignalConnector.sch" 50
+$EndSheet
+$Sheet
+S 5700 5350 500  150 
+U 5FA43545
+F0 "Mechanic" 50
+F1 "Mechanic.sch" 50
 $EndSheet
 $EndSCHEMATC

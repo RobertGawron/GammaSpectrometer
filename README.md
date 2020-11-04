@@ -31,6 +31,8 @@ Parts for 3D printing and model of the whole device were designed in OpenSCAD. A
 
 ## Hardware
 
+Placement of components that are important to be close to photomultiplier tube was generated automatically using python script.
+
 PCB was created using KiCAD.
 
 
@@ -40,4 +42,4 @@ TBD
 
 ## Hazards
 
-* **The device exposes high voltage to user, although maximum current is limited, it still poses health risk.
+* **The device exposes high voltage to user, although maximum current is limited, it still poses health risk.**
