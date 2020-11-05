@@ -21,7 +21,10 @@ This needs to be added to the design. Use microcontroller's ADC?
 
 This needs to be added to the design. Use microcontroller's DAC?
 
+## Microcontroller
+
+Arduino Uno
+
 ## User Interface
 
-A standard way: display + four push buttons needs to be added.
-
+Arduino Uno 2.4 inch TFT LCD Shield
