@@ -27,13 +27,13 @@ On a left side of the above image is a shield for photomultiplier tube - it's ne
 The detector is connected to a small PCB, visible in the center, it contains circuit for polarization of the tube and connectors.
 On the right side, on the bottom is visible shield for high voltage generator, on the top is visible shield for data acquisition. 
 
-Parts for 3D printing and model of the whole device were designed in OpenSCAD [more](./Mechanic/MechanicOverview/README.md). Above renderer was done in Blender.
+Parts for 3D printing and model of the whole device were designed in OpenSCAD [[more info]](./Mechanic/MechanicOverview/README.md). Above renderer was done in Blender.
 
 ## Hardware
 
-Values of elements of high voltage power supply were calculated using model made in Octave  [more](./Simulation/Octave/README.md).
+Values of elements of high voltage power supply were calculated using model made in Octave  [[more info]](./Simulation/Octave/README.md).
 
-Placement of components that are important to be close to photomultiplier tube was generated automatically using python script  [more](./Hardware/PhotomultiplierConnector/PolarCoordinateComponentPlacer/README.md).
+Placement of components that are important to be close to photomultiplier tube was generated automatically using python script  [[more info]](./Hardware/PhotomultiplierConnector/PolarCoordinateComponentPlacer/README.md).
 
 PCB was created using KiCAD.
 
