@@ -12,9 +12,9 @@ In command line, in this directory execute:
 
 ```octave-cli HVPowerSupplyElementsCalculator.m```
 
-The script will print results of calulations.
+The script will print results of calculations.
 
-Note: script mixes differents unit prefixes but this inconsistency is already present in the datsheet, so I stick to it.
+Note: script mixes different unit prefixes but this inconsistency is already present in the datasheet, so I stick to it.
 
 ## Assumed constants
 
