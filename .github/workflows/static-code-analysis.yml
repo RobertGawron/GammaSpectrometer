@@ -14,7 +14,7 @@ jobs:
       if: always()
       run: |
         sudo pip install flake8 flake8-html 
-        cd ./ContinousIntegration
+        cd ./ContinuousIntegration
         chmod +x ./run_python_static_code_analysis.sh
         ls
         ./run_python_static_code_analysis.sh
@@ -24,5 +24,5 @@ jobs:
       if: always()
       with:
         name: Report for Python sources
-        path: ./ContinousIntegration/python_lint_repport/
+        path: ./ContinuousIntegration/python_lint_report/
  
