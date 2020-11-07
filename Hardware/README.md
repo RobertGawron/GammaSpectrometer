@@ -15,11 +15,11 @@ Negative polarity + Cockcroft–Walton generator looks like a good choose.
 
 ## Monitoring value of tube's polarization voltage
 
-This needs to be added to the design. Use microcontroller's ADC?
+Use microcontroller's ADC?
 
 ## Setting value of tube's polarization voltage
 
-This needs to be added to the design. Use microcontroller's DAC?
+One value is enoughm choose according to tube datasheet
 
 ## Microcontroller
 
