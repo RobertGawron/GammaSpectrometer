@@ -19,7 +19,7 @@ It is designed in a way that the device can work remotely, e.g. no connection vi
 <img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
 
 
-## Overwiew of the mechanical design
+## Overview of the mechanical design
 
 ![render of the device](./Documentation/Pictures/render_28_10_2020.png)
 
@@ -37,6 +37,9 @@ Placement of components that are important to be close to photomultiplier tube w
 
 PCB was created using KiCAD.
 
+- [Details about photomultiplier principles [in progress]](./Hardware/README.md)
+- [Details acquisition module [to be done]](./DataAcquisition/README.md)
+- [Details about high voltage power supply [in progress]](./Hardware/HighVoltagePowerSupply/README.md)
 
 ## Software
 
