@@ -1796,22 +1796,6 @@ Connection ~ 3100 4000
 Wire Wire Line
 	3100 4000 3600 4000
 Wire Wire Line
-	8350 5300 8400 5300
-Wire Wire Line
-	8400 5300 8400 4950
-Wire Wire Line
-	8400 4950 7700 4950
-Wire Wire Line
-	10350 4950 10350 5400
-Wire Wire Line
-	10350 5400 10300 5400
-Wire Wire Line
-	10350 4950 9650 4950
-Wire Wire Line
-	9650 4950 9650 5300
-Wire Wire Line
-	9650 5300 9700 5300
-Wire Wire Line
 	8750 5500 9550 5500
 $Comp
 L Device:CP C?
@@ -1906,26 +1890,8 @@ F 3 "" H 2600 6850 50  0001 C CNN
 	1    2600 6850
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 6125052B
-P 3000 6850
-AR Path="/5EDA53F3/6125052B" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/6125052B" Ref="#PWR?"  Part="1" 
-AR Path="/6125052B" Ref="#PWR014"  Part="1" 
-F 0 "#PWR014" H 3000 6600 50  0001 C CNN
-F 1 "GND" H 3005 6677 50  0000 C CNN
-F 2 "" H 3000 6850 50  0001 C CNN
-F 3 "" H 3000 6850 50  0001 C CNN
-	1    3000 6850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 6150 3000 6200
 Wire Wire Line
 	2600 6150 2850 6150
-Wire Wire Line
-	3000 6800 3000 6850
 $Comp
 L Device:Jumper_NC_Small JP1
 U 1 1 6142A550
@@ -2022,37 +1988,36 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x03_Female J15
 U 1 1 6174ED76
-P 10950 5500
-F 0 "J15" V 11050 5450 50  0000 L CNN
-F 1 "Conn_01x03_Female" V 11150 5200 50  0000 L CNN
-F 2 "" H 10950 5500 50  0001 C CNN
-F 3 "~" H 10950 5500 50  0001 C CNN
-	1    10950 5500
+P 10950 5700
+F 0 "J15" V 11050 5650 50  0000 L CNN
+F 1 "Conn_01x03_Female" V 11150 5400 50  0000 L CNN
+F 2 "" H 10950 5700 50  0001 C CNN
+F 3 "~" H 10950 5700 50  0001 C CNN
+	1    10950 5700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10750 5400 10600 5400
-Connection ~ 10350 5400
+	10750 5600 10600 5600
 $Comp
 L power:GND #PWR?
 U 1 1 61787DD4
-P 10650 5750
+P 10650 5950
 AR Path="/5EDA53F3/61787DD4" Ref="#PWR?"  Part="1" 
 AR Path="/5EDA5628/61787DD4" Ref="#PWR?"  Part="1" 
 AR Path="/61787DD4" Ref="#PWR021"  Part="1" 
-F 0 "#PWR021" H 10650 5500 50  0001 C CNN
-F 1 "GND" H 10655 5577 50  0000 C CNN
-F 2 "" H 10650 5750 50  0001 C CNN
-F 3 "" H 10650 5750 50  0001 C CNN
-	1    10650 5750
+F 0 "#PWR021" H 10650 5700 50  0001 C CNN
+F 1 "GND" H 10655 5777 50  0000 C CNN
+F 2 "" H 10650 5950 50  0001 C CNN
+F 3 "" H 10650 5950 50  0001 C CNN
+	1    10650 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10750 5600 10650 5600
+	10750 5800 10650 5800
 Wire Wire Line
-	10650 5600 10650 5750
+	10650 5800 10650 5950
 Wire Wire Line
-	10750 5500 10500 5500
+	10750 5700 10500 5700
 $Comp
 L Connector:TestPoint TP3
 U 1 1 617DDB76
@@ -2084,8 +2049,8 @@ $Comp
 L Connector:TestPoint TP2
 U 1 1 6185CEDA
 P 2850 6100
-F 0 "TP2" H 2908 6218 50  0000 L CNN
-F 1 "TestPoint" H 2908 6127 50  0000 L CNN
+F 0 "TP2" H 2900 6350 50  0000 L CNN
+F 1 "TestPoint" H 2900 6250 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 3050 6100 50  0001 C CNN
 F 3 "~" H 3050 6100 50  0001 C CNN
 	1    2850 6100
@@ -2096,8 +2061,6 @@ Wire Wire Line
 Wire Wire Line
 	8600 5450 8600 5500
 Connection ~ 8600 5500
-Wire Wire Line
-	8600 5500 8450 5500
 $Comp
 L Connector:TestPoint TP4
 U 1 1 61879FB2
@@ -2111,7 +2074,7 @@ F 3 "~" H 8800 5450 50  0001 C CNN
 $EndComp
 Connection ~ 2850 6150
 Wire Wire Line
-	2850 6150 3000 6150
+	2850 6150 3050 6150
 $Comp
 L Connector:Conn_01x02_Female J1
 U 1 1 60912280
@@ -2168,7 +2131,7 @@ $EndComp
 Wire Wire Line
 	8600 5500 8750 5500
 Wire Wire Line
-	10500 5500 10500 6400
+	10500 5700 10500 6400
 Wire Wire Line
 	9400 5650 9400 5600
 Wire Wire Line
@@ -2186,11 +2149,9 @@ Wire Wire Line
 Text Label 10150 6300 0    50   ~ 0
 ENABLE
 Wire Wire Line
-	10600 5300 10600 5400
-Connection ~ 10600 5400
-Wire Wire Line
-	10600 5400 10450 5400
-Text Label 10600 5300 0    50   ~ 0
+	10600 5500 10600 5600
+Connection ~ 10600 5600
+Text Label 10600 5500 0    50   ~ 0
 HV_MONITOR
 Wire Wire Line
 	4550 5050 4550 5350
@@ -2290,8 +2251,6 @@ Wire Wire Line
 Connection ~ 1650 4000
 Wire Wire Line
 	1650 4000 1800 4000
-Wire Wire Line
-	10150 6400 6900 6400
 Wire Wire Line
 	6900 6400 6900 7100
 Connection ~ 10150 6400
@@ -2764,96 +2723,218 @@ F 3 "~" H 10600 1200 50  0001 C CNN
 	1    10600 1200
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7700 5400 7750 5400
-Connection ~ 7700 5400
-Wire Wire Line
-	7700 4950 7700 5400
 $Comp
 L Device:Jumper_NO_Small JP3
 U 1 1 5FA8EC90
-P 10000 4800
-F 0 "JP3" H 10000 4985 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 10000 4894 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 10000 4800 50  0001 C CNN
-F 3 "~" H 10000 4800 50  0001 C CNN
-	1    10000 4800
+P 10000 4750
+F 0 "JP3" H 10000 4935 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 10000 4844 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 10000 4750 50  0001 C CNN
+F 3 "~" H 10000 4750 50  0001 C CNN
+	1    10000 4750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10100 4800 10450 4800
+	10100 4750 10400 4750
 Wire Wire Line
-	10450 4800 10450 5400
-Connection ~ 10450 5400
+	9900 4750 9550 4750
 Wire Wire Line
-	10450 5400 10350 5400
-Wire Wire Line
-	9900 4800 9550 4800
-Wire Wire Line
-	9550 4800 9550 5500
+	9550 4750 9550 5500
 Connection ~ 9550 5500
 Wire Wire Line
 	9550 5500 9700 5500
+Wire Wire Line
+	9700 5700 9650 5700
+Wire Wire Line
+	9650 6000 10400 6000
+Wire Wire Line
+	10400 6000 10400 5600
+Wire Wire Line
+	10400 5600 10300 5600
+Wire Wire Line
+	6900 6400 10150 6400
+Wire Wire Line
+	9650 5700 9650 6000
 $Comp
-L Device:Jumper_NO_Small JP2
-U 1 1 5FADE637
-P 8000 4800
-F 0 "JP2" H 8000 4985 50  0000 C CNN
-F 1 "Jumper_NO_Small" H 8000 4894 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8000 4800 50  0001 C CNN
-F 3 "~" H 8000 4800 50  0001 C CNN
-	1    8000 4800
+L HighVoltagePowerSupply:MCP6V51 U3
+U 1 1 5FE7C7D4
+P 9950 5400
+F 0 "U3" H 10050 5050 50  0000 L CNN
+F 1 "MCP6V51" H 10050 4950 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9950 5400 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V51-Data-Sheet-DS20006136A.pdf" H 9950 5400 50  0001 C CNN
+	1    9950 5400
+	1    0    0    -1  
+$EndComp
+Text Label 3050 6150 3    50   ~ 0
+VCC_OPAMP
+Text Label 9900 4900 0    50   ~ 0
+VCC_OPAMP
+Connection ~ 10400 5600
+Wire Wire Line
+	10400 5600 10600 5600
+Wire Wire Line
+	10400 5600 10400 4750
+$Comp
+L Device:C C?
+U 1 1 600E1B30
+P 10100 5200
+AR Path="/5EDA53F3/600E1B30" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/600E1B30" Ref="C?"  Part="1" 
+AR Path="/600E1B30" Ref="C?"  Part="1" 
+F 0 "C?" V 10352 5200 50  0000 C CNN
+F 1 "100n" V 10261 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 10138 5050 50  0001 C CNN
+F 3 "~" H 10100 5200 50  0001 C CNN
+	1    10100 5200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 601068E7
+P 9900 6100
+AR Path="/5EDA53F3/601068E7" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/601068E7" Ref="#PWR?"  Part="1" 
+AR Path="/601068E7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9900 5850 50  0001 C CNN
+F 1 "GND" H 9905 5927 50  0000 C CNN
+F 2 "" H 9900 6100 50  0001 C CNN
+F 3 "" H 9900 6100 50  0001 C CNN
+	1    9900 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60106C45
+P 10300 5300
+AR Path="/5EDA53F3/60106C45" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/60106C45" Ref="#PWR?"  Part="1" 
+AR Path="/60106C45" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 10300 5050 50  0001 C CNN
+F 1 "GND" H 10305 5127 50  0000 C CNN
+F 2 "" H 10300 5300 50  0001 C CNN
+F 3 "" H 10300 5300 50  0001 C CNN
+	1    10300 5300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8450 5500 8450 4800
+	9900 4900 9900 5200
 Wire Wire Line
-	8450 4800 8100 4800
-Connection ~ 8450 5500
+	9900 5200 9950 5200
+Connection ~ 9900 5200
 Wire Wire Line
-	8450 5500 8350 5500
+	9900 5200 9900 5300
 Wire Wire Line
-	7900 4800 7600 4800
+	10250 5200 10300 5200
 Wire Wire Line
-	7600 4800 7600 5400
+	10300 5200 10300 5300
 Wire Wire Line
-	7600 5400 7700 5400
-Wire Wire Line
-	7600 5400 7550 5400
-Wire Wire Line
-	7550 5400 7550 5950
-Connection ~ 7600 5400
+	9900 5900 9900 6100
 $Comp
-L Amplifier_Operational:TS912 U2
-U 1 1 5FD37AB6
-P 8050 5400
-F 0 "U2" H 8050 5033 50  0000 C CNN
-F 1 "TS912" H 8050 5124 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 8050 5400 50  0001 C CNN
-F 3 "www.st.com/resource/en/datasheet/ts912.pdf" H 8050 5400 50  0001 C CNN
-	1    8050 5400
-	-1   0    0    1   
+L HighVoltagePowerSupply:MCP6V51 U?
+U 1 1 60240518
+P 8100 5400
+F 0 "U?" H 8200 5050 50  0000 L CNN
+F 1 "MCP6V51" H 8200 4950 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8100 5400 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V51-Data-Sheet-DS20006136A.pdf" H 8100 5400 50  0001 C CNN
+	1    8100 5400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 5600 7550 5950
+Wire Wire Line
+	8350 5700 8450 5700
+Wire Wire Line
+	8450 5700 8450 6000
+$Comp
+L Device:Jumper_NO_Small JP?
+U 1 1 602C1203
+P 8050 4750
+F 0 "JP?" H 8050 4935 50  0000 C CNN
+F 1 "Jumper_NO_Small" H 8050 4844 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 8050 4750 50  0001 C CNN
+F 3 "~" H 8050 4750 50  0001 C CNN
+	1    8050 4750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 4750 7650 4750
+Wire Wire Line
+	8150 4750 8500 4750
+Wire Wire Line
+	8500 4750 8500 5500
+Text Label 8150 4900 2    50   ~ 0
+VCC_OPAMP
+Wire Wire Line
+	7650 5600 7650 4750
+$Comp
+L Device:C C?
+U 1 1 602C1214
+P 7950 5200
+AR Path="/5EDA53F3/602C1214" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/602C1214" Ref="C?"  Part="1" 
+AR Path="/602C1214" Ref="C?"  Part="1" 
+F 0 "C?" V 8202 5200 50  0000 C CNN
+F 1 "100n" V 8111 5200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7988 5050 50  0001 C CNN
+F 3 "~" H 7950 5200 50  0001 C CNN
+	1    7950 5200
+	0    1    -1   0   
 $EndComp
 $Comp
-L Amplifier_Operational:TS912 U2
-U 2 1 5FD39533
-P 10000 5400
-F 0 "U2" H 10000 5033 50  0000 C CNN
-F 1 "TS912" H 10000 5124 50  0000 C CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 10000 5400 50  0001 C CNN
-F 3 "www.st.com/resource/en/datasheet/ts912.pdf" H 10000 5400 50  0001 C CNN
-	2    10000 5400
-	1    0    0    1   
+L power:GND #PWR?
+U 1 1 602C121A
+P 7750 5300
+AR Path="/5EDA53F3/602C121A" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/602C121A" Ref="#PWR?"  Part="1" 
+AR Path="/602C121A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7750 5050 50  0001 C CNN
+F 1 "GND" H 7755 5127 50  0000 C CNN
+F 2 "" H 7750 5300 50  0001 C CNN
+F 3 "" H 7750 5300 50  0001 C CNN
+	1    7750 5300
+	-1   0    0    -1  
 $EndComp
+Wire Wire Line
+	8150 4900 8150 5200
+Wire Wire Line
+	8150 5200 8100 5200
+Connection ~ 8150 5200
+Wire Wire Line
+	8150 5200 8150 5300
+Wire Wire Line
+	7800 5200 7750 5200
+Wire Wire Line
+	7750 5200 7750 5300
+Wire Wire Line
+	8350 5500 8500 5500
+Connection ~ 7650 5600
+Wire Wire Line
+	7650 5600 7550 5600
+Connection ~ 8500 5500
+Wire Wire Line
+	8500 5500 8600 5500
 $Comp
-L Amplifier_Operational:TS912 U2
-U 3 1 5FD3B80E
-P 3100 6500
-F 0 "U2" H 3058 6546 50  0000 L CNN
-F 1 "TS912" H 3058 6455 50  0000 L CNN
-F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 3100 6500 50  0001 C CNN
-F 3 "www.st.com/resource/en/datasheet/ts912.pdf" H 3100 6500 50  0001 C CNN
-	3    3100 6500
+L power:GND #PWR?
+U 1 1 6037AEE9
+P 8150 6050
+AR Path="/5EDA53F3/6037AEE9" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/6037AEE9" Ref="#PWR?"  Part="1" 
+AR Path="/6037AEE9" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8150 5800 50  0001 C CNN
+F 1 "GND" H 8155 5877 50  0000 C CNN
+F 2 "" H 8150 6050 50  0001 C CNN
+F 3 "" H 8150 6050 50  0001 C CNN
+	1    8150 6050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	8150 5900 8150 6050
+Wire Wire Line
+	7650 5600 7750 5600
+Wire Wire Line
+	7650 5600 7650 6000
+Wire Wire Line
+	7650 6000 8450 6000
 $EndSCHEMATC

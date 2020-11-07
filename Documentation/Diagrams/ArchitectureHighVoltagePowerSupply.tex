@@ -24,7 +24,7 @@
         \node (converter) [component, right=of currentlevel] {DC/DC Converter\\ (LT3580)};	
         \node (multiplier) [component, right=of converter] {Cockcroft–Walton Generator};	
 	    \node (vout) [system, right=of multiplier] {Output Voltage\\ (1100V DC)};
-        \node (feedback) [component, below=of multiplier] {Voltage Level Feedback\\ (Voltage Divider + TS912IDT Buffers)};
+        \node (feedback) [component, below=of multiplier] {Voltage Level Feedback\\ (Voltage Divider + MCP6V51 Buffers)};
 
 
         \node (voltagemonitor) [system, below=of vout] {External\\ Voltage Monitor};
