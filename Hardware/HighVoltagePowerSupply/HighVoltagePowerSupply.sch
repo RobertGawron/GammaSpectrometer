@@ -3051,4 +3051,112 @@ F 3 "https://www.tme.eu/Document/e39540ac51bab732bf0cd6d66b280881/DJNR3015-serie
 	1    2100 3700
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5FF355F1
+P 3750 7400
+F 0 "H1" H 3500 7700 50  0000 L CNN
+F 1 "MountingHole_Pad" H 3500 7600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm_Pad" H 3750 7400 50  0001 C CNN
+F 3 "~" H 3750 7400 50  0001 C CNN
+	1    3750 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FF355F7
+P 3750 7550
+AR Path="/5EDA53F3/5FF355F7" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/5FF355F7" Ref="#PWR?"  Part="1" 
+AR Path="/5FF355F7" Ref="#PWR023"  Part="1" 
+F 0 "#PWR023" H 3750 7300 50  0001 C CNN
+F 1 "GND" H 3755 7377 50  0000 C CNN
+F 2 "" H 3750 7550 50  0001 C CNN
+F 3 "" H 3750 7550 50  0001 C CNN
+	1    3750 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 7500 3750 7550
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 6001BF81
+P 4500 7400
+F 0 "H2" H 4250 7700 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4250 7600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm_Pad" H 4500 7400 50  0001 C CNN
+F 3 "~" H 4500 7400 50  0001 C CNN
+	1    4500 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6001BF87
+P 4500 7550
+AR Path="/5EDA53F3/6001BF87" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/6001BF87" Ref="#PWR?"  Part="1" 
+AR Path="/6001BF87" Ref="#PWR024"  Part="1" 
+F 0 "#PWR024" H 4500 7300 50  0001 C CNN
+F 1 "GND" H 4505 7377 50  0000 C CNN
+F 2 "" H 4500 7550 50  0001 C CNN
+F 3 "" H 4500 7550 50  0001 C CNN
+	1    4500 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 7500 4500 7550
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 6004886A
+P 5250 7400
+F 0 "H3" H 5000 7700 50  0000 L CNN
+F 1 "MountingHole_Pad" H 5000 7600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm_Pad" H 5250 7400 50  0001 C CNN
+F 3 "~" H 5250 7400 50  0001 C CNN
+	1    5250 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60048870
+P 5250 7550
+AR Path="/5EDA53F3/60048870" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/60048870" Ref="#PWR?"  Part="1" 
+AR Path="/60048870" Ref="#PWR025"  Part="1" 
+F 0 "#PWR025" H 5250 7300 50  0001 C CNN
+F 1 "GND" H 5255 7377 50  0000 C CNN
+F 2 "" H 5250 7550 50  0001 C CNN
+F 3 "" H 5250 7550 50  0001 C CNN
+	1    5250 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 7500 5250 7550
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 600757CC
+P 6000 7400
+F 0 "H4" H 5750 7700 50  0000 L CNN
+F 1 "MountingHole_Pad" H 5750 7600 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.5mm_Pad" H 6000 7400 50  0001 C CNN
+F 3 "~" H 6000 7400 50  0001 C CNN
+	1    6000 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 600757D2
+P 6000 7550
+AR Path="/5EDA53F3/600757D2" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/600757D2" Ref="#PWR?"  Part="1" 
+AR Path="/600757D2" Ref="#PWR026"  Part="1" 
+F 0 "#PWR026" H 6000 7300 50  0001 C CNN
+F 1 "GND" H 6005 7377 50  0000 C CNN
+F 2 "" H 6000 7550 50  0001 C CNN
+F 3 "" H 6000 7550 50  0001 C CNN
+	1    6000 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 7500 6000 7550
 $EndSCHEMATC

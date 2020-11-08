@@ -1,4 +1,4 @@
-# 3D models of 3d printed parts +model of the whole device
+# 3D models of 3d printed parts + model of the whole device
 
 ## Summary
 
