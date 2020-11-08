@@ -9,6 +9,7 @@ PCB_THICKNESS = 1;
 
 
 // docs: https://www.tme.eu/pl/details/alu-g0473/obudowy-uniwersalne/gainta/g-0473/
+// trimmed and rotated version: ../../Documentation/Pictures/chassis.png
 PCB_CHASIS_X_TOTAL   = 119;   // a dimmension 
 PCB_CHASIS_Y_TOTAL   = 93;    // b dimmension
 PCB_CHASIS_Z_TOTAL   = 34;    // c dimmension
