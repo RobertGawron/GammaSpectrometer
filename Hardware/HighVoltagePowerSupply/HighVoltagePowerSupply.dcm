@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP GA3459-BL
+F http://www.farnell.com/datasheets/1870439.pdf
+$ENDCMP
+#
 $CMP MCP6V51
 F https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V51-Data-Sheet-DS20006136A.pdf
 $ENDCMP
