@@ -16,6 +16,12 @@ Calculations based on[IPC-2221A](http://www-eng.lbl.gov/~shuman/NEXT/CURRENT_DES
 
 Voltage between n electrode and n+1 is around 110V, device will not be used above 3050m above see level. Looking on mentioned table, column B2, row 101-150V, the clearance should be at least 0.6mm.
 
+Distance  between each multiplier stage and ground :
+
+1100V - 500V = 600V
+0.25 mm + (600V * 0.0025 mm) = 
+0.25  + (600 * 0.0025) = 1.75mm
+
 ## Transformer
 
 Transformer should be shielded (to avoid EMI), turns ratio 1:10.

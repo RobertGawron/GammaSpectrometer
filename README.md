@@ -38,8 +38,11 @@ Placement of components that are important to be close to photomultiplier tube w
 PCB was created using KiCAD.
 
 - [Details about photomultiplier principles [in progress]](./Hardware/README.md)
-- [Details acquisition module [to be done]](./DataAcquisition/README.md)
-- [Details about high voltage power supply [in progress]](./Hardware/HighVoltagePowerSupply/README.md)
+- [Details acquisition module [to be done]](./Hardware/DataAcquisition/README.md)
+
+Below is a render of PCB for HV power supply [[more info]](./Hardware/HighVoltagePowerSupply/README.md)
+
+![render of the device](./Documentation/Pictures/render_10_11_2020.png)
 
 ## Software
 
