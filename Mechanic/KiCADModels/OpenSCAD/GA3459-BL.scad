@@ -1,4 +1,4 @@
-// Datheet: http://www.farnell.com/datasheets/1870439.pdf
+// datasheet: http://www.farnell.com/datasheets/1870439.pdf
 CHASSIS_X_LENGTH = 26;
 CHASSIS_Y_LENGTH = 26.75;
 CHASSIS_Z_LENGTH = 14;

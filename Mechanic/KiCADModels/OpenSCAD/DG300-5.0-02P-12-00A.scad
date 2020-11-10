@@ -1,4 +1,4 @@
-// Datasheet: https://www.tme.eu/Document/adcdc895102d44b158b752608cb08ff1/DG300-5.0.pdf
+// datasheet: https://www.tme.eu/Document/adcdc895102d44b158b752608cb08ff1/DG300-5.0.pdf
 CHASSIS_X_LENGTH = 10;
 CHASSIS_Y_LENGTH = 9;
 CHASSIS_Z_LENGTH = 12.6;

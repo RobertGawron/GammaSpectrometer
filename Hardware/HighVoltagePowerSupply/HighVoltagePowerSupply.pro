@@ -1,4 +1,4 @@
-update=09/11/2020 16:03:11
+update=10/11/2020 14:05:38
 version=1
 last_client=kicad
 [general]
@@ -29,8 +29,13 @@ MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.25
+TrackWidth2=0.4064
+TrackWidth3=1
+TrackWidth4=1.5
 ViaDiameter1=0.8
 ViaDrill1=0.4
+ViaDiameter2=1.3
+ViaDrill2=0.6
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -239,7 +244,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=high voltage
 Clearance=0.6
-TrackWidth=0.25
+TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3

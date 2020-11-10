@@ -1180,7 +1180,7 @@ AR Path="/5EDA5628/5FFB6B02" Ref="C?"  Part="1"
 AR Path="/5FFB6B02" Ref="C37"  Part="1" 
 F 0 "C37" H 1918 3946 50  0000 L CNN
 F 1 "220u" H 1918 3855 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 1838 3750 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 1838 3750 50  0001 C CNN
 F 3 "~" H 1800 3900 50  0001 C CNN
 	1    1800 3900
 	1    0    0    -1  
@@ -1248,15 +1248,15 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 602F1036
-P 9150 5500
+P 8850 5500
 AR Path="/5EDA53F3/602F1036" Ref="R?"  Part="1" 
 AR Path="/5EDA5628/602F1036" Ref="R?"  Part="1" 
 AR Path="/602F1036" Ref="R27"  Part="1" 
-F 0 "R27" H 9220 5546 50  0000 L CNN
-F 1 "10k" H 9220 5455 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9080 5500 50  0001 C CNN
-F 3 "~" H 9150 5500 50  0001 C CNN
-	1    9150 5500
+F 0 "R27" H 8920 5546 50  0000 L CNN
+F 1 "10k" H 8920 5455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8780 5500 50  0001 C CNN
+F 3 "~" H 8850 5500 50  0001 C CNN
+	1    8850 5500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1494,9 +1494,6 @@ Wire Wire Line
 	700  4100 700  4050
 Wire Wire Line
 	700  4050 1000 4050
-Connection ~ 1000 4050
-Wire Wire Line
-	1000 4050 1000 4100
 Wire Wire Line
 	2350 3550 2350 3700
 $Comp
@@ -1531,16 +1528,16 @@ Wire Wire Line
 Wire Wire Line
 	900  3700 1000 3700
 Wire Wire Line
-	1000 3600 1000 3700
+	1000 3550 1000 3700
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 60A75F31
-P 1000 3600
-F 0 "#FLG02" H 1000 3675 50  0001 C CNN
-F 1 "PWR_FLAG" H 1000 3773 50  0000 C CNN
-F 2 "" H 1000 3600 50  0001 C CNN
-F 3 "~" H 1000 3600 50  0001 C CNN
-	1    1000 3600
+P 1000 3550
+F 0 "#FLG02" H 1000 3625 50  0001 C CNN
+F 1 "PWR_FLAG" H 1000 3723 50  0000 C CNN
+F 2 "" H 1000 3550 50  0001 C CNN
+F 3 "~" H 1000 3550 50  0001 C CNN
+	1    1000 3550
 	1    0    0    -1  
 $EndComp
 Connection ~ 1000 3700
@@ -1587,7 +1584,7 @@ AR Path="/5EDA5628/60CCC6A2" Ref="C?"  Part="1"
 AR Path="/60CCC6A2" Ref="C44"  Part="1" 
 F 0 "C44" H 1968 4996 50  0000 L CNN
 F 1 "220u" H 1968 4905 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 1888 4800 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-3528-21_Kemet-B" H 1888 4800 50  0001 C CNN
 F 3 "~" H 1850 4950 50  0001 C CNN
 	1    1850 4950
 	1    0    0    -1  
@@ -1672,8 +1669,6 @@ F 3 "" H 2400 5150 50  0001 C CNN
 	1    2400 5150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1000 3700 1050 3700
 $Comp
 L Device:C C?
 U 1 1 60DF8587
@@ -1708,8 +1703,6 @@ F 3 "" H 2800 4100 50  0001 C CNN
 $EndComp
 Connection ~ 2800 3700
 Wire Wire Line
-	2800 3700 3300 3700
-Wire Wire Line
 	8500 5200 9300 5200
 $Comp
 L Device:Jumper_NC_Small JP5
@@ -1728,73 +1721,6 @@ Wire Wire Line
 	5900 4750 5900 5050
 Wire Wire Line
 	2400 4750 2600 4750
-$Comp
-L Device:C C?
-U 1 1 615C5544
-P 3300 3900
-AR Path="/5EDA53F3/615C5544" Ref="C?"  Part="1" 
-AR Path="/5EDA5628/615C5544" Ref="C?"  Part="1" 
-AR Path="/615C5544" Ref="C40"  Part="1" 
-F 0 "C40" H 3185 3854 50  0000 R CNN
-F 1 "100n" H 3185 3945 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3338 3750 50  0001 C CNN
-F 3 "~" H 3300 3900 50  0001 C CNN
-	1    3300 3900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3300 3750 3300 3700
-Wire Wire Line
-	3300 4050 3300 4100
-$Comp
-L power:GND #PWR?
-U 1 1 615C554C
-P 3300 4100
-AR Path="/5EDA53F3/615C554C" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/615C554C" Ref="#PWR?"  Part="1" 
-AR Path="/615C554C" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 3300 3850 50  0001 C CNN
-F 1 "GND" H 3305 3927 50  0000 C CNN
-F 2 "" H 3300 4100 50  0001 C CNN
-F 3 "" H 3300 4100 50  0001 C CNN
-	1    3300 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 615DEC3B
-P 3800 3900
-AR Path="/5EDA53F3/615DEC3B" Ref="C?"  Part="1" 
-AR Path="/5EDA5628/615DEC3B" Ref="C?"  Part="1" 
-AR Path="/615DEC3B" Ref="C41"  Part="1" 
-F 0 "C41" H 3685 3854 50  0000 R CNN
-F 1 "100n" H 3685 3945 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3838 3750 50  0001 C CNN
-F 3 "~" H 3800 3900 50  0001 C CNN
-	1    3800 3900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3800 3750 3800 3700
-Wire Wire Line
-	3800 4050 3800 4100
-$Comp
-L power:GND #PWR?
-U 1 1 615DEC43
-P 3800 4100
-AR Path="/5EDA53F3/615DEC43" Ref="#PWR?"  Part="1" 
-AR Path="/5EDA5628/615DEC43" Ref="#PWR?"  Part="1" 
-AR Path="/615DEC43" Ref="#PWR06"  Part="1" 
-F 0 "#PWR06" H 3800 3850 50  0001 C CNN
-F 1 "GND" H 3805 3927 50  0000 C CNN
-F 2 "" H 3800 4100 50  0001 C CNN
-F 3 "" H 3800 4100 50  0001 C CNN
-	1    3800 4100
-	1    0    0    -1  
-$EndComp
-Connection ~ 3300 3700
-Wire Wire Line
-	3300 3700 3800 3700
 Connection ~ 3800 3700
 $Comp
 L power:GND #PWR?
@@ -1845,26 +1771,15 @@ Wire Wire Line
 	8350 5150 8350 5200
 Connection ~ 8350 5200
 $Comp
-L Connector:TestPoint TP8
-U 1 1 61879FB2
-P 8350 5150
-F 0 "TP8" V 8300 5350 50  0000 L CNN
-F 1 "V_DIVIDER" V 8400 5350 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 8550 5150 50  0001 C CNN
-F 3 "~" H 8550 5150 50  0001 C CNN
-	1    8350 5150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x02_Female J14
 U 1 1 60912280
-P 700 3800
-F 0 "J14" V 850 3750 50  0000 C CNN
-F 1 "power supply" V 750 3750 50  0000 C CNN
-F 2 "HighVoltagePowerSupply:DG300-5.0-02P-12-00A(H)" H 700 3800 50  0001 C CNN
-F 3 "~" H 700 3800 50  0001 C CNN
-	1    700  3800
-	-1   0    0    1   
+P 700 3700
+F 0 "J14" V 850 3650 50  0000 C CNN
+F 1 "power supply" V 750 3650 50  0000 C CNN
+F 2 "HighVoltagePowerSupply:DG300-5.0-02P-12-00A(H)" H 700 3700 50  0001 C CNN
+F 3 "~" H 700 3700 50  0001 C CNN
+	1    700  3700
+	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:R R?
@@ -1917,7 +1832,7 @@ Wire Wire Line
 Wire Wire Line
 	9150 5300 8850 5300
 Wire Wire Line
-	8850 5300 8850 5800
+	8850 5300 8850 5350
 Wire Wire Line
 	8850 5800 8500 5800
 Wire Wire Line
@@ -1964,7 +1879,7 @@ Connection ~ 3850 5250
 Wire Wire Line
 	3850 5150 3850 5250
 Wire Wire Line
-	2600 4750 3050 4750
+	2600 4750 2900 4750
 Connection ~ 3850 4750
 Wire Wire Line
 	3850 4850 3850 4750
@@ -2015,13 +1930,6 @@ Wire Wire Line
 Wire Wire Line
 	6700 5650 6800 5650
 Wire Wire Line
-	1650 3700 1650 4750
-Wire Wire Line
-	1650 4750 1850 4750
-Connection ~ 1650 3700
-Wire Wire Line
-	1650 3700 1800 3700
-Wire Wire Line
 	6750 6100 6750 6800
 $Comp
 L Device:R R?
@@ -2042,31 +1950,31 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 5FB7AF2A
-P 1250 3700
+P 1400 3700
 AR Path="/5EDA53F3/5FB7AF2A" Ref="R?"  Part="1" 
 AR Path="/5EDA5628/5FB7AF2A" Ref="R?"  Part="1" 
 AR Path="/5FB7AF2A" Ref="R17"  Part="1" 
-F 0 "R17" V 1365 3700 50  0000 C CNN
-F 1 "10k" V 1456 3700 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 1180 3700 50  0001 C CNN
-F 3 "~" H 1250 3700 50  0001 C CNN
-	1    1250 3700
+F 0 "R17" V 1515 3700 50  0000 C CNN
+F 1 "10k" V 1606 3700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1330 3700 50  0001 C CNN
+F 3 "~" H 1400 3700 50  0001 C CNN
+	1    1400 3700
 	0    -1   1    0   
 $EndComp
 Wire Wire Line
-	1400 3700 1450 3700
+	1550 3700 1600 3700
 Wire Wire Line
-	1050 3700 1050 4000
+	1200 3700 1200 4000
 Wire Wire Line
-	1050 4000 1200 4000
-Connection ~ 1050 3700
+	1200 4000 1350 4000
+Connection ~ 1200 3700
 Wire Wire Line
-	1050 3700 1100 3700
+	1200 3700 1250 3700
 Wire Wire Line
-	1450 3700 1450 4000
+	1600 3700 1600 4000
 Wire Wire Line
-	1450 4000 1300 4000
-Connection ~ 1450 3700
+	1600 4000 1450 4000
+Connection ~ 1600 3700
 $Comp
 L Device:R R?
 U 1 1 60628A4F
@@ -2501,7 +2409,7 @@ Wire Wire Line
 	10150 5300 10050 5300
 Wire Wire Line
 	9400 5400 9400 5700
-Text Label 3050 4850 3    50   ~ 0
+Text Label 2900 4850 3    50   ~ 0
 VCC_OPAMP
 Text Label 9650 4600 0    50   ~ 0
 VCC_OPAMP
@@ -2568,9 +2476,9 @@ Wire Wire Line
 Wire Wire Line
 	7300 5300 7300 5650
 Wire Wire Line
-	8100 5400 8200 5400
+	8100 5400 8150 5400
 Wire Wire Line
-	8200 5400 8200 5700
+	8150 5400 8150 5700
 $Comp
 L Device:Jumper_NO_Small JP3
 U 1 1 602C1203
@@ -2638,29 +2546,29 @@ Wire Wire Line
 	7400 5300 7300 5300
 Connection ~ 8250 5200
 Wire Wire Line
-	8250 5200 8350 5200
+	8250 5200 8300 5200
 $Comp
 L power:GND #PWR?
 U 1 1 6037AEE9
-P 7900 5750
+P 7900 5800
 AR Path="/5EDA53F3/6037AEE9" Ref="#PWR?"  Part="1" 
 AR Path="/5EDA5628/6037AEE9" Ref="#PWR?"  Part="1" 
 AR Path="/6037AEE9" Ref="#PWR012"  Part="1" 
-F 0 "#PWR012" H 7900 5500 50  0001 C CNN
-F 1 "GND" H 7905 5577 50  0000 C CNN
-F 2 "" H 7900 5750 50  0001 C CNN
-F 3 "" H 7900 5750 50  0001 C CNN
-	1    7900 5750
+F 0 "#PWR012" H 7900 5550 50  0001 C CNN
+F 1 "GND" H 7905 5627 50  0000 C CNN
+F 2 "" H 7900 5800 50  0001 C CNN
+F 3 "" H 7900 5800 50  0001 C CNN
+	1    7900 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7900 5600 7900 5750
+	7900 5600 7900 5800
 Wire Wire Line
 	7400 5300 7500 5300
 Wire Wire Line
 	7400 5300 7400 5700
 Wire Wire Line
-	7400 5700 8200 5700
+	7400 5700 8150 5700
 $Comp
 L HighVoltagePowerSupply:GA3459-BL TR1
 U 1 1 6062F7B2
@@ -2747,17 +2655,17 @@ $EndComp
 Wire Wire Line
 	3800 3700 6400 3700
 Wire Wire Line
-	1300 6900 6800 6900
+	1450 6900 6800 6900
 Wire Wire Line
-	1300 4000 1300 6900
+	1450 4000 1450 6900
 Wire Wire Line
-	1200 4000 1200 7000
+	1350 4000 1350 7000
 Wire Wire Line
 	6800 6900 6800 6150
 Wire Wire Line
 	6850 7000 6850 6200
 Wire Wire Line
-	1200 7000 6850 7000
+	1350 7000 6850 7000
 $Comp
 L Device:Thermistor_NTC TH1
 U 1 1 60BBC750
@@ -2772,24 +2680,16 @@ $EndComp
 $Comp
 L Connector:Conn_01x06_Female J15
 U 1 1 60C1F767
-P 10950 5500
-F 0 "J15" V 11050 5400 50  0000 L CNN
-F 1 "monitoring" V 11150 5250 50  0000 L CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 10950 5500 50  0001 C CNN
-F 3 "~" H 10950 5500 50  0001 C CNN
-	1    10950 5500
-	1    0    0    -1  
+P 10950 5600
+F 0 "J15" V 11050 5500 50  0000 L CNN
+F 1 "monitoring" V 11150 5350 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 10950 5600 50  0001 C CNN
+F 3 "~" H 10950 5600 50  0001 C CNN
+	1    10950 5600
+	1    0    0    1   
 $EndComp
 Wire Wire Line
-	10300 6150 10300 5500
-Wire Wire Line
-	10300 5500 10450 5500
-Wire Wire Line
 	6800 6150 10300 6150
-Wire Wire Line
-	10350 5600 10550 5600
-Wire Wire Line
-	10350 5600 10350 6200
 Wire Wire Line
 	10750 5700 10650 5700
 Wire Wire Line
@@ -2828,7 +2728,6 @@ Wire Wire Line
 	10450 5500 10750 5500
 Wire Wire Line
 	10550 5600 10550 5100
-Connection ~ 10550 5600
 Wire Wire Line
 	10550 5600 10750 5600
 Wire Wire Line
@@ -3062,10 +2961,207 @@ Wire Wire Line
 Wire Wire Line
 	5300 1550 5500 1550
 Wire Wire Line
-	3050 4850 3050 4750
-Connection ~ 3050 4750
+	2900 4850 2900 4750
+Connection ~ 2900 4750
 Wire Wire Line
-	3050 4750 3850 4750
+	2900 4750 3150 4750
+$Comp
+L Device:R R?
+U 1 1 5FB06249
+P 1400 3600
+AR Path="/5EDA53F3/5FB06249" Ref="R?"  Part="1" 
+AR Path="/5EDA5628/5FB06249" Ref="R?"  Part="1" 
+AR Path="/5FB06249" Ref="R33"  Part="1" 
+F 0 "R33" V 1193 3600 50  0000 C CNN
+F 1 "10k" V 1284 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 1330 3600 50  0001 C CNN
+F 3 "~" H 1400 3600 50  0001 C CNN
+	1    1400 3600
+	0    -1   1    0   
+$EndComp
 Wire Wire Line
-	1450 3700 1650 3700
+	1550 3600 1600 3600
+Wire Wire Line
+	1600 3600 1600 3700
+Wire Wire Line
+	1250 3600 1200 3600
+Wire Wire Line
+	1200 3600 1200 3700
+Wire Wire Line
+	1600 3700 1800 3700
+Wire Wire Line
+	1100 4750 1100 3700
+Wire Wire Line
+	1000 3700 1100 3700
+Wire Wire Line
+	1100 4750 1850 4750
+Connection ~ 1100 3700
+Wire Wire Line
+	1100 3700 1200 3700
+Wire Wire Line
+	1000 4050 1000 4100
+Connection ~ 1000 4050
+Wire Wire Line
+	10350 5500 10450 5500
+Wire Wire Line
+	10300 6150 10300 5600
+Wire Wire Line
+	10350 5500 10350 6200
+Wire Wire Line
+	10300 5600 10550 5600
+Connection ~ 10550 5600
+$Comp
+L Device:C C?
+U 1 1 5FFE381F
+P 3150 4950
+AR Path="/5EDA53F3/5FFE381F" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/5FFE381F" Ref="C?"  Part="1" 
+AR Path="/5FFE381F" Ref="C49"  Part="1" 
+F 0 "C49" H 3035 4904 50  0000 R CNN
+F 1 "100n" H 3035 4995 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3188 4800 50  0001 C CNN
+F 3 "~" H 3150 4950 50  0001 C CNN
+	1    3150 4950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 5100 3150 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5FFE3826
+P 3150 5150
+AR Path="/5EDA53F3/5FFE3826" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/5FFE3826" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE3826" Ref="#PWR017"  Part="1" 
+F 0 "#PWR017" H 3150 4900 50  0001 C CNN
+F 1 "GND" H 3155 4977 50  0000 C CNN
+F 2 "" H 3150 5150 50  0001 C CNN
+F 3 "" H 3150 5150 50  0001 C CNN
+	1    3150 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4800 3150 4750
+Connection ~ 3150 4750
+Wire Wire Line
+	3150 4750 3850 4750
+Wire Wire Line
+	8850 5650 8850 5800
+$Comp
+L Device:R R?
+U 1 1 600DEE82
+P 9150 5500
+AR Path="/5EDA53F3/600DEE82" Ref="R?"  Part="1" 
+AR Path="/5EDA5628/600DEE82" Ref="R?"  Part="1" 
+AR Path="/600DEE82" Ref="R34"  Part="1" 
+F 0 "R34" H 9220 5546 50  0000 L CNN
+F 1 "10k" H 9220 5455 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9080 5500 50  0001 C CNN
+F 3 "~" H 9150 5500 50  0001 C CNN
+	1    9150 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener D25
+U 1 1 60140EC5
+P 8300 5550
+F 0 "D25" H 8350 5450 50  0000 L CNN
+F 1 "10V" H 8150 5450 50  0000 L CNN
+F 2 "Diode_SMD:D_SMA" H 8300 5550 50  0001 C CNN
+F 3 "~" H 8300 5550 50  0001 C CNN
+	1    8300 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 601750EC
+P 8300 5800
+AR Path="/5EDA53F3/601750EC" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/601750EC" Ref="#PWR?"  Part="1" 
+AR Path="/601750EC" Ref="#PWR018"  Part="1" 
+F 0 "#PWR018" H 8300 5550 50  0001 C CNN
+F 1 "GND" H 8305 5627 50  0000 C CNN
+F 2 "" H 8300 5800 50  0001 C CNN
+F 3 "" H 8300 5800 50  0001 C CNN
+	1    8300 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 5800 8300 5700
+Wire Wire Line
+	8300 5400 8300 5200
+Connection ~ 8300 5200
+Wire Wire Line
+	8300 5200 8350 5200
+Text Label 8350 5150 1    50   ~ 0
+V_DIVIDER
+Wire Wire Line
+	3300 3700 3800 3700
+Wire Wire Line
+	2800 3700 3300 3700
+Connection ~ 3300 3700
+Wire Wire Line
+	3300 3750 3300 3700
+Wire Wire Line
+	3800 3750 3800 3700
+$Comp
+L power:GND #PWR?
+U 1 1 615DEC43
+P 3800 4100
+AR Path="/5EDA53F3/615DEC43" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/615DEC43" Ref="#PWR?"  Part="1" 
+AR Path="/615DEC43" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 3800 3850 50  0001 C CNN
+F 1 "GND" H 3805 3927 50  0000 C CNN
+F 2 "" H 3800 4100 50  0001 C CNN
+F 3 "" H 3800 4100 50  0001 C CNN
+	1    3800 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4050 3800 4100
+$Comp
+L Device:C C?
+U 1 1 615DEC3B
+P 3800 3900
+AR Path="/5EDA53F3/615DEC3B" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/615DEC3B" Ref="C?"  Part="1" 
+AR Path="/615DEC3B" Ref="C41"  Part="1" 
+F 0 "C41" H 3685 3854 50  0000 R CNN
+F 1 "100n" H 3685 3945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3838 3750 50  0001 C CNN
+F 3 "~" H 3800 3900 50  0001 C CNN
+	1    3800 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 615C554C
+P 3300 4100
+AR Path="/5EDA53F3/615C554C" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/615C554C" Ref="#PWR?"  Part="1" 
+AR Path="/615C554C" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 3300 3850 50  0001 C CNN
+F 1 "GND" H 3305 3927 50  0000 C CNN
+F 2 "" H 3300 4100 50  0001 C CNN
+F 3 "" H 3300 4100 50  0001 C CNN
+	1    3300 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4050 3300 4100
+$Comp
+L Device:C C?
+U 1 1 615C5544
+P 3300 3900
+AR Path="/5EDA53F3/615C5544" Ref="C?"  Part="1" 
+AR Path="/5EDA5628/615C5544" Ref="C?"  Part="1" 
+AR Path="/615C5544" Ref="C40"  Part="1" 
+F 0 "C40" H 3185 3854 50  0000 R CNN
+F 1 "100n" H 3185 3945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3338 3750 50  0001 C CNN
+F 3 "~" H 3300 3900 50  0001 C CNN
+	1    3300 3900
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
