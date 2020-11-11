@@ -12,13 +12,11 @@ do
 
     filename=${filename_with_extension%.*}
 
-    # convert .tex to .png 
+    # convert .tex to .pdf
 
     pdflatex $filename.tex
     touch $filename-tmp.pdf
     pdfcrop $filename.pdf $filename-tmp.pdf
-    pdftoppm -png -r 800 $filename-tmp.pdf $filename
-
 
     # convert .tex to .png 
 

@@ -4,11 +4,16 @@
 
 <img src="../../Documentation/Diagrams/ArchitectureHighVoltagePowerSupply.svg"  width="100%">
 
-## Assumptions
+## Render of the PCB
+
+![render of the device](./Documentation/Pictures/render_10_11_2020.png)
+
+## Assumptions about used elements
 
 - All elements in Cockcroft–Walton generator should be rated 150V or more.
 - All resistors in voltage divider should be rated 150V or more and have the same temperature coefficient.
 - op-amp should be input/output rail to rail, low noise, low input bias currents, unity gain (e.g. [MCP6V51](https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V51-Data-Sheet-DS20006136A.pdf))
+- Transformer should be shielded (to avoid EMI), turns ratio 1:10. I've choose [GA3459-BL](http://www.farnell.com/datasheets/1870439.pdf), alternative that I was considering too was [ATB322515](https://product.tdk.com/info/en/catalog/datasheets/trans_atb3225_en.pdf). Search on the Internet for "capacitor charger transformer" or "photoflash transformer" to see similar transformers.
 
 ## PCB clearance 
 
@@ -21,12 +26,3 @@ Distance  between each multiplier stage and ground :
 1100V - 500V = 600V
 0.25 mm + (600V * 0.0025 mm) = 
 0.25  + (600 * 0.0025) = 1.75mm
-
-## Transformer
-
-Transformer should be shielded (to avoid EMI), turns ratio 1:10.
-
-I've choose [GA3459-BL](http://www.farnell.com/datasheets/1870439.pdf), alternative that I was considering too was [ATB322515](https://product.tdk.com/info/en/catalog/datasheets/trans_atb3225_en.pdf).
-
-Search on the Internet for "capacitor charger transformer" or "photoflash transformer" to see similar transformers.
-

@@ -31,18 +31,13 @@ Parts for 3D printing and model of the whole device were designed in OpenSCAD [[
 
 ## Hardware
 
-Values of elements of high voltage power supply were calculated using model made in Octave  [[more info]](./Simulation/Octave/README.md).
+- [Details about photomultiplier principles](./Hardware/README.md)
+- [Details about acquisition module (in progress)](./Hardware/DataAcquisition/README.md)
+- [Details about HV power supply module](./Hardware/HighVoltagePowerSupply/README.md). Values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
 
 Placement of components that are important to be close to photomultiplier tube was generated automatically using python script  [[more info]](./Hardware/PhotomultiplierConnector/PolarCoordinateComponentPlacer/README.md).
 
 PCB was created using KiCAD.
-
-- [Details about photomultiplier principles [in progress]](./Hardware/README.md)
-- [Details acquisition module [to be done]](./Hardware/DataAcquisition/README.md)
-
-Below is a render of PCB for HV power supply [[more info]](./Hardware/HighVoltagePowerSupply/README.md)
-
-![render of the device](./Documentation/Pictures/render_10_11_2020.png)
 
 ## Software
 
