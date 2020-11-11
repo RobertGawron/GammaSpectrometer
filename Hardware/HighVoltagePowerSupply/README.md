@@ -6,7 +6,7 @@
 
 ## Render of the PCB
 
-![render of the device](./Documentation/Pictures/render_10_11_2020.png)
+![render of the device](../../Documentation/Pictures/render_10_11_2020.png)
 
 ## Assumptions about used elements
 
