@@ -41,7 +41,7 @@ PCB was created using KiCAD.
 
 ## Software
 
-TBD
+[Details about software architecture.](./Documentation/UML/README.md)
 
 ## Hazards
 
