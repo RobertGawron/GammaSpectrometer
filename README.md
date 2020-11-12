@@ -31,17 +31,17 @@ Parts for 3D printing and model of the whole device were designed in OpenSCAD [[
 
 ## Hardware
 
-- [Details about photomultiplier principles](./Hardware/README.md)
-- [Details about acquisition module (in progress)](./Hardware/DataAcquisition/README.md)
-- [Details about HV power supply module](./Hardware/HighVoltagePowerSupply/README.md). Values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
+- [Documentation of photomultiplier principles](./Hardware/README.md)
+- [Documentation of acquisition module (in progress)](./Hardware/DataAcquisition/README.md)
+- [Documentation of HV power supply module](./Hardware/HighVoltagePowerSupply/README.md). Note: values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
 
 Placement of components that are important to be close to photomultiplier tube was generated automatically using python script  [[more info]](./Hardware/PhotomultiplierConnector/PolarCoordinateComponentPlacer/README.md).
 
-PCB was created using KiCAD.
+PCBs were designed in KiCAD.
 
 ## Software
 
-TBD
+[Details about software architecture.](./Documentation/UML/README.md)
 
 ## Hazards
 
