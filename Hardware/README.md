@@ -19,11 +19,12 @@ Use microcontroller's ADC?
 
 ## Setting value of tube's polarization voltage
 
-One value is enoughm choose according to tube datasheet
+One value is enough choose according to tube datasheet
 
 ## Microcontroller
 
-Arduino Uno
+[PIC32MZ0512EFE064-I/PT](https://www.mouser.com/datasheet/2/268/PIC32MZ-EF-_Family-DS60001320F-1545741.pdf)
+
 
 ## User Interface
 

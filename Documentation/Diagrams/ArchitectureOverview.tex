@@ -23,7 +23,7 @@
         \node (photomultiplier) [system, below=of scintillator] {Photomultiplier Tube};	
 		\node (hwpower) [system, left=of photomultiplier] {Polarization Power Supply\\ (1100V DC)};
 	
-		\node (cpu) [system, below=of photomultiplier] {Acquisition};
+		\node (cpu) [system, below=of photomultiplier] {Acquisition\\ (PIC32MZ0512EFE064-I/PT)};
 		\node (gui) [system, right=of cpu] {User Interface\\ (Arduino Uno 2.4 inch \\ TFT LCD Shield)};		
 
 		\node (pi) [system, below=of cpu] {Data processing and firmware flashing\\ (RaspberryPi 3B)};
