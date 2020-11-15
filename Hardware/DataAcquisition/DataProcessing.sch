@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 3
+Sheet 3 4
 Title "EEG signal processing"
 Date ""
 Rev "1.0"
@@ -32,17 +32,6 @@ F 3 "~" H 4850 2500 50  0001 C CNN
 	1    4850 2500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3600 4850 3600 4900
-Wire Wire Line
-	3600 4900 3650 4900
-Wire Wire Line
-	3700 4900 3700 4850
-Wire Wire Line
-	3650 4950 3650 4900
-Connection ~ 3650 4900
-Wire Wire Line
-	3650 4900 3700 4900
 Wire Wire Line
 	4050 2700 4050 2650
 $Comp
@@ -324,8 +313,6 @@ Wire Wire Line
 	4200 3750 4550 3750
 Wire Wire Line
 	4200 3650 4550 3650
-Wire Wire Line
-	4200 4550 4550 4550
 Connection ~ 5850 4050
 Wire Wire Line
 	4200 4050 5850 4050
@@ -333,13 +320,7 @@ Connection ~ 5500 4150
 Wire Wire Line
 	4200 4150 5500 4150
 Wire Wire Line
-	4550 4350 4200 4350
-Wire Wire Line
-	4550 4250 4200 4250
-Wire Wire Line
 	4550 3950 4200 3950
-Wire Wire Line
-	4200 4450 4550 4450
 Wire Wire Line
 	4550 3150 4200 3150
 Wire Wire Line
@@ -468,10 +449,6 @@ F 3 "~" H 5050 6700 50  0001 C CNN
 	1    5050 6700
 	0    1    -1   0   
 $EndComp
-Text Label 4550 4450 0    50   ~ 0
-SWDIO
-Text Label 4550 4550 0    50   ~ 0
-SWCLK
 Text Label 5250 6700 0    50   ~ 0
 SWCLK
 Text Label 5250 6600 0    50   ~ 0
@@ -516,17 +493,6 @@ Text GLabel 2700 4050 0    50   Output ~ 0
 CS
 Text GLabel 4550 3750 2    50   Output ~ 0
 MISO
-$Comp
-L MCU_ST_STM32F0:STM32F030K6Tx U?
-U 1 1 5DC98A9F
-P 3700 3850
-F 0 "U?" H 3250 4800 50  0000 C CNN
-F 1 "STM32F030K6Tx" H 3200 4700 50  0000 C CNN
-F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 3200 2950 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 3700 3850 50  0001 C CNN
-	1    3700 3850
-	1    0    0    -1  
-$EndComp
 Text Notes 800  2250 0    79   ~ 16
 STM32 VDD = 2.4 to 3.6 V
 Wire Wire Line
@@ -758,28 +724,6 @@ Wire Wire Line
 	6200 4050 6400 4050
 $Comp
 L Connector:TestPoint TP?
-U 1 1 5F0F4B62
-P 4550 4350
-F 0 "TP?" V 4550 4550 50  0000 L CNN
-F 1 "TestPoint" V 4550 4750 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4750 4350 50  0001 C CNN
-F 3 "~" H 4750 4350 50  0001 C CNN
-	1    4550 4350
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5F0F5518
-P 4550 4250
-F 0 "TP?" V 4550 4450 50  0000 L CNN
-F 1 "TestPoint" V 4550 4650 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4750 4250 50  0001 C CNN
-F 3 "~" H 4750 4250 50  0001 C CNN
-	1    4550 4250
-	0    1    1    0   
-$EndComp
-$Comp
-L Connector:TestPoint TP?
 U 1 1 5F0F5A50
 P 4550 3950
 F 0 "TP?" V 4550 4150 50  0000 L CNN
@@ -816,19 +760,6 @@ Wire Wire Line
 Connection ~ 2850 4150
 Wire Wire Line
 	2850 4150 2700 4150
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5F1139DC
-P 4550 4650
-F 0 "TP?" V 4550 4850 50  0000 L CNN
-F 1 "TestPoint" V 4550 5050 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4750 4650 50  0001 C CNN
-F 3 "~" H 4750 4650 50  0001 C CNN
-	1    4550 4650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4200 4650 4550 4650
 $Comp
 L Connector:TestPoint TP?
 U 1 1 5F0DAD75
@@ -969,17 +900,6 @@ F 3 "" H 1550 4000 50  0001 C CNN
 $EndComp
 $Comp
 L power:GND #PWR?
-U 1 1 5F14090B
-P 3650 4950
-F 0 "#PWR?" H 3650 4700 50  0001 C CNN
-F 1 "GND" H 3655 4777 50  0000 C CNN
-F 2 "" H 3650 4950 50  0001 C CNN
-F 3 "" H 3650 4950 50  0001 C CNN
-	1    3650 4950
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
 U 1 1 5F146141
 P 950 3750
 F 0 "#PWR?" H 950 3500 50  0001 C CNN
@@ -1090,4 +1010,15 @@ F 3 "" H 5850 3600 50  0001 C CNN
 $EndComp
 Text GLabel 4550 3150 2    50   Output ~ 0
 HV_EN
+$Comp
+L DataAcquisition:MCP33131-10 U?
+U 1 1 5FB16C07
+P 6550 4850
+F 0 "U?" H 6575 4411 50  0000 C CNN
+F 1 "MCP33131-10" H 6575 4320 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 6950 5150 50  0001 C CNN
+F 3 "https://www.tme.eu/Document/a5a4283a1bfa7721eddf2e7bc5de5352/MCP33131-MCP33121-MCP33111.pdf" H 6950 5150 50  0001 C CNN
+	1    6550 4850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
