@@ -1,73 +1,72 @@
-## User constant parameters
-f_osc = 800e3;
-v_cathode = 1.2e3;
-v_in = 12;
-v_out=v_cathode/12;
-i_out = 20e-3;
-v_divider = 2.5;
-r_divider_top = 500e6;
-
-## Chip constant parameters
-minimum_off_time = 60e-9;
-v_cesat = 300e-3;
-v_d = 600e-3;
-n = 0.88;
-i_min_riple = 98e-3;
-i_lim = 2.4;
-v_fb = 1.215;
-
-### Calculate r_t
-r_t = ((91.9 / (f_osc / 1e6))) * 1e3;
-
-### Calculate r_fb
-r_fb = abs(v_out - 1.215) / 83.3e-6;
-
-### Calculate r_divider_bottom
-r_divider_bottom = r_divider_top * (1 / ((v_cathode / v_divider) - 1));
-
-### Calculate duty_cycle_max
-t_p = 1 / f_osc;
-duty_cycle_max = (t_p - minimum_off_time) / t_p;
-
-### Calculate duty_cycle
-duty_cycle = (v_out - v_in + v_d) / (v_out + v_d - v_cesat);
-
-### Calculate l_min
-l_min = duty_cycle * v_in / (2 * f_osc * (i_lim - (abs(v_out) * i_out)/(v_in * n)));
-
-### Calculate l_min_to_avoid_subharmonic
-l_min_to_avoid_subharmonic = v_in * ((2 * duty_cycle) - 1) / ((1 - duty_cycle) * f_osc);
-
-## Calculate l_max
-l_max = ((v_in - v_cesat)/(i_min_riple)) * (duty_cycle / f_osc);
-
-### Calculate i_peak
-l1=l_min_to_avoid_subharmonic;
-i_peak = abs(v_out * i_out) / (v_in * n) + (v_in * duty_cycle)/(2 * l1 * f_osc);
+%% Input parameters
 
 
-## Show results
+v_in = 5; % input voltage
+v_out = 1.1e3; % PMT cathode voltage
+i_out = 10e-5; % PMT current
+v_divider = 2.5; % output voltage of the fedback voltage divider
+r_divider_top = 50e6; % upper resistor value in the fedback voltage divider
+f_osc = 1e4; % frequency of oscilator
+
+
+%% Bottom resistor value of the fedback voltage divider
+r_divider_bottom = r_divider_top * (1 / ((v_out / v_divider) - 1));
+
+%% Total power consumption
+pmt_power = i_out * v_out;
+efficiency = 0.7; %% assumed value for flyback topology 
+total_power_consumption = pmt_power / efficiency;
+
+%% np/ns is transformer turn ratio
+n_p = v_in;
+n_s = v_out;
+
+%% Output voltage seen by the primary side
+v_prim = v_out * (n_p / n_s);
+
+%% Duty cycle
+d_c = v_prim / (v_prim + v_in);
+
+%% Peak current flowing in primary transformer winding
+i_peak_secondary = (2 * i_out) / (1 - d_c);
+
+%% Peak current flowing in primary transformer winding
+i_peak_primary = i_peak_secondary * (n_s / n_p);
+
+%% Time when the switching transistor is on
+t_on = (1 / f_osc) * d_c;
+
+%% Inductance of the primary transformer winding
+l_primary = v_in * t_on / i_peak_primary;
+
+%% Inductance of the secondary transformer winding
+l_secondary= ((n_s/n_p)^2) * l_primary;
+
+%% Minimum GS voltage of the switching transistor
+mosfet_drain_source_min = v_prim + v_in;
+
+
+%% Show results
 printf("-------- %s --------\n", strftime("%Y-%m-%d %H:%M:%S", localtime(time())))
 
 printf("\n-------- User constant parameters:\n");
-printf("f_osc: %.3f Hz\n", f_osc);
 printf("v_in: %.3f V\n", v_in);
-
-printf("v_cathode: %.3e V\n", v_cathode);
-printf("v_cathode: %.3e V\n", i_out);
+printf("v_out: %.3e V\n", v_out);
+printf("i_out: %.3e A\n", i_out);
+printf("efficiency: %.3e\n", efficiency);
 printf("v_divider: %.3e V\n", v_divider);
 printf("r_divider_top: %.3e Ohm\n", r_divider_top);
 
 printf("\n-------- Calculated parameters:\n");
-printf("duty_cycle_max: %.3e s\n", duty_cycle_max);
-printf("duty_cycle: %.3e s\n", duty_cycle);
-printf("r_t: %.3e Ohm\n", r_t);
-printf("r_fb: %.3e Ohm\n", r_fb);
-printf("v_divider: %.3e V\n", v_divider);
+printf("total_power_consumption: %.3e W\n", total_power_consumption);
 printf("r_divider_bottom: %.3e Ohm\n", r_divider_bottom);
-printf("l_min: %.3e H\n", l_min)
-printf("l_min_to_avoid_subharmonic: %.3e H\n", l_min_to_avoid_subharmonic)
-printf("l_max: %.3e H\n", l_max)
-printf("i_peak: %.3e A\n", i_peak)
+printf("n_p / n_s = %.3e / %.3e\n", n_p, n_s);
+printf("d_c: %.3e\n", d_c);
+printf("i_peak_secondary: %.3e A\n", i_peak_secondary);
+printf("i_peak_primary: %.3e A\n", i_peak_primary);
+printf("t_on: %.3e s\n", t_on);
+printf("l_primary: %.3e H\n", l_primary);
+printf("l_secondary: %.3e H\n", l_secondary);
+printf("mosfet_drain_source_min: %.3e V\n", mosfet_drain_source_min);
 
 printf("-------------------------------------\n\n");
