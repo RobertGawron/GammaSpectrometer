@@ -9,6 +9,10 @@ Calculations are based on:
 - [Voltage divider](https://en.wikipedia.org/wiki/Voltage_divider) - feedback voltage divider.
 - [What is the transformer inductance ratio? How is it determined?](https://www.quora.com/What-is-the-transformer-inductance-ratio-How-is-it-determined) - inductance of the secondary transformer winding.
 - [SMPSChart](https://www.we-online.fr/web/fr/index.php/show/media/07_electronic_components/news_1/blog/midcom_blog_photos/SMPSChart.pdf) - efficiency of the converter.
+- [Flyback Switchmode PSU for Powering Legacy Equipment 
+](http://www.g4jnt.com/HV_SMPSU.pdf) - calculating minimum turns on primary side of transformer.
+- [Input and Output Capacitor Selection](https://www.ti.com/lit/an/slta055/slta055.pdf?ts=1605600750266) - calculating input bulk and ceramic capacitors.
+
 
 ## Usage
 
