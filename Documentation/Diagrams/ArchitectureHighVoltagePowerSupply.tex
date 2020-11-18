@@ -19,22 +19,15 @@
 	\pgfsetlayers{background,main}
 	
 		\node (vcc) [system] {Power Supply\\ (12V DC)};
-		\node (currentlevel) [component, right=of vcc] {Current Measurement};
-		
-        \node (converter) [component, right=of currentlevel] {DC/DC Converter\\ (LT3580)};	
-        \node (multiplier) [component, right=of converter] {Cockcroft–Walton Generator};	
-	    \node (vout) [system, right=of multiplier] {Output Voltage\\ (1100V DC)};
-        \node (feedback) [component, below=of multiplier] {Voltage Level Feedback\\ (Voltage Divider + MCP6V51 Buffers)};
 
-
-        \node (voltagemonitor) [system, below=of vout] {External\\ Voltage Monitor};
-        \node (currentmonitor) [system, below=of voltagemonitor] {External\\ Current Monitor};
+		\node (currentlevel) [component, right=of vcc] {Input Current\\ Measurement};
+        \node (converter) [component, right=of currentlevel] {DC/DC Converter\\ (Flyback Topology)};	
         
-        \node (poweronoff) [system, below=of vcc] {Generator On/Off};
-
+		\node (vout) [system, right=of converter] {Output Voltage\\ (1100V DC)};       
+        \node (driver) [system, below=of vcc] {External Driver};
 
 		\begin{pgfonlayer}{background}
-		\node[system, draw, thick, inner xsep=1em, inner ysep=1em, fit= (currentlevel) (converter) (multiplier) (feedback)] {};
+		\node[system, draw, thick, inner xsep=1em, inner ysep=1em, fit= (currentlevel) (converter)] {};
 		\end{pgfonlayer}
 
 		% Connectors
@@ -42,20 +35,10 @@
 		
             \draw [arrow] (vcc) -- (currentlevel);
             \draw [arrow] (currentlevel) -- (converter);
-            \draw [arrow] (converter) -- (multiplier);
-            \draw [arrow] (multiplier) -- (vout);
-            
-            \draw [arrow] (multiplier) -- (feedback);
-            \draw [arrow] (feedback.west) -- ++(0,0) -| (converter.south);
-            \draw [arrow] (feedback) -- (voltagemonitor);
-
-
-
-            \draw [arrow] (currentlevel.south) -- ++(0,0) |- (currentmonitor.west);
-
-
-
-            \draw [arrow] (poweronoff.east) -- ++(0,0) -| ([xshift=-20]converter.south);
+            \draw [arrow] (converter) -- (vout);	
+			\draw [arrow] (currentlevel.south) -| ++(0,0) |- ([yshift=20]driver.east);
+			\draw [arrow] (converter.south) -| ++(0,0)  |- node[anchor=north, minimum width=.25cm, draw=none]{{Output Voltage Measurement}}  (driver.east);
+			\draw [arrow] ([yshift=-20]driver.east) |- ++(0,0) -| node[anchor=west, minimum width=.25cm, draw=none]{{Driving signal}} ([xshift=20]converter.south);
 	    \end{scope}
 \end{tikzpicture}
 \end{document}
