@@ -2,8 +2,8 @@
 
 
 v_in = 12; % input voltage
-v_out = 1.1e3; % output voltage
-i_out = 10e-5; % output current
+v_out = 1.5e3; % output voltage
+i_out = 280e-6; % output current ( https://www.osti.gov/servlets/purl/1117124#:~:text=The%20charge%20amplifier%20is%20a,converts%20it%20to%20a%20voltage.&text=Vbias%20is%20a%20DC%20voltage,are%20referenced%20to%20this%20voltage. )
 v_divider = 2.5; % output voltage of the fedback voltage divider
 r_divider_top = 50e6; % upper resistor value in the fedback voltage divider
 f_osc = 3e4; % frequency of oscilator
