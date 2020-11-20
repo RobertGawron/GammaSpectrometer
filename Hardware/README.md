@@ -5,6 +5,8 @@
 
 Sodium Iodide Crystal will be used. Plastic "crystals" are cheaper, but have poor pulse height resolution. Other crystals are better but much harder to obtain and more expensive.
 
+TBD optical grease.
+
 ## Power supply for photomultiplier tube
 
 - PHT needs around 1000V-1200V DC [[example datasheet #1]](https://datasheetspdf.com/pdf-file/95080/HamamatsuCorporation/1P28/1), [[example datasheet #2]](https://datasheetspdf.com/pdf-file/959054/HAMAMATSU/R10699/1). Higher voltages increases sensitivity and decreases lifetime.
@@ -40,3 +42,4 @@ A photodiode will be placed in PMT enclosure, HV Power Supply should operate onl
 
 - How to set C+R values in charge amplifier?
 - Is the microcontroller sufficient in processing power?
+- Noise (dark current) needs more analysis
