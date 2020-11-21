@@ -1,1 +1,4 @@
-.*scg
+*.scg
+*.wrl
+*.FCStd1
+*.stl
