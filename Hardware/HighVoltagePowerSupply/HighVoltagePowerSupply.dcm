@@ -8,4 +8,9 @@ $CMP MCP6V51
 F https://ww1.microchip.com/downloads/en/DeviceDoc/MCP6V51-Data-Sheet-DS20006136A.pdf
 $ENDCMP
 #
+$CMP RM8
+D handmade transformer
+F https://www.tdk-electronics.tdk.com/inf/80/db/fer/rm_8.pdf
+$ENDCMP
+#
 #End Doc Library
