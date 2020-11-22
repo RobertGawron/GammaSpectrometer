@@ -1504,4 +1504,31 @@ F 3 "" H 9950 5600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9950 5600 9950 5550
+$Comp
+L Device:RF_Shield_Two_Pieces J5
+U 1 1 5FBAEC54
+P 4650 6350
+F 0 "J5" H 5380 6414 50  0000 L CNN
+F 1 "RF_Shield_Two_Pieces" H 5380 6323 50  0000 L CNN
+F 2 "HighVoltagePowerSupply:3710.16" H 4650 6250 50  0001 C CNN
+F 3 "https://www.tme.eu/Document/8721c1e12f28e68114c83752997c605d/3710.pdf" H 4650 6250 50  0001 C CNN
+	1    4650 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FBAFB71
+P 4650 6800
+AR Path="/5EDA53F3/5FBAFB71" Ref="#PWR?"  Part="1" 
+AR Path="/5EDA5628/5FBAFB71" Ref="#PWR?"  Part="1" 
+AR Path="/5FBAFB71" Ref="#PWR022"  Part="1" 
+F 0 "#PWR022" H 4650 6550 50  0001 C CNN
+F 1 "GND" H 4655 6627 50  0000 C CNN
+F 2 "" H 4650 6800 50  0001 C CNN
+F 3 "" H 4650 6800 50  0001 C CNN
+	1    4650 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6800 4650 6750
 $EndSCHEMATC
