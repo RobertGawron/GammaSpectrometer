@@ -1,0 +1,38 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GammaSpectrometer:PIC32MZ0512EFE064 U2
+U 1 1 5FBBA8A7
+P 4500 1450
+F 0 "U2" H 4425 1625 50  0000 C CNN
+F 1 "PIC32MZ0512EFE064" H 4425 1534 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64-1EP_10x10mm_P0.5mm_EP6.5x6.5mm" H 4500 1500 50  0001 C CNN
+F 3 "" H 4500 1500 50  0001 C CNN
+	1    4500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GammaSpectrometer:MCP33131-10 U3
+U 1 1 5FBBB2A7
+P 8650 5150
+F 0 "U3" H 8675 4711 50  0000 C CNN
+F 1 "MCP33131-10" H 8675 4620 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 9050 5450 50  0001 C CNN
+F 3 "" H 9050 5450 50  0001 C CNN
+	1    8650 5150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
