@@ -14,6 +14,8 @@ Least significant bit (LSB) voltage:
 
 ```Q = 2.5V / (2^16) = 35uV```
 
+MFB Filter should use unity-gain stable, VFB op amp.
+
 ## High Voltage Power Supply
 
 ## Architecture
