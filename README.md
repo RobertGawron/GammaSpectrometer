@@ -32,8 +32,7 @@ Parts for 3D printing and model of the whole device were designed in OpenSCAD [[
 ## Hardware
 
 - [Documentation of photomultiplier principles](./Hardware/README.md)
-- [Documentation of acquisition module (in progress)](./Hardware/DataAcquisition/README.md)
-- [Documentation of HV power supply module](./Hardware/HighVoltagePowerSupply/README.md). Note: values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
+- [Documentation of acquisition and HV power supply](./Hardware/GammaSpectrometer/README.md). Note: values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
 
 PCBs were designed in KiCAD.
 
