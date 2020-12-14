@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -1275,28 +1275,6 @@ F 3 "~" H 8800 4700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5FE347F4
-P 10650 2750
-F 0 "J2" H 10804 2662 50  0000 R CNN
-F 1 "anode" H 11000 2600 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 10650 2750 50  0001 C CNN
-F 3 "~" H 10650 2750 50  0001 C CNN
-	1    10650 2750
-	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J3
-U 1 1 5FE347FA
-P 10650 3150
-F 0 "J3" H 10804 3062 50  0000 R CNN
-F 1 "cathode" H 11000 3000 50  0000 R CNN
-F 2 "TestPoint:TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded" H 10650 3150 50  0001 C CNN
-F 3 "~" H 10650 3150 50  0001 C CNN
-	1    10650 3150
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:C C?
 U 1 1 5FE34806
 P 8500 1500
@@ -1367,36 +1345,8 @@ Wire Wire Line
 Connection ~ 8400 1300
 Wire Wire Line
 	8400 1300 8500 1300
-$Comp
-L Device:R R?
-U 1 1 5FE34829
-P 10150 2750
-AR Path="/5EDA53F3/5FE34829" Ref="R?"  Part="1" 
-AR Path="/5EDA5628/5FE34829" Ref="R?"  Part="1" 
-AR Path="/5FE34829" Ref="R?"  Part="1" 
-AR Path="/5FBBA154/5FE34829" Ref="R9"  Part="1" 
-F 0 "R9" V 9943 2750 50  0000 C CNN
-F 1 "TBD" V 10034 2750 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10080 2750 50  0001 C CNN
-F 3 "~" H 10150 2750 50  0001 C CNN
-	1    10150 2750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10300 2750 10450 2750
 Wire Wire Line
 	8500 1700 8800 1700
-$Comp
-L Device:L L2
-U 1 1 5FE34831
-P 9650 2750
-F 0 "L2" V 9840 2750 50  0000 C CNN
-F 1 "TBD" V 9749 2750 50  0000 C CNN
-F 2 "Inductor_SMD:L_10.4x10.4_H4.8" H 9650 2750 50  0001 C CNN
-F 3 "https://www.tme.eu/Document/18f8a623126e52c1b46a51bde1bd900b/SDR1006.pdf" H 9650 2750 50  0001 C CNN
-	1    9650 2750
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	8800 1350 8800 1300
 Wire Wire Line
@@ -1418,33 +1368,7 @@ F 3 "~" H 8800 1500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	9900 2800 9900 2750
-Wire Wire Line
-	9900 3100 9900 3150
-$Comp
-L Device:C C?
-U 1 1 5FE3484A
-P 9900 2950
-AR Path="/5EDA53F3/5FE3484A" Ref="C?"  Part="1" 
-AR Path="/5EDA5628/5FE3484A" Ref="C?"  Part="1" 
-AR Path="/5FE3484A" Ref="C?"  Part="1" 
-AR Path="/5FBBA154/5FE3484A" Ref="C23"  Part="1" 
-F 0 "C23" H 10015 2904 50  0000 L CNN
-F 1 "10n/2kV" H 10015 2995 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P7.50mm" H 9938 2800 50  0001 C CNN
-F 3 "~" H 9900 2950 50  0001 C CNN
-	1    9900 2950
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9800 2750 9900 2750
-Connection ~ 9900 2750
-Wire Wire Line
-	9900 2750 10000 2750
-Wire Wire Line
-	9900 3150 10450 3150
-Wire Wire Line
-	8800 1300 9350 1300
+	8800 1300 10050 1300
 $Comp
 L Device:C C?
 U 1 1 5FE34861
@@ -1678,21 +1602,10 @@ Wire Wire Line
 Connection ~ 8800 2750
 Connection ~ 8800 3450
 Wire Wire Line
-	8800 3850 8800 4500
-Connection ~ 8800 3850
-Connection ~ 8800 4500
+	10050 1300 10050 2550
 Wire Wire Line
-	9350 1300 9350 2750
-Wire Wire Line
-	9350 2750 9500 2750
-Wire Wire Line
-	8800 4900 9350 4900
-Wire Wire Line
-	9350 4900 9350 3150
-Wire Wire Line
-	9350 3150 9900 3150
+	8800 4900 10050 4900
 Connection ~ 8800 4900
-Connection ~ 9900 3150
 $Comp
 L power:PWR_FLAG #FLG05
 U 1 1 601F2683
@@ -1764,4 +1677,32 @@ Wire Wire Line
 	7000 3850 8500 3850
 Wire Wire Line
 	7050 3450 7650 3450
+Wire Wire Line
+	10050 4900 10050 3150
+Wire Wire Line
+	8800 4500 9750 4500
+Wire Wire Line
+	9750 4500 9750 2950
+Wire Wire Line
+	9750 2950 10350 2950
+Connection ~ 8800 4500
+Wire Wire Line
+	10050 2550 10350 2550
+Wire Wire Line
+	10050 3150 10350 3150
+Text GLabel 10350 2550 2    50   Input ~ 0
+HV+
+Text GLabel 10350 3150 2    50   Input ~ 0
+HV_REG-
+Text GLabel 10350 2950 2    50   Input ~ 0
+HV_REG+
+Wire Wire Line
+	8800 3850 9550 3850
+Wire Wire Line
+	9550 3850 9550 2750
+Wire Wire Line
+	9550 2750 10350 2750
+Connection ~ 8800 3850
+Text GLabel 10350 2750 2    50   Input ~ 0
+HV-
 $EndSCHEMATC
