@@ -26,7 +26,7 @@ F0 "DataAcquisition" 50
 F1 "DataAcquisition.sch" 50
 $EndSheet
 $Sheet
-S 5450 3800 500  150 
+S 3650 3300 500  150 
 U 5FDE08B1
 F0 "HighVoltageStabilizer" 50
 F1 "HighVoltageStabilizer.sch" 50
