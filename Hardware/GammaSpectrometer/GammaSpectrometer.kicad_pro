@@ -313,6 +313,7 @@
     ],
     "rule_severities": {
       "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
       "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
@@ -380,19 +381,7 @@
         "nets": [
           "Net-(C11-Pad1)",
           "Net-(C11-Pad2)",
-          "Net-(C12-Pad2)",
-          "Net-(C14-Pad2)",
-          "Net-(D1-Pad2)",
-          "Net-(J1-Pad1)",
-          "Net-(J2-Pad1)",
-          "Net-(R11-Pad1)",
-          "Net-(R11-Pad2)",
-          "Net-(R12-Pad2)",
-          "Net-(R13-Pad2)",
-          "Net-(R14-Pad2)",
-          "Net-(R5-Pad2)",
-          "Net-(R6-Pad2)",
-          "Net-(R7-Pad2)"
+          "Net-(J2-Pad1)"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -403,7 +392,7 @@
       }
     ],
     "meta": {
-      "version": 0
+      "version": 1
     },
     "net_colors": null
   },
@@ -419,6 +408,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
     "drawing": {
       "default_bus_thickness": 12.0,
       "default_junction_size": 40.0,
@@ -442,6 +432,8 @@
     },
     "net_format_name": "",
     "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
@@ -455,6 +447,23 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "e8361ea0-4c20-4b62-a056-62975103d6f5",
+      ""
+    ],
+    [
+      "00000000-0000-0000-0000-00005fbba5a8",
+      "DataAcquisition"
+    ],
+    [
+      "00000000-0000-0000-0000-00005fbba154",
+      "HighVoltagePowerSupply"
+    ],
+    [
+      "00000000-0000-0000-0000-00005fde08b1",
+      "HighVoltageStabilizer"
+    ]
+  ],
   "text_variables": {}
 }

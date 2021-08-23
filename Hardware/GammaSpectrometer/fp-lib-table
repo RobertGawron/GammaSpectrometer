@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name GammaSpectrometer)(type KiCad)(uri ${KIPRJMOD}/GammaSpectrometer.pretty)(options "")(descr ""))
-)
