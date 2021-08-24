@@ -378,11 +378,7 @@
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "high voltage",
-        "nets": [
-          "Net-(C11-Pad1)",
-          "Net-(C11-Pad2)",
-          "Net-(J2-Pad1)"
-        ],
+        "nets": [],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.8,
@@ -463,6 +459,10 @@
     [
       "00000000-0000-0000-0000-00005fde08b1",
       "HighVoltageStabilizer"
+    ],
+    [
+      "a99730d5-b4bf-403c-b255-5e295a773bd5",
+      "Mechanic"
     ]
   ],
   "text_variables": {}
