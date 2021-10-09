@@ -8,6 +8,7 @@
   )
 
 
+
   (wire (pts (xy 55.88 58.42) (xy 64.77 58.42))
     (stroke (width 0) (type solid) (color 0 0 0 0))
     (uuid aa0f0b54-9062-4822-9d1d-eee51a779bab)
