@@ -36,7 +36,7 @@ PCBs were designed in KiCAD.
 
 ## Software
 
-For more information about the software architecture, [see the UMLs I made](./Documentation/UML/README.md).
+For more information about the software architecture, [see the UMLs I made](./Software/README.md).
 
 ## Hazards
 
