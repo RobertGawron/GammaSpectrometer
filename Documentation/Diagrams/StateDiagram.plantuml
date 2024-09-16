@@ -1,0 +1,12 @@
+@startuml
+[*] --> Survival_Mode
+Survival_Mode --> Initialisation
+Initialisation --> Calibrating
+Initialisation --> Measurement_Collection
+Measurement_Collection --> Measurement_Collection
+Calibrating --> Measurement_Collection
+
+Initialisation --> Error_Detected
+Calibrating --> Error_Detected
+Measurement_Collection --> Error_Detected
+@enduml
