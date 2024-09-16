@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+actor "User" as local_user
+actor "Developer" as developer
+
+package "Gamma Spectrometer" as spectrometer {
+    usecase "Change Measured Sample" as change_sample
+    usecase "Power on/off" as power_on_off
+    usecase "Change Mode" as change_mode
+    usecase "Read Measurements" as read_measurements
+    usecase "Check Device Temperature" as check_temp
+    usecase "Update Firmware" as flash_firmware
+    usecase "Calibrate" as calibrate_spectrometer
+    usecase "View Error Logs" as view_error_logs
+}
+
+' Extended Use Cases for Dependencies
+read_measurements .> change_mode : <<includes>>
+calibrate_spectrometer .> change_mode : <<includes>>
+
+note right of change_mode: Switch between INIT/RUN/CALIBRATION
+note right of check_temp: Monitor temperature from sensor tube,\nHV power supply, MCU
+
+
+local_user --> change_sample
+local_user --> power_on_off
+local_user --> change_mode
+local_user --> read_measurements
+local_user --> check_temp
+local_user --> calibrate_spectrometer
+local_user --> view_error_logs
+
+developer --> power_on_off
+developer --> flash_firmware
+@enduml
