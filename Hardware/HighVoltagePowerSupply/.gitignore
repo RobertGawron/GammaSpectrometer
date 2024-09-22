@@ -1,0 +1,23 @@
+# Ignore backup folder
+HighVoltagePowerSupply-backups/
+
+# Ignore session/prl files (stores UI layout, last open tabs, etc.)
+*.kicad_prl
+
+# Ignore cache files (footprint cache)
+fp-info-cache
+
+# Ignore KiCad swap files (temporary files when editing)
+*.kicad_swp
+
+# Ignore KiCad lock files (prevents multiple instances of the file from being opened)
+~HighVoltagePowerSupply.kicad_sch.lck
+~HighVoltagePowerSupply.kicad_pcb.lck
+
+# Ignore auto-saved schematic files (created by KiCad for recovery)
+_autosave-HighVoltagePowerSupply.kicad_sch
+
+# Ignore auto-saved files folder (temporary files generated during editing)
+\#auto_saved_files#
+
+*autosave*
