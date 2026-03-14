@@ -1,0 +1,78 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 5500 2650 2    50   Input ~ 0
+TUBE_POWER_SUPPLY_POSITIVE
+Text GLabel 5450 2950 2    50   Input ~ 0
+TUBE_POWER_SUPPLY_NEGATIVE
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5FDA5A73
+P 4650 2650
+F 0 "J1" H 4758 2831 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 4758 2740 50  0000 C CNN
+F 2 "" H 4650 2650 50  0001 C CNN
+F 3 "~" H 4650 2650 50  0001 C CNN
+	1    4650 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5FDA5E95
+P 4650 2950
+F 0 "J2" H 4758 3131 50  0000 C CNN
+F 1 "Conn_01x01_Male" H 4758 3040 50  0000 C CNN
+F 2 "" H 4650 2950 50  0001 C CNN
+F 3 "~" H 4650 2950 50  0001 C CNN
+	1    4650 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2650 5400 2650
+Wire Wire Line
+	4850 2950 5400 2950
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5FDA783E
+P 5400 2550
+F 0 "#FLG01" H 5400 2625 50  0001 C CNN
+F 1 "PWR_FLAG" H 5400 2723 50  0000 C CNN
+F 2 "" H 5400 2550 50  0001 C CNN
+F 3 "~" H 5400 2550 50  0001 C CNN
+	1    5400 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5FDA7D37
+P 5400 3050
+F 0 "#FLG02" H 5400 3125 50  0001 C CNN
+F 1 "PWR_FLAG" H 5400 3223 50  0000 C CNN
+F 2 "" H 5400 3050 50  0001 C CNN
+F 3 "~" H 5400 3050 50  0001 C CNN
+	1    5400 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 2550 5400 2650
+Connection ~ 5400 2650
+Wire Wire Line
+	5400 2650 5500 2650
+Wire Wire Line
+	5400 3050 5400 2950
+Connection ~ 5400 2950
+Wire Wire Line
+	5400 2950 5450 2950
+$EndSCHEMATC
