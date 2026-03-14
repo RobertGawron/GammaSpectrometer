@@ -1,0 +1,43 @@
+@startuml
+skinparam componentStyle rectangle
+skinparam linetype ortho
+
+title Gamma Spectrometer - System Architecture
+
+skinparam package {
+    BackgroundColor<<detector>> #LightGreen
+    BackgroundColor<<analog>> #LightBlue
+    BackgroundColor<<digital>> #LightYellow
+}
+
+[Radioactive Sample] as Sample
+
+package "Detector Assembly" <<detector>> {
+    [Scintillation Crystal] as Crystal
+    [Photodiode] as Photodiode
+    [Photodiode Bias Voltage] as Bias
+}
+
+package "Analog Signal Chain" <<analog>> {
+    [Charge Preamplifier] as Preamp
+    [Pulse Shaper] as Shaper
+    [Peak Detector / Sample-and-Hold] as PeakDetect
+}
+
+package "Digital Processing" <<digital>> {
+    [Microcontroller / ADC Board] as MCU
+    [UART/USB Communication] as Comm
+}
+
+' Signal flow
+Sample ---> Crystal : gamma rays
+Crystal --> Photodiode : photons
+Photodiode ---> Preamp : current pulse
+Preamp --> Shaper : voltage pulse
+Shaper --> PeakDetect : shaped pulse
+PeakDetect ---> MCU : peak amplitude
+MCU --> Comm : spectrum data
+
+' Bias connection
+Bias --> Photodiode
+@enduml

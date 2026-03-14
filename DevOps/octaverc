@@ -1,0 +1,44 @@
+% ============================================================
+% Octave Configuration
+% Gamma Spectrometer Analysis Environment
+% ============================================================
+
+% Graphics backend
+graphics_toolkit('gnuplot');
+
+% Disable pager
+more off;
+
+% Display format
+format long;
+
+% Default figure settings
+set(0, 'defaultfigureposition', [100 100 1200 800]);
+set(0, 'defaultlinelinewidth', 2);
+set(0, 'defaultaxesfontsize', 12);
+set(0, 'defaulttextfontsize', 12);
+
+% Set working directory
+cd /workspace;
+
+% Startup message
+disp(' ');
+disp('════════════════════════════════════════════════════════');
+disp('  Octave - Gamma Spectrometer Analysis Environment');
+disp('════════════════════════════════════════════════════════');
+disp(' ');
+disp('Workspace:     /workspace');
+disp('Notebooks:     /workspace/notebooks/');
+disp('Scripts:       /workspace/scripts/');
+disp('Data:          /workspace/data/');
+disp('Results:       /workspace/results/');
+disp('LTspice Data:  /workspace/ltspice-data/ (read-only)');
+disp(' ');
+disp('Installed Octave packages:');
+
+% List packages
+pkg list;
+
+disp(' ');
+disp('════════════════════════════════════════════════════════');
+disp(' ');

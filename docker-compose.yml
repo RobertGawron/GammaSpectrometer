@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  gammaspec-dev:
+    build:
+      context: ./DevOps
+      dockerfile: Dockerfile
+    image: gammaspec/unified-dev:v2.0
+    container_name: gammaspec-dev
+    hostname: gammaspec-dev
+    
+    ports:
+      - "5901:5901"
+      - "6080:6080"
+      - "8888:8888"
+    
+    volumes:
+      - .:/workspace
+    
+    environment:
+      - VNC_RESOLUTION=3072x1920
+      - VNC_COL_DEPTH=24
+      - JUPYTER_PORT=8888
+      - VNC_PORT=5901
+      - NOVNC_PORT=6080
+      - TZ=UTC
+    
+    restart: unless-stopped
+    
+    # Override entrypoint for debugging
+    # entrypoint: ["/bin/bash", "-c", "tail -f /dev/null"]
