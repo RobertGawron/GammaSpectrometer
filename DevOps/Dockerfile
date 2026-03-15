@@ -104,9 +104,9 @@ RUN git clone --depth 1 https://github.com/novnc/noVNC.git /opt/novnc && \
 # ============================================================
 # Install Additional Octave Packages via pkg
 # ============================================================
-RUN octave --eval "pkg install -forge symbolic" || true && \
-    octave --eval "pkg install -forge struct" || true && \
-    octave --eval "pkg install -forge parallel" || true
+RUN octave --eval "pkg install -forge symbolic" && \
+    octave --eval "pkg install -forge struct" && \
+    octave --eval "pkg install -forge parallel"
 
 # ============================================================
 # Install Python Scientific Stack + Jupyter
@@ -162,10 +162,10 @@ RUN mkdir -p /home/developer/.vnc && \
 # ============================================================
 USER root
 
-COPY octaverc /home/developer/.octaverc
+COPY DevOps/octaverc /home/developer/.octaverc
 RUN chown developer:developer /home/developer/.octaverc
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY DevOps/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh && \
     chown developer:developer /usr/local/bin/entrypoint.sh
 
@@ -178,8 +178,6 @@ WORKDIR /workspace
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
     CMD pgrep -f "jupyter|Xtigervnc" > /dev/null || exit 1
-
-VOLUME ["/workspace"]
 
 USER developer
 

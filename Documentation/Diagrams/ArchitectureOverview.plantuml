@@ -13,9 +13,9 @@ skinparam package {
 [Radioactive Sample] as Sample
 
 package "Detector Assembly" <<detector>> {
-    [Scintillation Crystal] as Crystal
-    [Photodiode] as Photodiode
-    [Photodiode Bias Voltage] as Bias
+    component "Scintillation Crystal\n(NaI(Tl))" as Crystal
+    component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as Photodiode
+    component "29V DC Bias Voltage\n(LT1930A+TPS7A4901DGNR)" as Bias
 }
 
 package "Analog Signal Chain" <<analog>> {

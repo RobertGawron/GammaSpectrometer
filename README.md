@@ -1,4 +1,4 @@
-# GammaSpectrometer
+# PIN Photodiode Gamma Spectrometer
 
 **This project is unfinished.**
 
@@ -16,19 +16,19 @@ Sampling data over time and plotting its histogram reveals which radioactive iso
 
 Tools: KiCad.
 
-# Software
+## Software
 
 TBD
 
-# Mechanical
+## Mechanical
 
 Tools: OpenSCAD and FreeCAD.
 
-# Simulation
+## Simulation
 
 * Parts of the electronic circuit were simulated using LTspice, [click here for more details](./Simulation/LTspice/README.md).
 
-# DevOps
+## DevOps
 
 TBD
 
