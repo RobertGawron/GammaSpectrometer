@@ -17,7 +17,7 @@
 cd ~/Documents/GammaSpectrometer
 
 # Build and start
-docker-compose up -d --build
+docker-compose build
 
 # View logs
 docker-compose logs -f gammaspec-dev

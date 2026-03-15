@@ -39,7 +39,9 @@ start_vnc() {
         -localhost no \
         --I-KNOW-THIS-IS-INSECURE \
         2>&1 | tee /tmp/vnc.log
-
+    
+    VNC_EXIT_CODE=${PIPESTATUS[0]}
+    
     if [ $VNC_EXIT_CODE -ne 0 ]; then
         echo "[VNC] ✗ VNC server failed to start (exit code: $VNC_EXIT_CODE)"
         echo "[VNC] Log output:"
