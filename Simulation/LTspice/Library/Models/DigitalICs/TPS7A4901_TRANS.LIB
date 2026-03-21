@@ -1,0 +1,149 @@
+*$
+*TPS7A4901
+*****************************************************************************
+* (C) Copyright 2017, 2015 Texas Instruments Incorporated. All rights reserved.
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of
+** merchantability or fitness for a particular purpose. The model is
+** provided solely on an "as is" basis. The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+** Released by: WEBENCH Design Center, Texas Instruments Inc.
+* Part: TPS7A4901
+* Date: 28FEB2017 
+* Model Type: Transient
+* Simulator: PSPICE
+* Simulator Version: 16.2.0.p001
+* EVM Order Number: TPS7A30-49EVM-567
+* EVM Users Guide:  SLVU405–August 2010 
+* Datasheet: SBVS121E –AUGUST 2010–REVISED MAY 2015
+*
+* Model Version: Final 1.2
+*
+*****************************************************************************
+*
+* Updates:1.2
+*<Made this change to the model>
+*          1. Model has been updated to support for inverting configuration.
+*
+*          
+* Final 1.1
+* Released to Web
+* Updates:1.1
+*<Made this change to the model>
+*          1. The model has been updated using New template.
+*          2. Dropout measurement done with respect to IOUT
+* Final 1.00
+* Released to Web
+*
+*****************************************************************************
+.SUBCKT TPS7A4901_TRANS  PwPd EN FB IN NC NR DNC OUT GND
+R_R13         0 PWPD  1e6  
+E_ABM1         N799364 0 VALUE { {MIN(V(N798163), (V(Vzz_INT)+(ILIM*ROUT)))}   
++  }
+V_Vload         VZZ OUT 0Vdc
+X_F1    N506750 VZZ N506376 VYY TPS7A4901_F1 
+E_E11         V_FBK 0 VALUE { V(FB, GND) }
+R_R1         VXX N506376  {RINP}  
+R_R11         DNC IN  1e6  
+R_R2         N506318 VXX  {PSRR*RINP}  
+R_R12         GND DNC  1e6  
+X_S2    N506546 0 IN N506376 TPS7A4901_S2 
+C_C1         VXX N506376  {1/(6.28*RINP*POLE)}  
+R_U1_R9         U1_N7715581 NR  1m  
+X_U1_U2         IN_PRE U1_N627863 U1_N6278133 U1_UVLO_OK COMPHYS_BASIC_GEN
++  PARAMS: VDD=1 VSS=0 VTHRESH=0.5
+X_U1_U1         EN_INT U1_N628879 U1_N628829 U1_EN_OK COMPHYS_BASIC_GEN PARAMS:
++  VDD=1 VSS=0 VTHRESH=0.5
+C_U1_C4         0 VIN_EN_OK  1u IC=0 
+R_U1_R4         U1_N629335 U1_N628541  10 TC=0,0 
+R_U1_R8         U1_N769717 NR  280k TC=0,0 
+X_U1_U4         U1_N672242 N506318 d_d PARAMS:
+E_U1_E5         U1_N769717 GND VALUE { V(U1_N15847249, 0) }
+V_U1_V3         U1_N6278133 0 {UHYS}
+X_U1_U3         VIN_EN_OK U1_N630277 d_d PARAMS:
+V_U1_V1         U1_N628829 0 {EHYS}
+C_U1_C2         0 U1_N628541  1n  
+C_U1_C3         GND N506318  1n IC=0 
+V_U1_V4         U1_N627863 0 {UVLO}
+V_U1_V5         GND U1_N672242 -5.5m
+V_U1_V2         U1_N628879 0 {VENB}
+E_U1_E8         U1_DROP 0 TABLE { V(LOAD, 0) } 
++ ( (0,0) (0.1m,50m) (5m,80m) (10m,100m) (15m,120m) (150m,330m) )
+C_U1_C5         GND U1_N7715581  1n IC=0 TC=0,0 
+E_U1_ABM6         U1_N629219 0 VALUE { IF(V(VIN_EN_OK)>0.5, V(U1_NR_INT), 0)   
++  }
+R_U1_R2         GND U1_N628541  1G  
+E_U1_ABM5         U1_N629917 0 VALUE { MIN(V(U1_N628541),  
++ MAX(V(IN_PRE)-V(U1_DROP), 0))   }
+E_U1_E6         U1_NR_INT 0 VALUE { V(NR, GND) }
+E_U1_ABM9         U1_N630277 0 VALUE { if( V(U1_UVLO_OK) > 0.5 & V(U1_EN_OK) >
++  0.5,1,0)    }
+E_U1_ABM4         U1_N629335 0 VALUE { V(U1_N628493)  
++ * (ABS(V(OUT_INT)) + 1e-6)  
++ / (ABS(V(V_FBK)) + 1e-6)  }
+R_U1_R3         U1_N629219 U1_N628493  {3.333e5*SQRT(TTRN)} TC=0,0 
+R_U1_R1         GND U1_N628493  1G  
+E_U1_E4         U1_N6294851 GND VALUE { V(U1_N629917, 0) }
+E_U1_ABM10         U1_N15847249 0 VALUE { IF(V(VIN_EN_OK)>0.5,{VREF},0)    }
+R_U1_R6         U1_N630277 VIN_EN_OK  {80/0.693} TC=0,0 
+C_U1_C1         0 U1_N628493  {1e-6*SQRT(TTRN)} IC=0 
+R_U1_R5         U1_N6294851 N506318  10 TC=0,0 
+R_R14         0 PWPD  1e6  
+C_C2         VXX N506318  {1/(6.28*PSRR*RINP*ZERO)}  
+R_R9         NC IN  1e6  
+R_R6         N506754 VYY  10 TC=0,0 
+E_E6         IN_PRE 0 VALUE { V(IN, GND) }
+E_ABM2         LOAD 0 VALUE { I(V_Vload)    }
+E_E15         OUT_INT 0 VALUE { V(OUT, GND) }
+X_U4         GND OUT d_d PARAMS:
+C_C5         N506376 GND  0.5n IC=0 
+R_R5         N506750 VYY  {ROUT}  
+C_C3         GND VYY  1n  
+R_R8         VIN_EN_OK N506546  10 TC=0,0 
+R_R10         GND NC  1e6  
+E_E12         N798163 0 VALUE { V(VXX, GND) }
+E_E14         VZZ_INT 0 VALUE { V(VZZ, GND) }
+E_E5         EN_INT 0 VALUE { V(EN, GND) }
+C_C4         0 N506546  1u  
+E_E13         N506754 GND VALUE { V(N799364, 0) }
+.PARAM  psrr=224u uvlo=2.95 venb=2.1 ilim=390m pole=500 zero=100k rinp=1e7
++  ttrn=1u rout=1m vref=1.192 ehys=1.7 uhys=0.05
+.ENDS TPS7A4901_TRANS
+*$
+.subckt TPS7A4901_F1 1 2 3 4  
+F_F1         3 4 VF_F1 1
+VF_F1         1 2 0V
+.ends TPS7A4901_F1
+*$
+.subckt TPS7A4901_S2 1 2 3 4  
+S_S2         3 4 1 2 _S2
+RS_S2         1 2 1G
+.MODEL         _S2 VSWITCH Roff=100 Ron=10 Voff=0.1V Von=0.9V
+.ends TPS7A4901_S2
+*$
+.SUBCKT COMPHYS_BASIC_GEN INP INM HYS OUT PARAMS: VDD=1 VSS=0 VTHRESH=0.5	
+EIN INP1 INM1 INP INM 1 
+EHYS INP1 INP2 VALUE { IF( V(1) > {VTHRESH},-V(HYS),0) }
+EOUT OUT 0 VALUE { IF( V(INP2)>V(INM1), {VDD} ,{VSS}) }
+R1 OUT 1 1
+C1 1 0 5n
+RINP1 INP1 0 1K
+.ENDS COMPHYS_BASIC_GEN
+*$
+.SUBCKT D_D1 1 2
+D1 1 2 DD1
+.MODEL DD1 D( IS=1e-15 TT=10p Rs=0.05 N=.1  )
+.ENDS D_D1
+*$
+.subckt d_d 1 2
+d1 1 2 dd
+.model dd d
++ is=1e-015
++ n=0.01
++ tt=1e-011
+.ends d_d
+*$

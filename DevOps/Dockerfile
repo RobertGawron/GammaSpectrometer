@@ -63,10 +63,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     octave-optim \
     octave-io \
     liboctave-dev \
-    # Plotting and Visualization
+    # Plotting and Visualization (CHOOSE ONE gnuplot backend!)
     gnuplot \
-    gnuplot-x11 \
+    gnuplot-qt \
     ghostscript \
+    texlive \
+    texlive-latex-extra \
     # VNC Server and Desktop Environment
     tigervnc-standalone-server \
     tigervnc-common \
@@ -104,9 +106,9 @@ RUN git clone --depth 1 https://github.com/novnc/noVNC.git /opt/novnc && \
 # ============================================================
 # Install Additional Octave Packages via pkg
 # ============================================================
-RUN octave --eval "pkg install -forge symbolic" && \
-    octave --eval "pkg install -forge struct" && \
-    octave --eval "pkg install -forge parallel"
+RUN octave --no-gui --eval "pkg install -forge symbolic" && \
+    octave --no-gui --eval "pkg install -forge struct" && \
+    octave --no-gui --eval "pkg install -forge io"
 
 # ============================================================
 # Install Python Scientific Stack + Jupyter
@@ -126,7 +128,10 @@ RUN pip3 install --no-cache-dir --upgrade pip && \
     plotly \
     seaborn \
     h5py \
-    openpyxl
+    openpyxl \
+    ltspice \
+    PyLTSpice \
+    kaleido
 
 # ============================================================
 # Configure Jupyter
