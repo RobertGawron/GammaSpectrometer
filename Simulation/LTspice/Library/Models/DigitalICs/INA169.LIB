@@ -1,0 +1,137 @@
+
+*INA169
+*****************************************************************************
+* (C) Copyright 2011 Texas Instruments Incorporated. All rights reserved.       
+*****************************************************************************
+** This model is designed as an aid for customers of Texas Instruments.
+** TI and its licensors and suppliers make no warranties, either expressed
+** or implied, with respect to this model, including the warranties of 
+** merchantability or fitness for a particular purpose.  The model is
+** provided solely on an "as is" basis.  The entire risk as to its quality
+** and performance is with the customer.
+*****************************************************************************
+*
+* This model is subject to change without notice. Texas Instruments
+* Incorporated is not responsible for updating this model.
+*
+*****************************************************************************
+*
+** Released by: Analog eLab Design Center, Texas Instruments Inc.
+* Part: INA169
+* Date: 15JUL2011
+* Model Type: ALL IN ONE
+* Simulator: PSPICE
+* Simulator Version: 16.0.0.p001
+* EVM Order Number: N/A
+* EVM Users Guide: N/A
+* Datasheet: SBOS181D – DECEMBER 2000 – REVISED NOVEMBER 2005
+*
+* Model Version: 1.0
+*
+*****************************************************************************
+* 
+* Updates:
+*
+* Version 1.0 : 
+* Release to Web
+*
+*****************************************************************************
+* OPERATING NOTES
+*
+* MODEL TEMPERATURE RANGE IS -55 C TO +150 C, NOT ALL PARAMETERS ACCURATELY TRACK 
+* THOSE OF AN ACTUAL INA169 OVER THE FULL TEMPERATURE RANGE BUT ARE AS CLOSE AS PRACTICAL
+*
+* BEGIN MODEL INA169
+*
+* OPERATING NOTES
+*
+* THE INTERNAL OFFSET SOURCE, V71 IS SET
+* AT 1 MILLIVOLT SO THE OUTPUT STAGE IS
+* ENOUGH ON WITH ZERO SIGNAL TO GIVE THE
+* PROPER BANDWIDTH IN AN AC ANALYSIS WITH
+* NO INPUT SIGNAL PRESENT. THIS WILL GIVE
+* SLIGHTLY LARGER THAN TYPICAL OUTPUT
+* ERRORS. FOR TYPICAL OUTPUT ERRORS CHANGE
+* V71 TO 0.35 MILLIVOLT.
+*
+* MODEL FEATURES
+* THIS MODEL FEATURES INPUT RANGE, OUTPUT
+* SWING, OUTPUT COMPLIANCE, BANDWIDTH,
+* GAIN VS RL, CMRR VS FREQ, PSRR VS FREQ,
+* SETTLING TIME, QUIESCENT CURRENT AND
+* QUIESCENT CURRENT VERSUS SUPPLY VOLTAGE,
+* OUTPUT CURRENT DRAWN THROUGH THE SUPPLY,
+* OUTPUT IMPEDANCE, INPUT OFFSET, INPUT
+* BIAS CURRENT, AND NOISE.
+*
+* PINOUT ORDER OUT GND VIN+ VIN- V+
+* PINOUT ORDER  1   2    3    4   5
+*
+.SUBCKT INA169 1 2 3 4 5
+V71 11 9 1E-3
+Q1 6 7 8 QPI
+Q2 7 7 8 QPI
+Q3 7 7 9 QPI
+Q4 10 7 9 QPI
+R1 8 3 1E3
+R2 11 4 1E3
+Q5 12 12 5 QPI
+Q6 13 12 5 QPI
+Q7 6 14 15 QI
+Q8 5 6 14 QI
+Q9 13 16 15 QI
+Q10 5 10 16 QI
+Q11 10 17 15 QI
+Q12 8 13 18 QI
+Q13 18 18 13 QI
+I1 14 15 5E-6
+I2 7 15 5E-6
+I3 16 15 5E-6
+R3 18 1 500
+I4 12 15 20E-6
+R5 19 13 8E3
+C1 10 19 1.5E-12
+C6 15 1 5E-12
+C7 1 5 0.5E-12
+E2 20 14 5 0 0.15E-6
+E3 17 20 3 0 -2.5E-6
+D1 15 8 DD
+D2 15 11 DD
+D3 8 21 DD
+D4 11 21 DD
+D5 5 21 DD
+D6 15 5 DD
+D7 1 21 DD
+D8 15 1 DD
+R10 15 21 1E9
+R11 20 17 1E9
+R12 14 20 1E9
+L1 15 2 1N
+R13 15 2 10
+C8 15 3 1E-12
+C9 15 4 1E-12
+I18 0 22 1E-3
+D16 22 0 DD
+V74 23 22 -0.658
+R15 0 23 10E3
+G3 5 15 23 0 -65E-6
+I19 15 5 5E-6
+.MODEL DD D IS=3.0E-14 BV=90 RS=10
+.MODEL QI NPN
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=300E-12 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.MODEL QPI PNP
++IS=1E-15 BF=200 BR=0.1 NF=1 NR=1 EG=1.2056 ISE=1E-17
++NE=1.5 ISC=1E-17 NC=1.5 VAF=125 VAR=15 IKF=6E-3 RB=1.2E3
++RBM=65 RE=5 IKR=6E-3 IRB=60E-6 RC=750 CJE=0.5E-12 VJE=0.77
++MJE=0.3 CJC=0.6E-12 VJC=0.64 MJC=0.425 CJS=0.05E-12 VJS=0.58
++MJS=0.5  FC=0 XCJC=1 TF=50E-9 TR=1E-6 XTF=1
++VTF=0 ITF=10E-3 PTF=5 XTI=2.3
++ XTB=1.5 KF=0.16E-15 AF=1
+.ENDS
+* END MODEL INA169
