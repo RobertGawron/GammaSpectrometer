@@ -20,7 +20,7 @@ workspace.json
 _autosave-*
 *.gbr
 *.drl
-*.pdf
+*.rpt
 *.txt
 *.csv
 /plots/
@@ -28,3 +28,6 @@ _autosave-*
 /bom/
 *.kicad_prl
 *-backups/
+bom/
+production/
+fabrication-toolkit-options.json

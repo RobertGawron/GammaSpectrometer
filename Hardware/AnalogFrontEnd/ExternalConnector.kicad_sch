@@ -1,0 +1,107 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e40f1150-52bc-44d5-84d9-3577436d1b5e")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 66.04 78.74 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1bf38419-7f87-4549-b755-6449560ca76a")
+	)
+	(hierarchical_label "V_EE"
+		(shape input)
+		(at 67.31 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "53ec5177-e81f-4d74-8d63-5197835c4410")
+	)
+	(hierarchical_label "SIPM_TEMP"
+		(shape input)
+		(at 39.37 66.04 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "543f5d7c-f77d-4efa-bba2-7e28a1e7122b")
+	)
+	(hierarchical_label "ADC_IN"
+		(shape input)
+		(at 57.15 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "60211796-96ce-4d33-8894-283aa39ddf9b")
+	)
+	(hierarchical_label "VCC_SIPM_RAW"
+		(shape input)
+		(at 54.61 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d052d65-c4fd-4558-95b0-7840729ca993")
+	)
+	(hierarchical_label "VCC_SIPM_TEMP_COMP"
+		(shape input)
+		(at 43.18 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ab7e5a38-9399-4877-981d-06fd48d22306")
+	)
+	(hierarchical_label "V_CC"
+		(shape input)
+		(at 64.77 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bc2dad80-e13e-45ee-9da5-6f87c724bd5a")
+	)
+	(hierarchical_label "VCC_SIPM_EN"
+		(shape input)
+		(at 67.31 73.66 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c1d93eb9-bbb4-485b-9faa-ad22d022b099")
+	)
+	(hierarchical_label "FAULT_SIPM_LIGHTED"
+		(shape input)
+		(at 60.96 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ebbb62d7-77df-4fbf-8b35-91888673a2a1")
+	)
+)

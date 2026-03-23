@@ -1,0 +1,58 @@
+* ═══════════════════════════════════════════════════
+* SIPM_60035_PULSE - Transient/Pulse Analysis Model
+* ═══════════════════════════════════════════════════
+* Use for:
+* - TIA design
+* - Pulse shaping testing
+* - Signal chain simulation
+* - Timing analysis
+*
+* Pins:
+* K = Cathode (connect to +29V bias)
+* A = Anode (connect to TIA inverting input)
+*
+* Note: Add external I_GAMMA source to simulate photon events
+*
+* Usage:
+* .include SIPM_60035_PULSE.lib
+* XU1 K A SIPM_60035_PULSE
+* I_GAMMA 0 A EXP(0 100u 1u 1n 1.1u 50n)
+* ═══════════════════════════════════════════════════
+
+.subckt SIPM_60035_PULSE K A
+
+* ═══════════════════════════════════════
+* Parameters
+* ═══════════════════════════════════════
+.param IDARK25 = 1u
+.param CSIPM = 3400p
+.param RSERIES = 100
+.param VBR25 = 24.5
+.param TCVBR = 21.5m
+.param TCGAIN = -0.008
+.param TCDCR = 10
+
+* ═══════════════════════════════════════
+* Temperature Calculations
+* ═══════════════════════════════════════
+.param VBR_T = {VBR25 + TCVBR * (TEMP - 25)}
+.param GAIN_MULT = {1 + TCGAIN * (TEMP - 25)}
+.param IDARK_T = {IDARK25 * PWR(2, (TEMP - 25) / TCDCR)}
+
+* ═══════════════════════════════════════
+* Circuit Elements
+* ═══════════════════════════════════════
+
+* Series resistance sits between the external Cathode and the internal junction
+R_SERIES K JUNCTION {RSERIES * (1 + 0.004 * (TEMP - 25))}
+
+* Junction capacitance is inside the device, behind the series resistor
+C_SIPM JUNCTION A {CSIPM}
+
+* DC leakage path (prevents floating nodes and helps SPICE math convergence)
+R_LEAK JUNCTION A 1000Meg
+
+* Dark current
+G_DARK JUNCTION A VALUE={IDARK_T * V(JUNCTION,A) / 29}
+
+.ends SIPM_60035_PULSE

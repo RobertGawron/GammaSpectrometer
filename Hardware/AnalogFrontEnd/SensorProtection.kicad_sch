@@ -1,0 +1,41 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "3afd3dae-fd15-4614-b3b7-89139df5a85c")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "VCC_SIPM_STABILIZED"
+		(shape input)
+		(at 125.73 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5df051d5-b7a0-409b-b705-800b9b290a40")
+	)
+	(hierarchical_label "VCC_SIPM_PROT"
+		(shape input)
+		(at 119.38 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b4201064-bf55-4e02-af99-3f96568b7d07")
+	)
+	(hierarchical_label "FAULT_SIPM_LIGHTED"
+		(shape input)
+		(at 123.19 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eae151e3-917f-49c9-ad8d-5309c8472244")
+	)
+)

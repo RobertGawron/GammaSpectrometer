@@ -1,0 +1,71 @@
+.subckt MCR100_8 A G K
+* MCR100-8 Sensitive Gate SCR
+* A=Anode, G=Gate, K=Cathode
+*
+* Key specs modeled:
+* - VDRM = 600V (MCR100-8)
+* - IGT = 200µA (gate trigger current)
+* - VGT = 0.8V (gate trigger voltage)
+* - IH = 5mA (holding current)
+* - VTM = 1.7V @ 1A (on-state voltage)
+* - IT(RMS) = 0.8A max
+
+* Two-transistor latch structure
+Qpnp A n1 K Qpmod
+Qnpn n1 n2 K Qnmod
+
+* Gate resistor - sets IGT ~200µA
+* VGT/IGT = 0.8V/200µA = 4kΩ
+Rg G n2 500
+
+* Gate-cathode shunt - sets holding current ~5mA
+Rgk n2 K 4k
+
+* Anode stability resistor - improves dv/dt behavior (20V/µs spec)
+Rs n1 A 50k
+
+* Gate protection diode (reverse gate voltage limit 5V)
+Dgk K G Dgkmod
+
+* PNP model - lower gain for realistic holding current
+.model Qpmod PNP(
++ BF=15
++ IS=1e-13
++ ISE=1e-12
++ NE=1.5
++ BR=1
++ RC=0.5
++ RE=0.1
++ VAF=100
++ BV=600
++ IBV=100u
++ CJC=20p
++ CJE=30p
++ TF=100n
++ TR=1u)
+
+* NPN model - higher gain, sensitive gate
+.model Qnmod NPN(
++ BF=150
++ IS=1e-13
++ ISE=1e-12
++ NE=1.5
++ BR=1
++ RC=0.3
++ RE=0.05
++ VAF=100
++ BV=600
++ IBV=100u
++ CJC=15p
++ CJE=25p
++ TF=50n
++ TR=500n)
+
+* Gate protection diode model
+.model Dgkmod D(
++ IS=1e-14
++ BV=5
++ IBV=100u
++ RS=10)
+
+.ends MCR100_8

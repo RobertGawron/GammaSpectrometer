@@ -10,7 +10,7 @@ LTspice download URL: https://www.analog.com/en/resources/design-tools-and-calcu
 
 Notes:
 
-* It works on Windows and macOS natively but can be launched on Linux using Wine as well.
+* LTspice works on Windows and macOS natively but can be launched on Linux using Wine as well.
 * Maybe KiCad could be used as well (it has a simulation option in recent releases), but since LTspice is an industry standard, I will stick to it.
 
 ## Project Structure

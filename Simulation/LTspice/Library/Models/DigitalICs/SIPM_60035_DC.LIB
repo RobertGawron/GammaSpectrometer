@@ -1,0 +1,66 @@
+* ═══════════════════════════════════════════════════
+* SIPM_60035_DC - DC/Static Analysis Model
+* ═══════════════════════════════════════════════════
+* Use for:
+*   - Bias circuit design
+*   - Protection circuit testing
+*   - Power consumption analysis
+*   - DC operating point
+*
+* Pins:
+*   K = Cathode (connect to +29V bias)
+*   A = Anode (connect to TIA input)
+*
+* Usage:
+*   .include SIPM_60035_DC.lib
+*   XU1 K A SIPM_60035_DC
+* ═══════════════════════════════════════════════════
+
+.subckt SIPM_60035_DC K A
+
+* ═══════════════════════════════════════
+* Parameters
+* ═══════════════════════════════════════
+.param ILOAD = 2m
+.param IDARK25 = 1u
+.param CSIPM = 3400p
+.param RSERIES = 100
+.param VBR25 = 24.5
+.param TCVBR = 21.5m
+.param TCGAIN = -0.008
+.param TCDCR = 10
+
+* ═══════════════════════════════════════
+* Temperature Calculations
+* ═══════════════════════════════════════
+.param VBR_T = {VBR25 + TCVBR * (TEMP - 25)}
+.param GAIN_MULT = {1 + TCGAIN * (TEMP - 25)}
+.param IDARK_T = {IDARK25 * PWR(2, (TEMP - 25) / TCDCR)}
+
+* ═══════════════════════════════════════
+* Circuit Elements
+* ═══════════════════════════════════════
+
+* Junction capacitance
+C_SIPM K A {CSIPM}
+
+* Series resistance
+R_SERIES K INT {RSERIES * (1 + 0.004 * (TEMP - 25))}
+
+* Dark current
+G_DARK K A VALUE={IDARK_T * V(K,A) / 29}
+
+* DC photocurrent (constant)
+G_PHOTO INT A VALUE={ILOAD * GAIN_MULT}
+
+* Convergence helper
+R_CONV K A 1000Meg
+
+* ═══════════════════════════════════════
+* Info Nodes
+* ═══════════════════════════════════════
+V_VBR_INFO VBR_INFO 0 DC {VBR_T}
+V_IDARK_INFO IDARK_INFO 0 DC {IDARK_T * 1Meg}
+V_GAIN_INFO GAIN_INFO 0 DC {GAIN_MULT}
+
+.ends SIPM_60035_DC

@@ -1,0 +1,30 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "7b027ad7-df74-4f7b-a7be-0e3dd5e62674")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "SIPM_PULSE_RAW"
+		(shape input)
+		(at 99.06 115.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "090eab58-8ded-4e86-b5e3-7f4bc270d3cb")
+	)
+	(hierarchical_label "ADC_IN"
+		(shape input)
+		(at 80.01 97.79 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "73d88a09-4b7e-4502-8b33-53fec7612746")
+	)
+)

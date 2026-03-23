@@ -1,30 +1,42 @@
-# Gamma Spectrometer Development Environment
+# Development Environment
 
 ## Overview
 
-**Single unified Docker image** containing:
-- ✅ Octave + Scientific packages
-- ✅ Jupyter Notebook + Lab (with Octave kernel)
-- ✅ VNC + noVNC web interface
-- ✅ Development tools (tree, git, vim, etc.)
+Docker image contains:
+* Octave + Scientific packages
+* Jupyter Notebook + Lab (with Octave kernel)
+* VNC + noVNC web interface (to access Octave)
+* Development tools (tree, git, vim, etc.)
 
-## Quick Start
+## Prerequires
 
-### Build and Start
+Docker installed on host machine.
+
+### Build image
+
+From project root:
 
 ```bash
-# From project root
-cd ~/Documents/GammaSpectrometer
-
-# Build and start
 docker-compose build
+```
 
-# View logs
-docker-compose logs -f gammaspec-dev
+### Run the image
 
-# Check status
-docker-compose ps
+```bash
+docker-compose build
+```
+
+### Usage
+
+# Jupyter Notebook
+
+From host machin access via web browser:
+
+http://localhost:8888/
+
+# Octave
+
+From host machin access via web browser:
 
 http://localhost:6080/vnc_lite.html
 
-http://localhost:8888/lab/tree/docker-compose.yml

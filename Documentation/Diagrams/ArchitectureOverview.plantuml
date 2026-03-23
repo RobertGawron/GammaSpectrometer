@@ -5,39 +5,55 @@ skinparam linetype ortho
 title Gamma Spectrometer - System Architecture
 
 skinparam package {
-    BackgroundColor<<detector>> #LightGreen
     BackgroundColor<<analog>> #LightBlue
     BackgroundColor<<digital>> #LightYellow
 }
 
 [Radioactive Sample] as Sample
 
-package "Detector Assembly" <<detector>> {
+package "Analog Frontend" <<analog>> {
     component "Scintillation Crystal\n(NaI(Tl))" as Crystal
-    component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as Photodiode
-    component "29V DC Bias Voltage\n(LT1930A+TPS7A4901DGNR)" as Bias
+    component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as SiPM
+    component "29V DC Bias Supply\n(TPS7A4901)" as Bias
+    component "Transimpedance Amplifier\n(LTC6268)" as TIA
+    component "Differential ADC Driver\n(LTC6363)" as DiffDriver
+    component "Temperature Sensing" as TempSense
+    component "Overlight Protection" as Protection
 }
 
-package "Analog Signal Chain" <<analog>> {
-    [Charge Preamplifier] as Preamp
-    [Pulse Shaper] as Shaper
-    [Peak Detector / Sample-and-Hold] as PeakDetect
+package "Processing and Power" <<digital>> {
+    component "30V DC-DC Boost\n(LT1930)" as Boost
+    component "ADC 12-bit 65 MSPS\n(AD9226)" as ADC
+    component "FPGA\n(iCE40HX4K)" as FPGA
+    component "SPI Flash\n(Bitstream Storage)" as Flash
+    component "UART to USB\nCommunication" as Comm
 }
 
-package "Digital Processing" <<digital>> {
-    [Microcontroller / ADC Board] as MCU
-    [UART/USB Communication] as Comm
-}
+actor "User\n(PC Software)" as User
 
-' Signal flow
-Sample ---> Crystal : gamma rays
-Crystal --> Photodiode : photons
-Photodiode ---> Preamp : current pulse
-Preamp --> Shaper : voltage pulse
-Shaper --> PeakDetect : shaped pulse
-PeakDetect ---> MCU : peak amplitude
-MCU --> Comm : spectrum data
+' Main signal flow (green, bold, green labels)
+Sample -down[#green,bold]-> Crystal : <color:green>gamma rays</color>
+Crystal -[#green,bold]-> SiPM : <color:green>photons</color>
+SiPM -[#green,bold]-> TIA : <color:green>current pulse</color>\n<color:green>(1µA - 1mA)</color>
+TIA -[#green,bold]-> DiffDriver : <color:green>voltage pulse</color>\n<color:green>(10mV - 1V)</color>
+DiffDriver -[#green,bold]-> ADC : <color:green>differential signal</color>\n<color:green>(+1.5V common mode)</color>
+ADC -[#green,bold]-> FPGA : <color:green>raw samples</color>\n<color:green>(780 Mbps)</color>
+FPGA -[#green,bold]-> Comm : <color:green>spectrum data</color>
+Comm -down[#green,bold]-> User : <color:green>histogram</color>\n<color:green>via USB</color>
 
-' Bias connection
-Bias --> Photodiode
+' Power and bias
+Boost --> Bias : 30V raw
+
+' Bias and protection
+Bias --> SiPM
+Protection --> SiPM : monitors\ncurrent
+Protection --> Bias : disable\non fault
+
+' Temperature compensation
+TempSense --> SiPM : measures\ntemperature
+FPGA --> TempSense : reads via ADC
+FPGA --> Bias : adjusts\nvoltage
+
+' Configuration
+Flash --> FPGA : configuration
 @enduml
