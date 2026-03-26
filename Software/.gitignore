@@ -1,0 +1,21 @@
+# Build artifacts
+Build/*
+!Build/.gitkeep
+
+# Simulation outputs
+Simulation/*
+!Simulation/.gitkeep
+
+# GHDL work files
+*.cf
+work-obj*.cf
+
+# Editor files
+*.swp
+*~
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
