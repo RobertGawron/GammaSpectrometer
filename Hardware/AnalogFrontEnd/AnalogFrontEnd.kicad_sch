@@ -969,7 +969,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 67.31) (xy 170.18 46.99)
+			(xy 170.18 68.58) (xy 170.18 46.99)
 		)
 		(stroke
 			(width 0)
@@ -979,7 +979,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 64.77) (xy 130.81 64.77)
+			(xy 91.44 66.04) (xy 130.81 66.04)
 		)
 		(stroke
 			(width 0)
@@ -1029,7 +1029,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 50.8) (xy 127 50.8)
+			(xy 130.81 53.34) (xy 127 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1089,7 +1089,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 48.26) (xy 132.08 48.26)
+			(xy 127 50.8) (xy 132.08 50.8)
 		)
 		(stroke
 			(width 0)
@@ -1109,7 +1109,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 64.77) (xy 130.81 50.8)
+			(xy 130.81 66.04) (xy 130.81 53.34)
 		)
 		(stroke
 			(width 0)
@@ -1139,7 +1139,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.08 48.26) (xy 132.08 40.64)
+			(xy 132.08 50.8) (xy 132.08 40.64)
 		)
 		(stroke
 			(width 0)
@@ -1149,7 +1149,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 69.85) (xy 223.52 69.85)
+			(xy 91.44 71.12) (xy 223.52 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1199,7 +1199,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 43.18) (xy 223.52 69.85)
+			(xy 223.52 43.18) (xy 223.52 71.12)
 		)
 		(stroke
 			(width 0)
@@ -1249,7 +1249,7 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 67.31) (xy 170.18 67.31)
+			(xy 91.44 68.58) (xy 170.18 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2512,7 +2512,7 @@
 	)
 	(sheet
 		(at 102.87 38.1)
-		(size 24.13 13.97)
+		(size 24.13 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2538,7 +2538,7 @@
 			)
 		)
 		(property "Sheetfile" "BiasSupply.kicad_sch"
-			(at 102.87 52.6546 0)
+			(at 102.87 55.1946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2569,7 +2569,7 @@
 			)
 		)
 		(pin "VCC_SIPM_STABILIZED" input
-			(at 127 48.26 0)
+			(at 127 50.8 0)
 			(uuid "d4e49b4d-2d2c-454f-9a16-4cad95eb2b93")
 			(effects
 				(font
@@ -2589,13 +2589,23 @@
 			)
 		)
 		(pin "SIPM_TEMP" input
-			(at 127 50.8 0)
+			(at 127 53.34 0)
 			(uuid "0f4b4d6f-6e87-4886-a8e5-36c44700580c")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(pin "SIPM_TEMP_EN" input
+			(at 102.87 46.99 180)
+			(uuid "58a642e4-b41d-4d8f-9c35-6ce9e8bbeb0b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 		(instances
@@ -2608,7 +2618,7 @@
 	)
 	(sheet
 		(at 60.96 53.34)
-		(size 30.48 17.78)
+		(size 30.48 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2634,7 +2644,7 @@
 			)
 		)
 		(property "Sheetfile" "ExternalConnector.kicad_sch"
-			(at 60.96 71.7046 0)
+			(at 60.96 74.2446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2645,7 +2655,7 @@
 			)
 		)
 		(pin "FAULT_SIPM_LIGHTED" input
-			(at 91.44 67.31 0)
+			(at 91.44 68.58 0)
 			(uuid "0ca09450-30c4-4343-8292-cc12405da592")
 			(effects
 				(font
@@ -2695,7 +2705,7 @@
 			)
 		)
 		(pin "ADC_IN" input
-			(at 91.44 69.85 0)
+			(at 91.44 71.12 0)
 			(uuid "de3abe5b-be14-4444-ba62-ed515dd7584a")
 			(effects
 				(font
@@ -2715,7 +2725,7 @@
 			)
 		)
 		(pin "SIPM_TEMP" input
-			(at 91.44 64.77 0)
+			(at 91.44 66.04 0)
 			(uuid "246d94db-d3d6-4bc2-b9ed-ed8d5a01ba1b")
 			(effects
 				(font
@@ -2727,6 +2737,16 @@
 		(pin "VCC_SIPM_TEMP_COMP" input
 			(at 91.44 60.96 0)
 			(uuid "adec70b2-2585-4add-a477-1eac3a92254a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_TEMP_EN" input
+			(at 91.44 63.5 0)
+			(uuid "cf6d249a-9d13-4084-8e02-ec1fa5f6422f")
 			(effects
 				(font
 					(size 1.27 1.27)
