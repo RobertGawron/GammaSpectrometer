@@ -39,7 +39,7 @@ pulses, 10mV - 1V after amplification):
 * **Bias Supply ([TPS7A4901](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1774505770499))** - Provides stable, filtered 29V bias voltage for the SiPM, automatically adjusted for SIPM's temperature changes
 * **Overcurrent Protection (TBD)** - Cuts bias voltage if SiPM is exposed to external light source, preventing sensor damage from excessive photocurrent
 
-> **Note:** Traditional analog pulse shaping and peak detection are not used. Raw signal is digitized directly and processed in FPGA.
+> **Note:** Analog pulse shaping and peak detection are not used - raw signal is digitized directly and processed in FPGA.
 
 [More info.](./Hardware/AnalogFrontEnd/README.md)
 

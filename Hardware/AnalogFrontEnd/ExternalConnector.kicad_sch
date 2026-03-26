@@ -93,6 +93,17 @@
 		)
 		(uuid "c1d93eb9-bbb4-485b-9faa-ad22d022b099")
 	)
+	(hierarchical_label "SIPM_TEMP_EN"
+		(shape input)
+		(at 67.31 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eb47c5dc-eef2-4c50-9b72-7da30fd1eb6a")
+	)
 	(hierarchical_label "FAULT_SIPM_LIGHTED"
 		(shape input)
 		(at 60.96 88.9 0)

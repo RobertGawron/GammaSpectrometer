@@ -319,11 +319,10 @@
 					)
 				)
 			)
-			(pin no_connect line
-				(at 5.08 0 180)
+			(pin input line
+				(at -7.62 -3.81 0)
 				(length 2.54)
-				(hide yes)
-				(name "NC"
+				(name "NR"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -451,7 +450,7 @@
 				)
 			)
 			(pin input line
-				(at -7.62 -2.54 0)
+				(at -7.62 -1.27 0)
 				(length 2.54)
 				(name "EN"
 					(effects

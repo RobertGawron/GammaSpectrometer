@@ -1,10 +1,11 @@
 # ============================================================
-# Gamma Spectrometer Development Environment Dockerfile
+# Gamma Spectrometer + FPGA Development Environment Dockerfile
 # 
 # Includes:
 #   - Octave + Scientific packages
 #   - Jupyter Notebook + Lab
 #   - VNC + noVNC web interface
+#   - OSS CAD Suite (GHDL, Yosys, nextpnr-ice40)
 #   - Development tools (tree, git, etc.)
 # ============================================================
 
@@ -12,8 +13,8 @@ FROM ubuntu:22.04
 
 # Metadata
 LABEL maintainer="robert@gammaspectrometer"
-LABEL description="Unified Octave + Jupyter + VNC development environment"
-LABEL version="2.0"
+LABEL description="Unified Octave + Jupyter + VNC + FPGA environment"
+LABEL version="2.1"
 LABEL project="GammaSpectrometer"
 
 # ============================================================
@@ -28,7 +29,8 @@ ENV DEBIAN_FRONTEND=noninteractive \
     VNC_RESOLUTION=1920x1080 \
     VNC_COL_DEPTH=24 \
     LANG=C.UTF-8 \
-    LC_ALL=C.UTF-8
+    LC_ALL=C.UTF-8 \
+    PATH="/opt/oss-cad-suite/bin:${PATH}"
 
 # ============================================================
 # Create Application User
@@ -54,6 +56,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     gnupg \
     software-properties-common \
     build-essential \
+    jq \
+    less \
+    # OSS CAD Suite Runtime Libraries
+    libffi8 \
+    libtcl8.6 \
+    libreadline8 \
     # Octave and Scientific Packages
     octave \
     octave-control \
@@ -94,8 +102,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     rsync \
     net-tools \
     procps \
+    gtkwave \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# ============================================================
+# Install OSS CAD Suite (FPGA Toolchain)
+# ============================================================
+RUN mkdir -p /opt && \
+    wget -qO- https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-15/oss-cad-suite-linux-x64-20240115.tgz \
+    | tar xz -C /opt/
+
+# Verify OSS CAD Suite installation
+RUN echo "=== Tool Versions ===" && \
+    ghdl --version && \
+    yosys -V && \
+    nextpnr-ice40 -V && \
+    echo "=== GHDL Plugin Check ===" && \
+    yosys -m ghdl -p "help ghdl"
 
 # ============================================================
 # Install noVNC (newer version from GitHub)
@@ -187,4 +211,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
 USER developer
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["full"]
+CMD ["interactive"]
