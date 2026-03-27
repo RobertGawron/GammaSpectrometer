@@ -472,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "ProcessingAndPower.kicad_pro",
+    "filename": "MainBoard.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -627,8 +627,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "ProcessingAndPower.kicad_sch",
-        "name": "ProcessingAndPower",
+        "filename": "MainBoard.kicad_sch",
+        "name": "MainBoard",
         "uuid": "e4d86041-cc67-4ad2-9d37-150851448dab"
       }
     ],
@@ -638,7 +638,7 @@
   "sheets": [
     [
       "e4d86041-cc67-4ad2-9d37-150851448dab",
-      "ProcessingAndPower"
+      "MainBoard"
     ],
     [
       "39944ad9-68e2-440c-8764-0e0171d769dd",

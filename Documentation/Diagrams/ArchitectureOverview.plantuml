@@ -1,59 +1,91 @@
 @startuml
 skinparam componentStyle rectangle
 skinparam linetype ortho
+skinparam nodesep 40
+skinparam ranksep 50
 
 title Gamma Spectrometer - System Architecture
 
 skinparam package {
     BackgroundColor<<analog>> #LightBlue
     BackgroundColor<<digital>> #LightYellow
+    BackgroundColor<<power>> #LightCoral
 }
 
 [Radioactive Sample] as Sample
 
-package "Analog Frontend" <<analog>> {
+package "Data Acquisition Unit" <<analog>> {
     component "Scintillation Crystal\n(NaI(Tl))" as Crystal
     component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as SiPM
-    component "29V DC Bias Supply\n(TPS7A4901)" as Bias
     component "Transimpedance Amplifier\n(LTC6268)" as TIA
     component "Differential ADC Driver\n(LTC6363)" as DiffDriver
+    
     component "Temperature Sensing" as TempSense
+    component "29V DC Bias Supply\n(TPS7A4901)" as Bias
     component "Overlight Protection" as Protection
+    
+    ' Internal Layout Hints: Pushes sensors to the right of the main signal chain
+    Crystal -right[hidden]- TempSense
+    SiPM -right[hidden]- Bias
+    TIA -right[hidden]- Protection
 }
 
-package "Processing and Power" <<digital>> {
-    component "30V DC-DC Boost\n(LT1930)" as Boost
+package "Data Processing Unit" <<digital>> {
     component "ADC 12-bit 65 MSPS\n(AD9226)" as ADC
-    component "FPGA\n(iCE40HX4K)" as FPGA
     component "SPI Flash\n(Bitstream Storage)" as Flash
+    component "FPGA\n(iCE40HX4K)" as FPGA
+    
+    ' Internal Layout Hint: Keeps Flash next to ADC rather than below it
+    ADC -right[hidden]- Flash
+}
+
+package "Main Board" <<power>> {
+    component "30V DC-DC Boost\n(LT1930)" as Boost
+    component "Power Supply\n(3.3V, 1.2V, 5V)" as PSU
     component "UART to USB\nCommunication" as Comm
+    
+    ' Internal Layout Hint: Stacks power components neatly
+    Boost -down[hidden]- PSU
+    PSU -down[hidden]- Comm
 }
 
 actor "User\n(PC Software)" as User
 
-' Main signal flow (green, bold, green labels)
+' Global Layout Hints
+' Force Main Board to the right of the Analog and Digital packages
+Bias -right[hidden]- Boost
+FPGA -right[hidden]- Comm
+
+' Force User to sit completely at the bottom
+FPGA -down[hidden]- User
+
+' Main signal flow (Green Vertical Spine)
 Sample -down[#green,bold]-> Crystal : <color:green>gamma rays</color>
-Crystal -[#green,bold]-> SiPM : <color:green>photons</color>
-SiPM -[#green,bold]-> TIA : <color:green>current pulse</color>\n<color:green>(1µA - 1mA)</color>
-TIA -[#green,bold]-> DiffDriver : <color:green>voltage pulse</color>\n<color:green>(10mV - 1V)</color>
-DiffDriver -[#green,bold]-> ADC : <color:green>differential signal</color>\n<color:green>(+1.5V common mode)</color>
-ADC -[#green,bold]-> FPGA : <color:green>raw samples</color>\n<color:green>(780 Mbps)</color>
-FPGA -[#green,bold]-> Comm : <color:green>spectrum data</color>
+Crystal -down[#green,bold]-> SiPM : <color:green>photons</color>
+SiPM -down[#green,bold]-> TIA : <color:green>current pulse</color>\n<color:green>(1µA - 1mA)</color>
+TIA -down[#green,bold]-> DiffDriver : <color:green>voltage pulse</color>\n<color:green>(10mV - 1V)</color>
+DiffDriver -down[#green,bold]-> ADC : <color:green>differential signal</color>\n<color:green>(+1.5V common mode)</color>
+ADC -down[#green,bold]-> FPGA : <color:green>raw samples</color>\n<color:green>(780 Mbps)</color>
+
+' Routing to User via Main Board
+FPGA -right[#green,bold]-> Comm : <color:green>spectrum data</color>
 Comm -down[#green,bold]-> User : <color:green>histogram</color>\n<color:green>via USB</color>
 
-' Power and bias
-Boost --> Bias : 30V raw
+' Internal Data Acquisition Unit Connections
+TempSense -left-> SiPM : measures\ntemperature
+Bias -left-> SiPM
+Protection -left-> SiPM : monitors\ncurrent
+Protection -down-> Bias : disable\non fault
 
-' Bias and protection
-Bias --> SiPM
-Protection --> SiPM : monitors\ncurrent
-Protection --> Bias : disable\non fault
+' Internal Data Processing Unit Connections
+Flash -down-> FPGA : configuration
 
-' Temperature compensation
-TempSense --> SiPM : measures\ntemperature
-FPGA --> TempSense : reads via ADC
-FPGA --> Bias : adjusts\nvoltage
+' Cross-package control signals (Upwards from FPGA to Data Acquisition Unit)
+FPGA -up-> TempSense : reads via ADC
+FPGA -up-> Bias : adjusts\nvoltage
 
-' Configuration
-Flash --> FPGA : configuration
+' Power connections (Leftwards from Main Board to other packages)
+Boost -left-> Bias : 30V raw
+PSU -left-> ADC : 5V
+PSU -left-> FPGA : 3.3V, 1.2V
 @enduml

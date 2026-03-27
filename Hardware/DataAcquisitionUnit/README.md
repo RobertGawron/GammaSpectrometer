@@ -4,11 +4,11 @@ TBD
 
 # Circuit
 
-![](./AnalogFrontEnd.svg)
-![](./AnalogFrontEnd-BiasSupply.svg)
-![](./AnalogFrontEnd-SensorProtection.svg)
-![](./AnalogFrontEnd-Amplifier.svg)
-![](./AnalogFrontEnd-ExternalConnector.svg)
+![](./DataAcquisitionUnit.svg)
+![](./DataAcquisitionUnit-BiasSupply.svg)
+![](./DataAcquisitionUnit-SensorProtection.svg)
+![](./DataAcquisitionUnit-Amplifier.svg)
+![](./DataAcquisitionUnit-ExternalConnector.svg)
 
 # Simulated data
 
