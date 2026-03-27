@@ -1522,7 +1522,7 @@
 			(uuid "4fee52a4-187f-4ed2-beaa-95818dcd65b5")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#PWR07")
 					(unit 1)
@@ -1600,7 +1600,7 @@
 			(uuid "c5724c90-8f41-47dd-b987-be37ff4bd910")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#FLG01")
 					(unit 1)
@@ -1682,7 +1682,7 @@
 			(uuid "37bb8754-9132-4aab-b34e-eb08b8d44ef8")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "C1")
 					(unit 1)
@@ -1760,7 +1760,7 @@
 			(uuid "9ba5cf1e-9ae7-4bbd-92d4-e1766ed9f921")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#PWR06")
 					(unit 1)
@@ -1838,7 +1838,7 @@
 			(uuid "74377d18-1c8c-41fe-bfc5-a4ec78cd8fa6")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#PWR04")
 					(unit 1)
@@ -1927,7 +1927,7 @@
 			(uuid "37c4003d-80b9-4515-b14b-12b423994bff")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "U1")
 					(unit 1)
@@ -2005,7 +2005,7 @@
 			(uuid "bfa5c43e-dcab-4dc3-9b4b-1fda9781f100")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#PWR05")
 					(unit 1)
@@ -2087,7 +2087,7 @@
 			(uuid "3faf3b24-8444-46d2-849f-1f24c658009a")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "C2")
 					(unit 1)
@@ -2165,7 +2165,7 @@
 			(uuid "efaf854b-00c0-490c-8226-33ac28060ce8")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/39944ad9-68e2-440c-8764-0e0171d769dd"
 					(reference "#PWR010")
 					(unit 1)

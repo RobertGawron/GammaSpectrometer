@@ -26,9 +26,9 @@ Thanks to modern ADCs and FPGAs, it is possible to do all of this in software, m
 
 ![Architecture Overview](./Documentation/Diagrams/ArchitectureOverview.svg)
 
-The hardware consists of two PCBs:
+The hardware consists of three PCBs:
 
-### Analog Frontend
+### Data Acquisition Unit
 
 Handles low-level currents produced by the sensor (typically 1µA - 1mA 
 pulses, 10mV - 1V after amplification):
@@ -41,9 +41,9 @@ pulses, 10mV - 1V after amplification):
 
 > **Note:** Analog pulse shaping and peak detection are not used - raw signal is digitized directly and processed in FPGA.
 
-[More info.](./Hardware/AnalogFrontEnd/README.md)
+[More info.](./Hardware/DataAcquisitionUnit/README.md)
 
-### Processing and Power
+### Data Processing Unit
 
 Handles high-speed data processing and provides power for all nodes:
 
@@ -53,7 +53,13 @@ Handles high-speed data processing and provides power for all nodes:
 - **SPI Port** - External header for FPGA programming
 - **UART to USB Converter (TBD)** - Communication interface to PC.
 
-[More info.](./Hardware/ProcessingAndPower/README.md)
+[More info.](./Hardware/DataProcessingUnit/README.md)
+
+### Main Board
+
+Provides mechanical and electrical connections between the two boards above, power distribution and external interfaces (Power and USB socket).
+
+[More info.](./Hardware/MainBoard/README.md)
 
 Tools: KiCad.
 

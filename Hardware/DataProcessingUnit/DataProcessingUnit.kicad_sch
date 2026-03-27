@@ -44,7 +44,7 @@
 			)
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab"
 					(page "3")
 				)
@@ -160,7 +160,7 @@
 			)
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab"
 					(page "2")
 				)
@@ -206,7 +206,7 @@
 			)
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab"
 					(page "4")
 				)
@@ -252,7 +252,7 @@
 			)
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab"
 					(page "5")
 				)
@@ -408,7 +408,7 @@
 			)
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab"
 					(page "6")
 				)

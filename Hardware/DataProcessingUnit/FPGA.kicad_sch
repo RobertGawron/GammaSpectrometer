@@ -3304,7 +3304,7 @@
 			(uuid "b8183d51-70f1-4567-b082-5c6563499faf")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/2fe9eca2-3324-499e-b97b-5da0b26995ba"
 					(reference "U2")
 					(unit 2)
@@ -3813,7 +3813,7 @@
 			(uuid "b8183d51-70f1-4567-b082-5c6563499faf")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/2fe9eca2-3324-499e-b97b-5da0b26995ba"
 					(reference "U2")
 					(unit 4)
@@ -4320,7 +4320,7 @@
 			(uuid "b8183d51-70f1-4567-b082-5c6563499faf")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/2fe9eca2-3324-499e-b97b-5da0b26995ba"
 					(reference "U2")
 					(unit 5)
@@ -4829,7 +4829,7 @@
 			(uuid "b8183d51-70f1-4567-b082-5c6563499faf")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/2fe9eca2-3324-499e-b97b-5da0b26995ba"
 					(reference "U2")
 					(unit 1)
@@ -5338,7 +5338,7 @@
 			(uuid "b8183d51-70f1-4567-b082-5c6563499faf")
 		)
 		(instances
-			(project "ProcessingAndPower"
+			(project "DataProcessingUnit"
 				(path "/e4d86041-cc67-4ad2-9d37-150851448dab/2fe9eca2-3324-499e-b97b-5da0b26995ba"
 					(reference "U2")
 					(unit 3)

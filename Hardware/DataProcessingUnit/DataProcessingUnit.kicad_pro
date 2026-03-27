@@ -140,7 +140,7 @@
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
         "min_via_diameter": 0.5,
-        "solder_mask_to_copper_clearance": 0.005,
+        "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
       "teardrop_options": [
@@ -472,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "AnalogFrontEnd.kicad_pro",
+    "filename": "DataProcessingUnit.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -627,33 +627,37 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "AnalogFrontEnd.kicad_sch",
-        "name": "AnalogFrontEnd",
-        "uuid": "b3e88616-4405-48d6-aecf-2659499541fb"
+        "filename": "DataProcessingUnit.kicad_sch",
+        "name": "DataProcessingUnit",
+        "uuid": "e4d86041-cc67-4ad2-9d37-150851448dab"
       }
     ],
-    "used_designators": "#FLG1-2,J1-3,#PWR4-7",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
     [
-      "b3e88616-4405-48d6-aecf-2659499541fb",
-      "AnalogFrontEnd"
+      "e4d86041-cc67-4ad2-9d37-150851448dab",
+      "DataProcessingUnit"
     ],
     [
-      "e0ffd134-9149-4d67-a293-6e0df0ab4c3d",
-      "BiasSupply"
+      "39944ad9-68e2-440c-8764-0e0171d769dd",
+      "PowerSupply"
     ],
     [
-      "8ac68064-e88b-4e3a-a78f-f73b766c5086",
-      "SensorProtection"
+      "2fe9eca2-3324-499e-b97b-5da0b26995ba",
+      "FPGA"
     ],
     [
-      "c173cbc7-a48e-44ee-8730-76995ac7089c",
-      "Amplifier"
+      "8c051442-9087-41ff-a4a5-c77a0aa77c15",
+      "ADC"
     ],
     [
-      "e6a5468a-6002-4126-9526-7bfdaa0c8430",
+      "d4f6aa10-ced3-4ff2-864f-4c81a2bff1b7",
+      "ExternalCommunication"
+    ],
+    [
+      "dc949ed2-5665-454c-a393-3b8971ac1dab",
       "ExternalConnector"
     ]
   ],
