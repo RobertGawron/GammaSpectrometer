@@ -632,7 +632,7 @@
         "uuid": "b3e88616-4405-48d6-aecf-2659499541fb"
       }
     ],
-    "used_designators": "C6-10,D1,#PWR13-21,R3-11,Q1,TP7-14,TH1",
+    "used_designators": "#FLG1-2,J1-3,#PWR4-7",
     "variants": []
   },
   "sheets": [
@@ -651,10 +651,6 @@
     [
       "c173cbc7-a48e-44ee-8730-76995ac7089c",
       "Amplifier"
-    ],
-    [
-      "1b2eb0a0-c37f-4f13-9713-ef360796a034",
-      "PulseShaping"
     ],
     [
       "e6a5468a-6002-4126-9526-7bfdaa0c8430",

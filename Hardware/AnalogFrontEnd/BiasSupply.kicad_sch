@@ -1270,145 +1270,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+5V"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "+5V_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power global)
 			(pin_numbers
@@ -1524,6 +1385,131 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "SHOULD BE 3V3"
+		(exclude_from_sim no)
+		(at 130.81 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "381820f8-4c92-41f7-8f00-9550e43cfe73")
 	)
 	(text "Switched thermistor divider prevent self-heating od SiPM.\nPlace thermistor near SIPM."
 		(exclude_from_sim no)
@@ -1592,6 +1578,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d685162-ce31-4beb-9dd9-12bbd7c69e59")
+	)
+	(junction
+		(at 52.07 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d34f4a6-91c4-498e-b0ca-e6a11c3d99b9")
 	)
 	(junction
 		(at 59.69 52.07)
@@ -1903,7 +1895,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 49.53) (xy 59.69 52.07)
+			(xy 59.69 50.8) (xy 59.69 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2063,7 +2055,7 @@
 	)
 	(wire
 		(pts
-			(xy 57.15 52.07) (xy 59.69 52.07)
+			(xy 48.26 52.07) (xy 52.07 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2120,6 +2112,16 @@
 			(type default)
 		)
 		(uuid "b323d8f4-9097-4b64-a957-36d279ba8d69")
+	)
+	(wire
+		(pts
+			(xy 52.07 52.07) (xy 59.69 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6733a91-b433-4d03-a356-5329deae61c5")
 	)
 	(wire
 		(pts
@@ -2263,7 +2265,17 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 52.07) (xy 49.53 52.07)
+			(xy 52.07 49.53) (xy 52.07 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb194284-6af0-44a3-abe6-36055ebbfeab")
+	)
+	(wire
+		(pts
+			(xy 36.83 52.07) (xy 40.64 52.07)
 		)
 		(stroke
 			(width 0)
@@ -2342,7 +2354,7 @@
 		(uuid "fe874dcb-4ed9-46c3-96dc-15541e7c5419")
 	)
 	(hierarchical_label "SIPM_TEMP"
-		(shape input)
+		(shape output)
 		(at 80.01 143.51 180)
 		(effects
 			(font
@@ -2353,7 +2365,7 @@
 		(uuid "0de020f8-78cd-460b-8ab8-a32f2eb9580e")
 	)
 	(hierarchical_label "VCC_SIPM_STABILIZED"
-		(shape input)
+		(shape output)
 		(at 180.34 52.07 0)
 		(effects
 			(font
@@ -2396,9 +2408,20 @@
 		)
 		(uuid "a687de48-12d0-4efe-8784-c92f46cfd7a8")
 	)
+	(hierarchical_label "VCC_2V5"
+		(shape input)
+		(at 110.49 132.08 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bc82c006-b4e9-440a-b5fb-e35453975d72")
+	)
 	(hierarchical_label "VCC_SIPM_RAW"
 		(shape input)
-		(at 45.72 52.07 180)
+		(at 36.83 52.07 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2730,7 +2753,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 59.69 49.53 0)
+		(at 59.69 50.8 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2741,7 +2764,7 @@
 		(fields_autoplaced yes)
 		(uuid "1931c26e-f400-43f4-884d-891eed9811d5")
 		(property "Reference" "TP14"
-			(at 62.23 44.9579 0)
+			(at 62.23 46.2279 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2752,7 +2775,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 62.23 47.4979 0)
+			(at 62.23 48.7679 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2763,7 +2786,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 64.77 49.53 0)
+			(at 64.77 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2774,7 +2797,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 49.53 0)
+			(at 64.77 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2785,7 +2808,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 49.53 0)
+			(at 59.69 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3693,7 +3716,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 53.34 52.07 270)
+		(at 44.45 52.07 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3704,7 +3727,7 @@
 		(fields_autoplaced yes)
 		(uuid "54174a25-9b1c-4b50-aa3b-b01e5756f52c")
 		(property "Reference" "R11"
-			(at 53.34 45.72 90)
+			(at 44.45 45.72 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3714,7 +3737,7 @@
 			)
 		)
 		(property "Value" "0R"
-			(at 53.34 48.26 90)
+			(at 44.45 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3724,7 +3747,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 53.34 50.292 90)
+			(at 44.45 50.292 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3735,7 +3758,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 52.07 0)
+			(at 44.45 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3746,7 +3769,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 53.34 52.07 0)
+			(at 44.45 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3766,6 +3789,84 @@
 			(project "AnalogFrontEnd"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 52.07 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5cf828b0-6c2f-4ba3-829c-b651d8cd8632")
+		(property "Reference" "#FLG01"
+			(at 52.07 47.625 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 52.07 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc486edb-0da0-4f85-948c-b7111b863007")
+		)
+		(instances
+			(project "AnalogFrontEnd"
+				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -4991,84 +5092,6 @@
 			(project "AnalogFrontEnd"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 110.49 132.08 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c5f9f00e-d017-4db2-8e2a-68529fcbce93")
-		(property "Reference" "#PWR019"
-			(at 110.49 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+5V"
-			(at 110.49 127 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 110.49 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 110.49 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 110.49 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1389af46-2208-4eda-b917-373d4d67ce64")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "#PWR019")
 					(unit 1)
 				)
 			)

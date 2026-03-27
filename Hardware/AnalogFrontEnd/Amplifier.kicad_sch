@@ -220,16 +220,38 @@
 			(embedded_fonts no)
 		)
 	)
-	(hierarchical_label "SIPM_PULSE_RAW"
-		(shape input)
-		(at 139.7 110.49 0)
+	(hierarchical_label "SIPM_ADC_N"
+		(shape output)
+		(at 138.43 142.24 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "821772eb-d899-40d5-be40-4abbfcaf2d14")
+		(uuid "698e49c2-9e15-4ba0-b3a6-50b6886feb1e")
+	)
+	(hierarchical_label "SIPM_ADC_P"
+		(shape output)
+		(at 121.92 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7a1545d7-0647-4878-a9f2-fb223e5a5c7e")
+	)
+	(hierarchical_label "VEE_2V5"
+		(shape input)
+		(at 152.4 119.38 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "86a61605-2e6e-4f9a-ab50-0b8bdd81ab74")
 	)
 	(hierarchical_label "VCC_SIPM_PROT"
 		(shape input)
@@ -241,6 +263,17 @@
 			(justify left)
 		)
 		(uuid "cb0ebf3f-130a-484c-ad4f-37bfcf250dac")
+	)
+	(hierarchical_label "VCC_2V5"
+		(shape input)
+		(at 153.67 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fc6b5c50-965f-402c-b6dd-e0328e9a1b76")
 	)
 	(symbol
 		(lib_id "Device:D_SiPM")

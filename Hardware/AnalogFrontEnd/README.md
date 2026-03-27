@@ -8,7 +8,6 @@ TBD
 ![](./AnalogFrontEnd-BiasSupply.svg)
 ![](./AnalogFrontEnd-SensorProtection.svg)
 ![](./AnalogFrontEnd-Amplifier.svg)
-![](./AnalogFrontEnd-PulseShaping.svg)
 ![](./AnalogFrontEnd-ExternalConnector.svg)
 
 # Simulated data
