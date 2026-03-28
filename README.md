@@ -34,14 +34,14 @@ Handles low-level currents produced by the sensor (typically 1µA - 1mA
 pulses, 10mV - 1V after amplification):
 
 * **Transimpedance Amplifier ([LTC6268](https://www.analog.com/media/en/technical-documentation/data-sheets/62689f.pdf))** - Amplifies current pulses from SiPM and converts to voltage
-* **Differential ADC Driver ([LTC6363](https://www.analog.com/media/en/technical-documentation/data-sheets/LTC6363.pdf))** - Shifts the signal to +1v5 common-mode voltage required by the ADC
+* **Differential ADC Driver ([AD8139](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8139.pdf))** - Shifts the signal to +1v5 common-mode voltage required by the ADC
 * **Temperature Sensing (TBD)** - Monitors SiPM temperature for bias compensation
 * **Bias Supply ([TPS7A4901](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1774505770499))** - Provides stable, filtered 29V bias voltage for the SiPM, automatically adjusted for SIPM's temperature changes
 * **Overcurrent Protection (TBD)** - Cuts bias voltage if SiPM is exposed to external light source, preventing sensor damage from excessive photocurrent
 
 > **Note:** Analog pulse shaping and peak detection are not used - raw signal is digitized directly and processed in FPGA.
 
-[More info.](./Hardware/DataAcquisitionUnit/README.md)
+[More info.](./Hardware/DataAcquisitionUnit/)
 
 ### Data Processing Unit
 
@@ -53,13 +53,13 @@ Handles high-speed data processing and provides power for all nodes:
 - **SPI Port** - External header for FPGA programming
 - **UART to USB Converter (TBD)** - Communication interface to PC.
 
-[More info.](./Hardware/DataProcessingUnit/README.md)
+[More info.](./Hardware/DataProcessingUnit/)
 
 ### Main Board
 
 Provides mechanical and electrical connections between the two boards above, power distribution and external interfaces (Power and USB socket).
 
-[More info.](./Hardware/MainBoard/README.md)
+[More info.](./Hardware/MainBoard/)
 
 Tools: KiCad.
 
@@ -67,7 +67,7 @@ Tools: KiCad.
 
 Tools: VHDL
 
-[More info.](./Software/README.md)
+[More info.](./Software/)
 
 ## Mechanical
 
@@ -79,15 +79,15 @@ The crystal and SiPM are optically coupled using optical gel to minimize light p
 
 Tools: OpenSCAD and FreeCAD.
 
-[More info.](./Mechanic/README.md)
+[More info.](./Mechanic/)
 
 ## Simulation
 
 ### LTspice
 
-* Simulation: [Parts of the electronic circuit are simulated](./Simulation/LTspice/README.md) in LTspice.
-* Visualization (optional): The results can be either observed in LTspice or [imported into a Docker-based Jupyter Notebook.](./Simulation/JupyterLab/README.md) This allows for further simulation analysis (although it's not really used for now). Also, the graphs are more aesthetic this way.
+* Simulation: [Parts of the electronic circuit are simulated](./Simulation/LTspice/) in LTspice.
+* Visualization (optional): The results can be either observed in LTspice or [imported into a Docker-based Jupyter Notebook.](./Simulation/JupyterLab/) This allows for further simulation analysis (although it's not really used for now). Also, the graphs are more aesthetic this way.
 
 ## DevOps
 
-[More info.](./DevOps/README.md)
+[More info.](./DevOps/)

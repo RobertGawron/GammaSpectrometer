@@ -553,310 +553,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Q_NMOS"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Q_NMOS"
-				(at 5.08 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "N-MOSFET transistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "NMOS N-MOS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Q_NMOS_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.921 0.381) (xy 3.683 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Q_NMOS_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1501,26 +1197,6 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "SHOULD BE 3V3"
-		(exclude_from_sim no)
-		(at 130.81 124.46 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "381820f8-4c92-41f7-8f00-9550e43cfe73")
-	)
-	(text "Switched thermistor divider prevent self-heating od SiPM.\nPlace thermistor near SIPM."
-		(exclude_from_sim no)
-		(at 109.22 184.15 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "6d0548eb-7b5c-47a3-818f-990ff4a1b88b")
-	)
 	(text "R1, R2, C2 are precision elements."
 		(exclude_from_sim no)
 		(at 138.43 41.91 0)
@@ -1548,12 +1224,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "32b647e1-c137-498a-ba99-4456389e8e93")
-	)
-	(junction
-		(at 95.25 161.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3a4a2ba0-86e4-44bc-b261-c7081ec8e6ac")
 	)
 	(junction
 		(at 128.27 52.07)
@@ -1622,13 +1292,13 @@
 		(uuid "c3e209fa-7041-4d78-81f2-7c3fea727ae0")
 	)
 	(junction
-		(at 95.25 143.51)
+		(at 87.63 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dd50ad5d-8411-4a05-8988-1cdc2d357eff")
 	)
 	(junction
-		(at 110.49 143.51)
+		(at 102.87 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed2d7b91-0bf5-454f-85e7-f5ecda096bc4")
@@ -1642,6 +1312,16 @@
 			(type default)
 		)
 		(uuid "139424cc-778b-4e8c-b715-187a0162f2c5")
+	)
+	(wire
+		(pts
+			(xy 87.63 156.21) (xy 87.63 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19c1781f-a0b5-4032-a0fd-9d81868cf09c")
 	)
 	(wire
 		(pts
@@ -1745,7 +1425,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 143.51) (xy 110.49 143.51)
+			(xy 87.63 156.21) (xy 102.87 156.21)
 		)
 		(stroke
 			(width 0)
@@ -1775,7 +1455,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 143.51) (xy 110.49 147.32)
+			(xy 102.87 156.21) (xy 102.87 160.02)
 		)
 		(stroke
 			(width 0)
@@ -1825,13 +1505,13 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 170.18) (xy 95.25 171.45)
+			(xy 87.63 166.37) (xy 87.63 171.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "52d73b72-b4b3-47dc-bdda-917da8a96a4f")
+		(uuid "4bad434b-f054-41a0-885e-0905d42adc74")
 	)
 	(wire
 		(pts
@@ -1865,7 +1545,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 142.24) (xy 110.49 143.51)
+			(xy 102.87 154.94) (xy 102.87 156.21)
 		)
 		(stroke
 			(width 0)
@@ -1905,7 +1585,7 @@
 	)
 	(wire
 		(pts
-			(xy 110.49 132.08) (xy 110.49 134.62)
+			(xy 102.87 144.78) (xy 102.87 147.32)
 		)
 		(stroke
 			(width 0)
@@ -1945,7 +1625,7 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 142.24) (xy 95.25 143.51)
+			(xy 87.63 154.94) (xy 87.63 156.21)
 		)
 		(stroke
 			(width 0)
@@ -1962,16 +1642,6 @@
 			(type default)
 		)
 		(uuid "85c185d3-c05c-4809-a3db-fa55ed010164")
-	)
-	(wire
-		(pts
-			(xy 95.25 160.02) (xy 95.25 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "88edccce-7b56-477f-9254-11d371ef83ba")
 	)
 	(wire
 		(pts
@@ -1995,13 +1665,13 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 161.29) (xy 95.25 161.29)
+			(xy 82.55 156.21) (xy 87.63 156.21)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9c56a73b-c25a-4172-880f-3b4be447a39a")
+		(uuid "9e91ce60-38c0-40f5-a29e-8a153bdb32b2")
 	)
 	(wire
 		(pts
@@ -2035,7 +1705,17 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 143.51) (xy 95.25 143.51)
+			(xy 102.87 167.64) (xy 102.87 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a38998c2-2caf-4c06-b43b-5cc40a4c66b2")
+	)
+	(wire
+		(pts
+			(xy 72.39 156.21) (xy 74.93 156.21)
 		)
 		(stroke
 			(width 0)
@@ -2075,26 +1755,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 161.29) (xy 95.25 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b066d077-4f01-4fe4-815c-7ced10f7d61e")
-	)
-	(wire
-		(pts
-			(xy 110.49 166.37) (xy 110.49 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b09d9061-5bc2-4227-8142-c1391cc1bcb8")
-	)
-	(wire
-		(pts
 			(xy 76.2 52.07) (xy 102.87 52.07)
 		)
 		(stroke
@@ -2122,16 +1782,6 @@
 			(type default)
 		)
 		(uuid "b6733a91-b433-4d03-a356-5329deae61c5")
-	)
-	(wire
-		(pts
-			(xy 110.49 154.94) (xy 110.49 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8e1d257-a194-494b-acdc-b0dcb78c2746")
 	)
 	(wire
 		(pts
@@ -2235,16 +1885,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 161.29) (xy 102.87 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e14bfd38-ab51-41a0-a0bb-e365f045b8ca")
-	)
-	(wire
-		(pts
 			(xy 96.52 109.22) (xy 96.52 111.76)
 		)
 		(stroke
@@ -2282,16 +1922,6 @@
 			(type default)
 		)
 		(uuid "ec8b9f89-34b6-41d3-8314-7bdbef4efc00")
-	)
-	(wire
-		(pts
-			(xy 80.01 161.29) (xy 83.82 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f27600e1-6bcc-4ea3-89c1-5f72a7208fe5")
 	)
 	(wire
 		(pts
@@ -2355,7 +1985,7 @@
 	)
 	(hierarchical_label "SIPM_TEMP"
 		(shape output)
-		(at 80.01 143.51 180)
+		(at 72.39 156.21 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2386,17 +2016,6 @@
 		)
 		(uuid "57967c2c-9331-489d-9acd-737299aabedb")
 	)
-	(hierarchical_label "SIPM_TEMP_EN"
-		(shape input)
-		(at 80.01 161.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "6366bfb8-aac6-48db-bc9e-032d3fa3299c")
-	)
 	(hierarchical_label "VCC_SIPM_EN"
 		(shape input)
 		(at 64.77 25.4 180)
@@ -2410,7 +2029,7 @@
 	)
 	(hierarchical_label "VCC_2V5"
 		(shape input)
-		(at 110.49 132.08 90)
+		(at 102.87 144.78 90)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2500,7 +2119,7 @@
 			(uuid "d6590015-5f34-4bfa-ab05-fd02e50dfa68")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR013")
 					(unit 1)
@@ -2579,7 +2198,7 @@
 			(uuid "1e28fed4-f5d4-40d1-acc5-a6753a05d139")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP13")
 					(unit 1)
@@ -2661,7 +2280,7 @@
 			(uuid "4b278d11-2552-4e99-a5a0-6e8955913ee1")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C1")
 					(unit 1)
@@ -2671,7 +2290,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 110.49 138.43 180)
+		(at 102.87 151.13 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2682,7 +2301,7 @@
 		(fields_autoplaced yes)
 		(uuid "17df1825-024e-4edb-a2d4-032486afdd06")
 		(property "Reference" "R6"
-			(at 113.03 137.1599 0)
+			(at 105.41 149.8599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2693,7 +2312,7 @@
 			)
 		)
 		(property "Value" "TBD"
-			(at 113.03 139.6999 0)
+			(at 105.41 152.3999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2704,7 +2323,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 112.268 138.43 90)
+			(at 104.648 151.13 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2715,7 +2334,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 138.43 0)
+			(at 102.87 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2726,7 +2345,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 110.49 138.43 0)
+			(at 102.87 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2743,7 +2362,7 @@
 			(uuid "966cb7c1-056e-4dc1-a3e2-2477945801b0")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R6")
 					(unit 1)
@@ -2822,7 +2441,7 @@
 			(uuid "ff524a24-c20a-4b33-b94a-edb570894ad4")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP14")
 					(unit 1)
@@ -2904,7 +2523,7 @@
 			(uuid "94492a74-a43f-471f-8db4-d72cee3065b3")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C7")
 					(unit 1)
@@ -2983,7 +2602,7 @@
 			(uuid "e793f422-dee3-46c4-91f5-c1c0ae8ee928")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP12")
 					(unit 1)
@@ -3061,7 +2680,7 @@
 			(uuid "14afb6a3-538e-443e-9a6c-4e0a2d54c699")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR015")
 					(unit 1)
@@ -3141,7 +2760,7 @@
 			(uuid "0d6677df-bb22-458e-bfae-ca9108eb2ce3")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R3")
 					(unit 1)
@@ -3223,7 +2842,7 @@
 			(uuid "137ef263-9f85-4d4b-8b49-39d44cbf46fb")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R1")
 					(unit 1)
@@ -3303,88 +2922,9 @@
 			(uuid "88c0cbef-df28-454e-b652-a250f4a64625")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 95.25 160.02 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "440c5478-1486-409f-b5d1-d5e64387fbf9")
-		(property "Reference" "TP8"
-			(at 97.79 155.4479 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 97.79 157.9879 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 100.33 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 100.33 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 95.25 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4b108128-bd31-44b7-b451-4faa2c77048b")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "TP8")
 					(unit 1)
 				)
 			)
@@ -3461,94 +3001,9 @@
 			(uuid "5b5d0bd6-41b3-4155-ab84-4a08eb214098")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Q_NMOS")
-		(at 107.95 161.29 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4859b6ed-dcea-4368-aafd-32f70095d7f0")
-		(property "Reference" "Q1"
-			(at 114.3 160.0199 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Q_NMOS"
-			(at 114.3 162.5599 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 113.03 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "N-MOSFET transistor"
-			(at 107.95 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "G"
-			(uuid "14ea2126-e221-426f-b28b-d29a0c6ba2f7")
-		)
-		(pin "D"
-			(uuid "c385a24d-2d6e-4177-b819-6d8375964296")
-		)
-		(pin "S"
-			(uuid "b53aea00-0c2d-4195-aa5f-746917238e1e")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -3628,7 +3083,7 @@
 			(uuid "d4700113-1cd5-4632-8767-99a68f8ca96d")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R8")
 					(unit 1)
@@ -3706,7 +3161,7 @@
 			(uuid "ea23dbb9-3929-41ea-a3bf-982cdd106f9f")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR02")
 					(unit 1)
@@ -3786,7 +3241,7 @@
 			(uuid "1a40d354-bbee-4a47-9b05-8886cc668a01")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R11")
 					(unit 1)
@@ -3864,7 +3319,7 @@
 			(uuid "dc486edb-0da0-4f85-948c-b7111b863007")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#FLG01")
 					(unit 1)
@@ -3874,7 +3329,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 95.25 142.24 0)
+		(at 87.63 154.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3885,7 +3340,7 @@
 		(fields_autoplaced yes)
 		(uuid "5f73bfbe-ee37-4efc-a024-3ba4d6ce2cba")
 		(property "Reference" "TP9"
-			(at 97.79 137.6679 0)
+			(at 90.17 150.3679 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3896,7 +3351,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 97.79 140.2079 0)
+			(at 90.17 152.9079 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3907,7 +3362,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-			(at 100.33 142.24 0)
+			(at 92.71 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3918,7 +3373,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 142.24 0)
+			(at 92.71 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3929,7 +3384,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 95.25 142.24 0)
+			(at 87.63 154.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3943,7 +3398,7 @@
 			(uuid "178a664a-d962-4444-b305-feedab5a03c7")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP9")
 					(unit 1)
@@ -4021,7 +3476,7 @@
 			(uuid "9a4e0b68-9675-48d6-bae0-b379e8a562a8")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR014")
 					(unit 1)
@@ -4099,7 +3554,7 @@
 			(uuid "e9f9aa9d-25d8-468b-9548-eeb28d4e11c4")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR03")
 					(unit 1)
@@ -4181,7 +3636,7 @@
 			(uuid "73f85810-c321-462e-81c0-e9ad5ca7401a")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R2")
 					(unit 1)
@@ -4261,7 +3716,7 @@
 			(uuid "da830528-e4f2-417f-a7d4-07b6a03f049a")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R7")
 					(unit 1)
@@ -4343,7 +3798,7 @@
 			(uuid "ecc3032b-6d2f-457f-ab47-01551510bd03")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C10")
 					(unit 1)
@@ -4421,7 +3876,7 @@
 			(uuid "914297df-a206-47be-b79a-288080ff6ebe")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR017")
 					(unit 1)
@@ -4499,7 +3954,7 @@
 			(uuid "08f3c330-59af-46cb-bdb0-7b94f3edab33")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR018")
 					(unit 1)
@@ -4581,89 +4036,9 @@
 			(uuid "a221611d-d007-4e27-a372-feeadff64e7e")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 87.63 161.29 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "acc435d7-3486-427d-b07e-5884ff54673d")
-		(property "Reference" "R9"
-			(at 87.63 154.94 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TBD"
-			(at 87.63 157.48 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 87.63 159.512 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 87.63 161.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f8ca5301-1938-45e0-be00-b885722c960a")
-		)
-		(pin "2"
-			(uuid "411a3eab-91bb-45d5-a58a-4f1a5e581014")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -4743,7 +4118,7 @@
 			(uuid "e7da1291-057e-45cf-a7a9-497dad01058c")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "R5")
 					(unit 1)
@@ -4847,7 +4222,7 @@
 			(uuid "8fc1d7e1-aae8-485c-81ef-a641361910f2")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "U1")
 					(unit 1)
@@ -4929,7 +4304,7 @@
 			(uuid "69f7d160-d844-41f3-ba58-2ba08141479a")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C5")
 					(unit 1)
@@ -5007,9 +4382,89 @@
 			(uuid "4deceddf-1335-45a9-a31d-83a9cf5a5d45")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 78.74 156.21 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b97dba80-5e2b-4002-99e6-483eadef4a76")
+		(property "Reference" "R12"
+			(at 78.74 149.86 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0R"
+			(at 78.74 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 78.74 154.432 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 78.74 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "854feb53-75f6-4ae3-945c-52dac35c0a5b")
+		)
+		(pin "2"
+			(uuid "170fb9f8-6e9d-41c4-a145-4cea2d331258")
+		)
+		(instances
+			(project "DataAcquisitionUnit"
+				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -5089,7 +4544,7 @@
 			(uuid "c2b8c695-7497-4cce-8e15-6fdb7e0eb67a")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C9")
 					(unit 1)
@@ -5099,7 +4554,7 @@
 	)
 	(symbol
 		(lib_id "Device:Thermistor_NTC")
-		(at 110.49 151.13 0)
+		(at 102.87 163.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5110,7 +4565,7 @@
 		(fields_autoplaced yes)
 		(uuid "c71e92ba-2b83-4249-9e00-b86742286e93")
 		(property "Reference" "TH1"
-			(at 113.03 150.1774 0)
+			(at 105.41 162.8774 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5121,7 +4576,7 @@
 			)
 		)
 		(property "Value" "Thermistor_NTC"
-			(at 113.03 152.7174 0)
+			(at 105.41 165.4174 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5132,7 +4587,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 110.49 149.86 0)
+			(at 102.87 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5143,7 +4598,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 149.86 0)
+			(at 102.87 162.56 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5154,7 +4609,7 @@
 			)
 		)
 		(property "Description" "Temperature dependent resistor, negative temperature coefficient"
-			(at 110.49 151.13 0)
+			(at 102.87 163.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5171,7 +4626,7 @@
 			(uuid "447f0f09-6d8e-4db8-a8bf-dc889e693aa5")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TH1")
 					(unit 1)
@@ -5180,8 +4635,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 110.49 171.45 0)
+		(lib_id "Device:C")
+		(at 87.63 162.56 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5190,30 +4645,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d1771454-b43b-46e6-856d-51f58c3f5b8f")
-		(property "Reference" "#PWR020"
-			(at 110.49 177.8 0)
-			(hide yes)
+		(uuid "cef73b09-1e4b-45a4-9ee8-6f0b4392990e")
+		(property "Reference" "C23"
+			(at 91.44 161.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 110.49 176.53 0)
+		(property "Value" "100n"
+			(at 91.44 163.8299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 110.49 171.45 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 88.5952 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5224,7 +4680,88 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 110.49 171.45 0)
+			(at 87.63 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 87.63 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d0b9b6d2-d391-4b65-8c60-859cc86558e6")
+		)
+		(pin "1"
+			(uuid "013025fb-4d48-40a2-9e59-7c7f25a5fca2")
+		)
+		(instances
+			(project "DataAcquisitionUnit"
+				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 102.87 171.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d1771454-b43b-46e6-856d-51f58c3f5b8f")
+		(property "Reference" "#PWR020"
+			(at 102.87 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.87 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5235,7 +4772,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 110.49 171.45 0)
+			(at 102.87 171.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5249,7 +4786,7 @@
 			(uuid "ab44a18b-1c9c-426e-963a-246f9c8bf630")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR020")
 					(unit 1)
@@ -5328,91 +4865,9 @@
 			(uuid "af739bd0-0455-405d-9d37-b8495f2b3c34")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "TP11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 95.25 166.37 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ddeb543b-8b88-40a1-93b0-a07192d22f9f")
-		(property "Reference" "R10"
-			(at 97.79 165.0999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TBD"
-			(at 97.79 167.6399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 97.028 166.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 95.25 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "bb6ed682-3e25-4059-8cd6-b455b38b9258")
-		)
-		(pin "2"
-			(uuid "cb4c9dc8-5f42-4797-bdec-89df9d458cfb")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5488,7 +4943,7 @@
 			(uuid "8f472f62-1231-4a31-9764-eaa84b3a7c48")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR01")
 					(unit 1)
@@ -5570,9 +5025,87 @@
 			(uuid "9ab9168b-f733-4eab-a349-26856a57a90b")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 87.63 171.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e996eb76-425e-484f-9ef0-71c520da5064")
+		(property "Reference" "#PWR09"
+			(at 87.63 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 87.63 176.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 87.63 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bc6853e4-dddd-490a-bd22-dc5897c57a0a")
+		)
+		(instances
+			(project "DataAcquisitionUnit"
+				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -5652,7 +5185,7 @@
 			(uuid "7e37a44d-7e53-42b3-a828-fee33f11caa1")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "C6")
 					(unit 1)
@@ -5730,87 +5263,9 @@
 			(uuid "614587af-2ada-4d8f-8008-77bcc3cbbd09")
 		)
 		(instances
-			(project "AnalogFrontEnd"
+			(project "DataAcquisitionUnit"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 95.25 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fc47e61f-5f0b-4984-9e90-c56cf371e9e3")
-		(property "Reference" "#PWR021"
-			(at 95.25 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 95.25 176.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "800d866b-b3c8-4e56-92b7-b805f9fc17b6")
-		)
-		(instances
-			(project "AnalogFrontEnd"
-				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e0ffd134-9149-4d67-a293-6e0df0ab4c3d"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
