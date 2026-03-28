@@ -1,3 +1,3 @@
 # Interfaces
 
-Modules in this directory implement communication and connectivity between the FPGA design and external or internal interfaces.
+Modules that implement communication protocols, bus connections, or signal adaptation for external devices and internal design interconnects.
