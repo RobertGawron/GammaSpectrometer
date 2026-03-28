@@ -1,0 +1,23 @@
+name: style-check
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  style-check:
+    name: VHDL Style Check
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
+      service_name: gammaspec-dev
+      working_directory: /workspace/Software
+      artifact_name: style-check-results
+      artifact_paths: |
+        Software/Build/Reports/StyleCheck.log
+      run_script: |
+        mkdir -p Build/Reports
+        just style-check 2>&1 | tee Build/Reports/StyleCheck.log

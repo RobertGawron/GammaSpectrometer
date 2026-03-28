@@ -1,0 +1,24 @@
+name: firmware-build
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  synthesize:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
+      service_name: gammaspec-dev
+      working_directory: /workspace/Software
+      artifact_name: fpga-bitstream
+      artifact_paths: |
+        Software/Build/Top.bin
+        Software/Build/Top.asc
+        Software/Build/Top.json
+      run_script: |
+        just clean
+        just build

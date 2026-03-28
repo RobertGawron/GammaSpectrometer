@@ -1,0 +1,71 @@
+# Project Info
+PROJECT_NAME           = "Gamma Spectrometer FPGA"
+PROJECT_NUMBER         = 1.0
+PROJECT_BRIEF          = "FPGA firmware for gamma ray spectrometer"
+
+# Input/Output
+INPUT                  = /workspace/Software/Source /workspace/README.md
+RECURSIVE              = YES
+OUTPUT_DIRECTORY       = /workspace/Documentation/Firmware
+FILE_PATTERNS          = *.vhdl *.vhd *.md
+EXCLUDE_PATTERNS       = */Build/* */build/*
+
+# Language Settings
+OPTIMIZE_OUTPUT_VHDL   = YES
+EXTENSION_MAPPING      = vhdl=vhdl vhd=vhdl
+
+# Output Formats
+GENERATE_HTML          = YES
+GENERATE_LATEX         = YES
+GENERATE_RTF           = NO
+GENERATE_MAN           = NO
+GENERATE_XML           = NO
+
+# HTML Options
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+HTML_TIMESTAMP         = YES
+
+# LaTeX/PDF Options
+LATEX_OUTPUT           = /tmp/doxygen-latex
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+
+# Diagrams
+HAVE_DOT               = YES
+DOT_PATH               = /usr/bin/dot
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+DOT_IMAGE_FORMAT       = svg
+INTERACTIVE_SVG        = YES
+
+# Extraction Settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_PACKAGE        = YES
+
+# Source Browsing
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+# Documentation Style
+JAVADOC_AUTOBRIEF      = YES
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+
+# VHDL-specific settings
+HIDE_SCOPE_NAMES       = YES
+INHERIT_DOCS           = NO
+ENABLE_PREPROCESSING   = NO
+
+# Warnings
+QUIET                  = NO
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES

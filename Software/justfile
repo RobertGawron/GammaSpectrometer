@@ -1,0 +1,197 @@
+# ============================================================
+# GammaSpectrometer FPGA - Justfile
+# ============================================================
+
+# Default recipe
+default:
+    @just --list
+
+# ============================================================
+# Build
+# ============================================================
+
+# Synthesize bitstream
+build:
+    mkdir -p Build
+    yosys -m ghdl synth.ys
+    nextpnr-ice40 --hx4k --package tq144 --json Build/Top.json --pcf Constraints/Pins.pcf --asc Build/Top.asc
+    icepack Build/Top.asc Build/Top.bin
+    @echo "Bitstream ready: Build/Top.bin"
+
+# Program FPGA
+program:
+    iceprog Build/Top.bin
+
+
+# View waveform
+wave NAME:
+    test -f Build/Waves/{{NAME}}.ghw
+    gtkwave Build/Waves/{{NAME}}.ghw &
+
+# ============================================================
+# Code Quality
+# ============================================================
+
+# Run VHDL style check (JCL style)
+style-check:
+    vsg --style jcl -f Source/**/*.vhdl -f Testbench/**/*.vhdl
+
+# Fix VHDL style issues (JCL style)
+style-fix:
+    vsg --style jcl --fix Source/**/*.vhdl Testbench/**/*.vhdl
+
+# Run GHDL analysis (RTL sources, dependency order)
+analyze:
+    @echo "=== Analyzing RTL Sources ==="
+    ghdl -a --std=08 -fsynopsys -frelaxed --warn-error Source/Core/Types.vhdl
+    ghdl -a --std=08 -fsynopsys -frelaxed --warn-error Source/Utilities/EdgeDetector.vhdl
+    ghdl -a --std=08 -fsynopsys -frelaxed --warn-error Source/Core/ClockDivider.vhdl
+    ghdl -a --std=08 -fsynopsys -frelaxed --warn-error Source/Top/Top.vhdl
+    @echo "RTL analysis complete!"
+
+# Run all code quality checks
+lint: style-check analyze
+
+# ============================================================
+# Formal Verification (SymbiYosys)
+# ============================================================
+
+# Run all formal verification proofs
+formal:
+    #!/usr/bin/env bash
+    set -e
+    echo "=== Running Formal Verification ==="
+    mkdir -p Build/Reports/Formal
+    
+    FAILED=0
+    for sby_file in Formal/*.sby; do
+        if [ -f "$sby_file" ]; then
+            name=$(basename "$sby_file" .sby)
+            echo "--- Verifying: $name ---"
+            if sby -f "$sby_file" -d Build/Formal/$name 2>&1 | tee "Build/Reports/Formal/${name}.log"; then
+                echo "$name PASSED"
+            else
+                echo "$name FAILED"
+                FAILED=1
+            fi
+        fi
+    done
+    
+    if [ $FAILED -eq 1 ]; then
+        echo "Formal verification failed!"
+        exit 1
+    fi
+    
+    if [ ! -f Formal/*.sby ]; then
+        echo "No .sby files found in Formal/"
+        exit 0
+    fi
+    
+    echo "Formal verification complete!"
+
+# Run specific formal proof (usage: just formal-one ClockDivider)
+formal-one NAME:
+    mkdir -p Build/Reports/Formal
+    sby -f Formal/{{NAME}}.sby -d Build/Formal/{{NAME}} 2>&1 | tee Build/Reports/Formal/{{NAME}}.log
+
+# View formal verification waveform (for failed proofs)
+formal-wave NAME:
+    gtkwave Build/Formal/{{NAME}}/engine_0/trace.vcd &
+
+# Clean formal verification outputs
+formal-clean:
+    rm -rf Build/Formal Build/Reports/Formal
+
+# ============================================================
+# VUnit Testing
+# ============================================================
+
+# Run all VUnit tests
+test:
+    python run.py -v
+
+# Run tests with report (for CI)
+test-report:
+    mkdir -p Build/Reports
+    python run.py \
+        --xunit-xml Build/Reports/UnitTests.xml \
+        -v 2>&1 | tee Build/Reports/UnitTests.log
+    @echo "Reports generated in Build/Reports/"
+
+# Run specific test (usage: just test-one "test_reset")
+test-one NAME:
+    python run.py -v '*{{NAME}}*'
+
+# Run selected test(s) with per-test waveform generation
+test-wave-one PATTERN:
+    python run.py --wave -v "*{{PATTERN}}*"
+    @find Build/Waves -maxdepth 1 -name "*{{PATTERN}}*.ghw" -printf "  %f\n"
+
+# Run tests matching pattern (usage: just test-filter "uart")
+test-filter PATTERN:
+    python run.py -v '*{{PATTERN}}*'
+
+# List all available tests
+test-list:
+    python run.py --list
+
+# Run tests with waveform generation
+test-wave:
+    python run.py -v --gtkwave-fmt ghw
+
+# Clean VUnit output
+test-clean:
+    rm -rf vunit_out
+
+# ============================================================
+# Documentation
+# ============================================================
+
+# Generate documentation
+docs:
+    mkdir -p /workspace/Documentation/Firmware/
+    doxygen /workspace/DevOps/Configs/Doxyfile
+    @if [ -d /tmp/doxygen-latex ]; then \
+        cd /tmp/doxygen-latex && make && \
+        cp refman.pdf /workspace/Documentation/Firmware/ && \
+        echo "PDF saved to: /workspace/Documentation/Firmware/refman.pdf"; \
+    fi
+    @echo "HTML documentation ready: /workspace/Documentation/Firmware/html/index.html"
+
+# Clean documentation
+clean-docs:
+    rm -rf ../Documentation/Firmware /tmp/doxygen-latex
+
+# ============================================================
+# Utilities
+# ============================================================
+
+# Clean build artifacts
+clean:
+    rm -rf build/ Build/ simulation.ghw *.cf work-obj*.cf vunit_out
+
+# Clean all (including formal)
+clean-all: clean formal-clean test-clean
+
+# Continuous simulation
+watch:
+    watchexec -e vhdl "just sim"
+
+# Full workflow
+all: clean lint test build
+
+# ============================================================
+# CI Targets
+# ============================================================
+
+# Full CI pipeline
+ci: lint test-report formal build
+    @echo "CI complete!"
+
+# Quick verification
+verify: analyze test
+    @echo "Verification passed!"
+
+# Full verification (including formal)
+verify-full: analyze test formal
+    @echo "Full verification passed!"

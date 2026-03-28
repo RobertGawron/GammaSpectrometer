@@ -1,0 +1,8 @@
+# Load GHDL plugin and analyze VHDL files
+ghdl --std=08 Source/Packages/ConstantsPkg.vhdl  Source/Packages/TypesPkg.vhdl  Source/Peripherals/Display/Display.vhdl Source/Top/Top.vhdl -e TOP
+
+# Synthesize for iCE40
+synth_ice40 -top TOP -json Build/Top.json
+
+# Show statistics
+stat
