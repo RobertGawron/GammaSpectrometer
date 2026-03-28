@@ -1,0 +1,54 @@
+CAPI=2:
+
+name: gammaspectrometer:fpga:top:1.0.0
+description: Gamma Spectrometer FPGA Core
+
+filesets:
+  rtl:
+    files:
+      - Source/Core/Types.vhdl
+      - Source/Utilities/EdgeDetector.vhdl
+      - Source/Core/ClockDivider.vhdl
+      - Source/Core/Top.vhdl
+    file_type: vhdlSource-2008
+
+  constraints:
+    files:
+      - Constraints/Pins.pcf
+    file_type: PCF
+
+  tb:
+    files:
+      - Testbench/Core/TbTop.vhdl
+    file_type: vhdlSource-2008
+
+targets:
+  default: &default
+    filesets:
+      - rtl
+    toplevel: Top
+
+  sim:
+    <<: *default
+    default_tool: ghdl
+    filesets_append:
+      - tb
+    toplevel: TbTop
+    tools:
+      ghdl:
+        analyze_options: [--std=08]
+        run_options: [--stop-time=1ms, --wave=simulation.ghw]
+
+  synth:
+    <<: *default
+    default_tool: icestorm
+    filesets_append:
+      - constraints
+    tools:
+      icestorm:
+        pnr: next
+        arch: ice40
+        nextpnr_options: [--hx8k, --package, ct256]
+        yosys_synth_options: [-dsp]
+      yosys:
+        arch: ice40

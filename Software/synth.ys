@@ -1,0 +1,8 @@
+# Load GHDL plugin and analyze VHDL files
+ghdl --std=08 Source/Core/Types.vhdl Source/Utilities/EdgeDetector.vhdl Source/Core/ClockDivider.vhdl Source/Core/Top.vhdl -e Top
+
+# Synthesize for iCE40
+synth_ice40 -top Top -json Build/Top.json
+
+# Show statistics
+stat

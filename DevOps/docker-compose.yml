@@ -1,19 +1,19 @@
 services:
   gammaspec-dev:
-    image: ${DOCKER_IMAGE:-ghcr.io/robertgawron/gammaspec-dev:latest}
-    volumes:
-      - ../:/workspace
-    working_dir: /workspace
+    build:
+      context: ..
+      dockerfile: DevOps/Dockerfile
+    image: gamma-spectrometer:local
     container_name: gammaspec-dev
     hostname: gammaspec-dev
     volumes:
-      - ./:/workspace
+      - ../:/workspace
     working_dir: /workspace
     ports:
-      - "6080:6080"
-      - "8888:8888"
+      - "6080:6080"   # noVNC
+      - "8888:8888"   # Jupyter
     environment:
-     # - VNC_RESOLUTION=3072x1920
+      - VNC_RESOLUTION=1920x1080
       - VNC_COL_DEPTH=24
       - JUPYTER_PORT=8888
       - VNC_PORT=5901

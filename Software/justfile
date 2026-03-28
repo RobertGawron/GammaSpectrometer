@@ -1,0 +1,34 @@
+# Default recipe
+default:
+    @just --list
+
+# Simulate design
+sim:
+    fusesoc run --target=sim gammaspectrometer:fpga:top
+
+# View waveform
+wave:
+    gtkwave simulation.ghw &
+
+# Synthesize bitstream (manual flow with GHDL)
+build:
+    mkdir -p Build
+    yosys -m ghdl synth.ys
+    nextpnr-ice40 --hx4k --package tq144 --json Build/Top.json --pcf Constraints/Pins.pcf --asc Build/Top.asc
+    icepack Build/Top.asc Build/Top.bin
+    @echo "Bitstream ready: Build/Top.bin"
+
+# Clean build artifacts
+clean:
+    rm -rf build/ Build/ simulation.ghw *.cf work-obj*.cf
+
+# Program FPGA (adjust for your programmer)
+program:
+    iceprog Build/Top.bin
+
+# Full workflow
+all: clean build
+
+# Continuous simulation
+watch:
+    watchexec -e vhdl "just sim"
