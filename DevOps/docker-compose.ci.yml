@@ -1,0 +1,11 @@
+services:
+  gammaspec-dev:
+    image: ${DOCKER_IMAGE:-ghcr.io/robertgawron/gamma-spectrometer:latest}
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    environment:
+      - TZ=UTC
+      - HOME=/root
+    entrypoint: []           # Override the entrypoint
+    command: ["sleep", "infinity"]  # Just keep container alive

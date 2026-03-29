@@ -1,0 +1,53 @@
+name: Synthesis
+
+on:
+  workflow_run:
+    workflows: ["Build Docker"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  synthesis:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: yourusername/gamma-spectrometer
+      artifact_name: fpga-build
+      artifact_paths: |
+        build/design.bin
+        build/design.asc
+        reports/synthesis.log
+        reports/pnr.log
+        reports/timing.rpt
+      run_script: |
+        mkdir -p build reports
+        echo "=== FPGA Synthesis Pipeline ==="
+        
+        # Step 1: Synthesis (Yosys + GHDL)
+        echo "--- Synthesis ---"
+        yosys -m ghdl -p "
+          ghdl --std=08 src/*.vhd -e top_level;
+          synth_ice40 -top top_level -json build/design.json
+        " 2>&1 | tee reports/synthesis.log
+        
+        # Step 2: Place & Route (nextpnr)
+        echo "--- Place & Route ---"
+        nextpnr-ice40 \
+          --hx8k \
+          --package ct256 \
+          --json build/design.json \
+          --pcf constraints/pins.pcf \
+          --asc build/design.asc \
+          --report reports/pnr-report.json \
+          2>&1 | tee reports/pnr.log
+        
+        # Step 3: Timing Analysis
+        echo "--- Timing Analysis ---"
+        icetime -d hx8k -c 12 -r reports/timing.rpt build/design.asc
+        
+        # Step 4: Bitstream Generation
+        echo "--- Bitstream Generation ---"
+        icepack build/design.asc build/design.bin
+        
+        echo "=== Build Complete ==="
+        ls -la build/

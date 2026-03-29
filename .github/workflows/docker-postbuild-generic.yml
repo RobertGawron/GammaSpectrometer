@@ -1,0 +1,96 @@
+name: Docker Post-Build Generic
+
+on:
+  workflow_call:
+    inputs:
+      docker_image_repo:
+        description: "GHCR image repo (lowercase)"
+        required: true
+        type: string
+
+      compose_file:
+        required: false
+        type: string
+        default: DevOps/docker-compose.yml
+
+      service_name:
+        required: false
+        type: string
+        default: fpga-dev
+
+      up_args:
+        description: "Extra args for docker compose up"
+        required: false
+        type: string
+        default: "-d"
+
+      run_script:
+        description: "Script executed inside the container (bash -lc)"
+        required: true
+        type: string
+
+      artifact_name:
+        required: false
+        type: string
+        default: results
+
+      artifact_paths:
+        description: "Newline-separated paths/globs to upload"
+        required: false
+        type: string
+        default: ""
+
+      working_directory:
+        description: "Working directory inside container"
+        required: false
+        type: string
+        default: /workspace
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code (exact SHA from triggering workflow)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.workflow_run.head_repository.full_name }}
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull Docker Image
+        run: |
+          docker pull ghcr.io/${{ inputs.docker_image_repo }}:${{ github.event.workflow_run.head_sha }}
+
+      - name: Start stack
+        env:
+          DOCKER_IMAGE: ghcr.io/${{ inputs.docker_image_repo }}:${{ github.event.workflow_run.head_sha }}
+        run: |
+          docker compose -f "${{ inputs.compose_file }}" up ${{ inputs.up_args }}
+
+      - name: Run job script in container
+        run: |
+          docker compose -f "${{ inputs.compose_file }}" exec -T "${{ inputs.service_name }}" \
+            bash -lc 'cd ${{ inputs.working_directory }} && ${{ inputs.run_script }}'
+
+      - name: Upload artifacts
+        if: ${{ always() && inputs.artifact_paths != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: ${{ inputs.artifact_paths }}
+
+      - name: Clean up
+        if: always()
+        run: |
+          docker compose -f "${{ inputs.compose_file }}" down

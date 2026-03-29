@@ -68,7 +68,7 @@ Tools: KiCad.
 
 ## Software
 
-Tools: VHDL
+The project is developed using a **completely open-source FPGA toolchain**. The RTL code is written in VHDL-2019, synthesized with [Yosys](https://github.com/YosysHQ/yosys) + [GHDL](https://github.com/ghdl/ghdl), and targets iCE40 FPGAs via [nextpnr](https://github.com/YosysHQ/nextpnr). All code is **formally verified** using [SymbiYosys](https://github.com/YosysHQ/sby) with PSL assertions and **unit tested** using the [VUnit](https://vunit.github.io/) framework.
 
 [More info.](./Software/)
 

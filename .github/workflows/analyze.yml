@@ -1,0 +1,27 @@
+name: GHDL Analysis
+
+on:
+  workflow_run:
+    workflows: ["Build Docker"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  analyze:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: yourusername/gamma-spectrometer
+      artifact_name: analysis-results
+      artifact_paths: reports/analysis.txt
+      run_script: |
+        mkdir -p reports
+        echo "=== GHDL Analysis ===" | tee reports/analysis.txt
+        
+        # Analyze all VHDL files
+        for file in src/*.vhd; do
+          echo "Analyzing: $file" | tee -a reports/analysis.txt
+          ghdl -a --std=08 -fsynopsys --warn-error "$file" 2>&1 | tee -a reports/analysis.txt
+        done
+        
+        echo "Analysis complete!" | tee -a reports/analysis.txt
