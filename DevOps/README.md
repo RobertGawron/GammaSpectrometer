@@ -23,7 +23,7 @@ docker-compose build
 ### Run the image
 
 ```bash
-docker-compose run --rm --service-ports gammaspec-dev
+cd Devops && docker-compose run --rm --service-ports gammaspec-dev
 ```
 
 ### Usage

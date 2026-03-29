@@ -4,18 +4,19 @@ on:
   workflow_run:
     workflows: ["Build Docker"]
     types: [completed]
-    branches: [main]
+    branches: [main, "feature/*"]
 
 jobs:
-  docs:
+  generate-docs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ./.github/workflows/docker-postbuild-generic.yml
     with:
-      docker_image_repo: yourusername/gamma-spectrometer
+      docker_image_repo: ${{ github.repository }}
+      service_name: gammaspec-dev
+      working_directory: /workspace/Software
       artifact_name: documentation
       artifact_paths: |
-        docs/html/
+        Documentation/Firmware/html
+        Documentation/Firmware/refman.pdf
       run_script: |
-        echo "=== Generating Documentation ==="
-        doxygen Doxyfile
-        echo "Documentation generated!"
+        just docs

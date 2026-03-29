@@ -18,9 +18,24 @@ build:
     icepack Build/Top.asc Build/Top.bin
     @echo "Bitstream ready: Build/Top.bin"
 
+# Generate documentation
+docs:
+    mkdir -p /workspace/Documentation/Firmware/
+    doxygen /workspace/DevOps/Configs/Doxyfile
+    @if [ -d /tmp/doxygen-latex ]; then \
+        cd /tmp/doxygen-latex && make && \
+        cp refman.pdf /workspace/Documentation/Firmware/ && \
+        echo "PDF saved to: /workspace/Documentation/Firmware/refman.pdf"; \
+    fi
+    @echo "HTML documentation ready: /workspace/Documentation/Firmware/html/index.html"
+
 # Clean build artifacts
 clean:
     rm -rf build/ Build/ simulation.ghw *.cf work-obj*.cf
+
+# Clean documentation
+clean-docs:
+    rm -rf ../Documentation/Firmware /tmp/doxygen-latex
 
 # Program FPGA (adjust for your programmer)
 program:
