@@ -33,6 +33,9 @@ The hardware consists of three PCBs:
 Handles low-level currents produced by the sensor (typically 1µA - 1mA 
 pulses, 10mV - 1V after amplification):
 
+
+* **[NaI(Tl) Scintillator Crystal](https://www.ost-photonics.com/product/diameter-1-inch-x-1-inch-naitl-scintillator/)** - Converts gamma rays into visible light pulses through scintillation
+* **Silicon Photomultiplier ([MICROFC-60035-SMT-TR1 SiPM](https://www.onsemi.com/pdf/datasheet/microc-series-d.pdf))** - Converts light pulses from the scintillator crystal into electrical current pulses
 * **Transimpedance Amplifier ([LTC6268](https://www.analog.com/media/en/technical-documentation/data-sheets/62689f.pdf))** - Amplifies current pulses from SiPM and converts to voltage
 * **Differential ADC Driver ([AD8139](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8139.pdf))** - Shifts the signal to +1v5 common-mode voltage required by the ADC
 * **Temperature Sensing (TBD)** - Monitors SiPM temperature for bias compensation

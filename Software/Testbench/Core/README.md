@@ -1,3 +1,3 @@
 # Core Testbench
 
-This directory contains testbenches for [Core modules](../../Source/Core/).
+Testbenches for [Core modules](../../Source/Core/).
