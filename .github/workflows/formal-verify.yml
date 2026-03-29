@@ -1,1 +1,22 @@
-TODO
+name: Formal Verification
+
+on:
+  workflow_run:
+    workflows: ["Build Docker"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  formal:
+    name: SymbiYosys Proofs
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer
+      service_name: gammaspec-dev
+      working_directory: /workspace/Software
+      artifact_name: formal-verification-results
+      artifact_paths: |
+        Software/Build/Reports/Formal/
+      run_script: |
+        just formal

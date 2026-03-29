@@ -30,13 +30,13 @@ cd Devops && docker-compose run --rm --service-ports gammaspec-dev
 
 # Jupyter Notebook
 
-From host machin access via web browser:
+From host machine access via web browser:
 
 http://localhost:8888/
 
 # Octave
 
-From host machin access via web browser:
+From host machine access via web browser:
 
 http://localhost:6080/vnc_lite.html
 

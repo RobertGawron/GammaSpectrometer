@@ -6,34 +6,34 @@
 # ------------------------------------------------------------------------------
 # Clock and Reset
 # ------------------------------------------------------------------------------
-set_io Clk12MHz     49
-set_io ResetN       48
+set_io CLK12MHZ     49
+set_io RESETN       48
 
 # ------------------------------------------------------------------------------
 # SPI Interface (to ADC)
 # ------------------------------------------------------------------------------
-set_io SpiSclk      1
-set_io SpiMosi      2
-set_io SpiMiso      3
-set_io SpiCsN       4
+set_io SPISCLK      1
+set_io SPIMOSI      2
+set_io SPIMISO      3
+set_io SPICSN       4
 
 # ------------------------------------------------------------------------------
 # UART Interface
 # ------------------------------------------------------------------------------
-set_io UartTx       7
-set_io UartRx       8
+set_io UARTTX       7
+set_io UARTRX       8
 
 # ------------------------------------------------------------------------------
 # Status LEDs
 # ------------------------------------------------------------------------------
-set_io LedHeartbeat 44
-set_io LedPulse     45
-set_io LedError     47
-
+set_io LED_OPERATIONAL      44
+set_io LED_PULSE_DETECTED   45
+set_io LED_SIPM_OVERLIGHTED 47
+set_io LED_SIPM_OVERHEAT    47
 # ------------------------------------------------------------------------------
 # Debug Outputs
 # ------------------------------------------------------------------------------
-set_io DebugOut[0]  37
-set_io DebugOut[1]  38
-set_io DebugOut[2]  41
-set_io DebugOut[3]  42
+set_io DEBUGOUT[0]  37
+set_io DEBUGOUT[1]  38
+set_io DEBUGOUT[2]  41
+set_io DEBUGOUT[3]  42

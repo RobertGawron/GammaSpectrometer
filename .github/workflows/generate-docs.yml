@@ -1,4 +1,4 @@
-name: Documentation
+name: generate-docs
 
 on:
   workflow_run:

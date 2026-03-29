@@ -1,4 +1,4 @@
-name: Docker Post-Build Generic
+name: docker-postbuild-generic
 
 on:
   workflow_call:

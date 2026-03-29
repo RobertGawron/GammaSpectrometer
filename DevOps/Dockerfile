@@ -1,13 +1,12 @@
 # ============================================================
 # Gamma Spectrometer Development Environment
 # ============================================================
-
 FROM ubuntu:24.04
 
 # Metadata
 LABEL maintainer="robert@gammaspectrometer"
 LABEL description="Unified Octave + Jupyter + VNC + FPGA environment"
-LABEL version="2.5"
+LABEL version="2.6"
 LABEL project="GammaSpectrometer"
 
 # ============================================================
@@ -44,6 +43,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     jq \
     less \
+    software-properties-common \
     # OSS CAD Suite Runtime Libraries
     libffi8 \
     libtcl8.6 \
@@ -124,9 +124,7 @@ RUN mkdir -p /opt && \
     wget -qO- https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2024-01-15/oss-cad-suite-linux-x64-20240115.tgz \
     | tar xz -C /opt/
 
-# ============================================================
 # Verify OSS CAD Suite Installation
-# ============================================================
 RUN echo "=== OSS CAD Suite Tool Versions ===" && \
     ghdl --version | head -3 && \
     yosys -V && \
@@ -184,6 +182,15 @@ RUN pip install --no-cache-dir \
     cheat
 
 # ============================================================
+# Install VSG from GitHub (latest version supports Python 3.12)
+# ============================================================
+RUN pip install --no-cache-dir \
+    git+https://github.com/jeremiah-c-leary/vhdl-style-guide.git
+
+# Verify VSG
+RUN vsg --version
+
+# ============================================================
 # Configure Jupyter
 # ============================================================
 RUN mkdir -p /root/.jupyter
@@ -213,6 +220,7 @@ RUN mkdir -p /root/.config/fusesoc && \
 # ============================================================
 RUN echo "=== Final Verification ===" && \
     echo "Python: $(python --version)" && \
+    echo "VSG: $(vsg --version)" && \
     python -c "import vunit; print(f'VUnit: {vunit.__version__}')" && \
     echo "FuseSoC: $(fusesoc --version)" && \
     echo "Doxygen: $(doxygen --version)" && \

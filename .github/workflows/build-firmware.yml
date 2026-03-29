@@ -1,4 +1,4 @@
-name: Build Firmware
+name: build-firmware
 
 on:
   workflow_run:

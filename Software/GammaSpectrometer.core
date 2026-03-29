@@ -6,10 +6,10 @@ description: Gamma Spectrometer FPGA Core
 filesets:
   rtl:
     files:
-      - Source/Core/Types.vhdl
-      - Source/Utilities/EdgeDetector.vhdl
+      - Source/Packages/ConstantsPkg.vhdl
+      - Source/Packages/TypesPkg.vhdl      
       - Source/Core/ClockDivider.vhdl
-      - Source/Core/Top.vhdl
+      - Source/Top/Top.vhdl
     file_type: vhdlSource-2008
 
   constraints:
@@ -19,21 +19,21 @@ filesets:
 
   tb:
     files:
-      - Testbench/Core/TbTop.vhdl
+      - Testbench/Core/Tb_Top.vhdl
     file_type: vhdlSource-2008
 
 targets:
   default: &default
     filesets:
       - rtl
-    toplevel: Top
+    toplevel: TOP
 
   sim:
     <<: *default
     default_tool: ghdl
     filesets_append:
       - tb
-    toplevel: TbTop
+    toplevel: TB_TOP
     tools:
       ghdl:
         analyze_options: [--std=08]
