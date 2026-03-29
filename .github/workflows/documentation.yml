@@ -11,7 +11,7 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ./.github/workflows/docker-postbuild-generic.yml
     with:
-      docker_image_repo: ${{ github.repository }}
+      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
       service_name: gammaspec-dev
       working_directory: /workspace/Software
       artifact_name: documentation
