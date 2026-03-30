@@ -1004,6 +1004,52 @@
 		)
 	)
 	(sheet
+		(at 214.63 109.22)
+		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e64a0cd1-e74b-44a9-9bf4-2f4071d747f0")
+		(property "Sheetname" "ADC"
+			(at 214.63 108.5084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 214.63 113.6146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DataAcquisitionUnit"
+				(path "/b3e88616-4405-48d6-aecf-2659499541fb"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 64.77 40.64)
 		(size 24.13 38.1)
 		(exclude_from_sim no)

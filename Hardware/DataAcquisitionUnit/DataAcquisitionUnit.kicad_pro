@@ -632,7 +632,7 @@
         "uuid": "b3e88616-4405-48d6-aecf-2659499541fb"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U4-5,C25-35,#PWR7,#PWR10-11,#PWR19,#PWR21,#PWR27-33,R9-10,R20-21",
     "variants": []
   },
   "sheets": [
@@ -651,6 +651,10 @@
     [
       "c173cbc7-a48e-44ee-8730-76995ac7089c",
       "Amplifier"
+    ],
+    [
+      "e64a0cd1-e74b-44a9-9bf4-2f4071d747f0",
+      "ADC"
     ],
     [
       "e6a5468a-6002-4126-9526-7bfdaa0c8430",

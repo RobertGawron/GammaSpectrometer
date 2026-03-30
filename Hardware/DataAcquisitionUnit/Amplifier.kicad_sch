@@ -1395,7 +1395,7 @@
 	)
 	(text "All capcititors (except for voltage filtering) are  C0G / NP0.\nAll resistors are 1% or better."
 		(exclude_from_sim no)
-		(at 168.91 33.02 0)
+		(at 156.21 133.35 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1479,6 +1479,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "596226a9-1d71-4ffc-9bbd-b0007d641820")
+	)
+	(junction
+		(at 86.36 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5dec6dcf-0f7e-42f9-97dd-dc7ba43c3d53")
 	)
 	(junction
 		(at 88.9 148.59)
@@ -1823,6 +1829,16 @@
 			(type default)
 		)
 		(uuid "2a9d4b59-ba24-453e-9515-b6cd40d8abd2")
+	)
+	(wire
+		(pts
+			(xy 86.36 109.22) (xy 90.17 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ca50631-2272-4f03-994f-25d1bc3aa458")
 	)
 	(wire
 		(pts
@@ -2948,7 +2964,7 @@
 		(cells
 			(table_cell "Label"
 				(exclude_from_sim no)
-				(at 167.64 36.83 0)
+				(at 154.94 137.16 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2965,7 +2981,7 @@
 			)
 			(table_cell "Description"
 				(exclude_from_sim no)
-				(at 182.88 36.83 0)
+				(at 170.18 137.16 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2982,7 +2998,7 @@
 			)
 			(table_cell "VCC_SIPM"
 				(exclude_from_sim no)
-				(at 167.64 40.64 0)
+				(at 154.94 140.97 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -2999,7 +3015,7 @@
 			)
 			(table_cell "28.89V-29.22V (+322.5mV over 15degC) SiPM bias"
 				(exclude_from_sim no)
-				(at 182.88 40.64 0)
+				(at 170.18 140.97 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3016,7 +3032,7 @@
 			)
 			(table_cell "VCC_5V"
 				(exclude_from_sim no)
-				(at 167.64 44.45 0)
+				(at 154.94 144.78 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3033,7 +3049,7 @@
 			)
 			(table_cell "Differential ADC Driver and its reference voltage"
 				(exclude_from_sim no)
-				(at 182.88 44.45 0)
+				(at 170.18 144.78 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3050,7 +3066,7 @@
 			)
 			(table_cell "VCC_5V"
 				(exclude_from_sim no)
-				(at 167.64 48.26 0)
+				(at 154.94 148.59 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3067,7 +3083,7 @@
 			)
 			(table_cell "Differential ADC Driver"
 				(exclude_from_sim no)
-				(at 182.88 48.26 0)
+				(at 170.18 148.59 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3084,7 +3100,7 @@
 			)
 			(table_cell "VCC_2V5"
 				(exclude_from_sim no)
-				(at 167.64 52.07 0)
+				(at 154.94 152.4 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3101,7 +3117,7 @@
 			)
 			(table_cell "TIA"
 				(exclude_from_sim no)
-				(at 182.88 52.07 0)
+				(at 170.18 152.4 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3118,7 +3134,7 @@
 			)
 			(table_cell "VEE_2V5"
 				(exclude_from_sim no)
-				(at 167.64 55.88 0)
+				(at 154.94 156.21 0)
 				(size 15.24 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3135,7 +3151,7 @@
 			)
 			(table_cell "TIA"
 				(exclude_from_sim no)
-				(at 182.88 55.88 0)
+				(at 170.18 156.21 0)
 				(size 54.61 3.81)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -3184,6 +3200,17 @@
 			(justify right)
 		)
 		(uuid "4139ee20-24f8-42e8-8547-eb715bf89913")
+	)
+	(hierarchical_label "ADC_REF"
+		(shape output)
+		(at 90.17 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4266bcfd-82b1-4a73-9f53-300f964364ee")
 	)
 	(hierarchical_label "VCC_5V"
 		(shape input)
