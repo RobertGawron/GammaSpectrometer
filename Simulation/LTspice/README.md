@@ -18,7 +18,6 @@ Notes:
 ```
 .
 ├── Library/
-│   ├── Datasheets/          # Component datasheets (PDF)
 │   ├── Models/              # SPICE models (.cir, .lib, .sub)
 │   │   ├── DigitalICs/
 │   │   ├── Discrete/
@@ -32,12 +31,5 @@ Notes:
 │   └── Waveforms/           # Saved waveform plots
 │
 ├── Schematics/              # Main circuit schematics (.asc)
-│
-├── Scripts/                 # Automation scripts
-│
-├── Verification/
-│   ├── ComponentTests/      # Individual component test circuits
-│   └── ValidationReports/   # Test results and validation docs
-│
 └── README.md
 ```

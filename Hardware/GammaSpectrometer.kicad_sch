@@ -1,0 +1,1624 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "d6192878-4721-4ef4-99ff-dbbad0502886")
+	(paper "A4")
+	(lib_symbols)
+	(junction
+		(at 58.42 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8866d1b4-f52d-44cc-a76e-404305bee672")
+	)
+	(junction
+		(at 67.31 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98865d9f-1ca4-4af5-af1b-415f8cbe9037")
+	)
+	(junction
+		(at 90.17 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1c5fd89-6366-4406-89bd-a1f3f45d2fcd")
+	)
+	(wire
+		(pts
+			(xy 58.42 27.94) (xy 39.37 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00553993-7d63-449a-ad02-39b46d0b17da")
+	)
+	(wire
+		(pts
+			(xy 44.45 129.54) (xy 53.34 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "013d0fe6-e895-42af-a5e2-f93d3b04c84a")
+	)
+	(wire
+		(pts
+			(xy 69.85 119.38) (xy 69.85 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0204f605-3835-42c1-ba16-abd3783a71d9")
+	)
+	(wire
+		(pts
+			(xy 121.92 133.35) (xy 139.7 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02fa629c-f859-4552-a158-aa3d246ae0c4")
+	)
+	(wire
+		(pts
+			(xy 58.42 45.72) (xy 58.42 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07bf6f7e-5edc-4860-9b9d-e491ac577c4a")
+	)
+	(wire
+		(pts
+			(xy 60.96 33.02) (xy 58.42 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "097e8cb3-1228-4496-bf58-79aafc13cbb7")
+	)
+	(wire
+		(pts
+			(xy 135.89 39.37) (xy 135.89 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a89b0c2-4191-44a5-b362-797b3f4fbca1")
+	)
+	(wire
+		(pts
+			(xy 69.85 130.81) (xy 93.98 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10689514-81e5-4a32-840a-42add3a95e03")
+	)
+	(wire
+		(pts
+			(xy 39.37 69.85) (xy 125.73 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1141f29e-acaf-437b-a6fd-302cecc90bb9")
+	)
+	(wire
+		(pts
+			(xy 39.37 25.4) (xy 125.73 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11c76eca-d92f-4547-8f13-12545ec7219e")
+	)
+	(wire
+		(pts
+			(xy 139.7 30.48) (xy 125.73 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "143297f9-58c9-4eb3-8b49-12987d21564d")
+	)
+	(wire
+		(pts
+			(xy 67.31 133.35) (xy 67.31 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15ec77ef-54d9-4b9d-9453-6e8fe0fe2213")
+	)
+	(wire
+		(pts
+			(xy 93.98 133.35) (xy 67.31 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18293844-da72-4b18-a36e-ba4cd5c4c168")
+	)
+	(wire
+		(pts
+			(xy 93.98 33.02) (xy 97.79 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19d8d9ac-be47-48d8-80cb-cee50cae496d")
+	)
+	(wire
+		(pts
+			(xy 123.19 45.72) (xy 139.7 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ac4b323-4a85-492d-9b6d-6f185ecb6d6e")
+	)
+	(wire
+		(pts
+			(xy 53.34 142.24) (xy 57.15 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e9ad729-2536-426c-8c64-c52129bc4e4b")
+	)
+	(wire
+		(pts
+			(xy 95.25 46.99) (xy 58.42 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23c4bddf-d100-4120-a97b-666075229ce5")
+	)
+	(bus
+		(pts
+			(xy 90.17 142.24) (xy 90.17 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24168175-75b6-4380-abaa-9d1a3609d095")
+	)
+	(bus
+		(pts
+			(xy 83.82 142.24) (xy 90.17 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b3b376d-34cc-482e-9770-d070ef557bdd")
+	)
+	(wire
+		(pts
+			(xy 44.45 119.38) (xy 69.85 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37ccc963-e219-46d9-b31e-0c21a2f05d81")
+	)
+	(wire
+		(pts
+			(xy 96.52 45.72) (xy 58.42 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "384b38e5-90ba-40b5-9298-977333a3e4b1")
+	)
+	(wire
+		(pts
+			(xy 180.34 80.01) (xy 57.15 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4089df58-985d-46da-a8bf-7b1f55f79385")
+	)
+	(wire
+		(pts
+			(xy 124.46 33.02) (xy 139.7 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ff85a8a-f8c6-4dc6-a7a1-618009c62e36")
+	)
+	(bus
+		(pts
+			(xy 173.99 39.37) (xy 173.99 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "588b1fd2-d451-4a52-8362-7c07fd719483")
+	)
+	(wire
+		(pts
+			(xy 44.45 124.46) (xy 139.7 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e627ae2-5e2f-4409-a81c-6496c892d0b0")
+	)
+	(wire
+		(pts
+			(xy 58.42 33.02) (xy 58.42 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62d5d27c-6fc1-4e18-8952-3091eef1571d")
+	)
+	(wire
+		(pts
+			(xy 123.19 67.31) (xy 123.19 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63336591-fb6f-491b-87ee-4043c5e472fc")
+	)
+	(wire
+		(pts
+			(xy 57.15 80.01) (xy 57.15 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66245753-9ddb-4b14-ac43-072dce47081e")
+	)
+	(wire
+		(pts
+			(xy 95.25 35.56) (xy 95.25 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a10f3f0-e3f4-4dd8-b14e-3a2b316c23f5")
+	)
+	(wire
+		(pts
+			(xy 121.92 39.37) (xy 135.89 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d77d1f2-b523-4f06-95d6-a6d72b029217")
+	)
+	(wire
+		(pts
+			(xy 167.64 41.91) (xy 171.45 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6db3152a-2ca7-4db1-a820-0b3a8a22271e")
+	)
+	(wire
+		(pts
+			(xy 125.73 48.26) (xy 139.7 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e5c6c9f-6d0b-49f3-98bf-a5f70dfa1e8c")
+	)
+	(bus
+		(pts
+			(xy 167.64 39.37) (xy 173.99 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f370981-ad1e-4d62-b39c-b2a197068841")
+	)
+	(bus
+		(pts
+			(xy 91.44 137.16) (xy 93.98 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8221e08d-d010-4d21-b7b0-62ccd8fe3893")
+	)
+	(bus
+		(pts
+			(xy 173.99 88.9) (xy 91.44 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84686a03-9f25-4dcf-837a-4aa7eba822e9")
+	)
+	(wire
+		(pts
+			(xy 58.42 27.94) (xy 124.46 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86f9b67e-4b25-43ff-86fe-169b57a70fb5")
+	)
+	(wire
+		(pts
+			(xy 88.9 86.36) (xy 171.45 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "891dd709-28c3-4034-b0c9-5b9b3251c88f")
+	)
+	(wire
+		(pts
+			(xy 58.42 46.99) (xy 58.42 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e9708af-c37d-4aa5-a79d-03e48847a483")
+	)
+	(wire
+		(pts
+			(xy 180.34 121.92) (xy 180.34 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ef470c3-f2c8-4ada-973f-8e3a7e61ffee")
+	)
+	(wire
+		(pts
+			(xy 93.98 53.34) (xy 96.52 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "953c1d6a-1d12-4f35-b1d2-220398f8a58c")
+	)
+	(bus
+		(pts
+			(xy 90.17 148.59) (xy 139.7 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99a2d314-9810-48db-9dc4-ce88250cdec3")
+	)
+	(wire
+		(pts
+			(xy 93.98 139.7) (xy 88.9 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aeaa46a2-cd03-431e-aa19-f93cf9e6d941")
+	)
+	(wire
+		(pts
+			(xy 44.45 121.92) (xy 67.31 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af87ca36-74a0-4026-baef-5243a939bac9")
+	)
+	(wire
+		(pts
+			(xy 125.73 30.48) (xy 125.73 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0a2afde-bf70-4e70-80db-3e5ecd96369d")
+	)
+	(wire
+		(pts
+			(xy 168.91 121.92) (xy 180.34 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0af3c8b-0eb5-47fd-a57e-d6d083024327")
+	)
+	(wire
+		(pts
+			(xy 53.34 142.24) (xy 53.34 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c243e8d9-73c9-4d43-a7c5-bfa46f2511b6")
+	)
+	(wire
+		(pts
+			(xy 67.31 121.92) (xy 139.7 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6db4b13-74ee-4909-8e3c-01bc3b0d01a3")
+	)
+	(wire
+		(pts
+			(xy 39.37 67.31) (xy 123.19 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8e69bd8-c1fa-418f-81db-a0585b4f59dc")
+	)
+	(wire
+		(pts
+			(xy 93.98 35.56) (xy 95.25 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9f027d2-ac2c-4f0d-aba1-9308c99f4713")
+	)
+	(wire
+		(pts
+			(xy 135.89 138.43) (xy 139.7 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd3d0f85-0c46-47b7-aea1-f076888fa20a")
+	)
+	(wire
+		(pts
+			(xy 58.42 39.37) (xy 60.96 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d48e475d-71a5-41c5-b35d-a08c9888916e")
+	)
+	(bus
+		(pts
+			(xy 121.92 130.81) (xy 139.7 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d869dc72-e702-4299-be9f-a6c7afb48628")
+	)
+	(wire
+		(pts
+			(xy 121.92 36.83) (xy 139.7 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da8c9096-c7c6-4dd5-97f4-bd95c725e17e")
+	)
+	(bus
+		(pts
+			(xy 90.17 142.24) (xy 93.98 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3f99b50-f42a-410d-bb92-4daf95a0bc2f")
+	)
+	(wire
+		(pts
+			(xy 96.52 53.34) (xy 96.52 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6aa9a12-2bff-4a67-9f54-f88b739c51d4")
+	)
+	(wire
+		(pts
+			(xy 125.73 69.85) (xy 125.73 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f04e209a-91b1-40e3-bd51-c0dac8e83f1b")
+	)
+	(wire
+		(pts
+			(xy 124.46 27.94) (xy 124.46 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f55b090a-f258-476d-a94c-432d465efa5f")
+	)
+	(wire
+		(pts
+			(xy 171.45 41.91) (xy 171.45 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa6e2e90-0634-4e23-97fb-1c41c629a207")
+	)
+	(bus
+		(pts
+			(xy 91.44 88.9) (xy 91.44 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa8daaf1-676c-4fdb-9351-abea545e50db")
+	)
+	(wire
+		(pts
+			(xy 57.15 36.83) (xy 60.96 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbf32b6c-8ba7-46bd-9a6d-9ca032a1efdc")
+	)
+	(wire
+		(pts
+			(xy 88.9 139.7) (xy 88.9 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe51bb81-04dc-485d-9b71-f3c8b21d913d")
+	)
+	(wire
+		(pts
+			(xy 58.42 55.88) (xy 60.96 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff2713bf-8720-4227-b001-88b542e063c0")
+	)
+	(sheet
+		(at 97.79 157.48)
+		(size 19.05 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "15693ce6-b2f2-408a-b00e-10ad93f3b693")
+		(property "Sheetname" "FPGAConfiguration"
+			(at 97.79 156.7684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAConfiguration.kicad_sch"
+			(at 97.79 170.7646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 60.96 50.8)
+		(size 33.02 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2185dcb4-bd81-4185-b9c6-4c2ca3dfff01")
+		(property "Sheetname" "SiPMBiasControl"
+			(at 60.96 50.0884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBiasControl.kicad_sch"
+			(at 60.96 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_TEMP_OFFSET" output
+			(at 93.98 53.34 0)
+			(uuid "b284e911-9a49-4312-857b-865ac4d9e0c2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_TEMP_SENSE" output
+			(at 60.96 55.88 180)
+			(uuid "10857068-95f1-4822-9139-e117e740c63d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 24.13)
+		(size 19.05 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "31dfcd06-c710-4a2a-b6df-016666fa7ceb")
+		(property "Sheetname" "AnalogPowerPositive"
+			(at 20.32 23.4184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AnalogPowerPositive.kicad_sch"
+			(at 20.32 29.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VCC_5V" output
+			(at 39.37 25.4 0)
+			(uuid "bb4044c0-f301-4240-826e-bb026a69890d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_2V5" output
+			(at 39.37 27.94 0)
+			(uuid "9b8f31c3-c197-4f0f-b885-8a1485fa0a72")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 193.04 128.27)
+		(size 19.05 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "39293f93-b891-40ba-b9d7-d43627c0c319")
+		(property "Sheetname" "UserInterface"
+			(at 193.04 127.5584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "UserInterface.kicad_sch"
+			(at 193.04 139.0146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 97.79 31.115)
+		(size 24.13 9.525)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "45c5b52c-73c9-497e-8bbe-e5e62c0295f1")
+		(property "Sheetname" "SiPMOverlightProtection"
+			(at 97.79 30.4034 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMOverlightProtection.kicad_sch"
+			(at 97.79 41.2246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_OVERLIGHT_FAULT" output
+			(at 121.92 39.37 0)
+			(uuid "860ef423-364e-4745-8da8-b54a41627c2e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_BIAS" output
+			(at 121.92 36.83 0)
+			(uuid "8459848d-29e0-4bf5-82cb-4020ed71979e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_BIAS_REG" input
+			(at 97.79 33.02 180)
+			(uuid "3f64ae91-d1d6-48a6-8932-71e3fd527ff6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 57.15 140.97)
+		(size 26.67 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5e927257-5338-4ea8-9ca0-aa5d85a4e135")
+		(property "Sheetname" "ClockGeneration"
+			(at 57.15 140.2584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ClockGeneration.kicad_sch"
+			(at 57.15 145.3646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{CLK}" output
+			(at 83.82 142.24 0)
+			(uuid "7513935c-6cf6-4322-a46d-a0a8a1a99d8d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_3V3_CLK" input
+			(at 57.15 142.24 180)
+			(uuid "66d0370f-c47d-4523-b7c4-6b03911ddad0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "13")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 93.98 128.27)
+		(size 27.94 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6466b224-4c49-4157-b92d-85e1a2f108ad")
+		(property "Sheetname" "ADC"
+			(at 93.98 127.5584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 93.98 145.3646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ADC_REF" input
+			(at 93.98 139.7 180)
+			(uuid "d25a3ccb-0aeb-40f6-bd0b-fdeb3ecc8999")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_3V3" input
+			(at 93.98 133.35 180)
+			(uuid "6b2208ab-3bcf-40a7-8ad8-aee975d68521")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OTR" output
+			(at 121.92 133.35 0)
+			(uuid "dc330c1e-3294-42d1-b41b-e6c64f3a677e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_5V" input
+			(at 93.98 130.81 180)
+			(uuid "e2cd2fda-8653-4a1b-b69d-1c5045a32c0a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC[1..12]" input
+			(at 121.92 130.81 0)
+			(uuid "85fc32c5-2668-4705-bf1d-08a0fc13ee55")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{SIPM_ADC}" input
+			(at 93.98 137.16 180)
+			(uuid "355869f3-325b-4a27-8e82-fbf066f2e3a8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{CLK}" input
+			(at 93.98 142.24 180)
+			(uuid "881d1247-ded6-40a6-a425-3175d87f4fe5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 60.96 31.75)
+		(size 33.02 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7a4d4219-7bcd-493b-9908-8dad4b191438")
+		(property "Sheetname" "SiPMBiasRegulator"
+			(at 60.96 31.0384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBiasRegulator.kicad_sch"
+			(at 60.96 42.4946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_EN" input
+			(at 60.96 36.83 180)
+			(uuid "2da8c796-c2dd-40e4-8902-81e145254a29")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_BIAS_REG" output
+			(at 93.98 33.02 0)
+			(uuid "ce4d0272-002a-41b5-8fa2-7dde4be7927a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_TEMP_SENSE" input
+			(at 93.98 35.56 0)
+			(uuid "449ffa92-a1d2-48cd-8bec-87fe8dd90805")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_2V5" input
+			(at 60.96 33.02 180)
+			(uuid "fd4cdb18-8f84-4f8c-91db-8be759b8c140")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_TEMP_OFFSET" input
+			(at 60.96 39.37 180)
+			(uuid "9945c833-0887-45a3-af22-3d928b777fe2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 66.04)
+		(size 19.05 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9e2d86bc-7126-444f-b81f-ff149ea8d862")
+		(property "Sheetname" "AnalogPowerNegative"
+			(at 20.32 65.3284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AnalogPowerNegative.kicad_sch"
+			(at 20.32 71.7046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VEE_2V5" output
+			(at 39.37 67.31 0)
+			(uuid "4ac3fc6c-69a9-466f-a33f-0a5285b67547")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VEE_5V" output
+			(at 39.37 69.85 0)
+			(uuid "51ea7121-a8aa-48ae-b6b2-8f6e514af906")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 139.7 119.38)
+		(size 29.21 31.75)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ba137961-7098-4042-a793-6f9c73db00ba")
+		(property "Sheetname" "FPGA"
+			(at 139.7 118.6684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGA.kicad_sch"
+			(at 139.7 151.7146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VCC_3V3" output
+			(at 139.7 121.92 180)
+			(uuid "c8647914-3031-49b3-8b95-dac033dee45e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_1V2" output
+			(at 139.7 124.46 180)
+			(uuid "2130e8e1-6c9e-4768-9dd1-77c08fc02f46")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OTR" input
+			(at 139.7 133.35 180)
+			(uuid "c7ea8d8f-1552-415d-a137-f930f2ad9f2c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC[1..12]" input
+			(at 139.7 130.81 180)
+			(uuid "9fb4a199-f3e0-495e-909e-4523f07009cb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_OVERLIGHT_FAULT" input
+			(at 139.7 138.43 180)
+			(uuid "c4071c2c-ed20-4679-93fc-e9680055d27c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_EN" input
+			(at 168.91 121.92 0)
+			(uuid "c4e83b4b-b460-4c3d-b26e-3c75827f8815")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{CLK}" output
+			(at 139.7 148.59 180)
+			(uuid "7f31f841-a635-4497-aec5-8c27bdef7004")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 20.32 118.11)
+		(size 24.13 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ba90db14-78d5-4d37-a605-27a90511d129")
+		(property "Sheetname" "DigitalPower"
+			(at 20.32 117.3984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DigitalPower.kicad_sch"
+			(at 20.32 131.3946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VCC_5V" output
+			(at 44.45 119.38 0)
+			(uuid "7ac49265-13e6-4a78-b714-2ff2f37dfaaa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_1V2" output
+			(at 44.45 124.46 0)
+			(uuid "fe8dc01c-d344-4ed1-bbf1-231363b82035")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VCC_3V3" output
+			(at 44.45 121.92 0)
+			(uuid "7f6bd874-668c-484b-9a2f-8726dd1ccca2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VIN" input
+			(at 20.32 121.92 180)
+			(uuid "f7114ae9-78e8-4e35-9136-b0347c7a6484")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_3V3_CLK" output
+			(at 44.45 129.54 0)
+			(uuid "952470e7-082d-423b-a20d-68ac004c28b1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 139.7 27.94)
+		(size 27.94 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "dff2f075-29cf-4b6b-9196-9df00cd59d26")
+		(property "Sheetname" "AFE"
+			(at 139.7 27.2284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AFE.kicad_sch"
+			(at 139.7 51.3846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_BIAS" input
+			(at 139.7 36.83 180)
+			(uuid "cb1c3668-5822-43c5-8a2a-bdacb04f1d90")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_2V5" input
+			(at 139.7 33.02 180)
+			(uuid "3c7c0063-82f1-4dfa-8cdd-61280c5a7e20")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VEE_2V5" input
+			(at 139.7 45.72 180)
+			(uuid "3cab97b8-5f33-42de-869c-7ae1f9623001")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VCC_5V" input
+			(at 139.7 30.48 180)
+			(uuid "e1caaca8-97a6-4a47-983c-3ef58c2108d5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VEE_5V" input
+			(at 139.7 48.26 180)
+			(uuid "0989490a-3bd0-4a03-928a-1e60544e8193")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "ADC_REF" output
+			(at 167.64 41.91 0)
+			(uuid "42dbce7e-a34b-4aea-9eb8-7380c88d71fa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{SIPM_ADC}" input
+			(at 167.64 39.37 0)
+			(uuid "a2ff0e34-0537-4ffd-bf15-154017c782c1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

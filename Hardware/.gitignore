@@ -7,7 +7,7 @@
 *.cadstar
 *.legacy_pcb
 *.legacy_sch
-**/.history/
+.history
 
 # --- Local User Settings ---
 fp-info-cache

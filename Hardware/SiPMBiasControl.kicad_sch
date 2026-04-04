@@ -1,0 +1,52 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "1ac72708-81c8-467e-a458-540cdb74edaf")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "SIPM_TEMP_SENSE"
+		(shape output)
+		(at 106.68 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "521f4d7b-4dd7-44b8-99a4-cb26906911de")
+	)
+	(hierarchical_label "SIPM_TEMP_SENSE"
+		(shape output)
+		(at 116.84 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5d105f63-a874-4c97-a2cf-36026cd1bca7")
+	)
+	(hierarchical_label "SIPM_TEMP_SENSE"
+		(shape output)
+		(at 105.41 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e3cef40-dc3c-4b38-926e-e60b6f8c7f9e")
+	)
+	(hierarchical_label "SIPM_TEMP_OFFSET"
+		(shape output)
+		(at 106.68 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ef68adac-789e-449a-b0be-a16ad4de61fd")
+	)
+)

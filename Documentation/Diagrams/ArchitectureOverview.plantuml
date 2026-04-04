@@ -17,7 +17,7 @@ skinparam package {
 package "Data Acquisition Unit" <<analog>> {
     component "Scintillation Crystal\n(NaI(Tl))" as Crystal
     component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as SiPM
-    component "Transimpedance Amplifier\n(LTC6268)" as TIA
+    component "Transimpedance AFE\n(LTC6268)" as TIA
     component "Differential ADC Driver\n(LTC6363)" as DiffDriver
     
     component "Temperature Sensing" as TempSense

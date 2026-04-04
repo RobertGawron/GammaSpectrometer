@@ -1,4 +1,0 @@
-(sym_lib_table
-	(version 7)
-	(lib (name "DataProcessingUnit") (type "KiCad") (uri "C:/Users/rober/Documents/GammaSpectrometer/Hardware/DataAcquisitionUnit/DataProcessingUnit.kicad_sym") (options "") (descr ""))
-)

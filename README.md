@@ -30,41 +30,33 @@ Thanks to modern ADCs and FPGAs, it is possible to do all of this in software, m
 
 The hardware consists of three PCBs:
 
-### Data Acquisition Unit
+***Data Acquisition Unit***
 
 Handles low-level currents produced by the sensor (typically 1µA - 1mA 
 pulses, 10mV - 1V after amplification):
 
 
 * **[NaI(Tl) Scintillator Crystal](https://www.ost-photonics.com/product/diameter-1-inch-x-1-inch-naitl-scintillator/)** - Converts gamma rays into visible light pulses through scintillation
-* **Silicon Photomultiplier ([MICROFC-60035-SMT-TR1 SiPM](https://www.onsemi.com/pdf/datasheet/microc-series-d.pdf))** - Converts light pulses from the scintillator crystal into electrical current pulses
-* **Transimpedance Amplifier ([LTC6268](https://www.analog.com/media/en/technical-documentation/data-sheets/62689f.pdf))** - Amplifies current pulses from SiPM and converts to voltage
-* **Differential ADC Driver ([AD8139](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8139.pdf))** - Shifts the signal to +1v5 common-mode voltage required by the ADC
+* **Silicon Photomultiplier: [MICROFC-60035-SMT-TR1 SiPM](https://www.onsemi.com/pdf/datasheet/microc-series-d.pdf)** - Converts light pulses from the scintillator crystal into electrical current pulses
+* **Transimpedance AFE: [LTC6268](https://www.analog.com/media/en/technical-documentation/data-sheets/62689f.pdf)** - Amplifies current pulses from SiPM and converts to voltage
+* **Differential ADC Driver: [AD8139](https://www.analog.com/media/en/technical-documentation/data-sheets/AD8139.pdf)** - Shifts the signal to +1v5 common-mode voltage required by the ADC
 * **Temperature Sensing (TBD)** - Monitors SiPM temperature for bias compensation
-* **Bias Supply ([TPS7A4901](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1774505770499))** - Provides stable, filtered 29V bias voltage for the SiPM, automatically adjusted for SIPM's temperature changes
+* **Bias Supply: [TPS7A4901](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1774505770499)** - Provides stable, filtered 29V bias voltage for the SiPM, automatically adjusted for SIPM's temperature changes
 * **Overcurrent Protection (TBD)** - Cuts bias voltage if SiPM is exposed to external light source, preventing sensor damage from excessive photocurrent
 
 > **Note:** Analog pulse shaping and peak detection are not used - raw signal is digitized directly and processed in FPGA.
 
-[More info.](./Hardware/DataAcquisitionUnit/)
+***Data Processing Unit***
 
-### Data Processing Unit
+Handles high-speed data processing:
 
-Handles high-speed data processing and provides power for all nodes:
-
-- **ADC ([AD9226](https://www.analog.com/media/en/technical-documentation/data-sheets/ad9226.pdf))** - 12-bit, 65 MSPS sampling rate, produces 780 Mbps (97 MB/s) of raw data
-- **FPGA ([iCE40HX4K](https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40#_21E33C7EC0BD48AA80FE384ED73CC895))** - Real-time digital pulse processing (trapezoidal filtering, peak detection, histogram generation)
+- **ADC: [AD9226](https://www.analog.com/media/en/technical-documentation/data-sheets/ad9226.pdf)** - 12-bit, 65 MSPS sampling rate, produces 780 Mbps (97 MB/s) of raw data
+- **FPGA: [iCE40HX4K](https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40#_21E33C7EC0BD48AA80FE384ED73CC895)** - Real-time digital pulse processing (trapezoidal filtering, peak detection, histogram generation)
 - **SPI Flash (TBD)** - Stores FPGA configuration bitstream
 - **SPI Port** - External header for FPGA programming
 - **UART to USB Converter (TBD)** - Communication interface to PC.
 
-[More info.](./Hardware/DataProcessingUnit/)
-
-### Main Board
-
-Provides mechanical and electrical connections between the two boards above, power distribution and external interfaces (Power and USB socket).
-
-[More info.](./Hardware/MainBoard/)
+[More info.](./Hardware/README.md)
 
 Tools: KiCad.
 
