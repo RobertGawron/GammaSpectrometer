@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1.0"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -596,6 +596,14 @@
         "ADC_CLK",
         "FPGA_CLK"
       ],
+      "FPGA_CFG_IF": [
+        "CFG_SPI_CS",
+        "CFG_SPI_SCK",
+        "CFG_SPI_MOSI",
+        "CFG_SPI_MISO",
+        "CFG_RESET",
+        "CFG_DONE"
+      ],
       "SIPM_ADC": [
         "POS",
         "NEG"
@@ -641,7 +649,7 @@
         "uuid": "d6192878-4721-4ef4-99ff-dbbad0502886"
       }
     ],
-    "used_designators": "U7,U17-18,#PWR61-68,#PWR99-104,C62-64,C93-95,JP8,R92-94",
+    "used_designators": "U7,U17-19,#PWR31-32,#PWR38-42,#PWR49,#PWR54-55,#PWR61-69,#PWR83-85,#PWR99-110,C34-38,C42-44,C46,C62-64,C93-99,JP1,JP8,J1-2,R22-24,R29-31,R62-64,R92-98,#FLG2-3,TP17-18,SW1,D2",
     "variants": []
   },
   "sheets": [
@@ -696,6 +704,10 @@
     [
       "5e927257-5338-4ea8-9ca0-aa5d85a4e135",
       "ClockGeneration"
+    ],
+    [
+      "ec244bf6-1193-4eaf-b1ba-fe26d901e8f4",
+      "PowerInput"
     ]
   ],
   "text_variables": {},

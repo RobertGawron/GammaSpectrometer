@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "6e37fab6-c5f2-40ba-84ea-5a70691488a8")
 	(paper "A4")
+	(title_block
+		(title "12-bit 65MSPS Analog-to-Digital Converter")
+		(date "2026-04-06")
+		(rev "1.0")
+		(company "RG")
+	)
 	(lib_symbols
 		(symbol "DataAcquisitionUnit:AD9226_28_PIN"
 			(exclude_from_sim no)
@@ -2330,7 +2336,7 @@
 		(uuid "2687b290-6eea-4260-9965-59d4be686c02")
 	)
 	(hierarchical_label "SIPM_ADC[1..12]"
-		(shape input)
+		(shape output)
 		(at 143.51 66.04 0)
 		(effects
 			(font
