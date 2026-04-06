@@ -6,9 +6,11 @@
 	(paper "A4")
 	(title_block
 		(title "Negative Analog Power Supplies (-2.5V, -5V)")
-		(date "2026-04-06")
+		(date "2026-04-11")
 		(rev "1.0")
 		(company "RG")
+		(comment 2 "Schematic Diagram")
+		(comment 3 "DRAFT")
 	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
@@ -1496,6 +1498,16 @@
 			)
 			(embedded_fonts no)
 		)
+	)
+	(text "The diode is 100V rating, <2uA leakage, 15pF"
+		(exclude_from_sim no)
+		(at 129.54 17.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2abce6e3-27f1-447d-b52f-9985ffa23cfe")
 	)
 	(text "OUTS is a sensor pin. Should be connected close\nto the IC that is supplied by this stabilizer on the PCB."
 		(exclude_from_sim no)
@@ -3232,16 +3244,6 @@
 	)
 	(wire
 		(pts
-			(xy 21.59 38.1) (xy 21.59 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bd5b313f-6243-4ce8-8f33-bb03635116f1")
-	)
-	(wire
-		(pts
 			(xy 105.41 165.1) (xy 105.41 167.64)
 		)
 		(stroke
@@ -4007,7 +4009,7 @@
 		)
 		(uuid "aeadbe26-4c6c-4424-a13d-f4ddbae6775f")
 	)
-	(hierarchical_label "VEE_2V5"
+	(hierarchical_label "-2V5_A"
 		(shape output)
 		(at 135.89 118.11 0)
 		(effects
@@ -4016,9 +4018,9 @@
 			)
 			(justify left)
 		)
-		(uuid "b552373a-ddc2-4ed0-b0b5-1d4f6446028b")
+		(uuid "5b9204fa-6430-45e9-a619-5c4d31849088")
 	)
-	(hierarchical_label "VEE_5V"
+	(hierarchical_label "-5V0_A"
 		(shape output)
 		(at 138.43 179.07 0)
 		(effects
@@ -4027,18 +4029,18 @@
 			)
 			(justify left)
 		)
-		(uuid "cc4e992b-07fc-449e-91c9-186193178e29")
+		(uuid "869116ec-0460-41ae-8d49-7b3b93fd75dc")
 	)
-	(hierarchical_label "VIN"
+	(hierarchical_label "+V_IN"
 		(shape input)
-		(at 21.59 38.1 90)
+		(at 21.59 40.64 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "ee38361d-f88b-4da4-84a1-8cad0c1c774e")
+		(uuid "9a830af1-b7f9-40fa-9f9b-1c566089bd77")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -4108,14 +4110,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "a6fbf62e-d337-4545-8533-c4d8f3517801")
+			(uuid "301f0e5c-f2b7-4526-b6c5-2a5a42ccdca6")
 		)
 		(pin "1"
-			(uuid "80e3a95f-a68e-49fb-8901-830cafd40e4a")
+			(uuid "5daf6324-11b9-441e-9c0c-96ed88d56485")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C70")
 					(unit 1)
 				)
@@ -4187,47 +4189,47 @@
 			)
 		)
 		(pin "2"
-			(uuid "ec0a931c-3ca1-48f7-bac1-94e8247163d6")
+			(uuid "34a09251-9d9b-41d8-94cd-a5f2c1630c90")
 		)
 		(pin "4"
-			(uuid "136bd5bd-5469-43fd-bd5e-f7624a96a702")
+			(uuid "5fa511dc-6973-4a28-b367-6b1be61147c5")
 		)
 		(pin "6"
-			(uuid "7ceec8c8-22ec-412e-81b1-647e5dd39535")
+			(uuid "ed0058be-e80c-4797-a71a-11e3e0301cac")
 		)
 		(pin "1"
-			(uuid "eea04a72-6492-4014-984e-f9ddc15db166")
+			(uuid "00fe0e87-79ec-4527-aeaf-4c5d209f6e6e")
 		)
 		(pin "3"
-			(uuid "1e551a8c-f14f-4e56-8d59-7de906429af4")
+			(uuid "8ed8c431-e3e5-4048-b6a8-6f347a8fa58d")
 		)
 		(pin "5"
-			(uuid "0520f7fd-9351-458c-bb86-516f236bb2b0")
+			(uuid "95f929ad-d2d1-4b8c-aba3-04fe9898f5a4")
 		)
 		(pin "7"
-			(uuid "25cac7c7-3cc7-464e-a659-92b9c8631ed1")
+			(uuid "db646bbf-7753-4c52-8324-4066a6d16f6f")
 		)
 		(pin "8"
-			(uuid "0196d23c-a76f-4d6b-99c1-fdd3ce25b3e8")
+			(uuid "440fe0bc-9053-47a9-b3fd-40e3e4bf26f6")
 		)
 		(pin "10"
-			(uuid "f2fee88f-59f6-4c3a-8d94-47556e9e1f11")
+			(uuid "1624f621-478d-41e4-8cbc-ed9ab0abe233")
 		)
 		(pin "11"
-			(uuid "aac1f799-900b-46f9-9076-ac74a00f0eed")
+			(uuid "0c753b5b-b66c-4ab6-a1ad-7fca07d646ce")
 		)
 		(pin "12"
-			(uuid "108fa8fa-c41a-4553-b6cc-3f6b04bdb49f")
+			(uuid "107b8328-4572-4548-bf87-bcaebe345b03")
 		)
 		(pin "9"
-			(uuid "6d5d94d2-f495-499d-83ba-4df883edb513")
+			(uuid "012acb84-c0b5-46a5-bb23-5924c9759e4c")
 		)
 		(pin "13"
-			(uuid "20d781dc-a21f-4fba-9f22-86ae76ad8fe4")
+			(uuid "0a644b85-70b9-4e49-b05c-eb623b8b24d1")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "U9")
 					(unit 1)
 				)
@@ -4302,14 +4304,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "dc736974-e2d2-49dd-8280-364343766bed")
+			(uuid "a0967399-6478-4c8d-b0a5-d920d7c73b61")
 		)
 		(pin "2"
-			(uuid "3a704098-5d57-4988-b00e-da257d105c22")
+			(uuid "f12f7380-efc2-412d-b903-115b4f0ebeac")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R38")
 					(unit 1)
 				)
@@ -4385,11 +4387,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "61bbc7cd-b6e7-4881-badd-12862d196cda")
+			(uuid "e13cb682-200e-4ca8-9934-845c419d32a2")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "TP26")
 					(unit 1)
 				)
@@ -4463,11 +4465,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "c3fae534-bea7-4997-a0e0-5183000b6244")
+			(uuid "cac73f8a-0ed7-4cda-a83c-fd681d23f710")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR077")
 					(unit 1)
 				)
@@ -4540,14 +4542,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "6da13a09-d8f3-4150-8ce4-4cfcd780196b")
+			(uuid "6f32f56a-8fbc-4928-8e72-5a13cba239a5")
 		)
 		(pin "1"
-			(uuid "2794bdb8-e28a-414a-b45e-bc78e96fc7f6")
+			(uuid "7af79845-a730-4b04-a09d-b5c239f87095")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C69")
 					(unit 1)
 				)
@@ -4622,14 +4624,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "efab2595-a4f9-451c-ab8b-308f10207c9e")
+			(uuid "4596f8ea-e5c6-4d00-bb37-99383825855d")
 		)
 		(pin "2"
-			(uuid "220e8947-23ba-453a-92c0-ae77ec3b2ff1")
+			(uuid "14af132f-af8d-4181-bc39-40d61fcc1744")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R27")
 					(unit 1)
 				)
@@ -4703,11 +4705,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "599e4136-205a-4a4f-97cb-d7881eda9cde")
+			(uuid "423cc2bc-a18c-4580-a88f-f6dc7f706762")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR079")
 					(unit 1)
 				)
@@ -4782,14 +4784,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "d5aa469c-c54a-4b8b-ad9b-aff75665a61f")
+			(uuid "cce7b395-050d-455a-addf-98bc7b7cf557")
 		)
 		(pin "2"
-			(uuid "fe391e91-0591-4bb1-a200-6cb4f0d1fb63")
+			(uuid "00af1b8a-fb46-4814-88f4-9a413be81b9d")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R36")
 					(unit 1)
 				)
@@ -4863,11 +4865,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "f71f8cbb-993a-4951-860e-b7d731510d5e")
+			(uuid "c90b8515-61e0-43f2-8fa0-2d81102d6a65")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR075")
 					(unit 1)
 				)
@@ -4941,11 +4943,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "1ac0cc28-d546-4a38-9aee-b5510dd4ef53")
+			(uuid "1afd3828-f57b-4158-b995-d2829835d73c")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR074")
 					(unit 1)
 				)
@@ -5020,14 +5022,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "23e0c6d7-b5eb-49ea-96b5-6b5cffa3f2bc")
+			(uuid "dfc7cc02-0655-4100-93ff-26b193ff8f5a")
 		)
 		(pin "2"
-			(uuid "82a4b8d1-2676-47aa-a721-a737c529529c")
+			(uuid "6e656181-29bd-4956-94f8-526d033e519b")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R49")
 					(unit 1)
 				)
@@ -5102,14 +5104,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "faf4a40f-d418-4216-9b60-caec95805f2d")
+			(uuid "145d5475-4d30-42a6-a5fd-ee9dce0a1105")
 		)
 		(pin "1"
-			(uuid "11fa03fc-2f6c-4493-b6ba-a38dcd19ba94")
+			(uuid "1683eae9-2f13-4990-9f18-5363401af477")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C66")
 					(unit 1)
 				)
@@ -5182,14 +5184,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d0b398a-ce3c-4b20-aac2-a3df3e8be2a1")
+			(uuid "63b6d71d-e454-41f8-8cfa-840a8b48d277")
 		)
 		(pin "2"
-			(uuid "c252580f-0ae5-4fb7-bd52-aba5309cb1cf")
+			(uuid "26d71bb7-28c4-4e52-8eeb-bc4bf0e02dff")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R32")
 					(unit 1)
 				)
@@ -5264,14 +5266,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8b37144a-0d15-4eb1-8aab-aeca1768ede3")
+			(uuid "142e55aa-05db-4379-8569-975114351f65")
 		)
 		(pin "2"
-			(uuid "b9bc4e84-93e8-4e36-9a97-ef2e13e90297")
+			(uuid "1d3246a4-50bb-48a4-b92e-6eae8cd8f5eb")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R51")
 					(unit 1)
 				)
@@ -5346,14 +5348,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "9725f1ae-5faf-4d9a-96eb-64a2746df1a5")
+			(uuid "becf76f0-c7ef-4d30-9dd1-cafc20307520")
 		)
 		(pin "1"
-			(uuid "8cb5c2ac-fd3f-475b-be5f-f3949e2fa64e")
+			(uuid "c00f3d71-870b-4cfb-940a-555a215f5b56")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C49")
 					(unit 1)
 				)
@@ -5428,14 +5430,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1d8a4b0d-6fce-4998-a775-b3f3424beac9")
+			(uuid "707bcb21-b7e8-4955-ba64-cb308b57cc5a")
 		)
 		(pin "2"
-			(uuid "f8a7eeda-8412-4b8b-861a-e637d6c6b7cb")
+			(uuid "b0d33076-ff0e-4650-bce1-6365f1de14b8")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R47")
 					(unit 1)
 				)
@@ -5510,14 +5512,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "a1b2fcc6-6af3-4e24-ad5a-cf863b0d9d0c")
+			(uuid "1b4e0f59-2d44-40f4-966b-91680710ed95")
 		)
 		(pin "1"
-			(uuid "7c0d7467-aa86-459f-a376-80b6055f8168")
+			(uuid "e79fe727-13bf-42a6-bf41-22760caabd2e")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C47")
 					(unit 1)
 				)
@@ -5591,11 +5593,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5142accf-08fb-4c5c-80f7-536944274183")
+			(uuid "34a909f9-a21d-48b2-86ec-ca5cec537fcb")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#FLG04")
 					(unit 1)
 				)
@@ -5669,11 +5671,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "09ebc5f2-4fcd-4fd4-b6d4-40ebd12368aa")
+			(uuid "e7956224-df56-45f4-99cc-348aff42f549")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR071")
 					(unit 1)
 				)
@@ -5748,14 +5750,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "007141a2-1234-4c62-b0c9-1eb8db02d659")
+			(uuid "12583ae0-1a2b-4855-9067-7f15a04f8123")
 		)
 		(pin "1"
-			(uuid "2c50fb5c-bb2d-489c-acb2-c6abb9084309")
+			(uuid "e26fc2ce-7d80-4415-ad19-0c0d860a5db0")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C74")
 					(unit 1)
 				)
@@ -5830,14 +5832,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "aab4504b-7b80-454e-acd0-22ff9f76a06e")
+			(uuid "1a9a66a1-35a4-49c5-8873-4f6cc100910c")
 		)
 		(pin "1"
-			(uuid "2582a73a-0cba-4c2b-9c82-1b90f143435f")
+			(uuid "d7904858-0eec-4511-85ff-2fdbfc7b91da")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C45")
 					(unit 1)
 				)
@@ -5912,14 +5914,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "3259bebd-a39e-4bc2-90fa-fb6ef058af46")
+			(uuid "286739c2-cc6a-402a-b488-f86273d7233a")
 		)
 		(pin "2"
-			(uuid "4fb41d6c-14f5-4006-a5be-d3196bede666")
+			(uuid "9d027311-00f7-4c5d-8571-18a777665689")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R52")
 					(unit 1)
 				)
@@ -5994,14 +5996,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "0acea1ef-eebb-4535-a0dc-a529e4a35f9f")
+			(uuid "a755ad42-c489-403d-a3e0-c14e484045fc")
 		)
 		(pin "1"
-			(uuid "add9d19c-bb49-4491-9ac4-fa1b26c94e43")
+			(uuid "472ff88a-32a5-44da-a4b7-2d5be0d95679")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C67")
 					(unit 1)
 				)
@@ -6076,14 +6078,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "8cc64f18-cdc0-4c4b-8bdb-703ef1f29a88")
+			(uuid "351ba1f5-d31e-40eb-90f0-a3f95f5ac9b4")
 		)
 		(pin "2"
-			(uuid "a66b288e-4df5-4d3f-92bc-6d4e56fb46d2")
+			(uuid "f9a683c8-757c-45e6-83b1-37dab56c1d00")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R25")
 					(unit 1)
 				)
@@ -6158,14 +6160,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "651b923d-cff2-4dea-bae6-fb0feb5868c8")
+			(uuid "d2b99413-0a2d-4fe0-8f22-fd8c9a58a138")
 		)
 		(pin "2"
-			(uuid "cef1deb7-cdcb-481b-a63a-54b01d14cff0")
+			(uuid "cc8a3ba0-f74f-438e-a33e-72acd23fa1ad")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R55")
 					(unit 1)
 				)
@@ -6240,14 +6242,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e41eb00-2c7b-4e9d-a4a8-70d4a515805e")
+			(uuid "0c35ea44-08d5-4fc5-b734-7967c5c01d56")
 		)
 		(pin "2"
-			(uuid "d2046775-16a4-4097-aa22-4320a70ace8d")
+			(uuid "5347a617-c459-4e7e-bc66-91aa827a46c9")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R39")
 					(unit 1)
 				)
@@ -6322,14 +6324,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "121954fc-4ea5-473c-8395-be56f26db6e1")
+			(uuid "94f56d3a-8671-4e73-866b-6aadc2cf250a")
 		)
 		(pin "1"
-			(uuid "c75dbfc9-8910-4727-80c0-357ec75a11c8")
+			(uuid "288620fc-075f-4e66-8545-b55a81522c13")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C73")
 					(unit 1)
 				)
@@ -6404,14 +6406,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "e165176a-cfc5-4cf4-9798-abf0717928ad")
+			(uuid "e38eec89-678c-4cc7-afc9-2c1de1e666db")
 		)
 		(pin "1"
-			(uuid "78a3936d-8677-40fe-8ab0-9536802dadd7")
+			(uuid "298bc288-553e-4c1d-ad0c-d064e4b945cc")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C65")
 					(unit 1)
 				)
@@ -6486,14 +6488,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b4b2d230-b74f-4209-91a7-a44cd3ff041c")
+			(uuid "40621b0e-8a90-4425-878e-f0262c5b77a6")
 		)
 		(pin "2"
-			(uuid "2e41e836-40ea-4056-8c1a-af5975fd3968")
+			(uuid "38142fab-5d06-4385-8989-41756c6c2166")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R35")
 					(unit 1)
 				)
@@ -6566,14 +6568,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "1de17e3e-5697-4b6b-ad6d-5a4dfcc475ef")
+			(uuid "96248db1-8a5a-4a60-8dda-81cd85592085")
 		)
 		(pin "2"
-			(uuid "6ff72190-1686-4086-a69a-3a462daf5301")
+			(uuid "8846b1a0-f374-4b18-8489-a157f4e14700")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "L3")
 					(unit 1)
 				)
@@ -6647,12 +6649,94 @@
 			)
 		)
 		(pin "1"
-			(uuid "3fc2b4d6-bc52-4024-a9e0-41ecdd0f55bc")
+			(uuid "8d5b34b5-467c-4a4f-b981-ccf8b9dc5c40")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 116.84 31.75 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "673ef5bd-8aa1-41a2-b424-0f655c65c17b")
+		(property "Reference" "D5"
+			(at 119.38 30.1624 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "DFLS1100-7"
+			(at 119.38 32.7024 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_PowerDI-123"
+			(at 116.84 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 116.84 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6720a272-b47a-4e47-b7e2-c150aed56950")
+		)
+		(pin "2"
+			(uuid "0cde0147-b0f7-4cc3-926f-a345d2e9df10")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -6725,11 +6809,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "9f82265a-bbeb-4dc2-89d6-4809a50830f4")
+			(uuid "d52e9966-1565-4ae4-a6e3-89b707f1faa8")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR072")
 					(unit 1)
 				)
@@ -6804,14 +6888,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "f2501cfb-8272-48b5-8ddb-afdbc96bc837")
+			(uuid "4cd3e2c3-1b83-4d37-b7eb-1182d0827f5e")
 		)
 		(pin "2"
-			(uuid "7c69e57b-ff53-43c6-b4a0-a790d1fadf1f")
+			(uuid "852e5a27-24f3-4bbf-8208-1f5bd282b4d6")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R45")
 					(unit 1)
 				)
@@ -6886,14 +6970,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "596b7cde-b413-4ebb-a924-d9a4aeaef4e4")
+			(uuid "07fc7264-6ee9-48e7-ab4b-9a498504770b")
 		)
 		(pin "2"
-			(uuid "d2421020-2ac5-49c8-bb07-8100b1cc91e9")
+			(uuid "dc94a128-0082-4b14-af62-3caade4ae413")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R28")
 					(unit 1)
 				)
@@ -6965,47 +7049,47 @@
 			)
 		)
 		(pin "2"
-			(uuid "4bf34e0d-d3e0-4fb2-a504-a4d70af3b1c7")
+			(uuid "58f8717f-b92c-4c72-ad37-fe7d3979fc66")
 		)
 		(pin "4"
-			(uuid "dce692e2-32bc-4c11-82ea-abbb8203eba0")
+			(uuid "389a2834-5e98-4ae6-ae95-1544f453cf40")
 		)
 		(pin "6"
-			(uuid "c45a508f-53cb-41c6-9e1b-c923b1ba3ba6")
+			(uuid "60193fa0-ddc9-44d1-9105-ca3caab7a21d")
 		)
 		(pin "1"
-			(uuid "747b3461-30d4-4f07-9df6-dd44edf93f01")
+			(uuid "66c6d4b3-0eb4-4e96-8c73-84ca69111e9e")
 		)
 		(pin "3"
-			(uuid "dd1d355b-7995-411a-a2bd-91fc5c79e81e")
+			(uuid "9831d286-7c6e-4456-8c67-4159f024d18c")
 		)
 		(pin "5"
-			(uuid "aada175d-cd6e-46d9-acdd-d99873bf6242")
+			(uuid "ea9a6036-4a67-4476-9577-d300e6a396d7")
 		)
 		(pin "7"
-			(uuid "3b57c4bf-d308-4a1f-ba32-749ae95b95f7")
+			(uuid "d85f76c7-79c6-4e7c-a50a-81d6f1f29972")
 		)
 		(pin "8"
-			(uuid "3d1ba027-1176-4a71-8f85-40b144525613")
+			(uuid "56b0f09a-666f-45d5-b61e-6207c969a729")
 		)
 		(pin "10"
-			(uuid "3bf158db-e268-439f-96ad-9662a80489d2")
+			(uuid "d5216b7f-6d8a-4894-ba32-4485ce848e76")
 		)
 		(pin "11"
-			(uuid "cf628a65-ea32-4db7-acc6-e29c3deebd7a")
+			(uuid "887c741f-70a4-4990-9ff5-f52b039e9622")
 		)
 		(pin "12"
-			(uuid "c7f0d867-19c5-41cd-959e-ebe763b7e068")
+			(uuid "b983fc5a-7888-4d49-aa1b-bd6058ef3e7c")
 		)
 		(pin "9"
-			(uuid "f9cf7d07-bc32-4726-a702-acfaab275e3c")
+			(uuid "c6df1382-c493-4670-aa3a-bbb0bcc8f756")
 		)
 		(pin "13"
-			(uuid "805a1a18-67c5-4dfd-b342-9912abb94b9f")
+			(uuid "e56fc7b7-86fb-455e-a8d1-80d2b3737e21")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "U10")
 					(unit 1)
 				)
@@ -7079,11 +7163,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5073d1d8-5311-40c2-8cbc-7388afec4d97")
+			(uuid "6f460693-ab5f-4427-a6fd-b13a3881c346")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR078")
 					(unit 1)
 				)
@@ -7156,14 +7240,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "e9438ca5-d8cf-4934-b992-687b3d61938f")
+			(uuid "a6c70669-cb43-4ef8-b03c-bd256dcb5e95")
 		)
 		(pin "2"
-			(uuid "ab9b4af1-0b5c-422b-92c7-e75cf3b8ed39")
+			(uuid "f6667c8d-fa22-4e49-9454-79daef30955f")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "L5")
 					(unit 1)
 				)
@@ -7239,11 +7323,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "8033fb71-49cb-45ae-924e-6b21cc0bd5e6")
+			(uuid "f22e7793-0e66-4dcf-8a2d-7c5b283f4169")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "TP25")
 					(unit 1)
 				)
@@ -7318,14 +7402,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "0a33b59a-045c-4440-8290-1566f8fbe992")
+			(uuid "4f91d5a9-db07-48f2-aef2-0082a0bd62a6")
 		)
 		(pin "2"
-			(uuid "ad728855-e69f-4061-95e3-a434c69da064")
+			(uuid "ddf28554-9e7c-4091-8159-6a7209140dbd")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R33")
 					(unit 1)
 				)
@@ -7400,97 +7484,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "e69929d1-2b93-46a8-865b-fdff0692609e")
+			(uuid "2f6ced15-c8be-4d5a-b596-252c577c8764")
 		)
 		(pin "1"
-			(uuid "0005c42f-e975-4fd6-9a92-0d1fd8e58153")
+			(uuid "405fbea3-791d-4632-bb87-53986286dd9c")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C72")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_Schottky")
-		(at 116.84 31.75 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "79d70967-7a35-48b1-be33-e3e1ad9dcdb5")
-		(property "Reference" "D3"
-			(at 119.38 30.1624 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DFLS140L-7"
-			(at 119.38 32.7024 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_PowerDI-123"
-			(at 116.84 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0011119811/DIOD-S-A0011168012-1.pdf?hkey=6D3A4C79FDBF58556ACFDE234799DDF0"
-			(at 116.84 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Schottky diode"
-			(at 116.84 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "23e385a3-9977-484b-a3f9-cfb04053744e")
-		)
-		(pin "2"
-			(uuid "e44c9032-a528-4fad-9903-66dd1b85c62a")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -7564,14 +7566,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "34a83ee7-a825-4651-8a8f-02de8c0a8393")
+			(uuid "1bc796d7-f4d4-4ad5-bea1-8a8c49450031")
 		)
 		(pin "2"
-			(uuid "25f55bc7-7eab-4dd1-a613-fcc959b1f652")
+			(uuid "bf16d4ad-68ef-4acf-91ee-501011132200")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R40")
 					(unit 1)
 				)
@@ -7645,11 +7647,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "722b436f-2591-4dd2-bec7-1ac25d32bfe0")
+			(uuid "5564e0fd-b1cf-4c89-acbc-e57f427a7489")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR080")
 					(unit 1)
 				)
@@ -7724,14 +7726,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "9418ed85-0c13-4db9-9409-200f2409eb3d")
+			(uuid "0ebf6294-2a4d-4c3a-aa45-d92786897a0e")
 		)
 		(pin "1"
-			(uuid "01388f57-16f3-4704-a7e3-f63ae2095aae")
+			(uuid "59fa974b-6ef9-46c4-89e0-3ba8036e8ca4")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C68")
 					(unit 1)
 				)
@@ -7806,14 +7808,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "c919cbe1-483e-4688-b741-1aec1c8b6ff0")
+			(uuid "106f94a5-058b-4496-a6d0-f36e0ed386ae")
 		)
 		(pin "2"
-			(uuid "4b020ce3-639c-495d-948b-9a472079ba32")
+			(uuid "b48945e9-71ab-435e-b535-33890b1ce3f5")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R44")
 					(unit 1)
 				)
@@ -7887,11 +7889,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "0b7f1cda-9036-4cc0-a390-8f2e2108433b")
+			(uuid "848106d1-a8d4-4a80-a824-563bbc39cf62")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR070")
 					(unit 1)
 				)
@@ -7966,14 +7968,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "ada2c0a9-888f-4f95-9287-0400c891fe83")
+			(uuid "37bcb351-9343-4e9a-9eae-23accbb1309e")
 		)
 		(pin "1"
-			(uuid "080de651-4e95-4255-bb0f-8b3330d8cb0d")
+			(uuid "da770ba9-d560-4504-b9aa-19560a596515")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C75")
 					(unit 1)
 				)
@@ -8047,11 +8049,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "f5f6f135-2212-4c9a-acf9-0534617b849e")
+			(uuid "58397d85-6fb6-4956-b664-df38ba4e1393")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR081")
 					(unit 1)
 				)
@@ -8126,14 +8128,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "7ed4b0b7-2ce7-474d-91bd-f099b49ab228")
+			(uuid "5ab2901f-0baf-400f-ba60-19a01dbe5782")
 		)
 		(pin "2"
-			(uuid "d82682e4-e00f-4442-9d64-3968864492bf")
+			(uuid "42d5b3d3-1fa3-4c97-905c-3d0ea089eadf")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R34")
 					(unit 1)
 				)
@@ -8208,14 +8210,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "f66f6643-6aef-4b0e-a4c1-09c4e59e9009")
+			(uuid "db9161ed-0bf1-4e81-b511-bb741f869643")
 		)
 		(pin "1"
-			(uuid "452a281c-12e5-4df4-8804-708843328b21")
+			(uuid "accd411c-e94a-4b2e-80a1-759ef4f274f0")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C50")
 					(unit 1)
 				)
@@ -8289,11 +8291,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "e36056ed-000b-4213-98ce-ba6def5d3804")
+			(uuid "d28872ea-fc9b-46a6-8ec2-1a68fb7ec103")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#FLG06")
 					(unit 1)
 				)
@@ -8366,26 +8368,26 @@
 			)
 		)
 		(pin "4"
-			(uuid "1ca13411-d1db-44d3-a2f8-7b34057c7b14")
+			(uuid "c1d7d555-2451-4977-b48d-6279cd3768e1")
 		)
 		(pin "5"
-			(uuid "f22f44ac-0c02-40e5-a060-c68e65b048c6")
+			(uuid "3954bd5b-d0b7-4eec-8a9e-be928fb6da10")
 		)
 		(pin "3"
-			(uuid "dad34ea7-78a6-418d-83ff-b9db48100454")
+			(uuid "55410ee6-b135-4395-8671-670cdc9519df")
 		)
 		(pin "6"
-			(uuid "d05ffd30-67ed-431b-8faa-78ab9323c549")
+			(uuid "f34cb3fc-4e84-477f-b75f-9ae623e61c02")
 		)
 		(pin "1"
-			(uuid "7858a455-97ef-4422-8bd5-525970e18a7b")
+			(uuid "b8d354c9-505f-4630-8fe5-08ed4b26a11e")
 		)
 		(pin "2"
-			(uuid "19c1f22b-9aee-4ffe-8d6b-d9fdfd06a22e")
+			(uuid "14793e0c-3ca9-4a5d-bc19-cdeebcc45512")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "U8")
 					(unit 1)
 				)
@@ -8460,14 +8462,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "d375e157-dc3f-471f-a827-9d206116e58d")
+			(uuid "3d85113e-96ee-40a1-8dac-64b2015f7212")
 		)
 		(pin "1"
-			(uuid "b2581678-19fa-4671-bf54-b7e36bc45017")
+			(uuid "0a94d2d0-26bc-46c6-8a12-7ad8c19eece3")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C77")
 					(unit 1)
 				)
@@ -8542,14 +8544,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "5fdf0fb5-1d3e-48a6-83e2-cb8d0c377cff")
+			(uuid "335ef643-c7e8-4e42-8ea5-9a810fab48b9")
 		)
 		(pin "2"
-			(uuid "631bcc7a-a443-4ba8-9523-6d47bdf540f2")
+			(uuid "fc339649-4ae9-42c3-8f0a-de555add5433")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R26")
 					(unit 1)
 				)
@@ -8624,14 +8626,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "9a528c96-1053-4071-9e8b-841ba3f1816c")
+			(uuid "28c04b0b-e30e-440f-94e2-1792c2d7b38b")
 		)
 		(pin "2"
-			(uuid "c6fc84d1-0d62-499e-a1e2-fd3cd0160b43")
+			(uuid "81e7c49b-1e4d-451b-bc6e-d3e0e7a53da3")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R53")
 					(unit 1)
 				)
@@ -8704,14 +8706,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "225228de-ed55-49ee-8791-f7001b86b060")
+			(uuid "3c15d087-b994-4f8c-811c-141de7913cc4")
 		)
 		(pin "2"
-			(uuid "69a99f2f-4752-4c27-84e4-3fd461750cf2")
+			(uuid "3f535e4a-72e7-4b27-a1b6-2ea8923eeafd")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "L4")
 					(unit 1)
 				)
@@ -8785,11 +8787,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "bfc68cef-e890-4a2c-be0f-9d05a31c3353")
+			(uuid "f77c1d80-b9ca-48bd-8f01-bfa2c9bc88eb")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR082")
 					(unit 1)
 				)
@@ -8864,14 +8866,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "c6cdbed6-578e-4125-88e1-5415a6ae0fb6")
+			(uuid "dc4dada3-971c-48e3-ba8e-87cc579f2677")
 		)
 		(pin "1"
-			(uuid "230e829a-5813-4a45-84c5-a77abe9bfac5")
+			(uuid "63b2501c-b53d-4d3a-a9d0-2b61ef9e23e9")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C76")
 					(unit 1)
 				)
@@ -8946,14 +8948,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "54eb348f-b870-4993-aedd-25b3011caecd")
+			(uuid "bd0e64fc-981a-4893-9f27-6c4fbe8e7f1b")
 		)
 		(pin "2"
-			(uuid "0d820519-eff7-4582-a683-588f1ed681ba")
+			(uuid "e4ea7562-497f-4221-a81c-5f87092405df")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R37")
 					(unit 1)
 				)
@@ -9028,14 +9030,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "a970363b-4939-4f59-806d-49f5fc9bd8d5")
+			(uuid "b9cb56b8-297f-49bb-bef2-c6e9ad60dad6")
 		)
 		(pin "1"
-			(uuid "e2f81252-8bdb-4b94-9482-c488ccbab5ad")
+			(uuid "a3886724-7d5d-4997-8398-2d73571dd251")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C48")
 					(unit 1)
 				)
@@ -9109,11 +9111,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a1afb67-8fef-4380-838c-b4c574cefdfe")
+			(uuid "d7852b93-fa1f-4fbe-830f-aa03201cb8aa")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR043")
 					(unit 1)
 				)
@@ -9188,14 +9190,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "39ce35fb-30f9-4768-9b36-cf1ceb9d5a64")
+			(uuid "e336f820-c770-422b-a4ca-ca68d36eee2e")
 		)
 		(pin "2"
-			(uuid "5f08a33d-b733-4288-89c7-b42de6fb64ee")
+			(uuid "ceebc521-d00f-4d56-89a7-798450419e8d")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R43")
 					(unit 1)
 				)
@@ -9270,14 +9272,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "81a63a3b-d97b-4c97-8179-06f7816dce60")
+			(uuid "2ed94625-fdc3-404b-89b8-430aef539ac0")
 		)
 		(pin "2"
-			(uuid "1b78bff4-7c8c-4882-9a92-7bf249046a19")
+			(uuid "41b80a9c-d335-4c9d-b132-70bf03a59404")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R54")
 					(unit 1)
 				)
@@ -9352,14 +9354,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "db0a8103-af12-4563-b9ab-523668e1fc7e")
+			(uuid "f34664cf-51c9-4231-88e4-21e16805e586")
 		)
 		(pin "2"
-			(uuid "51d128e8-3252-47fd-8b54-c55c46fbeb81")
+			(uuid "cebd585a-baef-4eaf-80ae-4d36dcdc2894")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R48")
 					(unit 1)
 				)
@@ -9434,14 +9436,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "a5445fa0-6d22-4be1-895f-98dd23541676")
+			(uuid "3d29b544-b818-4f07-83e4-36e8a56d9388")
 		)
 		(pin "2"
-			(uuid "a3aa895a-1a21-4cfd-a582-e92f492cd4cf")
+			(uuid "59b7e304-faa7-4d65-badb-d3a02a270194")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R41")
 					(unit 1)
 				)
@@ -9516,14 +9518,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "71efb634-448e-4a7a-b507-e64a82ac7926")
+			(uuid "a54cddc1-d96f-4efd-ab6a-9fe6d17af050")
 		)
 		(pin "2"
-			(uuid "e8e96467-7635-4383-b7b9-3eb4607726ab")
+			(uuid "64ba165f-807d-4360-9ca5-944e960590aa")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R50")
 					(unit 1)
 				)
@@ -9598,14 +9600,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "b43f5c9c-a477-4550-b37c-da1a72baaa80")
+			(uuid "b76da36a-c3ef-4415-977b-81fb131720ee")
 		)
 		(pin "2"
-			(uuid "8aa214e4-391d-4234-85ce-ccc7fee21bc4")
+			(uuid "5a08f33e-9530-4059-99fd-a8b7aa48ea5a")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R46")
 					(unit 1)
 				)
@@ -9680,14 +9682,14 @@
 			)
 		)
 		(pin "2"
-			(uuid "c65dbf4e-b26c-4f95-8ebe-fb8134b627c3")
+			(uuid "3315758e-6851-43ed-8646-7ed8512ad396")
 		)
 		(pin "1"
-			(uuid "eefc090a-a1ad-4056-8472-d13d175325ec")
+			(uuid "e1b4d11b-a88b-4e6b-8cbc-b7a313f70bb9")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "C71")
 					(unit 1)
 				)
@@ -9761,11 +9763,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "eb893207-e129-4fc6-a6fa-4358d0e09e9e")
+			(uuid "81b674a9-21e3-4c94-a460-baab5d06cc4e")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "#PWR076")
 					(unit 1)
 				)
@@ -9840,14 +9842,14 @@
 			)
 		)
 		(pin "1"
-			(uuid "2924d95d-2839-42c2-91d6-bb2e44eeecd5")
+			(uuid "87a8e25d-1f45-4e64-a439-fa1775fcee4a")
 		)
 		(pin "2"
-			(uuid "7f0c0d45-eb34-496f-831c-8c9324db9b45")
+			(uuid "2e5b3d9d-7415-4aca-998e-f42f3f4ff14a")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/9e2d86bc-7126-444f-b81f-ff149ea8d862"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1/77b94cc4-5e4f-48ca-a6e0-c84b7093f221"
 					(reference "R42")
 					(unit 1)
 				)

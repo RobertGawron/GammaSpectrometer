@@ -64,7 +64,7 @@
 		(symbol "5PB1102PGGK_1_1"
 			(rectangle
 				(start -8.89 -6.35)
-				(end 7.62 -17.78)
+				(end 7.62 -19.05)
 				(stroke
 					(width 0)
 					(type solid)
@@ -92,7 +92,7 @@
 				)
 			)
 			(pin input line
-				(at -11.43 -12.7 0)
+				(at -11.43 -15.24 0)
 				(length 2.54)
 				(name "CLK_EN"
 					(effects
@@ -110,7 +110,7 @@
 				)
 			)
 			(pin output line
-				(at 10.16 -7.62 180)
+				(at 10.16 -8.89 180)
 				(length 2.54)
 				(name "Y0"
 					(effects
@@ -128,7 +128,7 @@
 				)
 			)
 			(pin power_in line
-				(at 0 -20.32 90)
+				(at 0 -21.59 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -202,7 +202,7 @@
 				)
 			)
 			(pin output line
-				(at 10.16 -10.16 180)
+				(at 10.16 -11.43 180)
 				(length 2.54)
 				(name "Y1"
 					(effects
@@ -238,8 +238,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "AD8139"
+			(at 2.286 -1.778 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2221,8 +2221,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 0 0 0)
+		(property "Value" "LTC6268IS6"
+			(at 4.826 -1.524 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

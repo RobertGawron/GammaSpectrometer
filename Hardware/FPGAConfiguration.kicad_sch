@@ -6,9 +6,11 @@
 	(paper "A4")
 	(title_block
 		(title "FPGA Configuration Memory - External 16Mb SPI Boot Flash")
-		(date "2026-04-06")
+		(date "2026-04-11")
 		(rev "1.0")
 		(company "RG")
+		(comment 2 "Schematic Diagram")
+		(comment 3 "DRAFT")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_02x04_Row_Letter_Last"
@@ -1857,17 +1859,6 @@
 		)
 		(uuid "b8054bf2-4048-47b7-a7d8-57c879ce2f4c")
 	)
-	(hierarchical_label "VCC_3V3"
-		(shape input)
-		(at 48.26 29.21 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "027ec97b-2eae-4bff-b04f-822c4c431419")
-	)
 	(hierarchical_label "{FPGA_CFG_IF}"
 		(shape bidirectional)
 		(at 46.99 49.53 180)
@@ -1890,7 +1881,18 @@
 		)
 		(uuid "7049178c-bbc9-4e67-a1e0-49af81510db7")
 	)
-	(hierarchical_label "VCC_3V3"
+	(hierarchical_label "+3V3_D"
+		(shape input)
+		(at 48.26 29.21 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7a24b402-5f04-4b9d-b7c2-2e78bc6872a9")
+	)
+	(hierarchical_label "+3V3_D"
 		(shape input)
 		(at 105.41 116.84 0)
 		(effects
@@ -1899,7 +1901,7 @@
 			)
 			(justify left)
 		)
-		(uuid "ebeebd2c-80a5-4d6d-bd77-b85c05ce6aeb")
+		(uuid "7b1a3cd9-7839-49af-b36d-5f09b2c2fc39")
 	)
 	(symbol
 		(lib_id "Jumper:Jumper_2_Open")

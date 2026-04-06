@@ -1,0 +1,575 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "4dcbfa6a-9e4e-40b5-91ea-9bd5e32f7ee4")
+	(paper "A4")
+	(title_block
+		(date "2026-04-11")
+		(rev "1.0")
+		(company "RG")
+		(comment 2 "Schematic Diagram")
+		(comment 3 "DRAFT")
+	)
+	(lib_symbols)
+	(junction
+		(at 129.54 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c6974333-bf11-462b-acba-c72e5cb15ae7")
+	)
+	(wire
+		(pts
+			(xy 73.66 40.64) (xy 86.36 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0354d6da-9919-4140-9d51-039f429c4bd7")
+	)
+	(wire
+		(pts
+			(xy 129.54 69.85) (xy 179.07 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09dcf42d-8557-4d08-833e-23608a8acb82")
+	)
+	(wire
+		(pts
+			(xy 129.54 80.01) (xy 127 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "123383e2-e400-4cc8-853f-39c61d3ee2d7")
+	)
+	(wire
+		(pts
+			(xy 86.36 54.61) (xy 86.36 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "164bdfbd-e0fb-41da-8d39-73148158ac21")
+	)
+	(wire
+		(pts
+			(xy 73.66 43.18) (xy 83.82 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e520079-d720-4a3d-9c47-155e240a90cb")
+	)
+	(wire
+		(pts
+			(xy 86.36 80.01) (xy 83.82 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "253ced81-e964-4faf-8961-dc265487701c")
+	)
+	(wire
+		(pts
+			(xy 132.08 58.42) (xy 135.89 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29c3e9c6-097c-4058-bc1b-e2c19e5255e5")
+	)
+	(wire
+		(pts
+			(xy 83.82 80.01) (xy 83.82 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31d99759-44a0-4501-8850-ff45a4f5a47a")
+	)
+	(wire
+		(pts
+			(xy 135.89 55.88) (xy 129.54 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47bcfdf6-aca0-4969-9ce0-38633fabdc92")
+	)
+	(wire
+		(pts
+			(xy 81.28 45.72) (xy 81.28 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60a2af0b-e523-4dbd-a1f5-06cdc10b3ca5")
+	)
+	(wire
+		(pts
+			(xy 81.28 82.55) (xy 86.36 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61e1de89-b971-4d11-bda4-6df06af15408")
+	)
+	(wire
+		(pts
+			(xy 129.54 69.85) (xy 129.54 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fa9f1c4-83de-499d-a432-5de0e7c7e1f6")
+	)
+	(wire
+		(pts
+			(xy 173.99 50.8) (xy 179.07 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "849de6e5-348e-43a7-b02e-b5212787d1a6")
+	)
+	(wire
+		(pts
+			(xy 127 82.55) (xy 132.08 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8797f313-b5b5-4edc-8f35-afa37dcfca94")
+	)
+	(wire
+		(pts
+			(xy 86.36 54.61) (xy 88.9 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a909352-4425-4caf-be9c-aa6d8d761732")
+	)
+	(wire
+		(pts
+			(xy 73.66 45.72) (xy 81.28 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94ceb7bc-a8a0-443c-be17-6a620c190961")
+	)
+	(bus
+		(pts
+			(xy 73.66 85.09) (xy 86.36 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "962596e6-0136-4552-9e99-cbf11589e71f")
+	)
+	(wire
+		(pts
+			(xy 86.36 69.85) (xy 129.54 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "997a0dd4-b272-4695-b099-ac36483eaf2e")
+	)
+	(wire
+		(pts
+			(xy 121.92 50.8) (xy 135.89 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b54f77d2-e55a-41bc-b495-6f937926b6c5")
+	)
+	(wire
+		(pts
+			(xy 132.08 58.42) (xy 132.08 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7893eb8-cff6-41b9-894c-cc068087ab3f")
+	)
+	(wire
+		(pts
+			(xy 129.54 55.88) (xy 129.54 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd472ead-0bfd-4680-9ea6-a74b508dad00")
+	)
+	(wire
+		(pts
+			(xy 88.9 50.8) (xy 86.36 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7ef1c23-f902-461e-af6a-bec0644059c9")
+	)
+	(wire
+		(pts
+			(xy 86.36 40.64) (xy 86.36 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f09244b8-00fb-4d6c-b7eb-a6dfbb9d9e3f")
+	)
+	(hierarchical_label "{SIPM_BIAS_I2C}"
+		(shape bidirectional)
+		(at 73.66 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0c74eb88-c70a-4d68-8f7c-f2427a162034")
+	)
+	(hierarchical_label "+3V3_D"
+		(shape input)
+		(at 73.66 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "28b74159-2fa6-4676-b279-678dfa12fa8d")
+	)
+	(hierarchical_label "+2V5_A"
+		(shape input)
+		(at 73.66 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2d90de81-75b0-4798-8902-c40e0db9fc1a")
+	)
+	(hierarchical_label "+V_IN"
+		(shape input)
+		(at 73.66 40.64 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3098d332-2fc9-4ae7-a620-fa73d427c5f6")
+	)
+	(hierarchical_label "SIPM_BIAS_OK"
+		(shape output)
+		(at 179.07 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97365109-f558-4219-a799-3e2e4256dc4e")
+	)
+	(hierarchical_label "+V_SIPM_BIAS"
+		(shape output)
+		(at 179.07 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d41b9197-c4f6-4fa2-b3ac-065bd3995cc8")
+	)
+	(sheet
+		(at 88.9 48.26)
+		(size 33.02 8.89)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "23991e5e-8b99-43ed-a019-85847ab82d65")
+		(property "Sheetname" "SiPMBiasRawHVGenerator"
+			(at 88.9 47.5484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBiasRawHVGenerator.kicad_sch"
+			(at 88.9 57.7346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+V_IN" input
+			(at 88.9 50.8 180)
+			(uuid "e944e2d4-7d82-449c-b5dd-9aba9e9b06bf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+V_SIPM_BIAS_RAW" output
+			(at 121.92 50.8 0)
+			(uuid "c9153ead-ef69-47e7-915e-7a48a313aae0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "VBIAS_EN" input
+			(at 88.9 54.61 180)
+			(uuid "ced90b0f-05d8-4ada-af40-badf3daaee8d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 86.36 77.47)
+		(size 40.64 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ba9d1102-5c45-46c4-a9eb-f40514860875")
+		(property "Sheetname" "SiPMBiasControl"
+			(at 86.36 76.7584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBiasControl.kicad_sch"
+			(at 86.36 92.0246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_BIAS_SET_V" output
+			(at 127 82.55 0)
+			(uuid "749278ad-21ff-41e7-acd3-fee456309888")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+2V5_A" input
+			(at 86.36 82.55 180)
+			(uuid "0ba59be6-c602-4ac3-8f7b-7ac747f9c632")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VBIAS_EN" output
+			(at 127 80.01 0)
+			(uuid "478673cb-516e-49d8-8cef-99dbe0e8c793")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{SIPM_BIAS_I2C}" tri_state
+			(at 86.36 85.09 180)
+			(uuid "bdfeb2ce-2f03-4947-a82a-4f0a46baa771")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_D" input
+			(at 86.36 80.01 180)
+			(uuid "7102dd14-225a-424a-9b85-df20bb387174")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 135.89 48.26)
+		(size 38.1 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e1c37bc0-f670-415c-9cd4-4e609e2dab2a")
+		(property "Sheetname" "SiPMBiasLDO"
+			(at 135.89 47.5484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBiasLDO.kicad_sch"
+			(at 135.89 61.5446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_BIAS_SET_V" input
+			(at 135.89 58.42 180)
+			(uuid "44f4bca5-d524-42f4-a841-f5f48a0f02b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+V_SIPM_BIAS" output
+			(at 173.99 50.8 0)
+			(uuid "87353a45-4b94-401c-b847-fde2221a2369")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+V_SIPM_BIAS_RAW" input
+			(at 135.89 50.8 180)
+			(uuid "5e2f02e4-8aab-4525-aa47-db35d5030e80")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "VBIAS_EN" input
+			(at 135.89 55.88 180)
+			(uuid "7a457163-fc3b-407c-bbf9-3488b79b72a1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
+					(page "16")
+				)
+			)
+		)
+	)
+)

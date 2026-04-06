@@ -450,14 +450,14 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
       "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "single_global_label": "warning",
       "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
@@ -607,6 +607,10 @@
       "SIPM_ADC": [
         "POS",
         "NEG"
+      ],
+      "SIPM_BIAS_I2C": [
+        "SIPM_BIAS_I2C_SCL",
+        "SIPM_BIAS_I2C_SDA"
       ]
     },
     "connection_grid_size": 50.0,
@@ -637,7 +641,7 @@
     "meta": {
       "version": 1
     },
-    "page_layout_descr_file": "",
+    "page_layout_descr_file": "kicad-embed://A4_ISO5457-1999_ISO7200-2004_EN.kicad_wks",
     "plot_directory": "",
     "reuse_designators": true,
     "subpart_first_id": 65,
@@ -649,7 +653,7 @@
         "uuid": "d6192878-4721-4ef4-99ff-dbbad0502886"
       }
     ],
-    "used_designators": "U7,U17-19,#PWR31-32,#PWR38-42,#PWR49,#PWR54-55,#PWR61-69,#PWR83-85,#PWR99-110,C34-38,C42-44,C46,C62-64,C93-99,JP1,JP8,J1-2,R22-24,R29-31,R62-64,R92-98,#FLG2-3,TP17-18,SW1,D2",
+    "used_designators": "D3,#PWR16-18,#PWR42,#PWR44-51,#PWR54,#PWR64,#PWR111-118,C7,C12,C41,C51,C54-55,C60-61,C96-97,C100,F1,TP3,TP15-16,U2,U13,U20-21,#FLG7-8,R22,R90-93,R99,JP2-5,JP9-10,FL1",
     "variants": []
   },
   "sheets": [
@@ -666,12 +670,12 @@
       "AFE"
     ],
     [
-      "7a4d4219-7bcd-493b-9908-8dad4b191438",
-      "SiPMBiasRegulator"
+      "ba9d1102-5c45-46c4-a9eb-f40514860875",
+      "SiPMBiasControl"
     ],
     [
-      "45c5b52c-73c9-497e-8bbe-e5e62c0295f1",
-      "SiPMOverlightProtection"
+      "23991e5e-8b99-43ed-a019-85847ab82d65",
+      "SiPMBiasRawHVGenerator"
     ],
     [
       "ba137961-7098-4042-a793-6f9c73db00ba",
@@ -682,32 +686,44 @@
       "UserInterface"
     ],
     [
-      "9e2d86bc-7126-444f-b81f-ff149ea8d862",
-      "AnalogPowerNegative"
+      "77b94cc4-5e4f-48ca-a6e0-c84b7093f221",
+      "Analog Power Negative"
     ],
     [
       "ba90db14-78d5-4d37-a605-27a90511d129",
-      "DigitalPower"
+      "Digital Power"
     ],
     [
-      "31dfcd06-c710-4a2a-b6df-016666fa7ceb",
-      "AnalogPowerPositive"
+      "e750a3cb-e2c5-4e50-bcee-30ecfb83cac8",
+      "Analog Power Positive"
     ],
     [
-      "2185dcb4-bd81-4185-b9c6-4c2ca3dfff01",
-      "SiPMBiasControl"
+      "0eb93d81-6259-47b4-a239-c0732e012cf7",
+      "Vref 2v048"
     ],
     [
       "15693ce6-b2f2-408a-b00e-10ad93f3b693",
-      "FPGAConfiguration"
+      "FPGA Configuration"
     ],
     [
       "5e927257-5338-4ea8-9ca0-aa5d85a4e135",
-      "ClockGeneration"
+      "Clock Generation"
     ],
     [
       "ec244bf6-1193-4eaf-b1ba-fe26d901e8f4",
-      "PowerInput"
+      "Power Input"
+    ],
+    [
+      "26c85e8f-d7e7-4def-9549-c7a26d210092",
+      "SiPM Bias"
+    ],
+    [
+      "e1c37bc0-f670-415c-9cd4-4e609e2dab2a",
+      "SiPMBiasLDO"
+    ],
+    [
+      "b16128e5-6398-4e08-86d4-8842ad98ebb1",
+      "Analog Power"
     ]
   ],
   "text_variables": {},
