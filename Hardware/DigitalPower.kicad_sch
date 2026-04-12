@@ -5,9 +5,9 @@
 	(uuid "a9dee4d2-09f6-4706-ad43-3d0d726afa10")
 	(paper "A4")
 	(title_block
-		(title "Digital Power Regulators (3.3V, 1.2V)")
+		(title "Digital Power Regulators \\n(3.3V, 1.2V)")
 		(date "2026-04-11")
-		(rev "1.0")
+		(rev "0.1")
 		(company "RG")
 		(comment 2 "Schematic Diagram")
 		(comment 3 "DRAFT")
@@ -2455,7 +2455,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03d1571d-f8b6-4150-a092-d7fd6382b160")
-		(property "Reference" "#PWR062"
+		(property "Reference" "#PWR0912"
 			(at 73.66 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -2515,7 +2515,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR062")
+					(reference "#PWR0912")
 					(unit 1)
 				)
 			)
@@ -2533,7 +2533,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "04255bde-5ea6-40bc-99b4-50342b3c3a5c")
-		(property "Reference" "U17"
+		(property "Reference" "U901"
 			(at 62.23 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2604,7 +2604,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "U17")
+					(reference "U901")
 					(unit 1)
 				)
 			)
@@ -2622,7 +2622,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11576f73-6ed7-45b3-a042-080560626c46")
-		(property "Reference" "#PWR053"
+		(property "Reference" "#PWR0910"
 			(at 72.39 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -2682,7 +2682,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR053")
+					(reference "#PWR0910")
 					(unit 1)
 				)
 			)
@@ -2700,7 +2700,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19653387-7ef3-4ded-8c26-8f1bfa2db5a3")
-		(property "Reference" "#PWR060"
+		(property "Reference" "#PWR0916"
 			(at 99.06 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2760,7 +2760,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR060")
+					(reference "#PWR0916")
 					(unit 1)
 				)
 			)
@@ -2778,7 +2778,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25f5238a-cc0d-4c26-9603-ab75cd659587")
-		(property "Reference" "#PWR034"
+		(property "Reference" "#PWR0902"
 			(at 33.02 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2838,7 +2838,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR034")
+					(reference "#PWR0902")
 					(unit 1)
 				)
 			)
@@ -2856,7 +2856,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "28d01ecb-a92b-4d4a-aec6-61235ba713e7")
-		(property "Reference" "#PWR057"
+		(property "Reference" "#PWR0908"
 			(at 58.42 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2916,7 +2916,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR057")
+					(reference "#PWR0908")
 					(unit 1)
 				)
 			)
@@ -2934,7 +2934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2e5bd638-855c-4a73-a402-613716aa783c")
-		(property "Reference" "#PWR061"
+		(property "Reference" "#PWR0903"
 			(at 33.02 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -2994,7 +2994,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR061")
+					(reference "#PWR0903")
 					(unit 1)
 				)
 			)
@@ -3012,7 +3012,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "38918bb4-67b0-4439-a14b-21ddeea6b4d2")
-		(property "Reference" "#PWR056"
+		(property "Reference" "#PWR0905"
 			(at 45.72 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -3072,7 +3072,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR056")
+					(reference "#PWR0905")
 					(unit 1)
 				)
 			)
@@ -3090,7 +3090,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "50bde54a-08cd-43c9-a384-707fc23a5353")
-		(property "Reference" "C62"
+		(property "Reference" "C903"
 			(at 29.21 156.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3154,7 +3154,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C62")
+					(reference "C903")
 					(unit 1)
 				)
 			)
@@ -3172,7 +3172,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54f2a330-3215-4b40-ba49-f40209990f04")
-		(property "Reference" "C57"
+		(property "Reference" "C908"
 			(at 88.9 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3236,7 +3236,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C57")
+					(reference "C908")
 					(unit 1)
 				)
 			)
@@ -3254,7 +3254,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5940158b-2aa7-4244-882b-ff431a804623")
-		(property "Reference" "#PWR037"
+		(property "Reference" "#PWR0915"
 			(at 99.06 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3314,7 +3314,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR037")
+					(reference "#PWR0915")
 					(unit 1)
 				)
 			)
@@ -3332,7 +3332,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "629157b7-2240-499d-8a99-1d48ba27be2f")
-		(property "Reference" "#PWR063"
+		(property "Reference" "#PWR0906"
 			(at 45.72 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -3392,7 +3392,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR063")
+					(reference "#PWR0906")
 					(unit 1)
 				)
 			)
@@ -3410,7 +3410,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64d83695-356c-40e2-829d-583f27f3b88a")
-		(property "Reference" "C39"
+		(property "Reference" "C901"
 			(at 29.21 36.8299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3474,7 +3474,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C39")
+					(reference "C901")
 					(unit 1)
 				)
 			)
@@ -3493,7 +3493,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6de477d7-de69-45e2-9396-fbf1039ea583")
-		(property "Reference" "C58"
+		(property "Reference" "C909"
 			(at 102.87 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3557,7 +3557,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C58")
+					(reference "C909")
 					(unit 1)
 				)
 			)
@@ -3575,7 +3575,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "737d34d1-19de-458e-a210-3518fac8799a")
-		(property "Reference" "C63"
+		(property "Reference" "C906"
 			(at 69.85 156.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3639,7 +3639,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C63")
+					(reference "C906")
 					(unit 1)
 				)
 			)
@@ -3657,7 +3657,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7621f5e7-7dfe-4e6f-827a-de1571074154")
-		(property "Reference" "#PWR036"
+		(property "Reference" "#PWR0904"
 			(at 45.72 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3717,7 +3717,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR036")
+					(reference "#PWR0904")
 					(unit 1)
 				)
 			)
@@ -3736,7 +3736,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "806d495b-d08b-4fac-819c-eccb51e14ada")
-		(property "Reference" "C53"
+		(property "Reference" "C905"
 			(at 41.91 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3800,7 +3800,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C53")
+					(reference "C905")
 					(unit 1)
 				)
 			)
@@ -3818,7 +3818,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ed7ee15-1be6-43f1-b5df-fff68775001e")
-		(property "Reference" "JP8"
+		(property "Reference" "JP901"
 			(at 39.37 156.21 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3883,7 +3883,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "JP8")
+					(reference "JP901")
 					(unit 1)
 				)
 			)
@@ -3901,7 +3901,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9dc737a8-4dc6-42bf-997f-684af5fa93a7")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR0901"
 			(at 33.02 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3961,7 +3961,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR033")
+					(reference "#PWR0901")
 					(unit 1)
 				)
 			)
@@ -3979,7 +3979,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a1737642-b588-4290-b04e-e41231fe869d")
-		(property "Reference" "U12"
+		(property "Reference" "U903"
 			(at 72.39 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4050,7 +4050,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "U12")
+					(reference "U903")
 					(unit 1)
 				)
 			)
@@ -4068,7 +4068,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5208969-be64-4ce4-81a7-9c77290b592f")
-		(property "Reference" "#PWR059"
+		(property "Reference" "#PWR0914"
 			(at 85.09 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -4128,7 +4128,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR059")
+					(reference "#PWR0914")
 					(unit 1)
 				)
 			)
@@ -4146,7 +4146,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a653f92d-893b-41b2-b6f5-643e5bfe246f")
-		(property "Reference" "C40"
+		(property "Reference" "C902"
 			(at 29.21 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4210,7 +4210,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C40")
+					(reference "C902")
 					(unit 1)
 				)
 			)
@@ -4228,7 +4228,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a67b9bdc-0e82-47dc-84b7-d7a439047fb6")
-		(property "Reference" "U11"
+		(property "Reference" "U902"
 			(at 72.39 25.4 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4299,7 +4299,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "U11")
+					(reference "U902")
 					(unit 1)
 				)
 			)
@@ -4317,7 +4317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bc533f44-8f11-487b-b986-cb847f782b67")
-		(property "Reference" "#PWR035"
+		(property "Reference" "#PWR0913"
 			(at 85.09 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -4377,7 +4377,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR035")
+					(reference "#PWR0913")
 					(unit 1)
 				)
 			)
@@ -4395,7 +4395,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c33ff1b9-a323-4c95-892f-d4505fd074f9")
-		(property "Reference" "JP6"
+		(property "Reference" "JP902"
 			(at 52.07 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4460,7 +4460,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "JP6")
+					(reference "JP902")
 					(unit 1)
 				)
 			)
@@ -4479,7 +4479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4665805-8c63-4e98-9222-92a015365423")
-		(property "Reference" "C52"
+		(property "Reference" "C904"
 			(at 41.91 36.8299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4543,7 +4543,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C52")
+					(reference "C904")
 					(unit 1)
 				)
 			)
@@ -4561,7 +4561,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cbd56d7f-fbe2-453e-8f78-3dd0df923e62")
-		(property "Reference" "C56"
+		(property "Reference" "C907"
 			(at 88.9 35.5599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4625,7 +4625,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C56")
+					(reference "C907")
 					(unit 1)
 				)
 			)
@@ -4643,7 +4643,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d48dda77-4b6a-4404-b0c7-5f5fbffd98f0")
-		(property "Reference" "JP7"
+		(property "Reference" "JP903"
 			(at 52.07 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4708,7 +4708,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "JP7")
+					(reference "JP903")
 					(unit 1)
 				)
 			)
@@ -4727,7 +4727,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dce50140-377e-4e38-9de1-5ab49dc66fed")
-		(property "Reference" "TP20"
+		(property "Reference" "TP901"
 			(at 96.52 25.9079 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4788,7 +4788,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "TP20")
+					(reference "TP901")
 					(unit 1)
 				)
 			)
@@ -4806,7 +4806,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e0f170e9-b6f1-4ea6-a149-a7929f977dcc")
-		(property "Reference" "#PWR065"
+		(property "Reference" "#PWR0909"
 			(at 62.23 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -4866,7 +4866,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR065")
+					(reference "#PWR0909")
 					(unit 1)
 				)
 			)
@@ -4885,7 +4885,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e221bdff-5c20-4580-b573-599a3ed8f94c")
-		(property "Reference" "C59"
+		(property "Reference" "C910"
 			(at 102.87 71.1199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4949,7 +4949,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "C59")
+					(reference "C910")
 					(unit 1)
 				)
 			)
@@ -4967,7 +4967,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e2b36983-5b43-4df4-b2c1-ff91f5147452")
-		(property "Reference" "#PWR058"
+		(property "Reference" "#PWR0911"
 			(at 72.39 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -5027,7 +5027,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR058")
+					(reference "#PWR0911")
 					(unit 1)
 				)
 			)
@@ -5045,7 +5045,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eddb32de-feca-4baf-bfab-b01aa51b24c5")
-		(property "Reference" "#PWR052"
+		(property "Reference" "#PWR0907"
 			(at 58.42 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -5105,7 +5105,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "#PWR052")
+					(reference "#PWR0907")
 					(unit 1)
 				)
 			)
@@ -5124,7 +5124,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f6dcfd88-9cf9-4010-9b76-fc02f9cd9c84")
-		(property "Reference" "TP21"
+		(property "Reference" "TP902"
 			(at 96.52 61.4679 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5185,7 +5185,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba90db14-78d5-4d37-a605-27a90511d129"
-					(reference "TP21")
+					(reference "TP902")
 					(unit 1)
 				)
 			)

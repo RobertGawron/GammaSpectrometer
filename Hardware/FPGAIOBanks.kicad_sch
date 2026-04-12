@@ -1,0 +1,423 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "46f5c7d7-7ff4-49c9-8d8f-c6a04e222e73")
+	(paper "A4")
+	(title_block
+		(title "iCE40HX4K FPGA Core & I/O Banks")
+		(date "2026-04-11")
+		(rev "0.1")
+		(company "RG")
+		(comment 2 "Schematic Diagram")
+		(comment 3 "DRAFT")
+	)
+	(lib_symbols)
+	(text "Note: This sheet groups the FPGA I/O banks for readability. \nBanks are partitioned onto separate subsheets."
+		(exclude_from_sim no)
+		(at 87.63 82.55 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "30f52ceb-b4ec-43b9-b99a-fdf93d866676")
+	)
+	(junction
+		(at 85.09 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a36e5203-68fc-4876-a19c-ce2bf558012e")
+	)
+	(wire
+		(pts
+			(xy 146.05 40.64) (xy 152.4 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05b4e6c5-1e96-4a17-8380-2792e7c24ec6")
+	)
+	(wire
+		(pts
+			(xy 146.05 43.18) (xy 152.4 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bdbbf9b-865d-4753-a676-e8b66baa167a")
+	)
+	(wire
+		(pts
+			(xy 85.09 40.64) (xy 85.09 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "206116d7-ad18-461b-88b2-8bb4f7b5f477")
+	)
+	(wire
+		(pts
+			(xy 85.09 33.02) (xy 85.09 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31cc57e4-4e5d-4d4c-9bb9-a480939c7af4")
+	)
+	(bus
+		(pts
+			(xy 106.68 53.34) (xy 111.76 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "379a52b8-c7a6-4a3f-a0d3-4c036f99a84d")
+	)
+	(wire
+		(pts
+			(xy 81.28 33.02) (xy 85.09 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c9c76ab-f963-4236-91a3-ceac15b14eb2")
+	)
+	(bus
+		(pts
+			(xy 106.68 48.26) (xy 111.76 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9adb6197-3aba-4821-89fd-8624240bb101")
+	)
+	(wire
+		(pts
+			(xy 85.09 72.39) (xy 111.76 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eec51ba-a9e2-40aa-8dcc-f1e142042e9f")
+	)
+	(wire
+		(pts
+			(xy 106.68 50.8) (xy 111.76 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4912ec0-0953-4b29-9e64-21a5ae26fe6e")
+	)
+	(wire
+		(pts
+			(xy 106.68 45.72) (xy 111.76 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc6f427f-1821-4ced-a931-9ad96c0436a6")
+	)
+	(wire
+		(pts
+			(xy 85.09 40.64) (xy 111.76 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cce8d53b-8917-4486-b50f-4fb30ae6d3cb")
+	)
+	(bus
+		(pts
+			(xy 106.68 58.42) (xy 111.76 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fee1e9a2-5f70-4989-b795-c101feab10db")
+	)
+	(hierarchical_label "+3V3_FPGA"
+		(shape input)
+		(at 81.28 33.02 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "27b4be37-7ce1-4c20-8dd9-c29380e6bd66")
+	)
+	(hierarchical_label "MEAS_UART_RX"
+		(shape input)
+		(at 152.4 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "319e6a34-398a-4457-8d7b-899c4a5224d6")
+	)
+	(hierarchical_label "{SIPM_BIAS_I2C}"
+		(shape bidirectional)
+		(at 106.68 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "37c9b4da-3526-4862-8770-a14fe7eaf3c6")
+	)
+	(hierarchical_label "OTR"
+		(shape input)
+		(at 106.68 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "446fa7da-bf2a-4bc3-8ce7-fe0de75d80fe")
+	)
+	(hierarchical_label "{CLK}"
+		(shape input)
+		(at 106.68 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "562365f4-99a4-44b3-a0d8-8a12be885b18")
+	)
+	(hierarchical_label "SIPM_ADC[1..12]"
+		(shape input)
+		(at 106.68 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a94de60f-85d2-4cf7-9479-505b3b0f84a2")
+	)
+	(hierarchical_label "MEAS_UART_TX"
+		(shape output)
+		(at 152.4 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d755afb1-3ec9-466c-8609-ab4d024bbc22")
+	)
+	(hierarchical_label "SIPM_BIAS_OK"
+		(shape input)
+		(at 106.68 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "efe29fb5-95b1-4347-8b6d-667fc7c45559")
+	)
+	(sheet
+		(at 111.76 69.85)
+		(size 34.29 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8dbe922f-549e-4607-9605-b76109be94c6")
+		(property "Sheetname" "FPGA IO Banks 2-3"
+			(at 111.76 69.1384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAIOBanks23.kicad_sch"
+			(at 111.76 75.5146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3V3_FPGA" input
+			(at 111.76 72.39 180)
+			(uuid "8df8d670-b8b4-4dfa-a8d7-c5206da31887")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 38.1)
+		(size 34.29 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "bebcc52f-09a1-40fc-ab10-2c658f7c32b0")
+		(property "Sheetname" "FPGA IO Banks 0-1"
+			(at 111.76 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAIOBanks01.kicad_sch"
+			(at 111.76 61.5446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "MEAS_UART_RX" input
+			(at 146.05 40.64 0)
+			(uuid "555ecd8e-e0e9-4ea7-9ba6-d6343a18fef6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MEAS_UART_TX" output
+			(at 146.05 43.18 0)
+			(uuid "9e3986bc-6237-4646-8c71-61887c4a302e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+3V3_FPGA" input
+			(at 111.76 40.64 180)
+			(uuid "5f76489a-cac1-41c8-8a33-531855483b04")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "OTR" input
+			(at 111.76 45.72 180)
+			(uuid "456ae266-d1bd-45df-b918-38a81295628e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC[1..12]" input
+			(at 111.76 48.26 180)
+			(uuid "ab3d2c39-f1e4-4af8-bba2-7bb6deb28553")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_BIAS_OK" input
+			(at 111.76 50.8 180)
+			(uuid "c0ac32a6-28e1-4827-8cce-123e17a03d50")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{SIPM_BIAS_I2C}" bidirectional
+			(at 111.76 53.34 180)
+			(uuid "c72bf130-c87b-43c3-9f70-373678ac67fa")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{CLK}" input
+			(at 111.76 58.42 180)
+			(uuid "d1e75b38-8871-40c3-831f-ada716d5670c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba"
+					(page "7")
+				)
+			)
+		)
+	)
+)

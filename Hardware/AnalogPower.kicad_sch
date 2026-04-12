@@ -7,7 +7,7 @@
 	(title_block
 		(title "Analog Power")
 		(date "2026-04-11")
-		(rev "1.0")
+		(rev "0.1")
 		(company "RG")
 		(comment 2 "Schematic Diagram")
 		(comment 3 "DRAFT")
@@ -15,7 +15,7 @@
 	(lib_symbols)
 	(text "Note: This sheet groups Analog Power generation and \ndistribution for readability. Positive and negative rails \nare shown on separate subsheets."
 		(exclude_from_sim no)
-		(at 45.72 82.55 0)
+		(at 45.72 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -32,7 +32,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 69.85) (xy 72.39 69.85)
+			(xy 72.39 64.77) (xy 88.9 64.77)
 		)
 		(stroke
 			(width 0)
@@ -42,7 +42,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 67.31) (xy 88.9 67.31)
+			(xy 72.39 62.23) (xy 88.9 62.23)
 		)
 		(stroke
 			(width 0)
@@ -82,7 +82,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 49.53) (xy 49.53 68.58)
+			(xy 49.53 49.53) (xy 49.53 63.5)
 		)
 		(stroke
 			(width 0)
@@ -92,7 +92,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 53.34) (xy 88.9 53.34)
+			(xy 72.39 50.8) (xy 88.9 50.8)
 		)
 		(stroke
 			(width 0)
@@ -102,23 +102,13 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 68.58) (xy 53.34 68.58)
+			(xy 49.53 63.5) (xy 53.34 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "c09748d6-f85c-4047-98b2-68982674d693")
-	)
-	(wire
-		(pts
-			(xy 72.39 50.8) (xy 88.9 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d52c9afa-914c-4d66-b8a8-61e35f6143cf")
 	)
 	(wire
 		(pts
@@ -132,7 +122,7 @@
 	)
 	(hierarchical_label "-5V0_A"
 		(shape output)
-		(at 88.9 69.85 0)
+		(at 88.9 64.77 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -140,17 +130,6 @@
 			(justify left)
 		)
 		(uuid "46897233-369c-42d0-a69c-df8a0b02fd4c")
-	)
-	(hierarchical_label "+3V3_ADC"
-		(shape output)
-		(at 88.9 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "776b143e-60dc-4c7b-9a76-c55ba459d542")
 	)
 	(hierarchical_label "+5V0_A"
 		(shape output)
@@ -165,7 +144,7 @@
 	)
 	(hierarchical_label "+2V5_A"
 		(shape output)
-		(at 88.9 53.34 0)
+		(at 88.9 50.8 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -187,7 +166,7 @@
 	)
 	(hierarchical_label "-2V5_A"
 		(shape output)
-		(at 88.9 67.31 0)
+		(at 88.9 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -197,7 +176,7 @@
 		(uuid "d345d869-3c0b-48ad-90e9-d77a54b46205")
 	)
 	(sheet
-		(at 53.34 66.04)
+		(at 53.34 60.96)
 		(size 19.05 6.35)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -213,7 +192,7 @@
 		)
 		(uuid "77b94cc4-5e4f-48ca-a6e0-c84b7093f221")
 		(property "Sheetname" "Analog Power Negative"
-			(at 53.34 65.3284 0)
+			(at 53.34 60.2484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -224,7 +203,7 @@
 			)
 		)
 		(property "Sheetfile" "AnalogPowerNegative.kicad_sch"
-			(at 53.34 72.9746 0)
+			(at 53.34 67.8946 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -235,7 +214,7 @@
 			)
 		)
 		(pin "+V_IN" input
-			(at 53.34 68.58 180)
+			(at 53.34 63.5 180)
 			(uuid "03865d7c-cbd4-4245-bb40-71963f8622c2")
 			(effects
 				(font
@@ -245,7 +224,7 @@
 			)
 		)
 		(pin "-2V5_A" output
-			(at 72.39 67.31 0)
+			(at 72.39 62.23 0)
 			(uuid "9e0c1829-4d99-476e-b6da-9ae4801a1c79")
 			(effects
 				(font
@@ -255,7 +234,7 @@
 			)
 		)
 		(pin "-5V0_A" output
-			(at 72.39 69.85 0)
+			(at 72.39 64.77 0)
 			(uuid "bdc4ac7a-a36f-4a97-990f-f743e735c903")
 			(effects
 				(font
@@ -274,7 +253,7 @@
 	)
 	(sheet
 		(at 53.34 46.99)
-		(size 19.05 8.89)
+		(size 19.05 6.35)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -300,7 +279,7 @@
 			)
 		)
 		(property "Sheetfile" "AnalogPowerPositive.kicad_sch"
-			(at 53.34 56.4646 0)
+			(at 53.34 53.9246 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -321,7 +300,7 @@
 			)
 		)
 		(pin "+2V5_A" output
-			(at 72.39 53.34 0)
+			(at 72.39 50.8 0)
 			(uuid "59e2ff9e-6e7a-48be-992b-54695d49c04b")
 			(effects
 				(font
@@ -333,16 +312,6 @@
 		(pin "+5V0_A" output
 			(at 72.39 48.26 0)
 			(uuid "02ca65f2-3ce4-4640-be03-a3d6a5871aa2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+3V3_ADC" output
-			(at 72.39 50.8 0)
-			(uuid "8518ef92-af55-46f4-a498-f61458b6a783")
 			(effects
 				(font
 					(size 1.27 1.27)

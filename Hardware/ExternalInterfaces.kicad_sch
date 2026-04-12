@@ -2,12 +2,12 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "7f30a754-21fb-43db-bf42-ed5af1a6d15c")
+	(uuid "a69e780b-3e8c-467f-abba-e0d9486ff628")
 	(paper "A4")
 	(title_block
-		(title "User Interface")
+		(title "External Interfaces")
 		(date "2026-04-11")
-		(rev "1.0")
+		(rev "0.1")
 		(company "RG")
 		(comment 2 "Schematic Diagram")
 		(comment 3 "DRAFT")
@@ -1078,220 +1078,90 @@
 		)
 	)
 	(junction
-		(at 92.71 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "274bd45a-d974-4a23-bf33-085f7ecd92d4")
-	)
-	(junction
-		(at 80.01 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d5553e6-ba60-4cef-a293-0ac8aac56177")
-	)
-	(junction
-		(at 82.55 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "961f41d4-dc48-4380-9336-330b72cffce3")
-	)
-	(junction
-		(at 78.74 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ded9cd56-7987-42eb-a322-5ef0838052d2")
-	)
-	(junction
 		(at 60.96 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e324f612-fab1-4189-95c6-457cd95def67")
+		(uuid "40a0c00d-72fd-4d46-8d5b-9cc259e205ce")
+	)
+	(junction
+		(at 77.47 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "67adaf96-6654-42f3-a02b-dbed8ee0c868")
+	)
+	(junction
+		(at 82.55 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88157009-8a25-445a-a443-2ea0cb70f6dd")
+	)
+	(junction
+		(at 77.47 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c81c96e7-9aca-4be0-a5d6-fb98497960c6")
+	)
+	(junction
+		(at 67.31 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb963ac2-4179-4880-a8cb-fd51ebfa41c8")
 	)
 	(no_connect
-		(at 118.11 86.36)
-		(uuid "2e6ad303-f37e-423f-8fc8-2dc5691795a0")
-	)
-	(no_connect
-		(at 118.11 83.82)
-		(uuid "2fd50772-ea36-4500-a08d-2a8936462759")
+		(at 109.22 73.66)
+		(uuid "43fd1892-8a04-4967-98f9-c4b2c1ec5a51")
 	)
 	(no_connect
 		(at 68.58 78.74)
-		(uuid "3686d375-9f1c-4a9a-991f-8a778ab5c6db")
+		(uuid "67d911d7-f170-4a4b-8a4c-8a4967b03989")
 	)
 	(no_connect
-		(at 118.11 73.66)
-		(uuid "c4708d11-fb78-4c57-83fb-7a03423eaadc")
+		(at 109.22 83.82)
+		(uuid "dd686cfa-2b2f-468b-b992-a595b8de1a2d")
+	)
+	(no_connect
+		(at 109.22 86.36)
+		(uuid "e6c692e3-fe4d-4fb7-83c5-8619d1af2921")
 	)
 	(wire
 		(pts
-			(xy 111.76 52.07) (xy 111.76 53.34)
+			(xy 67.31 43.18) (xy 67.31 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0136c282-694f-4ca4-a567-528b660e60d1")
+		(uuid "14abc9a0-ac19-4fbe-85ef-df293b821c27")
 	)
 	(wire
 		(pts
-			(xy 78.74 76.2) (xy 95.25 76.2)
+			(xy 68.58 73.66) (xy 77.47 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "039f26a6-a81d-40d6-b8d2-4f401ffae261")
+		(uuid "17af0fcc-5a03-47d0-bc26-b46a83c76390")
 	)
 	(wire
 		(pts
-			(xy 105.41 43.18) (xy 111.76 43.18)
+			(xy 102.87 52.07) (xy 102.87 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0a75498c-1b49-4d35-9f75-acfb71442724")
+		(uuid "193f8194-1e6d-4dee-80e8-a314f8068fbb")
 	)
 	(wire
 		(pts
-			(xy 60.96 85.09) (xy 60.96 83.82)
+			(xy 77.47 73.66) (xy 86.36 73.66)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0f568ee5-bc77-436a-b356-fc860b252cf9")
-	)
-	(wire
-		(pts
-			(xy 68.58 76.2) (xy 78.74 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10068ff0-c2ef-4d72-b6f1-55d2bc72e837")
-	)
-	(wire
-		(pts
-			(xy 111.76 43.18) (xy 111.76 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "108c80d1-e14c-4129-860e-e349c7e84cb0")
-	)
-	(wire
-		(pts
-			(xy 128.27 57.15) (xy 120.65 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24ffc4b5-7c96-4186-bf47-2a115121d7b1")
-	)
-	(wire
-		(pts
-			(xy 115.57 73.66) (xy 118.11 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3777a72d-4f82-4a06-bd28-42d5d63856bb")
-	)
-	(wire
-		(pts
-			(xy 60.96 85.09) (xy 60.96 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "378512f2-4bc0-4c49-97de-3e2c23604468")
-	)
-	(wire
-		(pts
-			(xy 118.11 54.61) (xy 128.27 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37d8c2ae-7939-4a8a-ac4b-12d3922ec30b")
-	)
-	(wire
-		(pts
-			(xy 92.71 43.18) (xy 80.01 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64aba1bd-15b8-4397-916a-24cf964c976b")
-	)
-	(wire
-		(pts
-			(xy 80.01 43.18) (xy 73.66 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64b5f807-ae80-4b66-9ecb-0220f105caf3")
-	)
-	(wire
-		(pts
-			(xy 120.65 68.58) (xy 115.57 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e15f463-5a45-45f8-baa9-2acf4888bc66")
-	)
-	(wire
-		(pts
-			(xy 120.65 57.15) (xy 120.65 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f58842f-00b6-4a91-87df-ffba6d8acd4b")
-	)
-	(wire
-		(pts
-			(xy 78.74 76.2) (xy 78.74 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "76094510-6877-44b8-977d-a627148e007c")
-	)
-	(wire
-		(pts
-			(xy 80.01 43.18) (xy 80.01 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b5b2c8a-7b70-459e-b705-eac0fb021421")
-	)
-	(wire
-		(pts
-			(xy 92.71 43.18) (xy 102.87 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "91e5cc67-c336-49ce-968d-f28c60012c78")
+		(uuid "2b57e55e-ae10-44e2-a4bb-f9cb529e2a2f")
 	)
 	(wire
 		(pts
@@ -1301,127 +1171,107 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9afbcb23-9720-414f-9ca5-25459a45d404")
+		(uuid "33822913-0379-4f34-9c32-3a4500571f74")
 	)
 	(wire
 		(pts
-			(xy 105.41 91.44) (xy 105.41 92.71)
+			(xy 60.96 85.09) (xy 60.96 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9b38e507-48cc-457c-987f-6903de8f6a18")
+		(uuid "36e6cb34-13cd-48f2-ac6b-340b3e822228")
 	)
 	(wire
 		(pts
-			(xy 92.71 43.18) (xy 92.71 44.45)
+			(xy 96.52 43.18) (xy 102.87 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a67a9683-0ab8-419f-871d-a23c76a79afb")
+		(uuid "3e190417-f275-454e-8edd-319632617969")
 	)
 	(wire
 		(pts
-			(xy 118.11 66.04) (xy 118.11 54.61)
+			(xy 106.68 66.04) (xy 110.49 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a787edb2-394a-4f28-a15a-43c0068955a4")
+		(uuid "460250af-a54f-425e-9f05-181296372f06")
 	)
 	(wire
 		(pts
-			(xy 82.55 73.66) (xy 95.25 73.66)
+			(xy 67.31 43.18) (xy 60.96 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ac3b0954-0b0f-4482-8c2d-487535f92d73")
+		(uuid "4d26a9a6-aa83-407c-bfb7-89c72be9fef1")
 	)
 	(wire
 		(pts
-			(xy 115.57 83.82) (xy 118.11 83.82)
+			(xy 102.87 43.18) (xy 102.87 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b02d09a0-d697-4b33-bffb-0bf1c28b2511")
+		(uuid "4dc3ebfe-b193-4389-8bb2-94ff034bf64a")
 	)
 	(wire
 		(pts
-			(xy 80.01 52.07) (xy 80.01 53.34)
+			(xy 82.55 43.18) (xy 93.98 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b154a368-6f36-4559-b26c-ebefa4a10a68")
+		(uuid "4e7678cf-917d-4348-bb48-0e5209737771")
 	)
 	(wire
 		(pts
-			(xy 115.57 86.36) (xy 118.11 86.36)
+			(xy 77.47 76.2) (xy 77.47 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "bc35985a-3188-4bed-bb1d-3ad1f1d11cf8")
+		(uuid "6c7d8195-f93e-472e-b7f6-4962c58437de")
 	)
 	(wire
 		(pts
-			(xy 72.39 68.58) (xy 72.39 80.01)
+			(xy 72.39 87.63) (xy 72.39 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cc1e9636-28e9-4d59-97bb-69d8f77371c8")
+		(uuid "6d0ac118-25e1-42cd-9c03-3e0fdf3627f2")
 	)
 	(wire
 		(pts
-			(xy 72.39 87.63) (xy 72.39 88.9)
+			(xy 96.52 91.44) (xy 96.52 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d3f209c6-0a5a-485c-b643-79c49124521c")
+		(uuid "701438a3-4148-4f84-a367-2bfcbca6d32e")
 	)
 	(wire
 		(pts
-			(xy 68.58 73.66) (xy 82.55 73.66)
+			(xy 93.98 43.18) (xy 93.98 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d47aeb9b-33b9-4a85-b788-f0a8430d4308")
-	)
-	(wire
-		(pts
-			(xy 82.55 69.85) (xy 82.55 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dba48753-a405-401b-b131-8bea66e1ca67")
-	)
-	(wire
-		(pts
-			(xy 105.41 60.96) (xy 105.41 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd5a5325-3f8b-4671-91f3-362038078e75")
+		(uuid "7362825a-094a-446d-8a52-fe34fdc5454d")
 	)
 	(wire
 		(pts
@@ -1431,7 +1281,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "eea6a174-d610-4ec1-ab8f-a5d9e02b6584")
+		(uuid "738f1251-cc8a-4e35-be0a-7285eab40204")
 	)
 	(wire
 		(pts
@@ -1441,208 +1291,204 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "eed9a020-5fed-4b0d-b49b-8c4276985b7f")
+		(uuid "7909dcaf-2628-4ac7-9ba6-7918f95972c4")
 	)
 	(wire
 		(pts
-			(xy 115.57 66.04) (xy 118.11 66.04)
+			(xy 106.68 86.36) (xy 109.22 86.36)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ef1e4079-860e-4c6f-9b21-185ef3124343")
+		(uuid "8e34b283-3af2-493b-8bb4-1cf34eab5cb6")
 	)
 	(wire
 		(pts
-			(xy 102.87 60.96) (xy 102.87 43.18)
+			(xy 82.55 43.18) (xy 82.55 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f67931c1-990f-4cc9-be15-464873660c70")
+		(uuid "8f37951a-7281-4e5f-915d-317452221665")
 	)
 	(wire
 		(pts
-			(xy 92.71 52.07) (xy 92.71 53.34)
+			(xy 67.31 43.18) (xy 82.55 43.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb48b62a-5ef2-4fda-8d7d-e0b6ac0a4612")
+		(uuid "99bcdbf7-d48e-463e-8e2a-428b4e889318")
 	)
 	(wire
 		(pts
-			(xy 73.66 43.18) (xy 73.66 41.91)
+			(xy 68.58 76.2) (xy 77.47 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fc7d182f-ed72-4067-a052-a7427f836053")
+		(uuid "a139bba0-db58-474a-81f2-b3330145c316")
 	)
-	(label "USB_N"
-		(at 78.74 78.74 0)
+	(wire
+		(pts
+			(xy 77.47 72.39) (xy 77.47 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a627f877-c28a-4d9b-8661-8efe9f42b400")
+	)
+	(wire
+		(pts
+			(xy 77.47 76.2) (xy 86.36 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8c71123-5f5d-4b72-b3f4-4a82728a48bd")
+	)
+	(wire
+		(pts
+			(xy 60.96 85.09) (xy 60.96 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abc42efc-fc59-4cdc-9060-1d8805364f05")
+	)
+	(wire
+		(pts
+			(xy 96.52 60.96) (xy 96.52 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af998659-f6e0-4c49-89c7-1b756bce9328")
+	)
+	(wire
+		(pts
+			(xy 82.55 52.07) (xy 82.55 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b85c18c5-bca8-4825-b41a-b9bf723bf17d")
+	)
+	(wire
+		(pts
+			(xy 106.68 68.58) (xy 110.49 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bda02f40-312e-4d88-a5e8-9e31e91a7d2f")
+	)
+	(wire
+		(pts
+			(xy 106.68 83.82) (xy 109.22 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd9be32b-b0ce-4177-b13d-fe1d694a529a")
+	)
+	(wire
+		(pts
+			(xy 72.39 68.58) (xy 72.39 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d45549b4-f837-4df6-b832-0838b415abf8")
+	)
+	(wire
+		(pts
+			(xy 67.31 52.07) (xy 67.31 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da1e0bce-d51a-4555-81f1-fac3a650d77c")
+	)
+	(wire
+		(pts
+			(xy 106.68 73.66) (xy 109.22 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3f165a4-ebb6-49a0-a09e-af4693e757de")
+	)
+	(label "USB_D_P"
+		(at 77.47 72.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "01b16a68-d9c7-495a-83b6-f95ad9540fa0")
+		(uuid "4c36d0b1-9e39-4e23-9e60-2e837cf46f72")
 	)
-	(label "USB_P"
-		(at 82.55 69.85 0)
+	(label "USB_D_N"
+		(at 77.47 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "a0066a90-6875-434e-b9db-94065bd11fc4")
-	)
-	(global_label "ESP_U0_RX"
-		(shape input)
-		(at 128.27 57.15 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "42b81aa9-1f74-4c54-8a43-ef80470a39a6")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 141.9335 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "ESP_U0_TX"
-		(shape input)
-		(at 128.27 54.61 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "70f613df-52e9-4881-b1ec-6e194196a1d1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 141.6311 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
+		(uuid "fd0050a3-bdd8-4483-8a0c-4d9b66b58bc0")
 	)
 	(hierarchical_label "+3V3_D"
+		(shape input)
+		(at 60.96 43.18 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d8a84a1f-5708-496c-b4d4-3eda519d5545")
+	)
+	(hierarchical_label "MEAS_UART_TX"
 		(shape output)
-		(at 73.66 41.91 90)
+		(at 110.49 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "98e1bcd4-3bcc-4525-92d0-2b3156f32642")
+		(uuid "e7529d3b-f90e-41a3-a3cb-0707c430bae0")
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 72.39 88.9 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "06d1f116-7d65-4327-a90c-eb823760a6bc")
-		(property "Reference" "#PWR014"
-			(at 72.39 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
+	(hierarchical_label "MEAS_UART_RX"
+		(shape input)
+		(at 110.49 68.58 0)
+		(effects
+			(font
+				(size 1.27 1.27)
 			)
+			(justify left)
 		)
-		(property "Value" "GND"
-			(at 72.263 93.2942 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 72.39 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 72.39 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 72.39 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9a7c0a5d-5a99-4000-a6c8-ebe36825b168")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "ed78f49a-fd02-4d4c-ab7c-42b23773d0b2")
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 92.71 48.26 0)
+		(at 67.31 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1651,9 +1497,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "0e7604d1-676b-4410-a084-fba649fb33a0")
-		(property "Reference" "C102"
-			(at 96.52 46.9899 0)
+		(uuid "01d7e51d-5935-4f32-808c-e3e261b09baa")
+		(property "Reference" "C1801"
+			(at 71.12 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1663,8 +1509,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
-			(at 96.52 49.5299 0)
+		(property "Value" "10u"
+			(at 71.12 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1675,7 +1521,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 93.6752 52.07 0)
+			(at 68.2752 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1686,7 +1532,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 92.71 48.26 0)
+			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1697,7 +1543,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 92.71 48.26 0)
+			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1708,418 +1554,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "3028e1c6-8c04-4a29-9a81-d88eb6bee3f1")
+			(uuid "cb3d2048-9ff4-4e87-b96d-5e25644a1ac8")
 		)
 		(pin "2"
-			(uuid "3ad63a51-843c-4117-aa9f-b4e1a56dfc49")
+			(uuid "58d4cb2e-691e-438c-9e56-027de24a38ea")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "C102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 92.71 53.34 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0fe51721-4f54-486e-b308-5b5006e6e47e")
-		(property "Reference" "#PWR016"
-			(at 92.71 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 92.583 57.7342 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 92.71 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 92.71 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "30b6d45f-4f56-4cb3-a97e-d03a24aff1d7")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:USB_B_Micro")
-		(at 60.96 73.66 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1fe8b34d-e173-4206-a01a-f266dba0b65c")
-		(property "Reference" "J3"
-			(at 62.4078 61.7982 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "USB_B_Micro"
-			(at 62.4078 64.1096 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "HardwareDataLogger:USB_Micro-B_Molex-105017-0001_Extra_Mechanical_Pads"
-			(at 64.77 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 64.77 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "USB Micro Type B connector"
-			(at 60.96 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "ca8c3bd1-5a86-422c-9ad3-0747bbece8ce")
-		)
-		(pin "2"
-			(uuid "597b9cdc-9cd4-4566-807d-fd6b731e0a74")
-		)
-		(pin "3"
-			(uuid "bf305a85-22a5-4368-95f6-dfad1a460104")
-		)
-		(pin "4"
-			(uuid "51e957a5-2ff6-4846-afa7-ad199f258ad9")
-		)
-		(pin "5"
-			(uuid "bd1911b5-5030-4018-ac11-c471f199dc3e")
-		)
-		(pin "SH"
-			(uuid "19665e70-2876-4b69-8429-ca8a1c8f715f")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 80.01 53.34 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3d7ac947-973a-440f-a4e2-950a6ee14380")
-		(property "Reference" "#PWR015"
-			(at 80.01 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 79.883 57.7342 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 80.01 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 80.01 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 80.01 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3394c3c5-565c-4278-9c9e-1ac24e3c876e")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 60.96 88.9 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "41b1a371-3ac2-4cf6-8ade-b1c69f92eaf7")
-		(property "Reference" "#PWR01"
-			(at 60.96 95.25 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 60.833 93.2942 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 60.96 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a89af3c-7ee9-4a05-9256-95d97ebc73b2")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 105.41 92.71 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4a02e765-8531-4357-8fc0-584d69c885e8")
-		(property "Reference" "#PWR049"
-			(at 105.41 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 105.283 97.1042 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 105.41 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 105.41 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 105.41 92.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f897bb35-686b-405c-8f9b-0bbe4b7ee7c9")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR049")
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "C1801")
 					(unit 1)
 				)
 			)
@@ -2137,8 +1580,8 @@
 		(in_pos_files yes)
 		(dnp yes)
 		(fields_autoplaced yes)
-		(uuid "55487630-d5c1-459d-8bd0-0d035a132b08")
-		(property "Reference" "R1"
+		(uuid "07d6fbfd-a5c4-4af9-963d-5ddf466f6a3d")
+		(property "Reference" "R1801"
 			(at 69.85 82.5499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2194,15 +1637,327 @@
 			)
 		)
 		(pin "1"
-			(uuid "5041c8b3-8ff8-4e50-b2b2-702bdfeb9e00")
+			(uuid "66214581-89f7-43e5-b3df-05923dd596d4")
 		)
 		(pin "2"
-			(uuid "22956b92-fad5-49fc-b895-0d63ad4fe9f3")
+			(uuid "5054cc31-1d14-4e93-85b1-7c97ad6874a3")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "R1")
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "R1801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 82.55 53.34 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "16ffb178-33ce-4fd5-b38f-e8127349fc51")
+		(property "Reference" "#PWR01804"
+			(at 82.55 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 82.423 57.7342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 82.55 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 82.55 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b6388e93-26d5-4fdd-9ee9-efe36b772161")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01804")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 72.39 91.44 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "23720af4-871b-4657-8b09-aa46940002c1")
+		(property "Reference" "#PWR01803"
+			(at 72.39 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 72.263 95.8342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 72.39 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efefc82e-1d6b-435c-aced-1f685a3b9288")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01803")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 60.96 91.44 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "25166cdf-795e-4c62-90d8-843a4d668ef0")
+		(property "Reference" "#PWR01801"
+			(at 60.96 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 60.833 95.8342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 60.96 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 60.96 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 60.96 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9592dae-3a4e-4bf3-af76-f0a5a833e9f1")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 67.31 53.34 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62e43c4e-ba87-40ff-83a1-8e71c80ab45d")
+		(property "Reference" "#PWR01802"
+			(at 67.31 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 67.183 57.7342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 67.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 67.31 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee39a882-52be-4f06-9384-6623dabe1268")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01802")
 					(unit 1)
 				)
 			)
@@ -2210,7 +1965,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 111.76 48.26 0)
+		(at 82.55 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2219,9 +1974,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "5f4a87b5-abfb-40a2-8580-82ecc78ea825")
-		(property "Reference" "C103"
-			(at 115.57 46.9899 0)
+		(uuid "727201ad-94e0-444e-8d23-5744be7240dc")
+		(property "Reference" "C1802"
+			(at 86.36 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2232,7 +1987,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 115.57 49.5299 0)
+			(at 86.36 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2243,7 +1998,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 112.7252 52.07 0)
+			(at 83.5152 52.07 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2254,7 +2009,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 48.26 0)
+			(at 82.55 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2265,7 +2020,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 111.76 48.26 0)
+			(at 82.55 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2276,97 +2031,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "a32c0d6d-33c9-4ccf-aa23-9f8a05aa1e20")
+			(uuid "ba15584f-9927-43ad-9278-9b3dbec053ea")
 		)
 		(pin "2"
-			(uuid "085cba3c-7709-4440-b439-d509fef7b1c6")
+			(uuid "72fa0cf3-9f9b-4709-9b3f-d2a7ebac9e42")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "C103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 80.01 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6a430b39-d10a-44b6-b76d-a5f108cfcfaa")
-		(property "Reference" "C101"
-			(at 83.82 46.9899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 83.82 49.5299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 80.9752 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 80.01 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 80.01 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "badd002a-3b03-4c5c-9193-d51e5f31498c")
-		)
-		(pin "2"
-			(uuid "730c5a0c-f8d6-4e20-b14e-11d48c936d60")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "C101")
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "C1802")
 					(unit 1)
 				)
 			)
@@ -2374,7 +2047,7 @@
 	)
 	(symbol
 		(lib_id "Interface_USB:CH340X")
-		(at 105.41 76.2 0)
+		(at 96.52 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2383,9 +2056,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "95b69f4f-74a7-4c44-a3e1-18b9a6e1d8a2")
-		(property "Reference" "U2"
-			(at 107.5533 91.44 0)
+		(uuid "7b275899-508e-4292-860a-eddff5a7104b")
+		(property "Reference" "U1801"
+			(at 98.6633 91.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2396,7 +2069,7 @@
 			)
 		)
 		(property "Value" "CH340X"
-			(at 107.5533 93.98 0)
+			(at 98.6633 93.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2407,7 +2080,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:MSOP-10_3x3mm_P0.5mm"
-			(at 106.68 90.17 0)
+			(at 97.79 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2419,7 +2092,7 @@
 			)
 		)
 		(property "Datasheet" "https://cdn.sparkfun.com/assets/5/0/a/8/5/CH340DS1.PDF"
-			(at 96.52 55.88 0)
+			(at 87.63 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2430,7 +2103,7 @@
 			)
 		)
 		(property "Description" "USB serial converter, 5V-tolerant IO, UART, MSOP-10"
-			(at 105.41 76.2 0)
+			(at 96.52 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2441,48 +2114,47 @@
 			)
 		)
 		(pin "2"
-			(uuid "e800482c-270e-4b9f-847c-59d47818e243")
+			(uuid "c959dd3b-ffbe-4af4-8e76-85af4c89eab4")
 		)
 		(pin "10"
-			(uuid "989364b4-f0c1-4860-b6b6-41f57fce7230")
+			(uuid "90b64eb2-4e88-4947-9959-1a304893f286")
 		)
 		(pin "3"
-			(uuid "083f81fe-7849-48df-be68-ef0aff5f5a1e")
+			(uuid "d31858c0-5f10-4cc2-86f5-6c2d7adbbdba")
 		)
 		(pin "6"
-			(uuid "2ecf76e9-2b00-4ee3-9ba3-ea8a8be0fa55")
+			(uuid "970d8f89-e7a5-4922-b534-f2ab6c92e32a")
 		)
 		(pin "7"
-			(uuid "5446f657-2d41-4882-92ed-2bfb06997586")
+			(uuid "a46171e7-e183-42e3-9f6f-c0a9a77bc5c0")
 		)
 		(pin "8"
-			(uuid "88f0eee2-7366-40f5-b088-6fd9926db861")
+			(uuid "719d0d61-294c-4eeb-bace-f1bb79b03afe")
 		)
 		(pin "1"
-			(uuid "6c46884d-d2d7-4fbd-bd26-6aa6e44ae80e")
+			(uuid "f7698f11-0775-44a2-b937-3a12d153e64a")
 		)
 		(pin "9"
-			(uuid "bb3c9c6c-2212-4ba2-9610-4c1bd94f769c")
+			(uuid "77462b43-aea3-40b1-8658-f613cb227204")
 		)
 		(pin "4"
-			(uuid "ef8618c8-d99c-4839-9027-e7e6ec81f172")
+			(uuid "d9342bbe-49a3-4cc3-b876-c1e7bbb13de9")
 		)
 		(pin "5"
-			(uuid "899cdadc-d956-458e-83f6-366f1457923d")
+			(uuid "27536a5b-a005-487a-ae69-bba630294f84")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "U2")
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "U1801")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 111.76 53.34 0)
-		(mirror y)
+		(lib_id "Connector:USB_B_Micro")
+		(at 60.96 73.66 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2490,10 +2162,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d1d90d4c-feb2-4cfc-9ae3-74904e103da8")
-		(property "Reference" "#PWR017"
-			(at 111.76 59.69 0)
-			(hide yes)
+		(uuid "8622e7e6-1497-4bab-80ad-8cd5fe50ef35")
+		(property "Reference" "J1801"
+			(at 62.4078 61.7982 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2502,8 +2173,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 111.633 57.7342 0)
+		(property "Value" "USB_B_Micro"
+			(at 62.4078 64.1096 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2512,8 +2183,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 111.76 53.34 0)
+		(property "Footprint" "HardwareDataLogger:USB_Micro-B_Molex-105017-0001_Extra_Mechanical_Pads"
+			(at 64.77 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2524,7 +2195,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 53.34 0)
+			(at 64.77 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2534,8 +2205,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 111.76 53.34 0)
+		(property "Description" "USB Micro Type B connector"
+			(at 60.96 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2546,12 +2217,265 @@
 			)
 		)
 		(pin "1"
-			(uuid "2832924d-67fe-4901-904e-c0ada7a98793")
+			(uuid "d1196932-c605-41a7-9006-cc256b30846f")
+		)
+		(pin "2"
+			(uuid "35425de8-62d0-46ea-b443-a6fa72def173")
+		)
+		(pin "3"
+			(uuid "de0a1454-b42f-4068-8bbb-c35249cfbda3")
+		)
+		(pin "4"
+			(uuid "d0b16e17-a941-4a8d-a4aa-85283f9a47e2")
+		)
+		(pin "5"
+			(uuid "57447411-2604-4b1c-88a8-f9002dc3341b")
+		)
+		(pin "SH"
+			(uuid "0fffc55b-7dff-4af2-a4bb-1b9a8e06e1a1")
 		)
 		(instances
 			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/39293f93-b891-40ba-b9d7-d43627c0c319"
-					(reference "#PWR017")
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "J1801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 96.52 92.71 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "89a8ecc9-34e8-4760-b6cf-14d016a0e080")
+		(property "Reference" "#PWR01805"
+			(at 96.52 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 96.393 97.1042 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 96.52 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d071c22-f6f2-4d8b-b3ef-3bd43642966d")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01805")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 102.87 53.34 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "de7fdb0c-04ae-4a07-9139-09d23490dddf")
+		(property "Reference" "#PWR01806"
+			(at 102.87 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 102.743 57.7342 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 102.87 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 102.87 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1dd7e5cb-db49-439b-b3ff-f00cd033a8b0")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "#PWR01806")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 102.87 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e807a21d-47e8-4f6c-9087-6335b80a79dc")
+		(property "Reference" "C1803"
+			(at 106.68 46.9899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 106.68 49.5299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 103.8352 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 102.87 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 102.87 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "550cc46b-4b25-46b3-b330-66e304b22ca6")
+		)
+		(pin "2"
+			(uuid "9480266b-42a6-4ad3-bc51-44b1c7a0bd7d")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
+					(reference "C1803")
 					(unit 1)
 				)
 			)
