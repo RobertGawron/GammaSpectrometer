@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "76222ad8-3746-4669-bda4-87406bdcf1c0")
+	(uuid "489202b5-03cb-4cbe-ac5f-24899688e392")
 	(paper "A4")
 	(title_block
 		(date "2026-04-11")
@@ -3972,7 +3972,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0c913977-020d-42ea-b726-95dcb505a40b")
-		(property "Reference" "#PWR01901"
+		(property "Reference" "#PWR1901"
 			(at 99.06 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4032,7 +4032,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba/8dbe922f-549e-4607-9605-b76109be94c6"
-					(reference "#PWR01901")
+					(reference "#PWR1901")
 					(unit 1)
 				)
 			)
@@ -4722,7 +4722,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8f530041-5017-43f0-93ae-3d5860304ab9")
-		(property "Reference" "#PWR01903"
+		(property "Reference" "#PWR1903"
 			(at 186.69 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4782,7 +4782,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba/8dbe922f-549e-4607-9605-b76109be94c6"
-					(reference "#PWR01903")
+					(reference "#PWR1903")
 					(unit 1)
 				)
 			)
@@ -4882,7 +4882,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b9fc6dea-9d7f-4793-b094-c6ee262a4524")
-		(property "Reference" "#PWR01902"
+		(property "Reference" "#PWR1902"
 			(at 105.41 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4942,7 +4942,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba/8dbe922f-549e-4607-9605-b76109be94c6"
-					(reference "#PWR01902")
+					(reference "#PWR1902")
 					(unit 1)
 				)
 			)
@@ -5042,7 +5042,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee8fac9e-8c9c-4aeb-8f3b-672e826917b9")
-		(property "Reference" "#PWR01904"
+		(property "Reference" "#PWR1904"
 			(at 195.58 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -5102,7 +5102,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ba137961-7098-4042-a793-6f9c73db00ba/8dbe922f-549e-4607-9605-b76109be94c6"
-					(reference "#PWR01904")
+					(reference "#PWR1904")
 					(unit 1)
 				)
 			)

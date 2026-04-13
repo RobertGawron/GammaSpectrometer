@@ -2680,7 +2680,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 182.88 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -2702,7 +2702,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 187.96 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -2737,7 +2737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85b9411f-ba06-4d6c-b98d-8cca0121edf3")
-		(property "Reference" "#PWR01401"
+		(property "Reference" "#PWR1401"
 			(at 198.12 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2797,7 +2797,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ec244bf6-1193-4eaf-b1ba-fe26d901e8f4"
-					(reference "#PWR01401")
+					(reference "#PWR1401")
 					(unit 1)
 				)
 			)
@@ -2924,7 +2924,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 182.88 64.77 0)
 			(hide yes)
 			(show_name no)

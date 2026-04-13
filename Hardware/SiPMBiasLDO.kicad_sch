@@ -1662,7 +1662,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1440a16e-7886-41c5-a74b-5e74772b04e1")
-		(property "Reference" "#PWR01610"
+		(property "Reference" "#PWR1610"
 			(at 181.61 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -1722,7 +1722,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01610")
+					(reference "#PWR1610")
 					(unit 1)
 				)
 			)
@@ -1904,7 +1904,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "18075f85-97ea-4f7e-8682-1e0f35dbd838")
-		(property "Reference" "#PWR01605"
+		(property "Reference" "#PWR1605"
 			(at 109.22 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -1964,7 +1964,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01605")
+					(reference "#PWR1605")
 					(unit 1)
 				)
 			)
@@ -2142,7 +2142,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "27f5bcd2-fdb1-4686-a834-ac8eff2c827b")
-		(property "Reference" "#PWR01602"
+		(property "Reference" "#PWR1602"
 			(at 88.9 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2202,7 +2202,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01602")
+					(reference "#PWR1602")
 					(unit 1)
 				)
 			)
@@ -2242,7 +2242,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 91.44 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -2463,7 +2463,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44d8e3b8-e7ae-46a3-86c5-a304125a57e9")
-		(property "Reference" "#PWR01601"
+		(property "Reference" "#PWR1601"
 			(at 72.39 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2523,7 +2523,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01601")
+					(reference "#PWR1601")
 					(unit 1)
 				)
 			)
@@ -2541,7 +2541,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d505ec2-65b2-45f6-aa0e-dabf23150dde")
-		(property "Reference" "#PWR01606"
+		(property "Reference" "#PWR1606"
 			(at 109.22 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -2601,7 +2601,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01606")
+					(reference "#PWR1606")
 					(unit 1)
 				)
 			)
@@ -2641,7 +2641,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 127 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -3128,7 +3128,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 186.69 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -3207,7 +3207,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 105.41 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -3346,7 +3346,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b4b2b989-147c-4ac2-94cb-72a3de3e8127")
-		(property "Reference" "#PWR01604"
+		(property "Reference" "#PWR1604"
 			(at 100.33 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -3406,7 +3406,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01604")
+					(reference "#PWR1604")
 					(unit 1)
 				)
 			)
@@ -3424,7 +3424,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b98f4bed-d892-4b0b-8fdd-c15e9a23cac9")
-		(property "Reference" "#PWR01607"
+		(property "Reference" "#PWR1607"
 			(at 123.19 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -3484,7 +3484,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01607")
+					(reference "#PWR1607")
 					(unit 1)
 				)
 			)
@@ -3584,7 +3584,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "be3abb67-6842-44bb-8f03-4e092d2aa8ec")
-		(property "Reference" "#PWR01608"
+		(property "Reference" "#PWR1608"
 			(at 140.97 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -3644,7 +3644,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01608")
+					(reference "#PWR1608")
 					(unit 1)
 				)
 			)
@@ -4008,7 +4008,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ea40333e-6b45-4eb6-a2a2-3f3e26bdbadb")
-		(property "Reference" "#PWR01603"
+		(property "Reference" "#PWR1603"
 			(at 86.36 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -4068,7 +4068,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01603")
+					(reference "#PWR1603")
 					(unit 1)
 				)
 			)
@@ -4086,7 +4086,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "edc3f707-ebf9-41ea-84f3-3b824e2e981a")
-		(property "Reference" "#PWR01609"
+		(property "Reference" "#PWR1609"
 			(at 165.1 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -4146,7 +4146,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/e1c37bc0-f670-415c-9cd4-4e609e2dab2a"
-					(reference "#PWR01609")
+					(reference "#PWR1609")
 					(unit 1)
 				)
 			)
@@ -4266,7 +4266,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 77.47 74.93 0)
 			(hide yes)
 			(show_name no)

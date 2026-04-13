@@ -53,7 +53,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -187,7 +193,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.35
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -214,7 +223,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -594,12 +608,36 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "shop",
+          "name": "shop",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -665,7 +703,7 @@
         "uuid": "d6192878-4721-4ef4-99ff-dbbad0502886"
       }
     ],
-    "used_designators": "D3-4,D7,D301,D501,D601,D701,D801,D1401,#PWR1,#PWR14-18,#PWR38,#PWR42,#PWR44-51,#PWR54,#PWR64,#PWR66,#PWR83-85,#PWR105-106,#PWR111-119,#PWR201-212,#PWR301-304,#PWR401-412,#PWR501-511,#PWR601-609,#PWR701-705,#PWR801-814,#PWR901-916,#PWR1001-1003,#PWR1101-1103,#PWR1201-1214,#PWR1301-1308,#PWR1401,#PWR1601-1610,#PWR1801-1806,#PWR1901-1904,C7,C12,C35,C41-44,C46,C51,C54-55,C60-61,C96-97,C100-104,C201-210,C301-312,C401-407,C501-509,C601-608,C701-704,C801-818,C901-910,C1001-1009,C1101-1102,C1201-1210,C1301-1304,C1401-1403,C1601-1608,C1801-1803,C1901-1904,F1,F1401,TP3,TP15-16,TP19,TP301-307,TP401-402,TP501-502,TP801-802,TP901-902,TP1101,TP1401-1402,TP1601-1605,U2,U13,U20-22,U201,U301-302,U401-402,U501,U601,U701,U801-803,U901-903,U1001-1003,U1101,U1201,U1301-1302,U1601,U1801,U1901,#FLG7-8,#FLG401-402,#FLG501,#FLG801-802,#FLG1401,#FLG1601,R1,R15,R22-24,R30-31,R62-63,R90-94,R99,R201-205,R301-307,R401-403,R501-507,R601-603,R701-703,R801-828,R1001-1033,R1201-1207,R1601-1608,R1801,JP2-5,JP9-10,JP401-404,JP901-903,JP1201,JP1301-1302,FL1,FL1401,J3,J1201,J1401,J1801,Q1-4,SW1,SW1201,L501-502,L801-803,TH401",
+    "used_designators": "C101-117,#PWR101-108,D101,R101,TP101-105,RN101-104,U101-102",
     "variants": []
   },
   "sheets": [
@@ -744,6 +782,14 @@
     [
       "8dbe922f-549e-4607-9605-b76109be94c6",
       "FPGA IO Banks 2-3"
+    ],
+    [
+      "e8aecbf6-0c13-45ea-b7be-3ecbd091f75b",
+      "AFEChannel1"
+    ],
+    [
+      "5a3274f8-21a6-47b3-b798-84d0edc34708",
+      "AFEChannel2"
     ]
   ],
   "text_variables": {},
