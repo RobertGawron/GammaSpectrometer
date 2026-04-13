@@ -20,22 +20,16 @@
 		(uuid "252ecb72-f87d-4953-8fd9-b66e7d90eb34")
 	)
 	(junction
-		(at 68.58 39.37)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3098ee03-c39e-4dcc-87d6-2e7cd67e09d6")
-	)
-	(junction
 		(at 128.27 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5bd7e7fb-46d1-4481-b04d-653629003bed")
 	)
 	(junction
-		(at 106.68 44.45)
+		(at 68.58 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "a00eb791-3891-4324-bcef-91de9fd4f6b2")
+		(uuid "bd67b9c1-f3a0-45e7-a152-a1a80ab248d0")
 	)
 	(junction
 		(at 68.58 60.96)
@@ -105,6 +99,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 36.83) (xy 68.58 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14fb03b9-ee38-4861-9778-7144184ede3f")
+	)
+	(wire
+		(pts
 			(xy 161.29 113.03) (xy 165.1 113.03)
 		)
 		(stroke
@@ -112,16 +116,6 @@
 			(type default)
 		)
 		(uuid "18931c07-1742-4005-9bfe-bfe23ba67bdb")
-	)
-	(wire
-		(pts
-			(xy 160.02 54.61) (xy 152.4 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bfcc561-40aa-4602-8abe-e59082eac2d3")
 	)
 	(bus
 		(pts
@@ -375,7 +369,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 39.37) (xy 71.12 39.37)
+			(xy 68.58 41.91) (xy 71.12 41.91)
 		)
 		(stroke
 			(width 0)
@@ -432,16 +426,6 @@
 			(type default)
 		)
 		(uuid "6450e36f-4135-4ed0-869f-cc87b197cec0")
-	)
-	(wire
-		(pts
-			(xy 106.68 44.45) (xy 106.68 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6647a8a0-63b7-4d00-9a35-5c24493d722d")
 	)
 	(wire
 		(pts
@@ -505,17 +489,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 44.45) (xy 154.94 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8513464d-948a-4720-9324-888c2352bc5c")
-	)
-	(wire
-		(pts
-			(xy 149.86 49.53) (xy 96.52 49.53)
+			(xy 96.52 44.45) (xy 154.94 44.45)
 		)
 		(stroke
 			(width 0)
@@ -585,17 +559,7 @@
 	)
 	(wire
 		(pts
-			(xy 152.4 54.61) (xy 152.4 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9428b14a-da44-447b-888b-54ad1b71c9eb")
-	)
-	(wire
-		(pts
-			(xy 160.02 57.15) (xy 149.86 57.15)
+			(xy 160.02 52.07) (xy 154.94 52.07)
 		)
 		(stroke
 			(width 0)
@@ -645,6 +609,16 @@
 	)
 	(wire
 		(pts
+			(xy 68.58 41.91) (xy 68.58 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9cf9f6-241b-466f-ba4b-c47d4c36faf6")
+	)
+	(wire
+		(pts
 			(xy 201.93 66.04) (xy 213.36 66.04)
 		)
 		(stroke
@@ -652,16 +626,6 @@
 			(type default)
 		)
 		(uuid "b0cc716e-1ad6-44c2-9fb1-ad90d625f259")
-	)
-	(wire
-		(pts
-			(xy 152.4 46.99) (xy 96.52 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b22b0b4d-bf44-43d0-a2a8-560c53ba7ccc")
 	)
 	(bus
 		(pts
@@ -685,7 +649,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.86 49.53) (xy 149.86 57.15)
+			(xy 154.94 44.45) (xy 154.94 52.07)
 		)
 		(stroke
 			(width 0)
@@ -735,17 +699,7 @@
 	)
 	(wire
 		(pts
-			(xy 106.68 44.45) (xy 96.52 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c68b7998-5d16-4bf4-aaf5-c9dbaf23ec20")
-	)
-	(wire
-		(pts
-			(xy 194.31 49.53) (xy 201.93 49.53)
+			(xy 187.96 49.53) (xy 201.93 49.53)
 		)
 		(stroke
 			(width 0)
@@ -772,26 +726,6 @@
 			(type default)
 		)
 		(uuid "d445fb5b-01a4-45e3-901c-d72be3a00a84")
-	)
-	(wire
-		(pts
-			(xy 154.94 52.07) (xy 160.02 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5182ec3-67df-4b4c-b7a5-d7e4d2c2423d")
-	)
-	(wire
-		(pts
-			(xy 68.58 39.37) (xy 68.58 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d90907c9-d499-4002-80f6-82869eb2157e")
 	)
 	(wire
 		(pts
@@ -865,17 +799,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 36.83) (xy 68.58 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e843b16f-49fd-4e4d-987c-3450b868f446")
-	)
-	(wire
-		(pts
-			(xy 194.31 52.07) (xy 199.39 52.07)
+			(xy 187.96 52.07) (xy 199.39 52.07)
 		)
 		(stroke
 			(width 0)
@@ -912,16 +836,6 @@
 			(type default)
 		)
 		(uuid "fa083271-e9fd-4dec-91df-c7d26fe94f9e")
-	)
-	(wire
-		(pts
-			(xy 106.68 44.45) (xy 154.94 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fa25e214-96c8-488b-820a-7ae21847ceb4")
 	)
 	(bus
 		(pts
@@ -1460,8 +1374,8 @@
 		)
 	)
 	(sheet
-		(at 71.12 36.83)
-		(size 25.4 15.24)
+		(at 71.12 39.37)
+		(size 25.4 12.7)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1476,7 +1390,7 @@
 		)
 		(uuid "b16128e5-6398-4e08-86d4-8842ad98ebb1")
 		(property "Sheetname" "Analog Power"
-			(at 71.12 36.1184 0)
+			(at 71.12 38.6584 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1498,18 +1412,8 @@
 			)
 		)
 		(pin "-5V0_A" output
-			(at 96.52 49.53 0)
-			(uuid "a804cc70-d569-4817-9d36-4ee2850f3809")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "+2V5_A" output
 			(at 96.52 44.45 0)
-			(uuid "e8516276-b2ba-4fc0-be7e-49349c0bb9db")
+			(uuid "a804cc70-d569-4817-9d36-4ee2850f3809")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1527,18 +1431,8 @@
 				(justify right)
 			)
 		)
-		(pin "-2V5_A" output
-			(at 96.52 46.99 0)
-			(uuid "b90edfc6-5add-48fe-8f72-ace8e7be8e15")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "+V_IN" input
-			(at 71.12 39.37 180)
+			(at 71.12 41.91 180)
 			(uuid "0e5d0448-6e49-47a8-b71f-e40c0a380306")
 			(effects
 				(font
@@ -1779,7 +1673,7 @@
 	)
 	(sheet
 		(at 160.02 46.99)
-		(size 34.29 19.05)
+		(size 27.94 19.05)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -1825,26 +1719,6 @@
 				(justify left)
 			)
 		)
-		(pin "+2V5_AFE" input
-			(at 160.02 52.07 180)
-			(uuid "b2b82e11-0e1d-49bc-aaa0-7abe20773b75")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "-2V5_AFE" input
-			(at 160.02 54.61 180)
-			(uuid "7409d8bf-f888-432e-ad74-9d5ab3f3a498")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "+5V0_AFE" input
 			(at 160.02 49.53 180)
 			(uuid "2840bf93-0a23-4063-b63e-477826567d25")
@@ -1856,7 +1730,7 @@
 			)
 		)
 		(pin "-5V0_AFE" input
-			(at 160.02 57.15 180)
+			(at 160.02 52.07 180)
 			(uuid "cfc7496d-0eea-42ae-a558-31a42f4f0e5b")
 			(effects
 				(font
@@ -1876,7 +1750,7 @@
 			)
 		)
 		(pin "AFE_OUT_N" output
-			(at 194.31 52.07 0)
+			(at 187.96 52.07 0)
 			(uuid "d756d05e-a682-4429-bee8-c4d379279f28")
 			(effects
 				(font
@@ -1886,7 +1760,7 @@
 			)
 		)
 		(pin "AFE_OUT_P" output
-			(at 194.31 49.53 0)
+			(at 187.96 49.53 0)
 			(uuid "b5090514-9bff-4b89-a06e-0b3e26bffb68")
 			(effects
 				(font

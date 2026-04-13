@@ -1,0 +1,52 @@
+(footprint "BUD_CU-470_50.8x50.8mm"
+  (layer "F.Cu")
+  (descr "BUD Industries CU-470 Econobox, 2.000 x 2.000 x 1.250 in, aluminium")
+  (tags "enclosure box aluminium BUD CU-470 econobox")
+  (attr board_only exclude_from_pos_file exclude_from_bom)
+
+  (fp_text reference "REF**" (at 0 -28.40) (layer "F.SilkS")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value "BUD_CU-470_50.8x50.8mm" (at 0 28.40) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text user "${REFERENCE}" (at 0 0.00) (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+
+  ; ── body outline (external) ──
+  (fp_line (start -25.4000 -25.4000) (end 25.4000 -25.4000) (layer "F.Fab") (width 0.10))
+  (fp_line (start 25.4000 -25.4000) (end 25.4000 25.4000) (layer "F.Fab") (width 0.10))
+  (fp_line (start 25.4000 25.4000) (end -25.4000 25.4000) (layer "F.Fab") (width 0.10))
+  (fp_line (start -25.4000 25.4000) (end -25.4000 -25.4000) (layer "F.Fab") (width 0.10))
+
+  ; ── internal cavity ──
+  (fp_line (start -20.6375 -20.6375) (end 20.6375 -20.6375) (layer "Dwgs.User") (width 0.10))
+  (fp_line (start 20.6375 -20.6375) (end 20.6375 20.6375) (layer "Dwgs.User") (width 0.10))
+  (fp_line (start 20.6375 20.6375) (end -20.6375 20.6375) (layer "Dwgs.User") (width 0.10))
+  (fp_line (start -20.6375 20.6375) (end -20.6375 -20.6375) (layer "Dwgs.User") (width 0.10))
+
+  ; ── silkscreen ──
+  (fp_line (start -25.4000 -25.4000) (end 25.4000 -25.4000) (layer "F.SilkS") (width 0.12))
+  (fp_line (start 25.4000 -25.4000) (end 25.4000 25.4000) (layer "F.SilkS") (width 0.12))
+  (fp_line (start 25.4000 25.4000) (end -25.4000 25.4000) (layer "F.SilkS") (width 0.12))
+  (fp_line (start -25.4000 25.4000) (end -25.4000 -25.4000) (layer "F.SilkS") (width 0.12))
+
+  ; ── courtyard ──
+  (fp_line (start -26.4000 -26.4000) (end 26.4000 -26.4000) (layer "F.CrtYd") (width 0.05))
+  (fp_line (start 26.4000 -26.4000) (end 26.4000 26.4000) (layer "F.CrtYd") (width 0.05))
+  (fp_line (start 26.4000 26.4000) (end -26.4000 26.4000) (layer "F.CrtYd") (width 0.05))
+  (fp_line (start -26.4000 26.4000) (end -26.4000 -26.4000) (layer "F.CrtYd") (width 0.05))
+
+  ; ── screw-boss indicators ──
+  (fp_circle (center -20.6375 -20.6375) (end -16.6751 -20.6375) (layer "F.Fab") (width 0.10))
+  (fp_circle (center 20.6375 -20.6375) (end 24.5999 -20.6375) (layer "F.Fab") (width 0.10))
+  (fp_circle (center 20.6375 20.6375) (end 24.5999 20.6375) (layer "F.Fab") (width 0.10))
+  (fp_circle (center -20.6375 20.6375) (end -16.6751 20.6375) (layer "F.Fab") (width 0.10))
+
+  ; ── mounting holes  #6-32 clearance ──
+  (pad "1" thru_hole circle (at -20.6375 -20.6375) (size 7.0 7.0) (drill 3.6) (layers "*.Cu" "*.Mask"))
+  (pad "2" thru_hole circle (at 20.6375 -20.6375) (size 7.0 7.0) (drill 3.6) (layers "*.Cu" "*.Mask"))
+  (pad "3" thru_hole circle (at 20.6375 20.6375) (size 7.0 7.0) (drill 3.6) (layers "*.Cu" "*.Mask"))
+  (pad "4" thru_hole circle (at -20.6375 20.6375) (size 7.0 7.0) (drill 3.6) (layers "*.Cu" "*.Mask"))
+)

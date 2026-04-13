@@ -42,16 +42,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 62.23) (xy 88.9 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4407a293-ce5a-4ee3-938c-4a76c48e8500")
-	)
-	(wire
-		(pts
 			(xy 49.53 49.53) (xy 53.34 49.53)
 		)
 		(stroke
@@ -89,16 +79,6 @@
 			(type default)
 		)
 		(uuid "81ddc4cb-692e-4743-9895-1784bbd1a2ab")
-	)
-	(wire
-		(pts
-			(xy 72.39 50.8) (xy 88.9 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "959a5364-4732-4fe9-b652-f353e90f03b6")
 	)
 	(wire
 		(pts
@@ -142,17 +122,6 @@
 		)
 		(uuid "82ca2dc1-c4d4-4fff-8dee-2f0ce9dbd632")
 	)
-	(hierarchical_label "+2V5_A"
-		(shape output)
-		(at 88.9 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9c5b4702-f4ab-4dc6-a0dd-f097cf5a08ab")
-	)
 	(hierarchical_label "+V_IN"
 		(shape input)
 		(at 46.99 43.18 180)
@@ -163,17 +132,6 @@
 			(justify right)
 		)
 		(uuid "c405c5dc-89f2-433b-a581-de63e0eaa7d4")
-	)
-	(hierarchical_label "-2V5_A"
-		(shape output)
-		(at 88.9 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d345d869-3c0b-48ad-90e9-d77a54b46205")
 	)
 	(sheet
 		(at 53.34 60.96)
@@ -221,16 +179,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(pin "-2V5_A" output
-			(at 72.39 62.23 0)
-			(uuid "9e0c1829-4d99-476e-b6da-9ae4801a1c79")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(pin "-5V0_A" output
@@ -297,16 +245,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-		(pin "+2V5_A" output
-			(at 72.39 50.8 0)
-			(uuid "59e2ff9e-6e7a-48be-992b-54695d49c04b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 		(pin "+5V0_A" output

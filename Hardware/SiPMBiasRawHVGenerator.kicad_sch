@@ -1963,7 +1963,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11f422c2-a3e5-42e3-9079-897e94f6cdda")
-		(property "Reference" "#PWR0507"
+		(property "Reference" "#PWR507"
 			(at 152.4 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2023,7 +2023,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0507")
+					(reference "#PWR507")
 					(unit 1)
 				)
 			)
@@ -2123,7 +2123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19fac590-f179-4ab3-b8be-826f51284089")
-		(property "Reference" "#PWR0508"
+		(property "Reference" "#PWR508"
 			(at 187.96 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2183,7 +2183,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0508")
+					(reference "#PWR508")
 					(unit 1)
 				)
 			)
@@ -2201,7 +2201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d2d7b07-3f81-4f52-8f2d-549bd6c07032")
-		(property "Reference" "#PWR0506"
+		(property "Reference" "#PWR506"
 			(at 125.73 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2261,7 +2261,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0506")
+					(reference "#PWR506")
 					(unit 1)
 				)
 			)
@@ -2359,7 +2359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e407e94-c922-4cec-a26f-3d335594b03d")
-		(property "Reference" "#PWR0504"
+		(property "Reference" "#PWR504"
 			(at 106.68 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2419,7 +2419,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0504")
+					(reference "#PWR504")
 					(unit 1)
 				)
 			)
@@ -2519,7 +2519,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2eca8f5f-338b-4a6f-9cc9-0b9f44c9894a")
-		(property "Reference" "#PWR0501"
+		(property "Reference" "#PWR501"
 			(at 60.96 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2579,7 +2579,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0501")
+					(reference "#PWR501")
 					(unit 1)
 				)
 			)
@@ -3245,7 +3245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f749be0-69e0-459f-9306-f8bd90c69c9a")
-		(property "Reference" "#PWR0511"
+		(property "Reference" "#PWR511"
 			(at 231.14 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3305,7 +3305,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0511")
+					(reference "#PWR511")
 					(unit 1)
 				)
 			)
@@ -3323,7 +3323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6093b823-20c1-458e-96fd-8fd05e4bf13d")
-		(property "Reference" "#PWR0510"
+		(property "Reference" "#PWR510"
 			(at 218.44 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3383,7 +3383,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0510")
+					(reference "#PWR510")
 					(unit 1)
 				)
 			)
@@ -3401,7 +3401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "615d70e5-b5c8-4e25-896e-26e94551ce5f")
-		(property "Reference" "#PWR0505"
+		(property "Reference" "#PWR505"
 			(at 116.84 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3461,7 +3461,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0505")
+					(reference "#PWR505")
 					(unit 1)
 				)
 			)
@@ -3479,7 +3479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65a94bab-d29a-4cea-b378-5280a3c2167f")
-		(property "Reference" "#PWR0509"
+		(property "Reference" "#PWR509"
 			(at 200.66 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3539,7 +3539,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0509")
+					(reference "#PWR509")
 					(unit 1)
 				)
 			)
@@ -3580,7 +3580,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 170.18 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -3801,7 +3801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "acd5d2b9-4832-4f6f-b941-d852fa71fac4")
-		(property "Reference" "#PWR0502"
+		(property "Reference" "#PWR502"
 			(at 77.47 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3861,7 +3861,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0502")
+					(reference "#PWR502")
 					(unit 1)
 				)
 			)
@@ -4318,7 +4318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 237.49 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -4375,7 +4375,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7f28ff9-6df4-47b0-be98-031cc96194f2")
-		(property "Reference" "#PWR0503"
+		(property "Reference" "#PWR503"
 			(at 90.17 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4435,7 +4435,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0503")
+					(reference "#PWR503")
 					(unit 1)
 				)
 			)
