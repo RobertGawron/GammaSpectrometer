@@ -42,16 +42,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 62.23) (xy 88.9 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4407a293-ce5a-4ee3-938c-4a76c48e8500")
-	)
-	(wire
-		(pts
 			(xy 49.53 49.53) (xy 53.34 49.53)
 		)
 		(stroke
@@ -92,16 +82,6 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 50.8) (xy 88.9 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "959a5364-4732-4fe9-b652-f353e90f03b6")
-	)
-	(wire
-		(pts
 			(xy 49.53 63.5) (xy 53.34 63.5)
 		)
 		(stroke
@@ -120,9 +100,9 @@
 		)
 		(uuid "f301cdbd-8676-4b54-b8c6-47bb777e4f9d")
 	)
-	(hierarchical_label "-5V0_A"
+	(hierarchical_label "-3V3_A"
 		(shape output)
-		(at 88.9 64.77 0)
+		(at 97.79 58.42 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -131,9 +111,9 @@
 		)
 		(uuid "46897233-369c-42d0-a69c-df8a0b02fd4c")
 	)
-	(hierarchical_label "+5V0_A"
+	(hierarchical_label "+3V3_A"
 		(shape output)
-		(at 88.9 48.26 0)
+		(at 90.17 34.29 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -141,17 +121,6 @@
 			(justify left)
 		)
 		(uuid "82ca2dc1-c4d4-4fff-8dee-2f0ce9dbd632")
-	)
-	(hierarchical_label "+2V5_A"
-		(shape output)
-		(at 88.9 50.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9c5b4702-f4ab-4dc6-a0dd-f097cf5a08ab")
 	)
 	(hierarchical_label "+V_IN"
 		(shape input)
@@ -163,17 +132,6 @@
 			(justify right)
 		)
 		(uuid "c405c5dc-89f2-433b-a581-de63e0eaa7d4")
-	)
-	(hierarchical_label "-2V5_A"
-		(shape output)
-		(at 88.9 62.23 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d345d869-3c0b-48ad-90e9-d77a54b46205")
 	)
 	(sheet
 		(at 53.34 60.96)
@@ -223,16 +181,6 @@
 				(justify left)
 			)
 		)
-		(pin "-2V5_A" output
-			(at 72.39 62.23 0)
-			(uuid "9e0c1829-4d99-476e-b6da-9ae4801a1c79")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "-5V0_A" output
 			(at 72.39 64.77 0)
 			(uuid "bdc4ac7a-a36f-4a97-990f-f743e735c903")
@@ -246,7 +194,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1"
-					(page "8")
+					(page "15")
 				)
 			)
 		)
@@ -299,16 +247,6 @@
 				(justify left)
 			)
 		)
-		(pin "+2V5_A" output
-			(at 72.39 50.8 0)
-			(uuid "59e2ff9e-6e7a-48be-992b-54695d49c04b")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "+5V0_A" output
 			(at 72.39 48.26 0)
 			(uuid "02ca65f2-3ce4-4640-be03-a3d6a5871aa2")
@@ -322,7 +260,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/b16128e5-6398-4e08-86d4-8842ad98ebb1"
-					(page "10")
+					(page "16")
 				)
 			)
 		)

@@ -345,226 +345,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DataAcquisitionUnit:MX25L1606EM1I-12G"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MX25L1606EM1I-12G"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_SO:SOP-8_3.76x4.96mm_P1.27mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.tme.eu/Document/90cf95a7114025302d33a68125e207ab/MX25L1606E.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "16M-BIT [x 1 / x 2] CMOS SERIAL FLASH"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "MX25L1606EM1I-12G_0_1"
-				(rectangle
-					(start -2.54 -2.54)
-					(end 10.16 -22.86)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "MX25L1606EM1I-12G_1_1"
-				(pin input line
-					(at -5.08 -5.08 0)
-					(length 2.54)
-					(name "~{CS}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 -12.7 0)
-					(length 2.54)
-					(name "SO/SIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 -15.24 0)
-					(length 2.54)
-					(name "~{WP}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 5.08 -25.4 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 -10.16 0)
-					(length 2.54)
-					(name "SI/SIO0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -5.08 -7.62 0)
-					(length 2.54)
-					(name "SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -5.08 -17.78 0)
-					(length 2.54)
-					(name "~{HOLD}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 5.08 0 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -3635,6 +3415,226 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "GammaSpectrometer:MX25L1606EM1I-12G"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MX25L1606EM1I-12G"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_SO:SOP-8_3.76x4.96mm_P1.27mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.tme.eu/Document/90cf95a7114025302d33a68125e207ab/MX25L1606E.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "16M-BIT [x 1 / x 2] CMOS SERIAL FLASH"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MX25L1606EM1I-12G_0_1"
+				(rectangle
+					(start -2.54 -2.54)
+					(end 10.16 -22.86)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "MX25L1606EM1I-12G_1_1"
+				(pin input line
+					(at -5.08 -5.08 0)
+					(length 2.54)
+					(name "~{CS}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -12.7 0)
+					(length 2.54)
+					(name "SO/SIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -15.24 0)
+					(length 2.54)
+					(name "~{WP}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 -25.4 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -10.16 0)
+					(length 2.54)
+					(name "SI/SIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -7.62 0)
+					(length 2.54)
+					(name "SCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -17.78 0)
+					(length 2.54)
+					(name "~{HOLD}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 0 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Jumper:Jumper_2_Open"
 			(pin_numbers
 				(hide yes)
@@ -5496,7 +5496,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "03a0120f-6d41-4b2f-975d-663f88d9ba59")
-		(property "Reference" "#PWR01205"
+		(property "Reference" "#PWR1205"
 			(at 67.31 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -5556,7 +5556,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01205")
+					(reference "#PWR1205")
 					(unit 1)
 				)
 			)
@@ -5656,7 +5656,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "096c214a-afd2-497c-b6c3-b38e456dee05")
-		(property "Reference" "#PWR01214"
+		(property "Reference" "#PWR1214"
 			(at 248.92 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -5716,7 +5716,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01214")
+					(reference "#PWR1214")
 					(unit 1)
 				)
 			)
@@ -5745,7 +5745,7 @@
 				)
 			)
 		)
-		(property "Value" "22R"
+		(property "Value" "R"
 			(at 208.28 58.42 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6334,7 +6334,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 63.5 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6417,7 +6417,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 120.65 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6500,7 +6500,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 81.28 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6581,7 +6581,7 @@
 				)
 			)
 		)
-		(property "Value" "100R"
+		(property "Value" "R"
 			(at 123.19 116.84 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6661,7 +6661,7 @@
 				)
 			)
 		)
-		(property "Value" "SPI programmer (FT2232H)"
+		(property "Value" "Conn_02x04_Row_Letter_Last"
 			(at 220.98 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6842,7 +6842,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 187.96 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6913,7 +6913,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33f3814f-692b-4e3a-9417-8bb1ff4c6762")
-		(property "Reference" "#PWR01212"
+		(property "Reference" "#PWR1212"
 			(at 198.12 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6973,7 +6973,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01212")
+					(reference "#PWR1212")
 					(unit 1)
 				)
 			)
@@ -6992,7 +6992,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4dbe5a7e-3154-424e-af76-215698c7447f")
-		(property "Reference" "#PWR01204"
+		(property "Reference" "#PWR1204"
 			(at 67.31 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -7052,7 +7052,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01204")
+					(reference "#PWR1204")
 					(unit 1)
 				)
 			)
@@ -7082,7 +7082,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 115.57 46.9899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7154,7 +7154,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5d970609-8473-465f-b084-e6a299dd409c")
-		(property "Reference" "#PWR01206"
+		(property "Reference" "#PWR1206"
 			(at 67.31 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -7214,7 +7214,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01206")
+					(reference "#PWR1206")
 					(unit 1)
 				)
 			)
@@ -7232,7 +7232,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "60c177a1-45c9-4126-986a-3cacc83e6aa8")
-		(property "Reference" "#PWR01211"
+		(property "Reference" "#PWR1211"
 			(at 184.15 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -7292,7 +7292,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01211")
+					(reference "#PWR1211")
 					(unit 1)
 				)
 			)
@@ -7311,7 +7311,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68ad3b2b-15a6-4848-901c-29d0579f57b3")
-		(property "Reference" "#PWR01209"
+		(property "Reference" "#PWR1209"
 			(at 124.46 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -7371,7 +7371,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01209")
+					(reference "#PWR1209")
 					(unit 1)
 				)
 			)
@@ -7390,7 +7390,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68b25625-92db-4585-a1bd-3bc84ff6c200")
-		(property "Reference" "#PWR01202"
+		(property "Reference" "#PWR1202"
 			(at 52.07 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -7450,7 +7450,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01202")
+					(reference "#PWR1202")
 					(unit 1)
 				)
 			)
@@ -7468,7 +7468,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6b522269-93bf-44f3-b493-b5987063fa3d")
-		(property "Reference" "#PWR01210"
+		(property "Reference" "#PWR1210"
 			(at 130.81 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -7528,7 +7528,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01210")
+					(reference "#PWR1210")
 					(unit 1)
 				)
 			)
@@ -7546,7 +7546,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6dd32a83-ba25-46ec-91e1-db73548012c5")
-		(property "Reference" "#PWR01213"
+		(property "Reference" "#PWR1213"
 			(at 240.03 139.7 0)
 			(hide yes)
 			(show_name no)
@@ -7606,7 +7606,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01213")
+					(reference "#PWR1213")
 					(unit 1)
 				)
 			)
@@ -7636,7 +7636,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 55.88 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7719,7 +7719,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "R"
 			(at 222.25 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7802,7 +7802,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 71.12 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7885,7 +7885,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 48.26 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7957,7 +7957,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "80bd6ffb-e6a2-4b0b-b41b-e7144da9fa7e")
-		(property "Reference" "#PWR01203"
+		(property "Reference" "#PWR1203"
 			(at 52.07 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -8017,7 +8017,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01203")
+					(reference "#PWR1203")
 					(unit 1)
 				)
 			)
@@ -8036,7 +8036,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8cfefbc9-1bc3-4edf-9dae-f7d6bff1c86d")
-		(property "Reference" "#PWR01208"
+		(property "Reference" "#PWR1208"
 			(at 111.76 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8096,7 +8096,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01208")
+					(reference "#PWR1208")
 					(unit 1)
 				)
 			)
@@ -8126,7 +8126,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 71.12 34.2899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8198,7 +8198,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9502fd1c-d66f-4ac6-a7f1-037986256705")
-		(property "Reference" "#PWR01207"
+		(property "Reference" "#PWR1207"
 			(at 102.87 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8258,7 +8258,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01207")
+					(reference "#PWR1207")
 					(unit 1)
 				)
 			)
@@ -8277,7 +8277,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9fc5761f-a95c-4a44-a579-021d7022da20")
-		(property "Reference" "#PWR01201"
+		(property "Reference" "#PWR1201"
 			(at 52.07 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -8337,14 +8337,14 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "#PWR01201")
+					(reference "#PWR1201")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "DataAcquisitionUnit:MX25L1606EM1I-12G")
+		(lib_id "GammaSpectrometer:MX25L1606EM1I-12G")
 		(at 243.84 54.61 0)
 		(unit 1)
 		(body_style 1)
@@ -8466,7 +8466,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 133.35 115.5699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8548,7 +8548,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "C"
 			(at 201.93 38.0999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8631,7 +8631,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "R"
 			(at 212.09 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8714,7 +8714,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 55.88 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8797,7 +8797,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 232.41 44.4499 0)
 			(show_name no)
 			(do_not_autoplace no)

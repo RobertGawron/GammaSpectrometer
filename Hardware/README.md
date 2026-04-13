@@ -4,11 +4,11 @@ TBD
 
 # Circuit
 
-![](./DataAcquisitionUnit.svg)
-![](./DataAcquisitionUnit-SiPMBiasRegulator.svg)
-![](./DataAcquisitionUnit-SiPMOverlightProtection.svg)
-![](./DataAcquisitionUnit-AFE.svg)
-![](./DataAcquisitionUnit-ExternalConnector.svg)
+![](./GammaSpectrometer.svg)
+![](./GammaSpectrometer-SiPMBiasRegulator.svg)
+![](./GammaSpectrometer-SiPMOverlightProtection.svg)
+![](./GammaSpectrometer-AFE.svg)
+![](./GammaSpectrometer-ExternalConnector.svg)
 
 # Simulated data
 

@@ -270,17 +270,6 @@
 		)
 		(uuid "28b74159-2fa6-4676-b279-678dfa12fa8d")
 	)
-	(hierarchical_label "+2V5_A"
-		(shape input)
-		(at 73.66 45.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2d90de81-75b0-4798-8902-c40e0db9fc1a")
-	)
 	(hierarchical_label "+V_IN"
 		(shape input)
 		(at 73.66 40.64 180)
@@ -302,6 +291,17 @@
 			(justify left)
 		)
 		(uuid "97365109-f558-4219-a799-3e2e4256dc4e")
+	)
+	(hierarchical_label "+3V3_A"
+		(shape input)
+		(at 73.66 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d5ef84f-90a4-45c5-81af-fcfd8929738c")
 	)
 	(hierarchical_label "+V_SIPM_BIAS"
 		(shape output)
@@ -385,7 +385,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
-					(page "5")
+					(page "11")
 				)
 			)
 		)
@@ -438,16 +438,6 @@
 				(justify right)
 			)
 		)
-		(pin "+2V5_A" input
-			(at 86.36 82.55 180)
-			(uuid "0ba59be6-c602-4ac3-8f7b-7ac747f9c632")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "VBIAS_EN" output
 			(at 127 80.01 0)
 			(uuid "478673cb-516e-49d8-8cef-99dbe0e8c793")
@@ -478,10 +468,20 @@
 				(justify left)
 			)
 		)
+		(pin "+3V3_A" input
+			(at 86.36 82.55 180)
+			(uuid "5879fd34-6b39-47d6-8b7f-85e416516761")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
-					(page "4")
+					(page "12")
 				)
 			)
 		)
@@ -567,7 +567,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092"
-					(page "16")
+					(page "13")
 				)
 			)
 		)

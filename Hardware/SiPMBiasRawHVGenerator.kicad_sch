@@ -136,188 +136,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DataAcquisitionUnit:LT8330IS6"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 8.128 -4.318 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LT8330IS6"
-				(at 8.636 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1930f.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Low IQ Boost/SEPIC/Inverting Converter with 1A, 60V Switch"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "LT8330IS6_1_1"
-				(rectangle
-					(start 1.27 10.16)
-					(end 15.24 -2.54)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin power_out line
-					(at 13.97 12.7 270)
-					(length 2.54)
-					(name "SW"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -1.27 -1.27 0)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 17.78 3.81 180)
-					(length 2.54)
-					(name "FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 3.81 0)
-					(length 2.54)
-					(name "EN/UVLO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -1.27 1.27 0)
-					(length 2.54)
-					(name "INTVCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 12.7 270)
-					(length 2.54)
-					(name "VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -947,6 +765,188 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GammaSpectrometer:LT8330IS6"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 8.128 -4.318 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LT8330IS6"
+				(at 8.636 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-6"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1930f.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Low IQ Boost/SEPIC/Inverting Converter with 1A, 60V Switch"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LT8330IS6_1_1"
+				(rectangle
+					(start 1.27 10.16)
+					(end 15.24 -2.54)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_out line
+					(at 13.97 12.7 270)
+					(length 2.54)
+					(name "SW"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -1.27 -1.27 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 17.78 3.81 180)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 3.81 0)
+					(length 2.54)
+					(name "EN/UVLO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -1.27 1.27 0)
+					(length 2.54)
+					(name "INTVCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 12.7 270)
+					(length 2.54)
+					(name "VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1963,7 +1963,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "11f422c2-a3e5-42e3-9079-897e94f6cdda")
-		(property "Reference" "#PWR0507"
+		(property "Reference" "#PWR507"
 			(at 152.4 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2023,7 +2023,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0507")
+					(reference "#PWR507")
 					(unit 1)
 				)
 			)
@@ -2052,7 +2052,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 154.94 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2123,7 +2123,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19fac590-f179-4ab3-b8be-826f51284089")
-		(property "Reference" "#PWR0508"
+		(property "Reference" "#PWR508"
 			(at 187.96 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2183,7 +2183,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0508")
+					(reference "#PWR508")
 					(unit 1)
 				)
 			)
@@ -2201,7 +2201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1d2d7b07-3f81-4f52-8f2d-549bd6c07032")
-		(property "Reference" "#PWR0506"
+		(property "Reference" "#PWR506"
 			(at 125.73 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2261,7 +2261,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0506")
+					(reference "#PWR506")
 					(unit 1)
 				)
 			)
@@ -2289,7 +2289,7 @@
 				)
 			)
 		)
-		(property "Value" "DFLS1100-7"
+		(property "Value" "D_Schottky"
 			(at 156.5275 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2359,7 +2359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1e407e94-c922-4cec-a26f-3d335594b03d")
-		(property "Reference" "#PWR0504"
+		(property "Reference" "#PWR504"
 			(at 106.68 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2419,7 +2419,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0504")
+					(reference "#PWR504")
 					(unit 1)
 				)
 			)
@@ -2448,7 +2448,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "C"
 			(at 120.65 78.7399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2519,7 +2519,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2eca8f5f-338b-4a6f-9cc9-0b9f44c9894a")
-		(property "Reference" "#PWR0501"
+		(property "Reference" "#PWR501"
 			(at 60.96 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -2579,7 +2579,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0501")
+					(reference "#PWR501")
 					(unit 1)
 				)
 			)
@@ -2607,7 +2607,7 @@
 				)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "L"
 			(at 139.7 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2688,7 +2688,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "R"
 			(at 167.64 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2770,7 +2770,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "R"
 			(at 109.22 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2852,7 +2852,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 81.28 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2933,7 +2933,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "R"
 			(at 77.47 99.06 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3003,7 +3003,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f658a09-4f82-4a96-ba2a-8fc1146bd7f3")
-		(property "Reference" "#FLG0501"
+		(property "Reference" "#FLG501"
 			(at 77.47 51.435 0)
 			(hide yes)
 			(show_name no)
@@ -3063,7 +3063,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#FLG0501")
+					(reference "#FLG501")
 					(unit 1)
 				)
 			)
@@ -3092,7 +3092,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 204.47 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3174,7 +3174,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 234.95 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3245,7 +3245,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f749be0-69e0-459f-9306-f8bd90c69c9a")
-		(property "Reference" "#PWR0511"
+		(property "Reference" "#PWR511"
 			(at 231.14 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3305,7 +3305,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0511")
+					(reference "#PWR511")
 					(unit 1)
 				)
 			)
@@ -3323,7 +3323,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6093b823-20c1-458e-96fd-8fd05e4bf13d")
-		(property "Reference" "#PWR0510"
+		(property "Reference" "#PWR510"
 			(at 218.44 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3383,7 +3383,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0510")
+					(reference "#PWR510")
 					(unit 1)
 				)
 			)
@@ -3401,7 +3401,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "615d70e5-b5c8-4e25-896e-26e94551ce5f")
-		(property "Reference" "#PWR0505"
+		(property "Reference" "#PWR505"
 			(at 116.84 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3461,7 +3461,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0505")
+					(reference "#PWR505")
 					(unit 1)
 				)
 			)
@@ -3479,7 +3479,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "65a94bab-d29a-4cea-b378-5280a3c2167f")
-		(property "Reference" "#PWR0509"
+		(property "Reference" "#PWR509"
 			(at 200.66 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3539,7 +3539,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0509")
+					(reference "#PWR509")
 					(unit 1)
 				)
 			)
@@ -3580,7 +3580,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 170.18 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -3602,7 +3602,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 175.26 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -3648,7 +3648,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 93.98 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3730,7 +3730,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "R"
 			(at 109.22 76.1999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3801,7 +3801,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "acd5d2b9-4832-4f6f-b941-d852fa71fac4")
-		(property "Reference" "#PWR0502"
+		(property "Reference" "#PWR502"
 			(at 77.47 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -3861,7 +3861,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0502")
+					(reference "#PWR502")
 					(unit 1)
 				)
 			)
@@ -3890,7 +3890,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 64.77 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3972,7 +3972,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10p"
+		(property "Value" "C"
 			(at 179.07 64.7699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4032,7 +4032,7 @@
 		)
 	)
 	(symbol
-		(lib_id "DataAcquisitionUnit:LT8330IS6")
+		(lib_id "GammaSpectrometer:LT8330IS6")
 		(at 130.81 73.66 0)
 		(unit 1)
 		(body_style 1)
@@ -4145,7 +4145,7 @@
 				)
 			)
 		)
-		(property "Value" "10u SRR4018-100Y"
+		(property "Value" "L"
 			(at 209.55 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4225,7 +4225,7 @@
 				)
 			)
 		)
-		(property "Value" "0R"
+		(property "Value" "R"
 			(at 68.58 52.07 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4318,7 +4318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 237.49 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -4340,7 +4340,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 242.57 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -4375,7 +4375,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7f28ff9-6df4-47b0-be98-031cc96194f2")
-		(property "Reference" "#PWR0503"
+		(property "Reference" "#PWR503"
 			(at 90.17 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -4435,7 +4435,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/26c85e8f-d7e7-4def-9549-c7a26d210092/23991e5e-8b99-43ed-a019-85847ab82d65"
-					(reference "#PWR0503")
+					(reference "#PWR503")
 					(unit 1)
 				)
 			)
@@ -4464,7 +4464,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 191.77 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4546,7 +4546,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 222.25 68.5799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4628,7 +4628,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "200k"
+		(property "Value" "R"
 			(at 154.94 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)

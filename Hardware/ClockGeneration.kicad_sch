@@ -13,7 +13,162 @@
 		(comment 3 "DRAFT")
 	)
 	(lib_symbols
-		(symbol "DataAcquisitionUnit:5PB1102PGGK"
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "GammaSpectrometer:5PB1102PGGK"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -233,7 +388,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DataAcquisitionUnit:XLH736065.000000I"
+		(symbol "GammaSpectrometer:XLH736065.000000I"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -433,161 +588,6 @@
 						)
 					)
 					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:C"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "C"
-				(at 0.635 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "C"
-				(at 0.635 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0.9652 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Unpolarized capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "cap capacitor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "C_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "C_0_1"
-				(polyline
-					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "C_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 2.794)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1578,7 +1578,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~{GEN_EN}"
+		(property "Value" "SolderJumper_2_Open"
 			(at 60.96 87.6299 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1638,7 +1638,7 @@
 		)
 	)
 	(symbol
-		(lib_id "DataAcquisitionUnit:5PB1102PGGK")
+		(lib_id "GammaSpectrometer:5PB1102PGGK")
 		(at 135.89 72.39 0)
 		(unit 1)
 		(body_style 1)
@@ -1748,7 +1748,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1dae539c-98c4-436c-b0ff-a492b84dc592")
-		(property "Reference" "#PWR01305"
+		(property "Reference" "#PWR1305"
 			(at 92.71 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -1808,7 +1808,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01305")
+					(reference "#PWR1305")
 					(unit 1)
 				)
 			)
@@ -1826,7 +1826,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2c7de7fb-9103-4917-bee5-fa0e69bbb098")
-		(property "Reference" "#PWR01304"
+		(property "Reference" "#PWR1304"
 			(at 77.47 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -1886,7 +1886,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01304")
+					(reference "#PWR1304")
 					(unit 1)
 				)
 			)
@@ -1904,7 +1904,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3451ced4-5453-4a7b-bd1a-3603eebe0707")
-		(property "Reference" "#PWR01303"
+		(property "Reference" "#PWR1303"
 			(at 64.77 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -1964,7 +1964,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01303")
+					(reference "#PWR1303")
 					(unit 1)
 				)
 			)
@@ -1993,7 +1993,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "C"
 			(at 68.58 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2075,7 +2075,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 53.34 66.0399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2146,7 +2146,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ae4dc06-cafe-4b53-bbb0-7bf474b0ecab")
-		(property "Reference" "#PWR01301"
+		(property "Reference" "#PWR1301"
 			(at 49.53 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -2206,7 +2206,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01301")
+					(reference "#PWR1301")
 					(unit 1)
 				)
 			)
@@ -2235,7 +2235,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "C"
 			(at 111.76 58.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2318,7 +2318,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SPLITTER_EN"
+		(property "Value" "SolderJumper_3_Bridged12"
 			(at 116.84 88.8999 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2381,7 +2381,7 @@
 		)
 	)
 	(symbol
-		(lib_id "DataAcquisitionUnit:XLH736065.000000I")
+		(lib_id "GammaSpectrometer:XLH736065.000000I")
 		(at 66.04 72.39 0)
 		(unit 1)
 		(body_style 1)
@@ -2505,7 +2505,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 96.52 58.4199 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2576,7 +2576,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d6ec7ee9-70d3-46a4-aebb-e6cdd02461bb")
-		(property "Reference" "#PWR01306"
+		(property "Reference" "#PWR1306"
 			(at 107.95 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -2636,7 +2636,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01306")
+					(reference "#PWR1306")
 					(unit 1)
 				)
 			)
@@ -2654,7 +2654,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8bb28c6-8a57-4e7e-a184-2d550e189c86")
-		(property "Reference" "#PWR01308"
+		(property "Reference" "#PWR1308"
 			(at 135.89 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2714,7 +2714,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01308")
+					(reference "#PWR1308")
 					(unit 1)
 				)
 			)
@@ -2732,7 +2732,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f1a19199-a37a-4ee3-b0b2-58bd7752cb8c")
-		(property "Reference" "#PWR01307"
+		(property "Reference" "#PWR1307"
 			(at 119.38 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2792,7 +2792,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01307")
+					(reference "#PWR1307")
 					(unit 1)
 				)
 			)
@@ -2810,7 +2810,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f443432e-c504-4309-ba6c-437b1e5db8af")
-		(property "Reference" "#PWR01302"
+		(property "Reference" "#PWR1302"
 			(at 63.5 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -2870,7 +2870,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "#PWR01302")
+					(reference "#PWR1302")
 					(unit 1)
 				)
 			)

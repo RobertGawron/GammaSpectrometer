@@ -2,7 +2,7 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "a69e780b-3e8c-467f-abba-e0d9486ff628")
+	(uuid "3a0091a9-8f76-48e7-afd7-4279c9fd98ab")
 	(paper "A4")
 	(title_block
 		(title "External Interfaces")
@@ -1509,7 +1509,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
+		(property "Value" "C"
 			(at 71.12 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1542,7 +1542,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 67.31 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -1592,7 +1592,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "R"
 			(at 69.85 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1625,7 +1625,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Resistor"
 			(at 72.39 83.82 0)
 			(hide yes)
 			(show_name no)
@@ -1663,7 +1663,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16ffb178-33ce-4fd5-b38f-e8127349fc51")
-		(property "Reference" "#PWR01804"
+		(property "Reference" "#PWR1804"
 			(at 82.55 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -1723,7 +1723,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01804")
+					(reference "#PWR1804")
 					(unit 1)
 				)
 			)
@@ -1741,7 +1741,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "23720af4-871b-4657-8b09-aa46940002c1")
-		(property "Reference" "#PWR01803"
+		(property "Reference" "#PWR1803"
 			(at 72.39 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -1801,7 +1801,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01803")
+					(reference "#PWR1803")
 					(unit 1)
 				)
 			)
@@ -1819,7 +1819,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "25166cdf-795e-4c62-90d8-843a4d668ef0")
-		(property "Reference" "#PWR01801"
+		(property "Reference" "#PWR1801"
 			(at 60.96 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -1879,7 +1879,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01801")
+					(reference "#PWR1801")
 					(unit 1)
 				)
 			)
@@ -1897,7 +1897,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "62e43c4e-ba87-40ff-83a1-8e71c80ab45d")
-		(property "Reference" "#PWR01802"
+		(property "Reference" "#PWR1802"
 			(at 67.31 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -1957,7 +1957,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01802")
+					(reference "#PWR1802")
 					(unit 1)
 				)
 			)
@@ -1986,7 +1986,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 86.36 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2019,7 +2019,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 82.55 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -2183,7 +2183,7 @@
 				)
 			)
 		)
-		(property "Footprint" "HardwareDataLogger:USB_Micro-B_Molex-105017-0001_Extra_Mechanical_Pads"
+		(property "Footprint" "GammaSpectrometer:USB_Micro-B_Molex-105017-0001_Extra_Mechanical_Pads"
 			(at 64.77 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -2255,7 +2255,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "89a8ecc9-34e8-4760-b6cf-14d016a0e080")
-		(property "Reference" "#PWR01805"
+		(property "Reference" "#PWR1805"
 			(at 96.52 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -2315,7 +2315,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01805")
+					(reference "#PWR1805")
 					(unit 1)
 				)
 			)
@@ -2333,7 +2333,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "de7fdb0c-04ae-4a07-9139-09d23490dddf")
-		(property "Reference" "#PWR01806"
+		(property "Reference" "#PWR1806"
 			(at 102.87 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -2393,7 +2393,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/42540219-26d7-4d17-b5bd-2b115da83203"
-					(reference "#PWR01806")
+					(reference "#PWR1806")
 					(unit 1)
 				)
 			)
@@ -2422,7 +2422,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 106.68 49.5299 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2455,7 +2455,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 102.87 48.26 0)
 			(hide yes)
 			(show_name no)

@@ -2178,7 +2178,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 124.46 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2260,7 +2260,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100n"
+		(property "Value" "C"
 			(at 162.56 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2414,7 +2414,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44c007e2-317a-4887-b303-e9a4895d0ff5")
-		(property "Reference" "#FLG01401"
+		(property "Reference" "#FLG1401"
 			(at 171.45 62.865 0)
 			(hide yes)
 			(show_name no)
@@ -2475,7 +2475,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ec244bf6-1193-4eaf-b1ba-fe26d901e8f4"
-					(reference "#FLG01401")
+					(reference "#FLG1401")
 					(unit 1)
 				)
 			)
@@ -2504,7 +2504,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470u/16V"
+		(property "Value" "C_Polarized"
 			(at 106.68 72.7709 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2669,7 +2669,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "TestPoint"
 			(at 190.5 75.4379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2680,7 +2680,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 182.88 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -2702,7 +2702,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 187.96 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -2737,7 +2737,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "85b9411f-ba06-4d6c-b98d-8cca0121edf3")
-		(property "Reference" "#PWR01401"
+		(property "Reference" "#PWR1401"
 			(at 198.12 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -2797,7 +2797,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/ec244bf6-1193-4eaf-b1ba-fe26d901e8f4"
-					(reference "#PWR01401")
+					(reference "#PWR1401")
 					(unit 1)
 				)
 			)
@@ -2913,7 +2913,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "+V_IN"
+		(property "Value" "TestPoint"
 			(at 190.5 62.7379 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2924,7 +2924,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
 			(at 182.88 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -2946,7 +2946,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "test point"
 			(at 187.96 64.77 0)
 			(hide yes)
 			(show_name no)

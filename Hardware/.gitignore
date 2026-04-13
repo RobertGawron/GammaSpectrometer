@@ -31,3 +31,5 @@ _autosave-*
 bom/
 production/
 fabrication-toolkit-options.json
+
+GammaSpectrometer-*.pdf
