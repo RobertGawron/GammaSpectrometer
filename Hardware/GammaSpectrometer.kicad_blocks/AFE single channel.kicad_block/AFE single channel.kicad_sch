@@ -340,7 +340,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "DataAcquisitionUnit:AD8139"
+		(symbol "GammaSpectrometer:AD8139"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -4691,7 +4691,7 @@
 		)
 	)
 	(symbol
-		(lib_id "DataAcquisitionUnit:AD8139")
+		(lib_id "GammaSpectrometer:AD8139")
 		(at 130.81 57.15 0)
 		(unit 1)
 		(body_style 1)

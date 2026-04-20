@@ -1537,7 +1537,7 @@
 			(uuid "b68209bd-98d9-40b4-8e00-dea9c67d0829")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#FLG03")
 					(unit 1)
@@ -1614,7 +1614,7 @@
 			(uuid "88201c5d-dfdf-46ce-88a1-41fc65f45f74")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#FLG05")
 					(unit 1)
@@ -1696,7 +1696,7 @@
 			(uuid "11f30670-d16b-41b7-93e5-a1d5b4d6d051")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "J2")
 					(unit 1)
@@ -1774,7 +1774,7 @@
 			(uuid "67e28e10-4e58-411d-8ad1-a1c2737d2836")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#FLG04")
 					(unit 1)
@@ -1852,7 +1852,7 @@
 			(uuid "3905b54e-0133-4f39-8968-a15e9be64ebb")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#FLG06")
 					(unit 1)
@@ -1931,7 +1931,7 @@
 			(uuid "0662834a-7c25-4f0e-9511-1fcdf980cb67")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "TP20")
 					(unit 1)
@@ -2037,7 +2037,7 @@
 			(uuid "2aca30c9-e5eb-4597-9ac0-517532eb2759")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "J1")
 					(unit 1)
@@ -2115,7 +2115,7 @@
 			(uuid "7e467c3e-b7fe-4549-a188-68f30dd387da")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#PWR06")
 					(unit 1)
@@ -2193,7 +2193,7 @@
 			(uuid "e9e383dd-1a67-48de-9cc2-ac0e85f36f89")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#PWR05")
 					(unit 1)
@@ -2271,7 +2271,7 @@
 			(uuid "b53dd849-06f6-49d5-99da-9ecb41fc9828")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#PWR04")
 					(unit 1)
@@ -2350,7 +2350,7 @@
 			(uuid "2f0c996d-fc2b-43bb-ad2b-00ba421b4909")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "TP21")
 					(unit 1)
@@ -2428,7 +2428,7 @@
 			(uuid "616e6c53-7baf-4455-a5d7-0cc827726f01")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "#FLG02")
 					(unit 1)
@@ -2510,7 +2510,7 @@
 			(uuid "091ba188-e5f1-40a0-a3ec-31611c44f26e")
 		)
 		(instances
-			(project "DataAcquisitionUnit"
+			(project "GammaSpectrometer"
 				(path "/b3e88616-4405-48d6-aecf-2659499541fb/e6a5468a-6002-4126-9526-7bfdaa0c8430"
 					(reference "J3")
 					(unit 1)
