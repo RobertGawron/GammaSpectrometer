@@ -916,7 +916,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "GammaSpectrometer:BUD_CU-470_Shield"
 			(at 135.89 66.04 0)
 			(hide yes)
 			(show_name no)
