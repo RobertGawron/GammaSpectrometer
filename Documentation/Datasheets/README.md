@@ -1,0 +1,1 @@
+Each folder corresponds to a hierarchical sheet in the KiCad design for this project.

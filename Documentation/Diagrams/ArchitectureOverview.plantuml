@@ -4,88 +4,126 @@ skinparam linetype ortho
 skinparam nodesep 40
 skinparam ranksep 50
 
-title Gamma Spectrometer - System Architecture
+title Gamma Spectrometer - Dual Channel Architecture
 
 skinparam package {
     BackgroundColor<<analog>> #LightBlue
     BackgroundColor<<digital>> #LightYellow
-    BackgroundColor<<power>> #LightCoral
+    BackgroundColor<<timing>> #E8EEF5
 }
 
 [Radioactive Sample] as Sample
 
+' =====================================================
+' Data Acquisition Unit
+' =====================================================
 package "Data Acquisition Unit" <<analog>> {
+
     component "Scintillation Crystal\n(NaI(Tl))" as Crystal
-    component "Silicon Photomultiplier\n(MICROFC-60035-SMT-TR1)" as SiPM
-    component "Transimpedance AFE\n(LTC6268)" as TIA
-    component "Differential ADC Driver\n(LTC6363)" as DiffDriver
-    
-    component "Temperature Sensing" as TempSense
-    component "29V DC Bias Supply\n(TPS7A4901)" as Bias
-    component "Overlight Protection" as Protection
-    
-    ' Internal Layout Hints: Pushes sensors to the right of the main signal chain
-    Crystal -right[hidden]- TempSense
-    SiPM -right[hidden]- Bias
-    TIA -right[hidden]- Protection
+
+    package "AFE" #CFE8FF {
+
+        package "AFE Channel 1" #EAF4FF {
+            component "SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_1
+            component "Charge Amplifier\n(OPA690xDBV)" as CA_1
+            component "ADC Driver\n(LTC6363)" as Driver_1
+        }
+
+        package "AFE Channel 2" #EAF4FF {
+            component "SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_2
+            component "Charge Amplifier\n(OPA690xDBV)" as CA_2
+            component "ADC Driver\n(LTC6363)" as Driver_2
+        }
+
+        SiPM_1 -down[hidden]- CA_1
+        CA_1 -down[hidden]- Driver_1
+
+        SiPM_2 -down[hidden]- CA_2
+        CA_2 -down[hidden]- Driver_2
+    }
+
+    package "SiPM Bias" #CFE8FF {
+        component "30V DC-DC Boost\n(LT1930)" as Boost
+        component "29V Bias Supply\n(TPS7A4901)" as Bias
+        component "Temperature Sensing\n(Thermistor+MCP3221)" as TempSense
+        component "SiPM Temperature Compensation DAC\n(MCP4725xxx-xCH)" as TempBias
+        component "Overlight Protection" as Protection
+    }
 }
 
+' =====================================================
+' Clock Subsystem
+' =====================================================
+package "Clock Subsystem" <<timing>> {
+    component "40 MHz LVDS Oscillator\n(511JCA40M0000BAG)" as OSC
+    component "LVDS Fanout Buffer\n(SY75576LKY)" as FANOUT
+    component "LVDS → CMOS Buffer\n(PI6C49CB01Q2WEX)" as CLKBUF
+}
+
+' =====================================================
+' Data Processing Unit
+' =====================================================
 package "Data Processing Unit" <<digital>> {
-    component "ADC 12-bit 65 MSPS\n(AD9226)" as ADC
-    component "SPI Flash\n(Bitstream Storage)" as Flash
+    component "Dual ADC 12-bit 40 MSPS (AD9238)" as ADC
+    component "SPI Flash\n(Bitstream Storage)\n(MX25L1606EM1I-12G)" as Flash
     component "FPGA\n(iCE40HX4K)" as FPGA
-    
-    ' Internal Layout Hint: Keeps Flash next to ADC rather than below it
-    ADC -right[hidden]- Flash
-}
-
-package "Main Board" <<power>> {
-    component "30V DC-DC Boost\n(LT1930)" as Boost
-    component "Power Supply\n(3.3V, 1.2V, 5V)" as PSU
     component "UART to USB\nCommunication" as Comm
-    
-    ' Internal Layout Hint: Stacks power components neatly
-    Boost -down[hidden]- PSU
-    PSU -down[hidden]- Comm
+
+    ADC -right[hidden]- Flash
+    FPGA -right[hidden]- Comm
 }
 
 actor "User\n(PC Software)" as User
 
-' Global Layout Hints
-' Force Main Board to the right of the Analog and Digital packages
-Bias -right[hidden]- Boost
-FPGA -right[hidden]- Comm
+' =====================================================
+' Analog Signal Path (Dark Orange)
+' =====================================================
+Sample -down[#D35400,bold]-> Crystal
 
-' Force User to sit completely at the bottom
-FPGA -down[hidden]- User
+Crystal -down[#D35400,bold]-> SiPM_1 : <color:#D35400>photons</color>
+SiPM_1 -down[#D35400,bold]-> CA_1 : <color:#D35400>Q(t)</color>
+CA_1 -down[#D35400,bold]-> Driver_1 : <color:#D35400>V(t)</color>
+Driver_1 -[#D35400,bold]-> ADC : <color:#D35400>differential pair CH1</color>
 
-' Main signal flow (Green Vertical Spine)
-Sample -down[#green,bold]-> Crystal : <color:green>gamma rays</color>
-Crystal -down[#green,bold]-> SiPM : <color:green>photons</color>
-SiPM -down[#green,bold]-> TIA : <color:green>current pulse</color>\n<color:green>(1µA - 1mA)</color>
-TIA -down[#green,bold]-> DiffDriver : <color:green>voltage pulse</color>\n<color:green>(10mV - 1V)</color>
-DiffDriver -down[#green,bold]-> ADC : <color:green>differential signal</color>\n<color:green>(+1.5V common mode)</color>
-ADC -down[#green,bold]-> FPGA : <color:green>raw samples</color>\n<color:green>(780 Mbps)</color>
+Crystal -down[#D35400,bold]-> SiPM_2 : <color:#D35400>photons</color>
+SiPM_2 -down[#D35400,bold]-> CA_2 : <color:#D35400>Q(t)</color>
+CA_2 -down[#D35400,bold]-> Driver_2 : <color:#D35400>V(t)</color>
+Driver_2 -[#D35400,bold]-> ADC : <color:#D35400>differential pair CH2</color>
 
-' Routing to User via Main Board
-FPGA -right[#green,bold]-> Comm : <color:green>spectrum data</color>
-Comm -down[#green,bold]-> User : <color:green>histogram</color>\n<color:green>via USB</color>
+ADC -down[#D35400,bold]-> FPGA : <color:#D35400>12-bit samples @ 40 MSPS</color>
 
-' Internal Data Acquisition Unit Connections
-TempSense -left-> SiPM : measures\ntemperature
-Bias -left-> SiPM
-Protection -left-> SiPM : monitors\ncurrent
-Protection -down-> Bias : disable\non fault
+' =====================================================
+' Digital Processing
+' =====================================================
+FPGA -down[#D35400,bold]-> Comm : <color:#D35400>spectrum data</color>
+Comm -down[#D35400,bold]-> User : <color:#D35400>spectrum data</color>
 
-' Internal Data Processing Unit Connections
-Flash -down-> FPGA : configuration
+Flash -left[#800080,dashed]---> FPGA : SPI
 
-' Cross-package control signals (Upwards from FPGA to Data Acquisition Unit)
-FPGA -up-> TempSense : reads via ADC
-FPGA -up-> Bias : adjusts\nvoltage
+' =====================================================
+' Clock Distribution (Dark Gray)
+' =====================================================
+"Clock Subsystem"-up[hidden]- "Data Processing Unit"
+OSC -up[#444444,bold]-> FANOUT : LVDS 40 MHz
+FANOUT -[#444444,bold]-> FPGA : LVDS 40 MHz
+FANOUT -up[#444444,bold]-> CLKBUF : LVDS 40 MHz
+CLKBUF -up[#444444,bold]-> ADC : CMOS 40 MHz
 
-' Power connections (Leftwards from Main Board to other packages)
-Boost -left-> Bias : 30V raw
-PSU -left-> ADC : 5V
-PSU -left-> FPGA : 3.3V, 1.2V
+' =====================================================
+' Bias & Protection
+' =====================================================
+Boost -left-> Bias
+Bias -left-> "AFE"
+Protection -down-> Bias : disable on fault
+
+' =====================================================
+' I2C Control (Purple)
+' =====================================================
+TempSense -down[#800080,dashed]-> FPGA : I2C
+TempBias -[#800080,dashed]-> FPGA : I2C
+
+' Compensation Voltage
+TempBias -up-> Bias : compensation voltage
+
+TempSense -up[hidden]- TempBias
 @enduml

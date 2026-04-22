@@ -168,6 +168,215 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "GammaSpectrometer:511JCA40M0000BAG"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "511JCA40M0000BAG"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Oscillator:Oscillator_SMD_IDT_JS6-6_5.0x3.2mm_P1.27mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://eu.mouser.com/datasheet/3/1166/1/REN_XL_Crystal_Oscillators_Datasheet_DST_20220302.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "CRYSTAL OSCILLATOR (XO) 100 kHZ TO 250 MHZ"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "shop" "https://eu.mouser.com/ProductDetail/Skyworks-Solutions-Inc/511JCA40M0000BAG?qs=1mbolxNpo8e7WO6c7RNjdQ%3D%3D"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "511JCA40M0000BAG_0_1"
+				(rectangle
+					(start 3.81 -2.54)
+					(end 19.05 -12.7)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "511JCA40M0000BAG_1_1"
+				(polyline
+					(pts
+						(xy 6.35 -5.08) (xy 6.985 -5.08) (xy 6.985 -3.81) (xy 7.62 -3.81) (xy 7.62 -5.08) (xy 8.255 -5.08)
+						(xy 8.255 -3.81) (xy 8.89 -3.81) (xy 8.89 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at 1.27 -7.62 0)
+					(length 2.54)
+					(name "E/D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 3.81 -10.16 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 -15.24 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 21.59 -5.08 180)
+					(length 2.54)
+					(name "CLK+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 21.59 -7.62 180)
+					(length 2.54)
+					(name "CLK-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 11.43 0 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "GammaSpectrometer:5PB1102PGGK"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -378,216 +587,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "GammaSpectrometer:XLH736065.000000I"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "XLH736065.000000I"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Oscillator:Oscillator_SMD_IDT_JS6-6_5.0x3.2mm_P1.27mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://eu.mouser.com/datasheet/3/1166/1/REN_XL_Crystal_Oscillators_Datasheet_DST_20220302.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "XL Family of Low Phase Noise Quartz-based PLL Oscillators"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "shop" "https://eu.mouser.com/ProductDetail/Renesas-Electronics/XLH736065.000000I?qs=itIaUkCn8qA%252B7s8RBj%2Fthg%3D%3D"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "XLH736065.000000I_0_1"
-				(rectangle
-					(start 3.81 -2.54)
-					(end 19.05 -12.7)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "XLH736065.000000I_1_1"
-				(polyline
-					(pts
-						(xy 6.35 -5.08) (xy 6.985 -5.08) (xy 6.985 -3.81) (xy 7.62 -3.81) (xy 7.62 -5.08) (xy 8.255 -5.08)
-						(xy 8.255 -3.81) (xy 8.89 -3.81) (xy 8.89 -5.08)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin input line
-					(at 1.27 -7.62 0)
-					(length 2.54)
-					(name "E/D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 3.81 -10.16 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 -15.24 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 21.59 -7.62 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 21.59 -10.16 180)
-					(length 2.54)
-					(hide yes)
-					(name "OUT2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 0 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2295,6 +2294,111 @@
 		)
 	)
 	(symbol
+		(lib_id "GammaSpectrometer:511JCA40M0000BAG")
+		(at 80.01 146.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "82d3256f-a0f8-46a9-8f73-dbe3a4471da5")
+		(property "Reference" "U801"
+			(at 93.5833 143.51 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "511JCA40M0000BAG"
+			(at 93.5833 146.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_SMD_IDT_JS6-6_5.0x3.2mm_P1.27mm"
+			(at 80.01 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://eu.mouser.com/datasheet/3/1166/1/REN_XL_Crystal_Oscillators_Datasheet_DST_20220302.pdf"
+			(at 80.01 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "CRYSTAL OSCILLATOR (XO) 100 kHZ TO 250 MHZ"
+			(at 80.01 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "shop" "https://eu.mouser.com/ProductDetail/Skyworks-Solutions-Inc/511JCA40M0000BAG?qs=1mbolxNpo8e7WO6c7RNjdQ%3D%3D"
+			(at 80.01 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "638b3103-5e05-4660-b048-eea240defab1")
+		)
+		(pin "2"
+			(uuid "b625160a-e461-4cce-9fce-60244a35cd8b")
+		)
+		(pin "4"
+			(uuid "fa5fadda-4836-4392-bc5d-c722ba817126")
+		)
+		(pin "5"
+			(uuid "c53db512-9da8-4a60-9676-dcc54c1e635e")
+		)
+		(pin "6"
+			(uuid "eca60aac-62a9-4612-8e81-7821dff89f4d")
+		)
+		(pin "3"
+			(uuid "488fecb7-9919-4c01-a279-9a49fed39820")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
+					(reference "U801")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Jumper:SolderJumper_3_Bridged12")
 		(at 119.38 87.63 90)
 		(mirror x)
@@ -2375,108 +2479,6 @@
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
 					(reference "JP1302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "GammaSpectrometer:XLH736065.000000I")
-		(at 66.04 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9f03353e-a580-4955-9aa7-d9d7a552f450")
-		(property "Reference" "U1301"
-			(at 80.01 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "XLH736065.000000I"
-			(at 87.63 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Oscillator:Oscillator_SMD_IDT_JS6-6_5.0x3.2mm_P1.27mm"
-			(at 66.04 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://eu.mouser.com/datasheet/3/1166/1/REN_XL_Crystal_Oscillators_Datasheet_DST_20220302.pdf"
-			(at 66.04 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "XL Family of Low Phase Noise Quartz-based PLL Oscillators"
-			(at 66.04 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "shop" "https://eu.mouser.com/ProductDetail/Renesas-Electronics/XLH736065.000000I?qs=itIaUkCn8qA%252B7s8RBj%2Fthg%3D%3D"
-			(at 66.04 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cd65d720-f5c2-4380-b674-eda2cd5d9443")
-		)
-		(pin "1"
-			(uuid "eeb61b08-b917-4e48-a002-112a513367c6")
-		)
-		(pin "3"
-			(uuid "4f2086a3-0d58-49ea-b3e6-b0e47fefdb5f")
-		)
-		(pin "5"
-			(uuid "bac95a77-5172-4845-a05e-d218746f33f3")
-		)
-		(pin "6"
-			(uuid "e9de1145-6b8e-47b5-8bd0-ca5b66ca96b5")
-		)
-		(pin "4"
-			(uuid "a36564ce-b669-4695-8eee-bcf621e8dce8")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/5e927257-5338-4ea8-9ca0-aa5d85a4e135"
-					(reference "U1301")
 					(unit 1)
 				)
 			)

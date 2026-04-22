@@ -63,6 +63,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ghostscript \
     texlive \
     texlive-latex-extra \
+    fontconfig \
+    fonts-freefont-otf \
+    fonts-dejavu-core \
     # VNC Server and Desktop Environment
     tigervnc-standalone-server \
     tigervnc-common \
