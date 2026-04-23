@@ -70,7 +70,7 @@ Handles low-level currents produced by the sensor (typically 1uA - 1mA pulses, 1
    * [MCP3221](https://ww1.microchip.com/downloads/en/devicedoc/20001732e.pdf) 12-bit I2C ADC measures the SiPM temperature via a thermistor. Since the SiPM gain varies with temperature, this measurement is used by FPGA to adjust the bias voltage
    * [MCP4725xxx-xCH](https://ww1.microchip.com/downloads/en/devicedoc/22039d.pdf) 12-bit I2C DAC generates a control voltage used to adjust the SiPM bias supply. This allows the FPGA to compensate temperature-induced gain variations of SiPM.
    * [LT8330IS6](https://www.analog.com/media/en/technical-documentation/data-sheets/lt8330.pdf) - dc/dc converter generates the raw high-voltage supply for the SiPM bias circuit.
-   * [TPS7A49](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1776866743000&ref_url=https%253A%252F%252Fwww.google.com%252F) - filters and regulates the output of the DC/DC converter, providing a low-noise and stable bias voltage for the SiPM. The output voltage is adjustable via the compensation DAC.
+   * [TPS7A49](https://www.ti.com/lit/ds/symlink/tps7a49.pdf?ts=1776866743000) - filters and regulates the output of the DC/DC converter, providing a low-noise and stable bias voltage for the SiPM. The output voltage is adjustable via the compensation DAC.
    * **Overcurrent Protection (TBD)** - Cuts bias voltage if SiPM is exposed to external light source, preventing sensor damage from excessive photocurrent
 
 > **Note:** Analog pulse shaping and peak detection are not used - raw signal is digitized directly and processed in FPGA.
@@ -79,7 +79,7 @@ Handles low-level currents produced by the sensor (typically 1uA - 1mA pulses, 1
 
 Performs high-speed sampling and real-time pulse analysis:
 
-- **ADC: [AD9238](https://www.analog.com/media/en/technical-documentation/data-sheets/ad9226.pdf](https://www.analog.com/media/en/technical-documentation/data-sheets/ad9238.pdf))** - 2-channel, 12-bit, 40 MSPS sampling rate. ch channel produces 480 Mbps (60 MB/s), resulting in 960 Mbps (120 MB/s) total sample data rate.
+- **ADC: [AD9238](https://www.analog.com/media/en/technical-documentation/data-sheets/ad9238.pdf)** - 2-channel, 12-bit, 40 MSPS sampling rate. ch channel produces 480 Mbps (60 MB/s), resulting in 960 Mbps (120 MB/s) total sample data rate.
 - **FPGA: [iCE40HX4K](https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40#_21E33C7EC0BD48AA80FE384ED73CC895)** - Real-time digital pulse processing (trapezoidal filtering, peak detection, histogram generation)
 - **SPI Flash: [MX25L1606EM1I-12G](https://www.tme.eu/Document/90cf95a7114025302d33a68125e207ab/MX25L1606E.pdf)** - Stores FPGA configuration bitstream
 - **SPI Port** - External header for FPGA programming
@@ -87,6 +87,11 @@ Performs high-speed sampling and real-time pulse analysis:
 
 **Clock Subsystem**
 * to be refined
+[511JCA40M0000BAG](https://eu.mouser.com/datasheet/3/564/1/si510_11.pdf) 40MHz, 0.8ps Nom / 1ps Max jitter LVDS clock
+
+[SI53340-B-GM](https://eu.mouser.com/datasheet/3/564/1/Si5334x_datasheet.pdf)
+
+[PI6C49CB01Q2WEX](https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0009189280/DIOD-S-A0009189280-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6)
 
 **Power Distribution**
 * to be refined
