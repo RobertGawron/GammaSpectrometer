@@ -12,6 +12,14 @@ Docker image contains:
 
 Docker installed on host machine.
 
+## COnfigure Git
+
+Don't use Windows line endings:
+
+```bash
+git config --global core.autocrlf input
+```
+
 ### Build image
 
 From project root:
