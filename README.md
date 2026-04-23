@@ -87,7 +87,7 @@ Performs high-speed sampling and real-time pulse analysis:
 
 **Clock Subsystem**
 * to be refined
-
+[511JCA40M0000BAG](https://eu.mouser.com/datasheet/3/564/1/si510_11.pdf) 40MHz, 0.8ps Nom / 1ps Max jitter LVDS clock
 **Power Distribution**
 * to be refined
 
