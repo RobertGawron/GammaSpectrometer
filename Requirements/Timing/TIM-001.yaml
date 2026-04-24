@@ -1,0 +1,29 @@
+id: TIM-001
+title: ADC Sampling Clock Jitter Limit
+
+category: Timing
+
+description: >
+  The total RMS sampling clock jitter at the ADC clock input
+  shall not exceed 4.5 ps RMS.
+
+rationale: >
+  System ENOB target: 10.5 bits.
+  Required SNR = 6.02 * 10.5 + 1.76 approx 65 dB.
+  Clock jitter limited SNR:
+    SNR_jitter = -20 * log10(2 * pi * f_in * t_jitter).
+  Using worst-case input frequency f_in = 20 MHz:
+    65 dB <= -20 * log10(2 * pi * 20e6 * t_jitter).
+  Solving:
+    t_jitter <= 4.5e-12 seconds (4.5 ps RMS).
+
+assumptions:
+  - Worst-case input frequency equals Nyquist frequency (20 MHz)
+  - Jitter contributions combined as RMS
+  - ADC aperture jitter included in total budget
+
+acceptance_criteria:
+  sampling_clock_jitter_rms_max: 4.5e-12  # seconds RMS
+
+status: Draft
+last_verified_commit: null

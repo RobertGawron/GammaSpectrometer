@@ -1,7 +1,0 @@
-# LTspice temporary/generated files
-*.log
-*.net
-*.raw
-*.op.raw
-*.fft
-*.meas
