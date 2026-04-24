@@ -1,0 +1,64 @@
+@startuml
+title System-Level Modeling and Analysis Workflow
+
+start
+
+:Define system requirements
+(noise, bandwidth, dynamic range,
+timing, thermal, power);
+
+repeat
+
+  group "LTspice Modeling and Simulation" #LightBlue {
+
+    fork
+      :AFE Model
+      (AC Gain, Noise,
+      Transient Pulse,
+      Linearity,
+      Output Load);
+    fork again
+      :Power and SiPM Bias
+      (Regulators,
+      Temperature Compensation);
+    fork again
+      :Protection Circuits;
+    end fork
+
+  }
+
+  group "System Performance Analysis (Jupyter Environment)" #LightBlue {
+
+    fork
+      :Analog Noise;
+    fork again
+      :Bandwidth;
+    fork again
+      :Digital Timing;
+    fork again
+      :Dynamic Range;
+    fork again
+      :Clock Jitter;
+    fork again
+      :Linearity;
+    fork again
+      :Power;
+    fork again
+      :Reference Stability;
+    fork again
+      :Thermal;
+    end fork
+
+  }
+
+  :Compare results against requirements;
+
+backward :Refine models
+or design assumptions;
+
+repeat while (Requirements met?) is (No) not (Yes)
+
+:Document validated results;
+
+stop
+@enduml
