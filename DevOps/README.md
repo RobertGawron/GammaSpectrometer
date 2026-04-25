@@ -12,7 +12,7 @@ Docker image contains:
 
 Docker installed on host machine.
 
-## COnfigure Git
+## Configure Git
 
 Don't use Windows line endings:
 

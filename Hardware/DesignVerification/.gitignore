@@ -1,0 +1,21 @@
+# Jupiter Notebook checkpoints
+.ipynb_checkpoints/
+
+# LTspice temporary/generated files
+*.log
+*.net
+*.raw
+*.op.raw
+*.fft
+*.meas
+CircuitModels/AFE/Reports/
+
+# *spice unused files
+*.DSN
+*.opj
+*.sim
+*.prb
+*.mrk
+SCHEMATIC1/
+TRAN/
+dc/

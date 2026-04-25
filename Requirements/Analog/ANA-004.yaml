@@ -1,0 +1,52 @@
+id: ANA-004
+title: AFE Differential Small-Signal Bandwidth
+category: Analog
+
+description: >
+  The analog front-end (AFE) small-signal differential transfer function,
+  including the complete charge-sensitive amplifier (CSA) stage and ADC
+  input load, shall exhibit a -3 dB bandwidth between 3 MHz and 6 MHz.
+
+rationale: >
+  The SiPM microcell recharge time constant defines the intrinsic current
+  pulse envelope. To preserve pulse fidelity while enabling stable digital
+  reconstruction at the selected ADC sampling rate, the analog rise time
+  shall provide at least three ADC samples across the 10-90 percent
+  transition region.
+
+  For a first-order response:
+    t_r approx 0.35 / f_3dB
+
+  To satisfy discrete-time reconstruction stability:
+    t_r >= 3 * T_s
+
+  Where:
+    T_s = ADC sampling period
+    t_r = analog rise time
+
+  This yields a target analog bandwidth in the low-MHz range.
+
+  The upper bandwidth bound prevents unnecessary white-noise integration
+  that would degrade energy resolution. The lower bound ensures sufficient
+  temporal resolution for accurate digital pulse processing.
+
+assumptions:
+  - Charge Sensitive Amplifier topology
+  - Digitally processed pulse acquisition
+  - Dominant first-order bandwidth behavior
+  - White noise dominant in analog stage
+  - Sampling frequency significantly greater than signal bandwidth
+
+acceptance_criteria:
+  minus_3db_bandwidth_min_hz: 3e6
+  minus_3db_bandwidth_max_hz: 6e6
+
+verification_method:
+  - Small-signal AC analysis (.ac sweep)
+  - Differential transfer function measurement
+  - -3 dB point measured relative to midband gain
+  - Rise-time cross-check using small-signal transient step
+  - Noise integration validation against analog noise requirement
+
+status: Draft
+last_verified_commit: null

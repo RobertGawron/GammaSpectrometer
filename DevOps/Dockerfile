@@ -57,12 +57,20 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     octave-image \
     octave-optim \
     octave-io \
-    # Plotting and Visualization
+    # Plotting and Visualization + Full LaTeX Math Support
     gnuplot \
     gnuplot-qt \
     ghostscript \
     texlive \
     texlive-latex-extra \
+    texlive-fonts-recommended \
+    texlive-fonts-extra \
+    texlive-science \
+    texlive-pictures \
+    texlive-plain-generic \
+    latexmk \
+    dvipng \
+    cm-super \
     fontconfig \
     fonts-freefont-otf \
     fonts-dejavu-core \
@@ -182,7 +190,10 @@ RUN pip install --no-cache-dir \
     gcovr \
     junitparser \
     # Utilities
-    cheat
+    cheat \
+    # LaTeX Support in Jupyter
+    jupyterlab-latex \
+    pylatexenc
 
 # ============================================================
 # Install VSG from GitHub (latest version supports Python 3.12)
