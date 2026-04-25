@@ -10,7 +10,7 @@ It consists of a scintillator (a material that converts gamma particles into pho
 
 Sampling data over time and plotting its histogram reveals which radioactive isotopes are present in the measured sample and their respective ratios.
 
-[More info.](./Documentation/SystemTheory/README.md)
+[More info.](./Documentation/Theory/README.md)
 
 ## Design rationale
 
@@ -26,19 +26,19 @@ Traditional spectrometers implement CR-RC shaping networks and peak detection en
 
 In this system, pulse shaping and peak detection are performed digitally after high-speed sampling. This increases flexibility and allows signal processing parameters to be modified in firmware without hardware changes. The trade-off is higher performance requirements for the ADC and the need for an FPGA rather than a microcontroller, which increases overall system cost.
 
-## System-level analysis
-
-System-level analysis is performed using LTspice for circuit simulation and a Jupyter-based framework for numerical post-processing. These tools are used to validate the interaction between the SiPM, the analog front-end, and the system timing behavior before to PCB design. The goal is to verify theoretical models, evaluate noise and bandwidth limitations, and confirm that design requirements are satisfied.
-
-[More info.](./Architecture/Analysis/README.md)
-
 ## Hardware
 
 ![Architecture Overview](./Documentation/Diagrams/ArchitectureOverview.svg)
 
 Tools: KiCad.
 
-[More info.](./Hardware/README.md)
+[More info.](./Hardware/Design/README.md)
+
+## Hardware design verification
+
+Hardware design analysis is performed using LTspice for circuit simulation and a Jupyter-based framework for numerical post-processing. These tools are used to validate the interaction between the SiPM, the analog front-end, and the system timing behavior before to PCB design. The goal is to verify theoretical models, evaluate noise and bandwidth limitations, and confirm that design requirements are satisfied.
+
+[More info.](./Hardware/DesignVerification/README.md)
 
 ## Software
 

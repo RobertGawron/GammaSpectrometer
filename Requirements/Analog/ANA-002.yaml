@@ -1,0 +1,45 @@
+id: ANA-002
+title: AFE Linearity Requirement
+
+category: Analog
+
+description: >
+  The analog front-end shall not introduce total harmonic distortion
+  (THD) exceeding -85 dBc for a full-scale sinusoidal input signal
+  within the specified operating bandwidth.
+
+rationale: >
+  The system ENOB target is 10.5 bits (SYS-001).
+
+  The selected ADC (AD9238, 12-bit, 40 MSPS) specifies worst
+  harmonic distortion of approximately -80 dBc at higher input
+  frequencies (ADC datasheet, AC Specifications, Table 2).
+
+  To ensure that overall system distortion remains limited by
+  the ADC and not by the analog front-end (AFE), the AFE
+  distortion must be lower than the worst-case ADC intrinsic
+  distortion.
+
+  Selecting a 5 dB design margin:
+
+  THD_AFE <= THD_ADC_worst - 5 dB
+  THD_AFE <= (-80 dBc) - 5 dB
+  THD_AFE <= -85 dBc
+
+  This guarantees that harmonic distortion introduced by the
+  AFE does not dominate total system distortion and does not
+  degrade effective resolution below the ADC intrinsic limit.
+
+assumptions:
+
+- ADC worst harmonic distortion approx -80 dBc (datasheet Table 2)
+- Full-scale differential input equals 2 Vpp
+- Input frequency within nominal operating range up to Nyquist
+- Measurement performed with a full-scale sinusoidal test signal
+- Temperature range per system specification
+
+acceptance_criteria:
+  thd_max_db: -85
+
+status: Draft
+last_verified_commit: null

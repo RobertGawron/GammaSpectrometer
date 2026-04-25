@@ -1,0 +1,691 @@
+================================================================================
+This is the content of AnalogNoiseAnalysis.md
+================================================================================
+
+# Analog Noise Analysis and Energy Resolution
+
+## 1. Purpose
+
+Basis for analyzing analog front-end (AFE) noise.
+
+---
+
+## 2. Definition of Noise Metrics
+
+### 2.1 Output RMS Noise
+
+Output RMS noise is defined as:
+
+$$
+V_{rms} = \sqrt{\int_{f_{low}}^{f_{high}} S_v^2(f) \, df}
+$$
+
+Where:
+
+- $S_v(f)$ is voltage noise spectral density in V/sqrt(Hz)
+- $f_{low}$ and $f_{high}$ define the effective bandwidth
+
+The integration limits must be explicitly defined because RMS noise
+is bandwidth dependent.
+
+---
+
+### 2.2 Differential Noise
+
+For a differential ADC input:
+
+$$
+V_{diff}(t) = V_P(t) - V_N(t)
+$$
+
+All RMS noise calculations relevant to ADC performance
+shall be performed on the differential signal:
+
+$$
+V_{diff,rms}
+$$
+
+---
+
+## 2.3 Bandwidth Definition
+
+Noise integration bandwidth must match the system sampling domain.
+
+For an ADC operating at sampling frequency $f_s$:
+
+$$
+f_{Nyquist} = \frac{f_s}{2}
+$$
+
+Noise shall be integrated from DC to Nyquist frequency,
+unless an analog anti-alias filter limits the effective bandwidth.
+
+If an anti-alias filter is present, its transfer function
+must be included in the noise model:
+
+$$
+S_{v,shaped}(f) = |H(f)|^2 \cdot S_v(f)
+$$
+
+---
+
+## 2.4 Noise Spectral Density Integration
+
+Noise spectral density ($S_v$) is expressed in units of:
+
+$$\text{V} / \sqrt{\text{Hz}}$$
+
+To compute the total **RMS noise** ($V_{rms}$) over a defined frequency bandwidth from $f_{low}$ to $f_{high}$:
+
+$$V_{rms} = \sqrt{\int_{f_{low}}^{f_{high}} S_v^2(f) \, df}$$
+
+### Key principles:
+* The spectral density must be squared before integration.
+* Integration must be performed in the linear domain.
+* Units consistency must be preserved.
+
+---
+
+### 2.5 Input-Referred Noise (Charge Amplifier)
+
+For a charge-sensitive amplifier (CSA):
+
+$$
+V_{out} = \frac{Q_{in}}{C_f}
+$$
+
+Where:
+
+- $Q_{in}$ is the input charge
+- $C_f$ is the feedback capacitor
+
+Thus, the input-referred charge noise is:
+
+$$
+Q_{noise,rms} = V_{noise,rms} \cdot C_f
+$$
+
+Convert to equivalent number of electrons:
+
+$$
+N_e = \frac{Q_{noise,rms}}{e}
+$$
+
+Where:
+
+- $e = 1.602 \times 10^{-19}$ C is the elementary charge
+
+### Key Principles
+
+1. Input-referred noise for a CSA is expressed in coulombs or electrons.
+2. Smaller $C_f$ reduces output noise but decreases dynamic range.
+3. Equivalent Noise Charge (ENC) is the standard metric used to quantify the noise performance of a charge-sensitive amplifier.
+4. ENC allows direct comparison between detector resolution and electronic noise.
+5. Input-referred charge noise is independent of detector capacitance.
+
+
+## 2.6 Input-Referred Noise (TIA)
+For a transimpedance amplifier (TIA):
+$$V_{out} = I_{in} \cdot R_f$$
+
+Thus, the input-referred current noise is:
+$$I_{noise,rms} = \frac{V_{noise,rms}}{R_f}$$
+
+**Where:**
+* $R_f$: Feedback resistor.
+* $V_{noise,rms}$: Output RMS noise.
+
+Input-referred noise is the relevant metric for detector comparison.
+
+---
+
+## 2.7 RSS Combination of Independent Noise Sources
+If multiple independent noise sources exist (AFE noise, ADC intrinsic noise, Reference noise, Detector shot noise), the total RMS noise is:
+
+$$V_{total,rms} = \sqrt{V_1^2 + V_2^2 + V_3^2 + \dots}$$
+
+**This assumes:**
+* Statistical independence.
+* Gaussian distribution.
+* No deterministic correlation.
+* **Note:** Noise powers add, not amplitudes.
+
+---
+
+## 2.8 Cumulative Integrated Noise
+To evaluate the noise contribution versus frequency:
+
+$$V_{rms}(f) = \sqrt{\int_{f_{low}}^{f} S_v^2(f') \, df'}$$
+
+**This representation allows:**
+* Identification of dominant frequency regions.
+* Validation of bandwidth assumptions.
+* Verification of anti-alias filtering impact.
+
+---
+
+## 2.9 Conversion to ENOB
+Signal-to-Noise Ratio (SNR):
+
+$$SNR = 20 \log_{10} \left( \frac{V_{signal,rms}}{V_{noise,rms}} \right)$$
+
+Effective Number of Bits (ENOB):
+
+$$ENOB = \frac{SNR - 1.76}{6.02}$$
+
+**Where:**
+* $1.76$ dB arises from ideal quantization error.
+* $6.02$ dB per bit arises from $20 \log_{10}(2)$.
+
+System ENOB is limited by the dominant noise source.
+
+---
+
+## 2.10 Equivalent Noise Charge (ENC)
+Input-referred current noise can be converted to charge noise:
+
+$$Q_{noise} = I_{noise,rms} \cdot \tau$$
+
+**Where:**
+* $\tau$: Shaping time constant.
+
+Convert to electrons ($N_e$):
+
+$$N_e = \frac{Q_{noise}}{e}$$
+
+**Where:**
+* $e = 1.602 \times 10^{-19}$ C.
+
+ENC provides a direct linkage between electronic noise and spectroscopy energy resolution.
+
+---
+
+## 2.11 Impact on Energy Resolution
+Energy resolution (FWHM) degradation due to noise:
+
+$$\Delta E_{noise} \propto ENC$$
+
+Total resolution combines statistical detector variance and electronic noise variance in quadrature:
+
+$$\sigma_{total}^2 = \sigma_{detector}^2 + \sigma_{electronics}^2$$
+
+
+
+
+================================================================================
+This is the content of ClockJitterAnalysis.md
+================================================================================
+
+# Clock Jitter and SNR Limitation
+
+## 1. Purpose
+
+Theoretical basis for clock jitter analysis.
+
+---
+
+## 2. Definitions
+
+### 2.1 Signal-to-Noise Ratio (SNR)
+
+In power terms:
+
+$$
+\mathrm{SNR} = \frac{P_{\mathrm{signal}}}{P_{\mathrm{noise}}}
+$$
+
+In decibel form:
+
+$$
+\mathrm{SNR}_{dB} = 10 \log_{10}\left(\frac{P_{\mathrm{signal}}}{P_{\mathrm{noise}}}\right)
+$$
+
+For voltage quantities (equal impedance):
+
+$$
+\mathrm{SNR}_{dB} = 20 \log_{10}\left(\frac{V_{\mathrm{signal,rms}}}{V_{\mathrm{noise,rms}}}\right)
+$$
+
+---
+
+### 2.2 RMS Clock Jitter
+
+RMS jitter represents the statistical standard deviation of sampling time uncertainty.
+
+If an ideal sampling instant occurs at time $t_0$, the actual sampling time is:
+
+$$
+t = t_0 + \Delta t
+$$
+
+where $\Delta t$ is a random timing deviation.
+
+The RMS jitter is defined as:
+
+$$
+\sigma_t = \sqrt{E[(\Delta t)^2]}
+$$
+
+where $E[\cdot]$ denotes the expectation operator.
+
+---
+
+## 2.3 Derivation of Jitter-Limited SNR
+
+Consider a sinusoidal input signal:
+
+$$
+x(t) = A \sin(2\pi f_{in} t)
+$$
+
+If sampling occurs with time error $\Delta t$, the amplitude error is:
+
+$$
+\Delta x = \frac{dx}{dt} \cdot \Delta t
+$$
+
+The derivative of the signal is:
+
+$$
+\frac{dx}{dt} = A \cdot 2\pi f_{in} \cos(2\pi f_{in} t)
+$$
+
+Thus:
+
+$$
+\Delta x = A \cdot 2\pi f_{in} \cos(2\pi f_{in} t) \cdot \Delta t
+$$
+
+The RMS value of $\cos(\cdot)$ is $1/\sqrt{2}$.
+
+Therefore, jitter-induced RMS noise is:
+
+$$
+V_{\mathrm{jitter,rms}} = \frac{A}{\sqrt{2}} \cdot 2\pi f_{in} \sigma_t
+$$
+
+Signal RMS:
+
+$$
+V_{\mathrm{signal,rms}} = \frac{A}{\sqrt{2}}
+$$
+
+Thus:
+
+$$
+\mathrm{SNR} = \frac{V_{\mathrm{signal,rms}}}{V_{\mathrm{jitter,rms}}}
+= \frac{1}{2\pi f_{in} \sigma_t}
+$$
+
+In decibel form:
+
+$$
+\mathrm{SNR}_{dB} = -20 \log_{10}(2\pi f_{in} \sigma_t)
+$$
+
+This shows jitter-induced SNR degradation increases linearly with input frequency.
+
+---
+
+## 2.4 Derivation of ENOB Formula
+
+For an ideal N-bit ADC with full-scale peak-to-peak range $V_{FS,pp}$:
+
+$$
+\mathrm{LSB} = \frac{V_{FS,pp}}{2^N}
+$$
+
+Quantization noise RMS (uniform distribution):
+
+$$
+V_{q,rms} = \frac{\mathrm{LSB}}{\sqrt{12}}
+$$
+
+For a full-scale sine wave:
+
+$$
+V_{\mathrm{signal,rms}} = \frac{V_{FS,pp}}{2\sqrt{2}}
+$$
+
+Thus:
+
+```math
+\mathrm{SNR} =
+\frac{V_{\mathrm{signal,rms}}}{V_{q,rms}}
+=
+\frac{\frac{V_{FS,pp}}{2\sqrt{2}}}
+{\frac{V_{FS,pp}}{\sqrt{12} \cdot 2^N}}
+=
+\sqrt{\frac{3}{2}} \cdot 2^N
+```
+
+In decibel form, the ideal SNR for an $N$-bit converter is:
+
+$$SNR_{dB} = 6.02N + 1.76$$
+
+Rearranging to solve for the **Effective Number of Bits (ENOB)** based on measured SNR:
+
+$$ENOB = \frac{SNR_{dB} - 1.76}{6.02}$$
+
+
+## 2.5 Total SNR Combination
+When multiple independent noise sources exist (e.g., ADC intrinsic noise and jitter noise), noise powers add in the linear domain.
+
+If:
+
+$$SNR_{ADC}$$
+$$SNR_{jitter}$$
+
+Then:
+
+$$\frac{1}{SNR_{total,linear}} = \frac{1}{SNR_{ADC,linear}} + \frac{1}{SNR_{jitter,linear}}$$
+
+Where:
+$$SNR_{linear} = 10^{SNR_{dB}/10}$$
+
+Convert back:
+
+$$SNR_{total,dB} = 10 \log_{10}(SNR_{total,linear})$$
+
+Noise powers must always be summed in linear scale.
+
+---
+
+## 2.6 RSS Jitter Combination
+If multiple independent RMS jitter sources exist:
+
+$$\sigma_{total} = \sqrt{\sigma_1^2 + \sigma_2^2 + \sigma_3^2 + \dots}$$
+
+This follows from variance addition:
+
+$$\sigma_{total}^2 = \sigma_1^2 + \sigma_2^2 + \sigma_3^2 + \dots$$
+
+Valid only for uncorrelated jitter sources.
+
+
+
+================================================================================
+This is the content of ENOBAndADCPerformance.md
+================================================================================
+
+# ENOB and ADC Performance Limitations
+
+## 1. Purpose
+This document defines the relationship between nominal ADC resolution ($N$ bits), intrinsic ADC SNR, and achievable system ENOB. It establishes why system requirements must be derived from real ADC performance rather than ideal quantization assumptions.
+
+---
+
+## 2. Definitions
+
+### 2.1 Ideal Quantization SNR
+For an ideal $N$-bit ADC:
+
+$$SNR_{ideal} = 6.02N + 1.76 \text{ dB}$$
+
+This represents the theoretical limit assuming quantization noise is the only error source.
+
+---
+
+### 2.2 Correct Engineering Approach
+The system ENOB must satisfy:
+
+$$ENOB_{system} \le ENOB_{ADC}$$
+
+A practical requirement must include a margin ($\Delta$):
+
+$$ENOB_{system} \ge ENOB_{ADC} - \Delta$$
+
+Where $\Delta$ is typically $0.2$ to $0.5$ bits to account for:
+* Analog front-end noise
+* Bandwidth limitations
+* Clock jitter
+* Anti-alias filtering
+* Implementation/thermal variation
+
+---
+
+### 2.3 Deriving Noise Requirement from ENOB
+Given a target ENOB, we find the required SNR:
+
+$$SNR = 6.02 \cdot ENOB + 1.76$$
+
+Using the relationship to RMS voltage:
+
+$$SNR = 20 \log_{10} \left( \frac{V_{signal,rms}}{V_{noise,rms}} \right)$$
+
+Solving for the allowable noise floor ($V_{noise,max}$):
+
+$$V_{noise,max} = \frac{V_{signal,rms}}{10^{SNR/20}}$$
+
+
+
+
+
+================================================================================
+This is the content of README.md
+================================================================================
+
+# System Theory
+
+## Purpose
+This folder contains the theoretical foundation for the SiPM-based data acquisition system.
+
+It defines the mathematical models, signal relationships, and performance limits governing the detector, analog front-end (AFE), clocking, and ADC stages.
+
+---
+
+## Document Structure
+
+* [SiPM and Charge Amplifier Readout](./SiPMAndCSA.md) - establishes the detector and analog front-end signal model.
+  * SiPM gain and charge generation: $$Q_{total} = N \cdot G \cdot q_e$$
+  * Equivalent SiPM capacitance ($C_{SiPM}$)
+  * Microcell recharge time constant ($\tau_{cell}$)
+  * Charge-to-voltage conversion: $$V_{out} = \frac{Q_{in}}{C_f}$$
+  * Feedback component relationships ($R_f, C_f$)
+
+* [Analog Noise Analysis and Energy Resolution](./AnalogNoiseAnalysis.md) - establishes the system noise budgeting methodology.
+  * RMS noise definition and spectral density integration: $$V_{rms} = \sqrt{\int S_v^2(f) \, df}$$
+  * Differential noise treatment
+  * Input-referred noise (CSA and TIA)
+  * Equivalent Noise Charge (ENC)
+  * Root-sum-square (RSS) noise combination
+  * ENOB conversion from SNR: $$ENOB = \frac{SNR - 1.76}{6.02}$$
+  * Impact of electronic noise on energy resolution
+
+* [Clock Jitter and SNR Limitation](./ClockJitterAnalysis.md) - defines timing-related performance limitations.
+  * RMS jitter definition ($\sigma_t$)
+  * Jitter-induced amplitude error derivation
+  * Jitter-limited SNR equation: $$SNR_{jitter} = -20 \log_{10}(2\pi f_{in} \sigma_t)$$
+  * ENOB relationship
+  * Combination of multiple jitter sources (RSS combination)
+
+* [ENOB and ADC Performance Limitations](./ENOBAndADCPerformance.md) - establishes ADC-driven system constraints.
+  * Ideal quantization SNR: $$6.02N + 1.76$$
+  * Practical ENOB limits based on datasheet SNR
+  * Margin definition ($\Delta$) for system design
+  * Derivation of allowable noise from ENOB target: $$V_{noise,max} = \frac{V_{signal,rms}}{10^{SNR/20}}$$
+
+
+
+================================================================================
+This is the content of SiPMAndCSA.md
+================================================================================
+
+# SiPM and Charge Amplifier Readout
+
+## 1. Purpose
+Theoretical background of the Silicon Photomultiplier (SiPM) and its readout using a charge‑sensitive amplifier.
+
+---
+## 2. Definitions
+
+### 2.1 Silicon Photomultiplier (SiPM) Operation
+
+When a photon is absorbed in a microcell, it may trigger an avalanche process, producing a fixed amount of charge. The charge generated by a single avalanche event is given by:
+
+$$Q_{1ph} = G \cdot q_e$$
+
+**Where:**
+* $G$: SiPM gain (number of charge carriers generated during one avalanche event).
+* $q_e$: Elementary charge ($1.602 \times 10^{-19}$ C).
+
+> **Note:** The gain $G$ is typically provided in the device datasheet and depends on the applied overvoltage.
+
+For multiple detected photons:
+
+$$Q_{total} = N \cdot G \cdot q_e$$
+
+**Where:**
+* $N$: Number of triggered microcells (approximately equal to detected photons under low light conditions).
+
+Thus, the SiPM behaves as a quantized charge generator.
+
+---
+
+### 2.2 SiPM Capacitance
+Since all microcells are connected in parallel, the SiPM exhibits a total equivalent capacitance ($C_{SiPM}$). This capacitance arises from the junction capacitance of each microcell and the parallel combination of all cells.
+
+$C_{SiPM}$ influences:
+* Bandwidth
+* Noise
+* Stability of the front-end amplifier
+
+In a charge amplifier configuration, however, the gain does not depend directly on $C_{SiPM}$.
+
+---
+
+### 2.3 Microcell Recharge Time Constant
+After an avalanche event, each microcell must recharge through its internal quench resistor. This follows exponential recovery behavior characterized by the microcell time constant:
+
+$$\tau_{cell} = R_q \cdot C_{cell}$$
+
+**Where:**
+* $R_q$: Internal quench resistor.
+* $C_{cell}$: Microcell capacitance.
+
+> **Note:** The gain $\tau_{cell}$ is typically provided in the device datasheet.
+
+The value of $\tau_{cell}$ affects the maximum count rate, pulse shape, and dynamic response.
+
+---
+
+### 2.4 Charge Amplifier Principle
+To convert the SiPM charge pulse into a measurable voltage, a charge-sensitive amplifier (CSA) is used. In an ideal charge amplifier:
+
+$$V_{out} = \frac{Q_{in}}{C_f}$$
+
+Substituting the SiPM charge expression:
+
+$$V_{out} = \frac{N \cdot G \cdot q_e}{C_f}$$
+
+**This shows that:**
+1. The output voltage is proportional to the number of detected photons.
+2. The gain is determined only by the feedback capacitor $C_f$.
+3. The detector capacitance $C_{SiPM}$ does not set the signal amplitude.
+
+---
+
+### 2.5 Feedback Capacitor ($C_f$)
+In a charge-sensitive amplifier (CSA), the output voltage is determined by the input charge and the feedback capacitance:
+
+$$V_{out} = \frac{Q_{in}}{C_f}$$
+
+For an SiPM, the input charge generated by $N$ detected photons is:
+
+$$Q_{in} = N \cdot G \cdot q_e$$
+
+Combining both equations:
+
+$$V_{out} = \frac{N \cdot G \cdot q_e}{C_f}$$
+
+Rearranging to determine the required feedback capacitance for a specific target voltage:
+
+$$C_f = \frac{N \cdot G \cdot q_e}{V_{out}}$$
+
+**Thus, the feedback capacitor is selected based on:**
+* Expected maximum number of detected photons ($N$).
+* SiPM gain ($G$) from the datasheet.
+* Desired output voltage amplitude ($V_{out}$).
+
+The value of $C_f$ directly sets the charge-to-voltage conversion gain of the system.
+
+---
+
+### 2.6 Feedback Resistor ($R_f$)
+The feedback resistor determines the discharge rate of the feedback capacitor and therefore the pulse decay time. The decay time constant of the charge amplifier is:
+
+$$\tau = R_f \cdot C_f$$
+
+To ensure accurate charge integration, the amplifier time constant is chosen relative to the SiPM microcell recharge time constant ($\tau_{cell}$):
+
+$$\tau \ge k \cdot \tau_{cell}$$
+
+**Where:**
+* $\tau_{cell}$ is provided in the datasheet.
+* $k$ is typically selected between 3 and 5.
+
+Solving for the feedback resistor:
+
+$$R_f = \frac{\tau}{C_f}$$
+
+Therefore, once $C_f$ is determined and the desired shaping time $\tau$ is selected, the required feedback resistor can be calculated.
+
+---
+
+### 2.7 Design Considerations
+* **$C_f$**: Defines signal amplitude and dynamic range. Larger capacitance prevents saturation but lowers sensitivity.
+* **$R_f$**: Defines pulse width and maximum count rate capability. Lower resistance allows for faster counting but may increase electronic noise.
+* Both parameters must be selected considering noise, bandwidth, and stability constraints of the operational amplifier.
+
+
+
+
+
+
+
+
+
+
+
+
+### 2.X Detector Shot Noise (SiPM)
+The dominant intrinsic noise mechanism of a SiPM is shot noise associated with dark current. The RMS shot noise current is given by:
+$$i_{shot,rms} = \sqrt{2q I_{dark} \Delta f}$$
+
+**Where:**
+* $q$: Elementary charge ($1.602 \times 10^{-19} \text{ C}$).
+* $I_{dark}$: Detector dark current.
+* $\Delta f$: Effective noise bandwidth.
+
+Shot noise arises from the discrete nature of charge carriers and follows Poisson statistics.
+
+**Key Properties:**
+* Shot noise is proportional to the square root of dark current.
+* Shot noise increases with bandwidth.
+* Shot noise is statistically independent from electronic amplifier noise.
+
+This contribution must be included in the total noise RSS calculation when modeling full system performance.
+
+---
+
+### Effective Noise Bandwidth
+The effective noise integration bandwidth is not defined by arbitrary frequency limits, but by the complete system transfer function:
+$$H_{system}(f) = H_{AFE}(f) \cdot H_{filter}(f)$$
+
+The integrated noise is therefore determined by:
+* **Analog front-end transfer function:** The gain and bandwidth of the CSA/TIA.
+* **Anti-alias filtering:** The roll-off characteristics of the hardware filters.
+* **ADC Nyquist limit:** The sampling rate constraints.
+
+Noise integration must reflect the true signal chain frequency response.
+
+---
+
+### Generalized Noise Integration
+In the most rigorous form, RMS noise is computed as:
+$$V_{n,rms} = \sqrt{\int_{0}^{\infty} |H(f)|^2 \cdot e_n^2(f) \, df}$$
+
+**Where:**
+* $e_n(f)$: The noise spectral density.
+* $H(f)$: Represents the complete system transfer function.
+
