@@ -10,7 +10,7 @@ It consists of a scintillator (a material that converts gamma particles into pho
 
 Sampling data over time and plotting its histogram reveals which radioactive isotopes are present in the measured sample and their respective ratios.
 
-[More info.](./Documentation/Theory/README.md)
+[More info.](./02_SystemArchitecture/SystemTheory/README.md)
 
 ## Design rationale
 
@@ -28,11 +28,11 @@ In this system, pulse shaping and peak detection are performed digitally after h
 
 ## Hardware
 
-![Architecture Overview](./Documentation/Diagrams/ArchitectureOverview.svg)
+![Architecture Overview](./02_SystemArchitecture/Diagrams/ArchitectureOverview.svg)
 
 Tools: KiCad.
 
-[More info.](./Hardware/Design/README.md)
+[More info.](./03_SubsystemDesign/ElectronicHardware/README.md)
 
 ## Hardware design verification
 
@@ -52,7 +52,7 @@ The project is developed using a **completely open-source** FPGA toolchain conta
 * Formal Verification: [SymbiYosys](https://github.com/YosysHQ/sby), PSL assertions
 * Unit Testing Framework: [VUnit](https://vunit.github.io/)
 
-[More info.](./Software/README.md)
+[More info.](./04_Implementation/DigitalLogic/README.md)
 
 ## Mechanical
 

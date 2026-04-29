@@ -1,8 +1,0 @@
-Firmware
-
-# Ignore everything inside Diagrams
-Diagrams/**
-
-# But allow plantuml and svg files
-!Diagrams/**/*.plantuml
-!Diagrams/**/*.svg
