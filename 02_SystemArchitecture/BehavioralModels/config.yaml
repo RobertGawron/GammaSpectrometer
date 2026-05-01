@@ -1,0 +1,122 @@
+# ============================================
+# SiPM Coverage Trade Study Configuration
+# ============================================
+
+study:
+  description: >
+    Trade study investigating the effect of SiPM array size
+    on statistical energy resolution using SiPM-based detection.
+
+# --------------------------------------------
+# Physics Parameters
+# --------------------------------------------
+physics:
+  energy_mev: 0.662       # Reference gamma energy (Cs-137)
+  # For 6 × 6 mm (MICROFC‑60035‑SMT):
+  # 
+  # PDE = 31% typical at Vbr + 2.5 V
+  # PDE = 41% typical at Vbr + 5.0 V
+  # Source: Page 2, Table 1, Rev. 9 datasheet
+  pde: 0.35
+  optical_efficiency: 0.7
+
+# --------------------------------------------
+# Scintillator Properties
+# --------------------------------------------
+scintillators:
+  NaI(Tl):
+    light_yield_ph_per_mev: 38000
+  LaBr3(Ce):
+    light_yield_ph_per_mev: 63000
+
+geometry:
+  crystal_diameters_mm: [25.4, 38.0, 50.0]
+  sipm_sizes_mm: [6.0, 10.0, 25.4]
+
+# --------------------------------------------
+# Energy Axis
+# --------------------------------------------
+energy_axis:
+  max_kev: 2000
+  bins: 4096
+
+# --------------------------------------------
+# Simulation
+# --------------------------------------------
+simulation:
+  events_per_peak: 20000
+  background_rate: 5
+  seed: 42
+
+# --------------------------------------------
+# Detector Configuration
+# --------------------------------------------
+detector:
+  # Single SiPM resolution at 662 keV (Cs-137)
+  fwhm_single_662: 0.12
+
+# --------------------------------------------
+# SiPM Array Configurations
+# --------------------------------------------
+sipm_configurations:
+  "1 x 6x6mm":
+    n_sipm: 1
+  "4 x 6x6mm":
+    n_sipm: 4
+  "6 x 6x6mm":
+    n_sipm: 6
+
+# --------------------------------------------
+# Isotope Lines
+# --------------------------------------------
+# Format: energy_keV, relative_intensity
+# Sources: common calibration and environmental lines
+isotopes:
+  - energy_kev: 59.5
+    intensity: 0.6
+    label: "Am-241"
+  - energy_kev: 81.0
+    intensity: 0.5
+    label: "?"
+  - energy_kev: 295.0
+    intensity: 0.4
+    label: "Bi-214"
+  - energy_kev: 352.0
+    intensity: 0.5
+    label: "Pb-214"
+  - energy_kev: 356.0
+    intensity: 0.6
+    label: "Ba-133"
+  - energy_kev: 511.0
+    intensity: 0.7
+    label: "annihilation"
+  - energy_kev: 583.0
+    intensity: 0.6
+    label: "Tl-208"
+  - energy_kev: 609.0
+    intensity: 0.8
+    label: "Bi-214"
+  - energy_kev: 662.0
+    intensity: 1.0
+    label: "Cs-137"
+  - energy_kev: 911.0
+    intensity: 0.5
+    label: "Ac-228"
+  - energy_kev: 1120.0
+    intensity: 0.5
+    label: "Bi-214"
+  - energy_kev: 1173.0
+    intensity: 0.8
+    label: "Co-60"
+  - energy_kev: 1274.0
+    intensity: 0.7
+    label: "Na-22"
+  - energy_kev: 1332.0
+    intensity: 0.8
+    label: "Co-60"
+  - energy_kev: 1460.0
+    intensity: 0.7
+    label: "K-40"
+  - energy_kev: 1764.0
+    intensity: 0.6
+    label: "Bi-214"
