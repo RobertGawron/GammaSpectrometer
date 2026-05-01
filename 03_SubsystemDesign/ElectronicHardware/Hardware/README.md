@@ -84,7 +84,7 @@ TBD
 
 Max safe voltage = 24.2V (min Vbr) + 5.0V = 29.2V
 
-ADC: 0V -> 4.5V (simulating 20degC → 35degC)
+ADC: 0V -> 4.5V (simulating 20degC -> 35degC)
 
 LDO: 28.89V -> 29.22V (+322.5mV over 15degC)
 

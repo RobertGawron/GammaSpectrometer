@@ -1,7 +1,7 @@
 # SiPM and Charge Amplifier Readout
 
 ## 1. Purpose
-Theoretical background of the Silicon Photomultiplier (SiPM) and its readout using a charge‑sensitive amplifier.
+Theoretical background of the Silicon Photomultiplier (SiPM) and its readout using a charge-sensitive amplifier.
 
 ---
 ## 2. Definitions
