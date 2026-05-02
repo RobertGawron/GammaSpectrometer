@@ -15,7 +15,7 @@ For a first-order system:
 $$t_r \approx \frac{0.35}{f_{3dB}}$$
 
 Where:
-* $t_r$: 10%–90% rise time.
+* $t_r$: 10%-90% rise time.
 * $f_{3dB}$: -3 dB bandwidth.
 
 The constant arises from:
@@ -23,7 +23,7 @@ The constant arises from:
 $$t_r = \frac{\ln(9)}{\omega_{3dB}} = \frac{2.2}{2\pi f_{3dB}}$$
 
 Engineering Interpretation:
-* Higher bandwidth → faster rise time.
+* Higher bandwidth -> faster rise time.
 * Excess bandwidth increases integrated noise.
 
 Bandwidth must preserve signal dynamics without unnecessarily increasing noise.
@@ -53,9 +53,9 @@ For reliable amplitude estimation:
 $$N_{rise} \ge 3$$
 
 Reason:
-* 1 sample → no slope information.
-* 2 samples → unstable interpolation.
-* 3+ samples → reliable curve fitting and peak detection.
+* 1 sample -> no slope information.
+* 2 samples -> unstable interpolation.
+* 3+ samples -> reliable curve fitting and peak detection.
 
 This requirement arises from discrete-time approximation limits.
 

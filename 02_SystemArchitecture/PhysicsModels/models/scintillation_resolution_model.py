@@ -1,5 +1,5 @@
 import numpy as np
-from constants import FWHM_TO_SIGMA
+from .constants import FWHM_TO_SIGMA
 
 def crystal_area(diameter_mm):
     return np.pi * (diameter_mm / 2.0) ** 2

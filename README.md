@@ -46,7 +46,7 @@ Target FPGA: iCE40.
 
 The project is developed using a **completely open-source** FPGA toolchain containerized in Docker.
 
-* RTL Language: VHDL‑2008
+* RTL Language: VHDL-2008
 * Synthesis: [Yosys](https://github.com/YosysHQ/yosys), [GHDL](https://github.com/ghdl/ghdl)
 * Place & Route: [nextpnr](https://github.com/YosysHQ/nextpnr)
 * Formal Verification: [SymbiYosys](https://github.com/YosysHQ/sby), PSL assertions
