@@ -7,7 +7,7 @@ on:
     branches: [main, "feature/*"]
 
 jobs:
-  style-check:
+  vhdl-style-check:
     name: VHDL Style Check
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ./.github/workflows/docker-postbuild-generic.yml
@@ -15,9 +15,23 @@ jobs:
       docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
       service_name: gammaspec-dev
       working_directory: /workspace/Software
-      artifact_name: style-check-results
+      artifact_name: vhdl-style-check-results
       artifact_paths: |
         Software/Build/Reports/StyleCheck.log
       run_script: |
         mkdir -p Build/Reports
         just style-check 2>&1 | tee Build/Reports/StyleCheck.log
+
+  python-style-check:
+    name: Python Style Check
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: python-style-check-results
+      artifact_paths: 05_Verification/Reports/Python/PythonStyleCheck.log
+      run_script: |
+        mkdir -p 05_Verification/Reports/Python
+        just -f 05_Verification/justfile check-format 2>&1 | tee -a 05_Verification/Reports/Python/PythonStyleCheck.log

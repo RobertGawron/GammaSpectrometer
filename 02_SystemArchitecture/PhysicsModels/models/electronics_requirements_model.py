@@ -9,16 +9,16 @@ import numpy as np
 from .constants import FWHM_TO_SIGMA
 
 
-def electronics_noise_budget(sigma_scintillation, budget_fraction=0.3):
+def electronics_noise_budget(sigma_scintillation, budget_fraction=0.18):
     """
     Calculate allowed electronics noise budget to remain detector-limited.
     
     Parameters
     ----------
     sigma_scintillation : float
-        Detector statistical RMS resolution (as fraction, e.g., 0.0477)
+        Detector statistical RMS resolution (as fraction, e.g., 0.018)
     budget_fraction : float, optional
-        Fraction of detector noise allocated to electronics (default 0.3)
+        Fraction of detector noise allocated to electronics (default 0.18)
         
     Returns
     -------
@@ -61,7 +61,7 @@ def resolution_degradation(sigma_scintillation, sigma_electronics):
     Returns
     -------
     float
-        Fractional degradation (as fraction, e.g., 0.046 for 4.6%)
+        Fractional degradation (as fraction, e.g., 0.018 for 1.8%)
     """
     sigma_total = total_system_noise(sigma_scintillation, sigma_electronics)
     return (sigma_total - sigma_scintillation) / sigma_scintillation

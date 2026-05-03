@@ -397,59 +397,41 @@ Real measured resolution will always be larger due to additional noise sources.
 
 From Section 3, we determined (for 4 x 6x6 mm SiPM array):
 
-$$
-\sigma_{scintillation} = 2.39\% \text{ RMS}
-$$
+$$\sigma_{scintillation} = 2.39\% \text{ RMS}$$
 
 ### Design Rule
 
-To remain detector-limited:
+To meet minimal degradation:
 
-$$
-\sigma_{electronics} \leq 0.3 \times \sigma_{scintillation}
-$$
+$$\sigma_{electronics} \leq 0.18 \times \sigma_{scintillation}$$
 
-This ensures total degradation is negligible:
+This ensures total degradation is limited to 1.5%:
 
-$$
-\sigma_{total} = \sqrt{\sigma_{scint}^2 + \sigma_{elec}^2}
-$$
+$$\sigma_{total} = \sqrt{\sigma_{scint}^2 + \sigma_{elec}^2}$$
 
 ### Calculate Electronics Budget
 
-$$
-\sigma_{electronics} \leq 0.3 \times 2.39\% = 0.72\% \text{ RMS}
-$$
+$$\sigma_{electronics} \leq 0.18 \times 2.39\% = 0.43\% \text{ RMS}$$
 
-$$
-\sigma_{electronics} \leq 0.72\%
-$$
+$$\sigma_{electronics} \leq 0.43\%$$
 
 ### Verify Degradation
 
-If electronics contributes 0.72% RMS:
+If electronics contributes 0.43% RMS:
 
-$$
-\sigma_{total} = \sqrt{2.39^2 + 0.72^2} = \sqrt{5.71 + 0.52} = \sqrt{6.23} \approx 2.50\%
-$$
+$$\sigma_{total} = \sqrt{2.39^2 + 0.43^2} = \sqrt{5.71 + 0.18} = \sqrt{5.89} \approx 2.427\%$$
 
 Degradation:
 
-$$
-\frac{2.50 - 2.39}{2.39} \times 100 \approx 4.6\%
-$$
+$$\frac{2.427 - 2.39}{2.39} \times 100 \approx 1.5\%$$
 
-Acceptable (< 5% degradation threshold).
+This meets the requirement (≤ 1.5% degradation threshold).
 
 ### Derived Requirement
 
-$$
-\boxed{
-\sigma_{electronics} \leq 0.72\% \text{ RMS of full-scale energy}
-}
-$$
+$$\boxed{\sigma_{electronics} \leq 0.43 \text{ percent RMS of full-scale energy}}$$
 
-This is **traceable** to detector physics, not arbitrary.
+This is traceable to detector physics.
 
 ---
 
@@ -459,21 +441,15 @@ Convert detector resolution to SNR:
 
 For FWHM ~= 5.6% (4 x 6x6 mm SiPM array):
 
-$$
-\sigma = \frac{FWHM}{2.355} = \frac{5.6}{2.355} \approx 2.38\%
-$$
+$$\sigma = \frac{FWHM}{2.355} = \frac{5.6}{2.355} \approx 2.38\%$$
 
 Equivalent SNR:
 
-$$
-SNR = \frac{1}{\sigma} = \frac{1}{0.0238} \approx 42
-$$
+$$SNR = \frac{1}{\sigma} = \frac{1}{0.0238} \approx 42$$
 
 In dB:
 
-$$
-SNR_{dB} = 20 \log_{10}(42) \approx 32.5 \text{ dB}
-$$
+$$SNR_{dB} = 20 \log_{10}(42) \approx 32.5 \text{ dB}$$
 
 **The detector physics limit is approximately 32.5 dB SNR at 662 keV.**
 
@@ -490,12 +466,9 @@ Typical ADC specifications:
 **Conclusion:**
 
 The ADC intrinsic noise floor is **not** the system bottleneck.
-
 Detector photon statistics dominate system resolution.
-
 Even with improved detector (4 SiPM array), ADC still has ~37 dB margin.
 
----
 
 ### Important Clarification on ENOB
 
