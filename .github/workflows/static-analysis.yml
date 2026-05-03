@@ -12,12 +12,10 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     uses: ./.github/workflows/docker-postbuild-generic.yml
     with:
-      docker_image_repo: ${{ github.repository_owner }}/gammaspectrometer | tr '[:upper:]' '[:lower:]'
       service_name: gammaspec-dev
-      working_directory: /workspace/Software
+      working_directory: /workspace
       artifact_name: static-analysis-results
       artifact_paths: |
-        Software/Build/Reports/Lint.log
+        05_Verification/DigitalLogic/Reports/Quality/
       run_script: |
-        mkdir -p Build/Reports
-        just lint 2>&1 | tee Build/Reports/Lint.log
+        just -f ./04_Implementation/DigitalLogic/justfile lint

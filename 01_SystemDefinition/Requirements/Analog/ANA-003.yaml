@@ -1,44 +1,48 @@
 id: ANA-003
-title: AFE Output Swing Margin
+title: AFE Output Swing and Linearity
 
 category: Analog
 
 description: >
-  The analog front-end shall support at least 2.2 Vpp differential
+  The analog front-end shall support at least 2.4 Vpp differential
   output swing without clipping or gain compression when operated
-  over the full specified supply voltage and temperature range.
+  over the full temperature range.
+  
+  The AFE shall maintain integral non-linearity (INL) better than 0.2%
+  over the full output range up to 2.0 Vpp differential.
 
 rationale: >
   The ADC differential full-scale input range is 2.0 Vpp.
-
-  To prevent clipping or gain compression at full-scale input,
-  the analog front-end must provide output swing margin beyond
-  the nominal ADC full-scale range.
-
-  Selecting a 10 percent design margin:
-
-  Required swing = 2.0 Vpp * 1.10
-                 = 2.2 Vpp
-
-  This margin accounts for:
+  
+  Based on the detector physics analysis, the maximum allowable
+  electronics noise contribution is 0.43% RMS. To maintain this
+  resolution across the full energy range, linearity must be
+  preserved with sufficient margin.
+  
+  Selecting a 20% design margin for output swing:
+  
+  Required swing = 2.0 Vpp * 1.20 = 2.4 Vpp
+  
+  This increased margin accounts for:
   - Supply tolerance variation
-  - Temperature drift
-  - Gain error
-  - Component tolerance
+  - Gain variation across temperature
+  - Component tolerance across production lots
   - Output stage saturation effects
-
-  Ensuring additional swing margin guarantees that the ADC
-  full-scale range is reachable without distortion or clipping
-  introduced by the analog front-end.
+  - Aging and long-term drift
+  
+  The 0.2% INL specification ensures that non-linearity remains
+  a minor contributor to overall resolution compared to the
+  0.43% RMS electronics noise budget.
 
 assumptions:
 - ADC differential full-scale equals 2.0 Vpp
+- Full energy range of interest must fit within linear region
 - Gain error within specified tolerance
-- Supply voltage within specified operating limits
-- Temperature range per system specification
+- Supply voltage within operating limits
 
 acceptance_criteria:
-  differential_output_swing_min: 2.2 # Vpp
+  differential_output_swing_min: 2.4 # Vpp
+  integral_nonlinearity_max: 0.2 # Percent of full scale
 
 status: Draft
 last_verified_commit: null

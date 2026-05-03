@@ -1,0 +1,8 @@
+# Format notebooks with autopep8 and sort imports
+format:
+    nbqa autopep8 --in-place --aggressive .
+    nbqa isort .
+
+# Run linter on notebooks
+lint:
+    nbqa pylint .

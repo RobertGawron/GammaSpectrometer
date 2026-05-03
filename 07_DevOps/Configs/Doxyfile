@@ -3,10 +3,10 @@ PROJECT_NAME           = "Gamma Spectrometer FPGA"
 PROJECT_NUMBER         = 1.0
 PROJECT_BRIEF          = "FPGA firmware for gamma ray spectrometer"
 
-# Input/Output
-INPUT                  = /workspace/Software/Source /workspace/README.md
+# Input/Output - Fixed paths
+INPUT                  = /workspace/03_SubsystemDesign/DigitalLogic/Source /workspace/README.md
 RECURSIVE              = YES
-OUTPUT_DIRECTORY       = /workspace/Documentation/Firmware
+OUTPUT_DIRECTORY       = /workspace/04_Implementation/DigitalLogic/Build/Documentation
 FILE_PATTERNS          = *.vhdl *.vhd *.md
 EXCLUDE_PATTERNS       = */Build/* */build/*
 
@@ -26,10 +26,10 @@ HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
 HTML_COLORSTYLE_HUE    = 220
 HTML_COLORSTYLE_SAT    = 100
-HTML_TIMESTAMP         = YES
+# HTML_TIMESTAMP removed (obsolete)
 
 # LaTeX/PDF Options
-LATEX_OUTPUT           = /tmp/doxygen-latex
+LATEX_OUTPUT           = latex
 PDF_HYPERLINKS         = YES
 USE_PDFLATEX           = YES
 
