@@ -9,6 +9,7 @@ filesets:
       - Source/Packages/ConstantsPkg.vhdl
       - Source/Packages/TypesPkg.vhdl      
       - Source/Core/ClockDivider.vhdl
+      - Source/Peripherals/Display/Display.vhdl
       - Source/Top/Top.vhdl
     file_type: vhdlSource-2008
 
@@ -19,7 +20,7 @@ filesets:
 
   tb:
     files:
-      - Testbench/Core/Tb_Top.vhdl
+      - ../../05_Verification/DigitalLogic/UnitVerification/Core/tb_Top.vhdl
     file_type: vhdlSource-2008
 
 targets:
@@ -36,8 +37,8 @@ targets:
     toplevel: TB_TOP
     tools:
       ghdl:
-        analyze_options: [--std=08]
-        run_options: [--stop-time=1ms, --wave=simulation.ghw]
+        analyze_options: [--std=08, -fsynopsys, -frelaxed]
+        run_options: [--stop-time=1ms, --wave=../../04_Implementation/DigitalLogic/Build/Waves/simulation.ghw]
 
   synth:
     <<: *default
@@ -48,7 +49,14 @@ targets:
       icestorm:
         pnr: next
         arch: ice40
-        nextpnr_options: [--hx8k, --package, ct256]
+        nextpnr_options: [--hx4k, --package, tq144]
         yosys_synth_options: [-dsp]
       yosys:
         arch: ice40
+
+  lint:
+    <<: *default
+    default_tool: ghdl
+    tools:
+      ghdl:
+        analyze_options: [--std=08, -fsynopsys, -frelaxed, --warn-error]

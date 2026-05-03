@@ -13,6 +13,10 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 
+# V-model directory paths
+DESIGN_DIR = ROOT / ".." / ".." / "03_SubsystemDesign" / "DigitalLogic"
+VERIFY_DIR = ROOT / ".." / ".." / "05_Verification" / "DigitalLogic"
+
 GENERATE_WAVES = "--wave" in sys.argv
 if GENERATE_WAVES:
     sys.argv.remove("--wave")
@@ -21,23 +25,26 @@ WITH_COVERAGE = "--with-coverage" in sys.argv
 if WITH_COVERAGE:
     sys.argv.remove("--with-coverage")
 
-vu = VUnit.from_argv(vhdl_standard="2008")
+# Fix VUnit deprecation warning
+vu = VUnit.from_argv(vhdl_standard="2008", compile_builtins=False)
+vu.add_vhdl_builtins()
+
 lib = vu.add_library("gammaspec_lib")
 
 # -----------------------------------------------------------------------------
-# Source files
+# Source files (from Design phase)
 # -----------------------------------------------------------------------------
-lib.add_source_file(str(ROOT / "Source" / "Packages" / "ConstantsPkg.vhdl"))
-lib.add_source_file(str(ROOT / "Source" / "Packages" / "TypesPkg.vhdl"))
-lib.add_source_file(str(ROOT / "Source" / "Core" / "ClockDivider.vhdl"))
-lib.add_source_file(str(ROOT / "Source" / "Peripherals" / "Display" / "Display.vhdl"))
-lib.add_source_file(str(ROOT / "Source" / "Top" / "Top.vhdl"))
+lib.add_source_file(str(DESIGN_DIR / "Source" / "Packages" / "ConstantsPkg.vhdl"))
+lib.add_source_file(str(DESIGN_DIR / "Source" / "Packages" / "TypesPkg.vhdl"))
+lib.add_source_file(str(DESIGN_DIR / "Source" / "Core" / "ClockDivider.vhdl"))
+lib.add_source_file(str(DESIGN_DIR / "Source" / "Peripherals" / "Display" / "Display.vhdl"))
+lib.add_source_file(str(DESIGN_DIR / "Source" / "Top" / "Top.vhdl"))
 
 # -----------------------------------------------------------------------------
-# Testbench files
+# Testbench files (from Verification phase)
 # -----------------------------------------------------------------------------
-lib.add_source_file(str(ROOT / "Testbench" / "Peripherals" / "Display" / "tb_Display.vhdl"))
-lib.add_source_file(str(ROOT / "Testbench" / "Core" / "tb_Top.vhdl"))
+lib.add_source_file(str(VERIFY_DIR / "UnitVerification" / "Peripherals" / "Display" / "tb_Display.vhdl"))
+lib.add_source_file(str(VERIFY_DIR / "UnitVerification" / "Core" / "tb_Top.vhdl"))
 
 # -----------------------------------------------------------------------------
 # Compile options

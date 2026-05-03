@@ -1,0 +1,103 @@
+requirement:
+  id: ANA-001
+  source_file: ../../../../../01_SystemDefinition/Requirements/Analog/ANA-001.yaml
+
+simulation:
+  raw_file: ../03_RunArtifacts/raw/TbNoise.raw
+  trace:
+    frequency: "frequency"
+    output_noise: "V(onoise)"
+
+# ADC Parameters (AD9238)
+adc:
+  datasheet: "AD9238 Datasheet, Rev. D"
+  input_span: 2.0  # Vpp differential
+  bits: 12
+  lsb_size: 0.488e-3  # V (calculated at runtime: input_span / 2^bits)
+  input_noise_lsb: 0.27  # LSB RMS (Input Span = 2V) - Page 4, Table 1, "Input Referred Noise"
+  snr:
+    low_freq: 70.4  # dB @ fIN = 2.4 MHz - Page 5, Table 2, "Signal-to-Noise Ratio (SNR)"
+    mid_freq: 69.3  # dB @ fIN = 32.5 MHz - Page 5, Table 2, "Signal-to-Noise Ratio (SNR)"
+    high_freq: 67.6  # dB @ fIN = 100 MHz - Page 5, Table 2, "Signal-to-Noise Ratio (SNR)"
+  sinad:
+    low_freq: 70.2  # dB @ fIN = 2.4 MHz - Page 5, Table 2, "Signal-to-Noise and Distortion Ratio (SINAD)"
+    mid_freq: 68.9  # dB @ fIN = 32.5 MHz - Page 5, Table 2, "Signal-to-Noise and Distortion Ratio (SINAD)"
+    high_freq: 66.6  # dB @ fIN = 100 MHz - Page 5, Table 2, "Signal-to-Noise and Distortion Ratio (SINAD)"
+  enob:
+    low_freq: 11.5  # bits @ fIN = 2.4 MHz - Page 5, Table 2, "Effective Number of Bits (ENOB)"
+    mid_freq: 11.2  # bits @ fIN = 32.5 MHz - Page 5, Table 2, "Effective Number of Bits (ENOB)"
+    high_freq: 10.9  # bits @ fIN = 100 MHz - Page 5, Table 2, "Effective Number of Bits (ENOB)"
+  jitter: 0.5e-12  # s (aperture jitter) - Page 6, Table 4, "Aperture Uncertainty (tJ)"
+  dnl: 0.35  # LSB - Page 4, Table 1, "Differential Nonlinearity (DNL)"
+  inl: 0.70  # LSB - Page 4, Table 1, "Integral Nonlinearity (INL)"
+  psrr: 0.01  # % FSR - Page 4, Table 1, "Power Supply Rejection Ratio (PSRR)"
+  crosstalk: -85  # dB - Page 5, Table 2, "Crosstalk"
+
+# Charge Amplifier Parameters
+csa:
+  rf: 100.0e3  # Ohm (feedback resistor)
+  cf: 4.7e-12  # F (feedback capacitor)
+  composite_bandwidth_min: 3.0e6  # Hz (after complete signal chain)
+  composite_bandwidth_max: 6.0e6  # Hz (after complete signal chain)
+
+# SiPM Parameters
+sipm:
+  model: "MICROFC-60035-SMT"
+  datasheet: "MICROC-Series-D Datasheet, ON Semiconductor"
+  devices: 4  # Number of SiPMs in array
+  
+  # Capacitance - corrected values
+  capacitance_per_device: 3400.0e-12  # F - Page 3, Table 1 (3400 pF per device)
+  
+  # Noise-related parameters
+  dark_count_rate:
+    per_device_typical: 1200.0e3  # Hz - Page 3, Table 1 (1200 kHz typical)
+    per_device_maximum: 3400.0e3  # Hz - Page 3, Table 1 (3400 kHz maximum)
+    
+  dark_current:
+    per_device_typical: 618.0e-9  # A - Page 2, Table 1 (618 nA typical)
+    per_device_maximum: 1750.0e-9  # A - Page 2, Table 1 (1750 nA maximum)
+  
+  # Correlated noise parameters (percentages remain same for parallel devices)
+  crosstalk: 0.07  # 7% - Page 4, Table 1
+  afterpulsing: 0.002  # 0.2% - Page 4, Table 1
+  
+  # Device characteristics
+  gain: 3.0e6  # Page 2, Table 1 (3 × 10^6)
+  pde_420nm: 0.31  # 31% - Page 2, Table 1 (PDE @ 420 nm)
+  
+  # Temperature coefficients
+  gain_temp_coeff: -0.008  # -0.8%/°C - Page 4, Table 1
+  vbr_temp_coeff: 21.5e-3  # 21.5 mV/°C - Page 4, Table 1
+  
+  # Timing characteristics
+  microcell_time_constant: 95.0e-9  # s - Page 3, Table 1 (95 ns)
+  rise_time: 1.0e-9  # s - Page 3, Table 1 (1.0 ns, Fast Output)
+  pulse_width_fwhm: 3.2e-9  # s - Page 3, Table 1 (3.2 ns FWHM, Fast Output)
+
+
+# Analysis Parameters
+analysis:
+  f_low: 0.0  # Hz (DC)
+  f_high: 20.0e6  # Hz (Nyquist frequency = ADC sampling rate / 2)
+  reference_noise: 50.0e-6  # V RMS (estimated)
+  
+# Requirements
+requirements:
+  noise_max: 1.5e-3  # V RMS (from ANA-001)
+  noise_percent: 0.43  # % of full scale (from detector physics)
+
+# File Paths
+paths:
+  simulation_results: '../02_SimulationModel/Model.raw'
+  report_directory: './Reports'
+
+acceptance:
+  differential_output_noise_rms_max: 1.5e-3  # match requirements.noise_max
+  comparison: "<="
+
+report:
+  generate_figures: true
+  figure_formats:
+    - svg
+  include_noise_breakdown: true

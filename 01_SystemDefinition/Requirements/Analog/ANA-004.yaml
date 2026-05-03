@@ -8,34 +8,38 @@ description: >
   input load, shall exhibit a -3 dB bandwidth between 3 MHz and 6 MHz.
 
 rationale: >
-  The SiPM microcell recharge time constant defines the intrinsic current
-  pulse envelope. To preserve pulse fidelity while enabling stable digital
-  reconstruction at the selected ADC sampling rate, the analog rise time
-  shall provide at least three ADC samples across the 10-90 percent
-  transition region.
-
-  For a first-order response:
-    t_r approx 0.35 / f_3dB
-
-  To satisfy discrete-time reconstruction stability:
-    t_r >= 3 * T_s
-
-  Where:
-    T_s = ADC sampling period
-    t_r = analog rise time
-
-  This yields a target analog bandwidth in the low-MHz range.
-
-  The upper bandwidth bound prevents unnecessary white-noise integration
-  that would degrade energy resolution. The lower bound ensures sufficient
-  temporal resolution for accurate digital pulse processing.
+  From Detector Physics Analysis (Section 5):
+  
+  The MICROFC-60035-SMT SiPM has a microcell recharge time constant of
+  approximately 95 ns. This defines the fundamental temporal character
+  of the detector current pulse.
+  
+  With ADC sampling at 40 MSPS (25 ns period), stable digital reconstruction
+  requires 3-5 samples across the rising edge of the pulse:
+  
+  Required rise time: t_rise = 3-5 x 25 ns = 75-125 ns
+  
+  Converting rise time to bandwidth:
+  f_3dB = 0.35/t_rise
+  
+  For t_rise = 100 ns:
+  f_3dB = 0.35/(100e-9) = 3.5 MHz
+  
+  The 3-6 MHz bandwidth range optimizes the tradeoff between:
+  - Sufficient temporal resolution for pulse shape analysis
+  - Limiting noise integration to meet 0.43% RMS noise target
+  - Avoiding aliasing with 40 MSPS ADC sampling
+  
+  This bandwidth requirement is independent of SiPM array size, as it
+  is determined by the fundamental microcell time constant and ADC
+  sampling constraints.
 
 assumptions:
+  - MICROFC-60035-SMT SiPM (tau_cell = 95 ns)
+  - ADC sampling rate of 40 MSPS
   - Charge Sensitive Amplifier topology
-  - Digitally processed pulse acquisition
   - Dominant first-order bandwidth behavior
   - White noise dominant in analog stage
-  - Sampling frequency significantly greater than signal bandwidth
 
 acceptance_criteria:
   minus_3db_bandwidth_min_hz: 3e6
@@ -46,7 +50,7 @@ verification_method:
   - Differential transfer function measurement
   - -3 dB point measured relative to midband gain
   - Rise-time cross-check using small-signal transient step
-  - Noise integration validation against analog noise requirement
+  - Noise integration validation against 0.43% RMS requirement
 
 status: Draft
 last_verified_commit: null

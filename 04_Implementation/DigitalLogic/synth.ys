@@ -1,0 +1,14 @@
+# FPGA Synthesis Script for GammaSpectrometer
+# Implementation Phase Build Configuration
+
+# Load GHDL plugin and analyze VHDL files in dependency order
+ghdl --std=08 ../../03_SubsystemDesign/DigitalLogic/Source/Packages/ConstantsPkg.vhdl ../../03_SubsystemDesign/DigitalLogic/Source/Packages/TypesPkg.vhdl ../../03_SubsystemDesign/DigitalLogic/Source/Core/ClockDivider.vhdl ../../03_SubsystemDesign/DigitalLogic/Source/Peripherals/Display/Display.vhdl ../../03_SubsystemDesign/DigitalLogic/Source/Top/Top.vhdl -e TOP
+
+# Check design hierarchy
+hierarchy -check -top TOP
+
+# Synthesize for iCE40 FPGA
+synth_ice40 -top TOP -json Build/Top.json
+
+# Report synthesis statistics
+stat -top TOP

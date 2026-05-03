@@ -12,12 +12,15 @@ cover: depth 50
 smtbmc z3
 
 [script]
+plugin -i ghdl
 ghdl --std=08 -fsynopsys -frelaxed \
-    ../Source/Core/Types.vhdl \
-    ../Source/Core/ClockDivider.vhdl \
-    -e ClockDivider
-prep -top ClockDivider
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/ConstantsPkg.vhdl \
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/TypesPkg.vhdl \
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Core/ClockDivider.vhdl \
+    -e CLOCKDIVIDER
+prep -top CLOCKDIVIDER
 
 [files]
-../Source/Core/Types.vhdl
-../Source/Core/ClockDivider.vhdl
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/ConstantsPkg.vhdl
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/TypesPkg.vhdl
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Core/ClockDivider.vhdl

@@ -4,42 +4,47 @@ title: AFE Linearity Requirement
 category: Analog
 
 description: >
-  The analog front-end shall not introduce total harmonic distortion
-  (THD) exceeding -85 dBc for a full-scale sinusoidal input signal
-  within the specified operating bandwidth.
+  The analog front-end shall maintain integral non-linearity (INL) 
+  better than 0.1% of full-scale and differential non-linearity (DNL)
+  better than 0.05% over the complete operating range.
 
 rationale: >
-  The system ENOB target is 10.5 bits (SYS-001).
-
-  The selected ADC (AD9238, 12-bit, 40 MSPS) specifies worst
-  harmonic distortion of approximately -80 dBc at higher input
-  frequencies (ADC datasheet, AC Specifications, Table 2).
-
-  To ensure that overall system distortion remains limited by
-  the ADC and not by the analog front-end (AFE), the AFE
-  distortion must be lower than the worst-case ADC intrinsic
-  distortion.
-
-  Selecting a 5 dB design margin:
-
-  THD_AFE <= THD_ADC_worst - 5 dB
-  THD_AFE <= (-80 dBc) - 5 dB
-  THD_AFE <= -85 dBc
-
-  This guarantees that harmonic distortion introduced by the
-  AFE does not dominate total system distortion and does not
-  degrade effective resolution below the ADC intrinsic limit.
+  From the detector physics analysis, the maximum allowable electronics 
+  noise contribution is 0.43% RMS. Linearity is a critical component of 
+  energy resolution in a gamma spectrometer.
+  
+  Non-linearity introduces systematic bias in energy measurements that 
+  cannot be removed by increased integration time or averaging. For 
+  precise gamma spectroscopy, the relationship between energy and pulse 
+  height must be highly consistent across the entire spectrum.
+  
+  By limiting INL to 0.1%, we ensure that non-linearity remains a minor 
+  contributor to overall resolution compared to the statistical 0.43% RMS 
+  electronics noise budget.
+  
+  The DNL requirement of 0.05% ensures that peak shape distortion is 
+  minimized, which is essential for accurate peak identification and 
+  separation.
+  
+  These specifications are more appropriate for pulse processing systems 
+  than THD, which is primarily relevant for sinusoidal signals.
 
 assumptions:
-
-- ADC worst harmonic distortion approx -80 dBc (datasheet Table 2)
-- Full-scale differential input equals 2 Vpp
-- Input frequency within nominal operating range up to Nyquist
-- Measurement performed with a full-scale sinusoidal test signal
-- Temperature range per system specification
+  - Pulse-height linearity is critical for accurate energy calibration
+  - Full energy range must fit within the linear region
+  - Non-linearity directly impacts isotope identification accuracy
+  - Measurements performed with precision pulse generator
+  - Temperature range per system specification
 
 acceptance_criteria:
-  thd_max_db: -85
+  integral_nonlinearity_max: 0.1  # Percent of full scale
+  differential_nonlinearity_max: 0.05  # Percent of full scale
+
+verification_method:
+  - Precision pulse height linearity measurement
+  - Input swept from 0-100% of full scale in 5% increments
+  - INL calculated as maximum deviation from best-fit line
+  - DNL calculated as maximum deviation between adjacent step sizes
 
 status: Draft
 last_verified_commit: null

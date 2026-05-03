@@ -3,20 +3,15 @@ name: docker-postbuild-generic
 on:
   workflow_call:
     inputs:
-      docker_image_repo:
-        description: "GHCR image repo (lowercase)"
-        required: true
-        type: string
-
       compose_file:
         required: false
         type: string
-        default: DevOps/docker-compose.yml
+        default: 07_DevOps/docker-compose.yml
 
       service_name:
         required: false
         type: string
-        default: fpga-dev
+        default: gammaspec-dev
 
       up_args:
         description: "Extra args for docker compose up"
@@ -58,6 +53,16 @@ jobs:
           ref: ${{ github.event.workflow_run.head_sha }}
           fetch-depth: 0
 
+      - name: Set image name
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+          echo "Set IMAGE_NAME to: ghcr.io/${GITHUB_REPOSITORY,,}"
+
+      - name: Set full Docker image name  
+        run: |
+          echo "DOCKER_IMAGE=${IMAGE_NAME}:${{ github.event.workflow_run.head_sha }}" >> $GITHUB_ENV
+          echo "Set DOCKER_IMAGE to: ${IMAGE_NAME}:${{ github.event.workflow_run.head_sha }}"
+
       - name: Set up Docker Compose
         uses: docker/setup-compose-action@v1
 
@@ -70,18 +75,19 @@ jobs:
 
       - name: Pull Docker Image
         run: |
-          docker pull ghcr.io/${{ inputs.docker_image_repo }}:${{ github.event.workflow_run.head_sha }}
+          echo "Pulling image: ${DOCKER_IMAGE}"
+          docker pull ${DOCKER_IMAGE}
 
       - name: Start stack
-        env:
-          DOCKER_IMAGE: ghcr.io/${{ inputs.docker_image_repo }}:${{ github.event.workflow_run.head_sha }}
         run: |
-          docker compose -f "${{ inputs.compose_file }}" up ${{ inputs.up_args }}
+          echo "Starting stack with image: ${DOCKER_IMAGE}"
+          docker compose -f "${{ inputs.compose_file }}" up ${{ inputs.up_args }} --no-build
 
       - name: Run job script in container
         run: |
+          echo "Running script in container..."
           docker compose -f "${{ inputs.compose_file }}" exec -T "${{ inputs.service_name }}" \
-            bash -lc 'cd ${{ inputs.working_directory }} && ${{ inputs.run_script }}'
+            bash -lc "cd ${{ inputs.working_directory }} && ${{ inputs.run_script }}"
 
       - name: Upload artifacts
         if: ${{ always() && inputs.artifact_paths != '' }}

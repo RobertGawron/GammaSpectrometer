@@ -173,6 +173,8 @@ RUN pip install --no-cache-dir \
     jupyter_server \
     ipywidgets \
     octave_kernel \
+    # Jupyter Code Quality (notebook-specific)
+    nbqa \
     # Visualization
     plotly \
     seaborn \
@@ -186,9 +188,18 @@ RUN pip install --no-cache-dir \
     vunit_hdl \
     fusesoc \
     edalize \
-    # Code Coverage & Reporting
+    # Code Coverage & Quality Analysis
     gcovr \
     junitparser \
+    pylint \
+    mypy \
+    flake8 \
+    # Code Formatting
+    black \
+    autopep8 \
+    isort \
+    # Development Workflow
+    pre-commit \
     # Utilities
     cheat \
     # LaTeX Support in Jupyter
@@ -208,20 +219,20 @@ RUN vsg --version
 # Configure Jupyter
 # ============================================================
 RUN mkdir -p /root/.jupyter
-COPY DevOps/Configs/jupyter_server_config.py /root/.jupyter/jupyter_server_config.py
+COPY 07_DevOps/Configs/jupyter_server_config.py /root/.jupyter/jupyter_server_config.py
 RUN python -m octave_kernel install
 
 # ============================================================
 # Configure VNC
 # ============================================================
 RUN mkdir -p /root/.vnc
-COPY DevOps/Configs/xstartup /root/.vnc/xstartup
+COPY 07_DevOps/Configs/xstartup /root/.vnc/xstartup
 RUN chmod +x /root/.vnc/xstartup
 
 # ============================================================
 # Configure Octave
 # ============================================================
-COPY DevOps/Configs/.octaverc /root/.octaverc
+COPY 07_DevOps/Configs/.octaverc /root/.octaverc
 
 # ============================================================
 # Configure FuseSoC
@@ -243,7 +254,7 @@ RUN echo "=== Final Verification ===" && \
 # ============================================================
 # Copy Entrypoint Script
 # ============================================================
-COPY DevOps/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY 07_DevOps/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # ============================================================

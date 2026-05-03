@@ -22,7 +22,7 @@ git config --global core.autocrlf input
 
 ### Build image
 
-From project root:
+In the directory where this tutorial is run:
 
 ```bash
 docker-compose build
@@ -30,8 +30,10 @@ docker-compose build
 
 ### Run the image
 
+In the directory where this tutorial is run:
+
 ```bash
-cd Devops && docker-compose run --rm --service-ports gammaspec-dev
+docker-compose run --rm --service-ports gammaspec-dev
 ```
 
 ### Usage
