@@ -1,0 +1,53 @@
+f0: 40e6  # ADC sampling clock frequency (Hz)
+
+# ------------------------------------------------------------
+#
+# 1. Oscillator (Si510 LVDS)
+#
+# Data from:
+# https://eu.mouser.com/datasheet/3/564/1/si510_11.pdf
+# Table 5. Output Clock Jitter and Phase Noise (LVDS)
+# Row: Phase Jitter (RMS)
+#
+# Note: we are using "12 kHz to 20 MHz integration bandwidth"
+# because it's the "industry standard". It's unrelated
+# to ADC sampling frequency.
+#
+# ------------------------------------------------------------
+
+sigma_osc_typ: 0.8e-12
+sigma_osc_max: 1.0e-12
+
+# ------------------------------------------------------------
+# 2. Fanout Buffer (Si53340, LVDS, VDD: 3.3 V)
+# Data from:
+# https://eu.mouser.com/datasheet/3/564/1/Si5334x_datasheet.pdf
+# Table 3.6 - Additive Jitter (12 kHz - 20 MHz)
+# 156.25 MHz row (closest to our operating region)
+# ------------------------------------------------------------
+
+sigma_fanout_typ: 150e-15
+sigma_fanout_max: 200e-15
+
+# ------------------------------------------------------------
+# 3. LVDS -> CMOS Buffer (PI6C49CB01Q)
+# Data from:
+# https://4donline.ihs.com/images/VipMasterIC/IC/DIOD/DIOD-S-A0009189280/DIOD-S-A0009189280-1.pdf?hkey=CECEF36DEECDED6468708AAF2E19C0C6
+# Page 4, table with header "AC Characteristics, VDD: 3.3V +/- 0.3V, TA: -40degC to 105degC"
+# ------------------------------------------------------------
+
+sigma_buffer: 0.15e-12
+
+# ------------------------------------------------------------
+# 4. ADC Aperture Jitter (AD9238)
+# Data from:
+# https://www.analog.com/media/en/technical-documentation/data-sheets/ad9238.pdf
+# Page 6
+# Row "Aperture Uncertainty"
+# ------------------------------------------------------------
+
+sigma_adc: 0.5e-12
+
+# File Paths
+paths:
+  report_directory: '../04_Report'

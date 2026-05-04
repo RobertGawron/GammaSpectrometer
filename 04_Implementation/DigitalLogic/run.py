@@ -16,6 +16,8 @@ ROOT = Path(__file__).resolve().parent
 # V-model directory paths
 DESIGN_DIR = ROOT / ".." / ".." / "03_SubsystemDesign" / "DigitalLogic"
 VERIFY_DIR = ROOT / ".." / ".." / "05_Verification" / "DigitalLogic"
+BUILD_DIR  = ROOT / "Build"
+VUNIT_OUT  = BUILD_DIR / "VUnitOut"
 
 GENERATE_WAVES = "--wave" in sys.argv
 if GENERATE_WAVES:
@@ -24,6 +26,10 @@ if GENERATE_WAVES:
 WITH_COVERAGE = "--with-coverage" in sys.argv
 if WITH_COVERAGE:
     sys.argv.remove("--with-coverage")
+
+# Force VUnit output into Build/VUnitOut regardless of CWD
+if "-o" not in sys.argv and "--output-path" not in sys.argv:
+    sys.argv.extend(["-o", str(VUNIT_OUT)])
 
 # Fix VUnit deprecation warning
 vu = VUnit.from_argv(vhdl_standard="2008", compile_builtins=False)
@@ -54,7 +60,7 @@ lib.set_compile_option("ghdl.a_flags", ["--std=08", "-fsynopsys", "-frelaxed"])
 # -----------------------------------------------------------------------------
 # Per-test waveform generation
 # -----------------------------------------------------------------------------
-WAVE_DIR = ROOT / "Build" / "Waves"
+WAVE_DIR = BUILD_DIR / "Waves"
 
 if GENERATE_WAVES:
     WAVE_DIR.mkdir(parents=True, exist_ok=True)

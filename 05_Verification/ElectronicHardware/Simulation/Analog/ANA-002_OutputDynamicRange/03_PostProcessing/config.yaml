@@ -1,0 +1,13 @@
+adc:
+  resolution: 12
+  full_scale_voltage: 2  # Full-scale differential input range
+
+simulation:
+  raw_file: ../02_SimulationModel/TbTransientPulseSlow.raw
+  trace:
+    time: time
+    output_positive: V(out_p)
+    output_negative: V(out_n)
+
+paths:
+  report_directory: '../04_Report/'

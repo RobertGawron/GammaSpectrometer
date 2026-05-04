@@ -9,33 +9,34 @@ description: >
 
 rationale: >
   From Detector Physics Analysis (Section 5):
-  
-  The MICROFC-60035-SMT SiPM has a microcell recharge time constant of
-  approximately 95 ns. This defines the fundamental temporal character
-  of the detector current pulse.
-  
-  With ADC sampling at 40 MSPS (25 ns period), stable digital reconstruction
-  requires 3-5 samples across the rising edge of the pulse:
-  
-  Required rise time: t_rise = 3-5 x 25 ns = 75-125 ns
-  
-  Converting rise time to bandwidth:
-  f_3dB = 0.35/t_rise
-  
-  For t_rise = 100 ns:
-  f_3dB = 0.35/(100e-9) = 3.5 MHz
-  
-  The 3-6 MHz bandwidth range optimizes the tradeoff between:
-  - Sufficient temporal resolution for pulse shape analysis
-  - Limiting noise integration to meet 0.43% RMS noise target
-  - Avoiding aliasing with 40 MSPS ADC sampling
-  
-  This bandwidth requirement is independent of SiPM array size, as it
-  is determined by the fundamental microcell time constant and ADC
+
+  The MICROFC-60035-SMT SiPM exhibits a microcell recharge time constant
+  of approximately 95 ns, which defines the dominant decay time of the
+  detector pulse.
+
+  This corresponds to an intrinsic signal bandwidth of approximately:
+
+  f_signal approx 1 / (2 * pi * tau_cell) approx 1.7 MHz
+
+  To accurately preserve pulse shape and energy information while limiting
+  integrated noise, the AFE bandwidth shall exceed the signal bandwidth by
+  a factor of approximately 2 to 3.
+
+  This yields a required bandwidth range:
+
+  f_3dB approx 3 MHz to 6 MHz
+
+  This range ensures:
+  - Accurate reconstruction of the pulse envelope with 40 MSPS sampling
+  - Minimal distortion of pulse amplitude and area
+  - Controlled noise bandwidth to meet the 0.43 percent RMS electronics budget
+
+  The bandwidth requirement is independent of SiPM array size, as it is
+  determined by the intrinsic microcell time constant and system-level
   sampling constraints.
 
 assumptions:
-  - MICROFC-60035-SMT SiPM (tau_cell = 95 ns)
+  - MICROFC-60035-SMT SiPM (tau_cell approx 95 ns)
   - ADC sampling rate of 40 MSPS
   - Charge Sensitive Amplifier topology
   - Dominant first-order bandwidth behavior
@@ -50,7 +51,7 @@ verification_method:
   - Differential transfer function measurement
   - -3 dB point measured relative to midband gain
   - Rise-time cross-check using small-signal transient step
-  - Noise integration validation against 0.43% RMS requirement
+  - Noise integration validation against 0.43 percent RMS requirement
 
 status: Draft
 last_verified_commit: null

@@ -89,8 +89,8 @@ requirements:
 
 # File Paths
 paths:
-  simulation_results: '../02_SimulationModel/Model.raw'
-  report_directory: './Reports'
+  simulation_results: '../02_SimulationModel/TbNoise.raw'
+  report_directory: '../04_Report/'
 
 acceptance:
   differential_output_noise_rms_max: 1.5e-3  # match requirements.noise_max

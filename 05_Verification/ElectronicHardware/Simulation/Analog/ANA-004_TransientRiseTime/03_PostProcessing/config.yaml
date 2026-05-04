@@ -1,0 +1,12 @@
+adc:
+  sampling_frequency: 40e6
+
+simulation:
+  raw_file: ../02_SimulationModel/TbBandwidthStep.raw
+  trace:
+    time: time
+    output_positive: V(out_p)
+    output_negative: V(out_n)
+
+paths:
+  report_directory: '../04_Report/'

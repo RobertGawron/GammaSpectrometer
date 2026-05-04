@@ -67,7 +67,9 @@ style-fix:
         {{VERIFY_DIR}}/UnitVerification/**/*.vhdl
 
 analyze: build-dir
+    mkdir -p {{BUILD_DIR}}/GHDL
     ghdl -a --std=08 -fsynopsys -frelaxed --warn-error \
+        --workdir={{BUILD_DIR}}/GHDL \
         {{DESIGN_DIR}}/Source/Packages/*.vhdl \
         {{DESIGN_DIR}}/Source/Core/*.vhdl \
         {{DESIGN_DIR}}/Source/Peripherals/**/*.vhdl \
@@ -155,7 +157,7 @@ formal-wave-cover NAME:
 
 # Clean Operations
 clean:
-    rm -rf {{BUILD_DIR}} vunit_out *.cf work-obj*.cf
+    rm -rf {{BUILD_DIR}}
 
 clean-all: clean
     find . -name "*.ghw" -delete

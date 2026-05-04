@@ -1,0 +1,59 @@
+id: ANA-005
+title: AFE Transient Response
+category: Analog
+
+description: >
+  The analog front-end (AFE) differential output response to a pulse input
+  shall exhibit controlled transient behavior consistent with the detector
+  pulse shape and the defined bandwidth requirement.
+
+rationale: >
+  This requirement is derived from ANA-004 (AFE Differential Small-Signal
+  Bandwidth), which establishes a bandwidth range of 3 MHz to 6 MHz based
+  on detector physics and sampling constraints.
+
+  The MICROFC-60035-SMT SiPM exhibits a microcell recharge time constant
+  of approximately 95 ns. This defines the dominant decay time of the
+  detector pulse and therefore the expected temporal response of the AFE.
+
+  For a first-order system, the settling time to within 2 percent is
+  approximately:
+
+  t_settle approx 4 * tau_cell approx 380 ns
+
+  Therefore, the transient response of the AFE shall be consistent with
+  this time scale.
+
+  The bandwidth constraint defined in ANA-004 implies a well-damped system.
+  Excessive bandwidth leads to overshoot and ringing, while insufficient
+  bandwidth leads to slow settling and pulse distortion.
+
+  The requirements defined here ensure that the implemented system:
+  - Preserves pulse shape for accurate energy measurement
+  - Avoids instability or excessive peaking
+  - Remains consistent with the detector physics time constants
+
+  The numerical limits for overshoot and ringing are based on good
+  engineering practice for first-order or lightly underdamped systems,
+  not directly derived from detector physics.
+
+assumptions:
+  - MICROFC-60035-SMT SiPM (tau_cell approx 95 ns)
+  - AFE behavior is approximately first-order or lightly underdamped
+  - Pulse response is dominated by decay time, not rise time
+  - System operates within linear region (no clipping)
+
+acceptance_criteria:
+  settling_time_2percent_max_ns: 400
+  overshoot_max_percent: 10
+  ringing_crossings_max: 3
+
+verification_method:
+  - Transient simulation with pulse input stimulus
+  - Differential output waveform measurement
+  - Settling time measured to within plus minus 2 percent of final value
+  - Overshoot measured relative to final settled value
+  - Ringing evaluated as number of zero crossings after main peak
+
+status: Draft
+last_verified_commit: null

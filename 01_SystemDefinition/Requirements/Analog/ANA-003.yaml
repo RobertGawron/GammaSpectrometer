@@ -1,48 +1,32 @@
 id: ANA-003
-title: AFE Output Swing and Linearity
-
+title: AFE Output Dynamic Range
 category: Analog
 
 description: >
-  The analog front-end shall support at least 2.4 Vpp differential
-  output swing without clipping or gain compression when operated
-  over the full temperature range.
-  
-  The AFE shall maintain integral non-linearity (INL) better than 0.2%
-  over the full output range up to 2.0 Vpp differential.
+  The analog front-end (AFE) shall support a minimum differential output
+  swing of 2.4 Vpp without clipping or significant gain compression.
 
 rationale: >
-  The ADC differential full-scale input range is 2.0 Vpp.
-  
-  Based on the detector physics analysis, the maximum allowable
-  electronics noise contribution is 0.43% RMS. To maintain this
-  resolution across the full energy range, linearity must be
-  preserved with sufficient margin.
-  
-  Selecting a 20% design margin for output swing:
-  
-  Required swing = 2.0 Vpp * 1.20 = 2.4 Vpp
-  
-  This increased margin accounts for:
-  - Supply tolerance variation
-  - Gain variation across temperature
-  - Component tolerance across production lots
-  - Output stage saturation effects
-  - Aging and long-term drift
-  
-  The 0.2% INL specification ensures that non-linearity remains
-  a minor contributor to overall resolution compared to the
-  0.43% RMS electronics noise budget.
+  The ADC full-scale differential input range is 2.0 Vpp. A design margin
+  of 20% is required to accommodate gain variation, temperature effects,
+  supply tolerance, and component variation without entering saturation.
+
+  Providing headroom beyond the ADC full-scale ensures that the AFE
+  remains within its linear operating region during nominal operation.
 
 assumptions:
-- ADC differential full-scale equals 2.0 Vpp
-- Full energy range of interest must fit within linear region
-- Gain error within specified tolerance
-- Supply voltage within operating limits
+  - ADC differential full-scale input is 2.0 Vpp
+  - Environmental and process variations affect gain and headroom
 
 acceptance_criteria:
-  differential_output_swing_min: 2.4 # Vpp
-  integral_nonlinearity_max: 0.2 # Percent of full scale
+  differential_output_swing_min_vpp: 2.4
+  gain_compression_max_percent: 1.0
+
+verification_method:
+  - Transient simulation with increasing input amplitude
+  - Measure peak differential output voltage
+  - Verify output swing ≥ 2.4 Vpp
+  - Evaluate gain compression relative to linear region
+  - Confirm absence of waveform clipping or saturation
 
 status: Draft
-last_verified_commit: null
