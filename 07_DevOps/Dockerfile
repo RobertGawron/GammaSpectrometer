@@ -160,6 +160,9 @@ RUN octave --no-gui --no-init-file --eval "\
 # ============================================================
 # Install Python Packages
 # ============================================================
+# ============================================================
+# Install Python Packages
+# ============================================================
 RUN pip install --no-cache-dir \
     # Scientific Computing
     numpy \
@@ -173,7 +176,7 @@ RUN pip install --no-cache-dir \
     jupyter_server \
     ipywidgets \
     octave_kernel \
-    # Jupyter Code Quality (notebook-specific)
+    # Jupyter Code Quality (notebook adapter)
     nbqa \
     # Visualization
     plotly \
@@ -191,13 +194,13 @@ RUN pip install --no-cache-dir \
     # Code Coverage & Quality Analysis
     gcovr \
     junitparser \
-    pylint \
+    ruff \
     mypy \
-    flake8 \
+    radon \
+    # Security
+    pip-audit \
     # Code Formatting
     black \
-    autopep8 \
-    isort \
     # Development Workflow
     pre-commit \
     # Utilities
