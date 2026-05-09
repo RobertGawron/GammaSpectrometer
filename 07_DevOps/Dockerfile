@@ -197,6 +197,7 @@ RUN pip install --no-cache-dir \
     ruff \
     mypy \
     radon \
+    types-PyYAML \
     # Security
     pip-audit \
     # Code Formatting

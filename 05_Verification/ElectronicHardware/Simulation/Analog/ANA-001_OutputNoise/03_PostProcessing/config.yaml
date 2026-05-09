@@ -35,8 +35,8 @@ adc:
 
 # Charge Amplifier Parameters
 csa:
-  rf: 100.0e3  # Ohm (feedback resistor)
-  cf: 4.7e-12  # F (feedback capacitor)
+  rf: 100.0e6  # Ohm (feedback resistor)
+  cf: 270e-12  # F (feedback capacitor)
   composite_bandwidth_min: 3.0e6  # Hz (after complete signal chain)
   composite_bandwidth_max: 6.0e6  # Hz (after complete signal chain)
 

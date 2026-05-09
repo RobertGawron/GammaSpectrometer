@@ -1,0 +1,29 @@
+Version 4
+SymbolType BLOCK
+RECTANGLE Normal -64 -72 64 72
+WINDOW 0 0 -72 Bottom 2
+WINDOW 3 1 73 Top 2
+SYMATTR Prefix X
+SYMATTR Value ADA4817
+SYMATTR ModelFile ada4817.cir
+PIN -64 -16 LEFT 8
+PINATTR PinName +
+PINATTR SpiceOrder 1
+PIN -64 16 LEFT 8
+PINATTR PinName -
+PINATTR SpiceOrder 2
+PIN -64 -48 LEFT 8
+PINATTR PinName vcc
+PINATTR SpiceOrder 3
+PIN -64 48 LEFT 8
+PINATTR PinName vee
+PINATTR SpiceOrder 4
+PIN 64 -16 RIGHT 8
+PINATTR PinName out
+PINATTR SpiceOrder 5
+PIN 64 16 RIGHT 8
+PINATTR PinName fb
+PINATTR SpiceOrder 6
+PIN 64 48 RIGHT 8
+PINATTR PinName pd
+PINATTR SpiceOrder 7
