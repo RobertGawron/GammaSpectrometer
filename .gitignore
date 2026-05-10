@@ -42,16 +42,16 @@ kicad-pce-settings.json
 workspace.json
 *-backups/
 _autosave-*
-
+03_SubsystemDesign/ElectronicHardware/Hardware/GammaSpectrometer-*.pdf
 
 # ==========================================================
-# KiCad – Manufacturing Outputs (Generated)
+# KiCad – Manufacturing Outputs
 # ==========================================================
 *.gbr
 *.drl
-/plots/
-/gerbers/
-/bom/
+plots/
+gerbers/
+bom/
 production/
 fabrication-toolkit-options.json
 

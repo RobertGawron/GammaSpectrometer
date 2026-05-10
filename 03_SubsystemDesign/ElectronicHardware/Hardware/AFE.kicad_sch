@@ -565,7 +565,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "GammaSpectrometer:ISL21010C"
+		(symbol "GammaSpectrometer:ISL21010CFH325Z-T7A (2V5)"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -581,7 +581,7 @@
 					)
 				)
 			)
-			(property "Value" "ISL21010C"
+			(property "Value" "ISL21010CFH325Z-T7A"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -624,7 +624,7 @@
 					)
 				)
 			)
-			(symbol "ISL21010C_1_1"
+			(symbol "ISL21010CFH325Z-T7A (2V5)_1_1"
 				(rectangle
 					(start -6.35 -1.27)
 					(end 6.35 -10.16)
@@ -810,6 +810,12 @@
 		)
 	)
 	(junction
+		(at 140.97 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1671dfa5-6eb9-41b1-b2a2-f9d1f4f5ca48")
+	)
+	(junction
 		(at 67.31 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -822,28 +828,16 @@
 		(uuid "1f72c433-d65c-4956-a53f-b6065a6614a9")
 	)
 	(junction
-		(at 135.89 64.77)
+		(at 137.16 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "24df4284-dd76-4886-b8dc-c89e8b428635")
+		(uuid "4bd6ba40-dedc-4728-ae2e-3be9a00e6d89")
 	)
 	(junction
 		(at 107.95 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4f6691ff-a3fc-4325-abba-6e5af6089ca2")
-	)
-	(junction
-		(at 140.97 57.15)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "581ebade-774f-4142-8937-e303fc540b48")
-	)
-	(junction
-		(at 138.43 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "74c9b73a-ec57-4f7c-9b4e-da0465b502b9")
 	)
 	(junction
 		(at 133.35 67.31)
@@ -859,16 +853,6 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 59.69) (xy 146.05 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0112e53e-f71e-49a7-86ab-f71141548482")
-	)
-	(wire
-		(pts
 			(xy 120.65 67.31) (xy 120.65 68.58)
 		)
 		(stroke
@@ -876,16 +860,6 @@
 			(type default)
 		)
 		(uuid "06afda71-6c8c-4ed8-aad8-63e23c4fbcd4")
-	)
-	(wire
-		(pts
-			(xy 138.43 82.55) (xy 146.05 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0991b1c9-b333-4b59-8491-53b4def2bd7c")
 	)
 	(wire
 		(pts
@@ -899,7 +873,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 64.77) (xy 135.89 86.36)
+			(xy 137.16 64.77) (xy 137.16 82.55)
 		)
 		(stroke
 			(width 0)
@@ -919,17 +893,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 64.77) (xy 146.05 64.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bfc010a-8c7a-4c8a-af4f-e3c0803cb3df")
-	)
-	(wire
-		(pts
-			(xy 140.97 57.15) (xy 140.97 80.01)
+			(xy 140.97 53.34) (xy 140.97 62.23)
 		)
 		(stroke
 			(width 0)
@@ -939,13 +903,13 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 53.34) (xy 140.97 57.15)
+			(xy 140.97 62.23) (xy 140.97 80.01)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "33fef0fe-433b-4b65-8477-f9649a562a21")
+		(uuid "324e28ca-12e6-42e4-8b0b-9b70eb8ec300")
 	)
 	(wire
 		(pts
@@ -959,7 +923,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 82.55) (xy 173.99 82.55)
+			(xy 180.34 82.55) (xy 172.72 82.55)
 		)
 		(stroke
 			(width 0)
@@ -989,7 +953,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 80.01) (xy 173.99 80.01)
+			(xy 180.34 80.01) (xy 172.72 80.01)
 		)
 		(stroke
 			(width 0)
@@ -1009,7 +973,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 59.69) (xy 135.89 59.69)
+			(xy 133.35 57.15) (xy 137.16 57.15)
 		)
 		(stroke
 			(width 0)
@@ -1029,16 +993,6 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 57.15) (xy 173.99 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e0ffede-7344-4f27-979d-639fba492695")
-	)
-	(wire
-		(pts
 			(xy 80.01 67.31) (xy 87.63 67.31)
 		)
 		(stroke
@@ -1049,7 +1003,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 86.36) (xy 146.05 86.36)
+			(xy 137.16 82.55) (xy 146.05 82.55)
 		)
 		(stroke
 			(width 0)
@@ -1059,23 +1013,33 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 67.31) (xy 133.35 88.9)
+			(xy 137.16 64.77) (xy 146.05 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "803ffe74-4b3c-44a8-8d97-9ebd2b4419a5")
+	)
+	(wire
+		(pts
+			(xy 172.72 62.23) (xy 180.34 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8145cbe8-6420-4ae8-9038-284e37a92217")
+	)
+	(wire
+		(pts
+			(xy 133.35 67.31) (xy 133.35 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "82e06d68-de51-4080-9f87-c830b2eb567e")
-	)
-	(wire
-		(pts
-			(xy 133.35 55.88) (xy 138.43 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a46654c-7dcd-4a8b-a07d-b28f3e55a0c8")
 	)
 	(wire
 		(pts
@@ -1109,7 +1073,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 88.9) (xy 146.05 88.9)
+			(xy 133.35 85.09) (xy 146.05 85.09)
 		)
 		(stroke
 			(width 0)
@@ -1129,7 +1093,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 59.69) (xy 135.89 64.77)
+			(xy 137.16 57.15) (xy 137.16 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1149,17 +1113,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 55.88) (xy 138.43 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b90a4a9a-16dc-49f1-9742-d94c53a60de7")
-	)
-	(wire
-		(pts
-			(xy 140.97 57.15) (xy 146.05 57.15)
+			(xy 140.97 62.23) (xy 146.05 62.23)
 		)
 		(stroke
 			(width 0)
@@ -1179,7 +1133,7 @@
 	)
 	(wire
 		(pts
-			(xy 181.61 59.69) (xy 173.99 59.69)
+			(xy 172.72 64.77) (xy 180.34 64.77)
 		)
 		(stroke
 			(width 0)
@@ -1206,16 +1160,6 @@
 			(type default)
 		)
 		(uuid "d6f65cb5-0034-4b9f-8ce9-ad3e4efe0c7a")
-	)
-	(wire
-		(pts
-			(xy 138.43 59.69) (xy 138.43 82.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb6c2607-0780-4491-a17e-94ac61038171")
 	)
 	(wire
 		(pts
@@ -1250,7 +1194,7 @@
 	)
 	(hierarchical_label "AFE_CH1_N"
 		(shape output)
-		(at 181.61 59.69 0)
+		(at 180.34 64.77 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1261,7 +1205,7 @@
 	)
 	(hierarchical_label "AFE_CH1_P"
 		(shape output)
-		(at 181.61 57.15 0)
+		(at 180.34 62.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1270,9 +1214,20 @@
 		)
 		(uuid "3c8bd48e-df0c-4dd6-a809-83c6f8014371")
 	)
+	(hierarchical_label "+5V0_A"
+		(shape input)
+		(at 133.35 53.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5be8e774-82b4-40ab-aa85-5646418ca876")
+	)
 	(hierarchical_label "AFE_CH2_P"
 		(shape output)
-		(at 181.61 80.01 0)
+		(at 180.34 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1283,7 +1238,7 @@
 	)
 	(hierarchical_label "AFE_CH2_N"
 		(shape output)
-		(at 181.61 82.55 0)
+		(at 180.34 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1292,31 +1247,9 @@
 		)
 		(uuid "7715fbd7-c046-4f81-802c-9254b50b4d69")
 	)
-	(hierarchical_label "-3V3_A"
-		(shape input)
-		(at 133.35 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "7fefcb8e-780e-467f-8c8e-2f87f2391696")
-	)
-	(hierarchical_label "+3V3_A"
-		(shape input)
-		(at 133.35 53.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "98c2e2d4-0a9b-4424-9d89-f09e3d6e4085")
-	)
 	(hierarchical_label "SIPM_BIAS"
 		(shape input)
-		(at 133.35 59.69 180)
+		(at 133.35 57.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1809,89 +1742,6 @@
 		)
 	)
 	(symbol
-		(lib_id "GammaSpectrometer:ISL21010C")
-		(at 96.52 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8d5d880a-ca87-4be8-ba61-0f4170390215")
-		(property "Reference" "U301"
-			(at 96.52 60.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ISL21010C"
-			(at 96.52 63.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 96.52 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.mouser.fr/datasheet/3/1166/1/REN_isl21010_DST_20210920.pdf"
-			(at 96.52 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Micropower Voltage Reference"
-			(at 96.52 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "be940fa4-4541-4454-9d88-a6dae7efe9bb")
-		)
-		(pin "1"
-			(uuid "cf9e9965-a724-40a5-b5c1-b5a04a8197c2")
-		)
-		(pin "3"
-			(uuid "02f5fecb-55f8-4ed0-8394-e5546ee1cbc5")
-		)
-		(instances
-			(project "GammaSpectrometer"
-				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/dff2f075-29cf-4b6b-9196-9df00cd59d26"
-					(reference "U301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:RFShield_TwoPieces")
 		(at 120.65 113.03 0)
 		(unit 1)
@@ -1965,6 +1815,89 @@
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/dff2f075-29cf-4b6b-9196-9df00cd59d26"
 					(reference "J301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "GammaSpectrometer:ISL21010CFH325Z-T7A (2V5)")
+		(at 96.52 64.77 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1f05528-2f52-4d3a-9e65-b8637140a910")
+		(property "Reference" "U302"
+			(at 96.52 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ISL21010CFH325Z-T7A"
+			(at 96.52 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 96.52 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.fr/datasheet/3/1166/1/REN_isl21010_DST_20210920.pdf"
+			(at 96.52 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Micropower Voltage Reference"
+			(at 96.52 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "72e16de1-b6e0-459c-af7a-4cfcdf7a68af")
+		)
+		(pin "1"
+			(uuid "042785a2-2eb4-424e-ae89-eee143f46f07")
+		)
+		(pin "2"
+			(uuid "3e40e853-6a8d-4889-b9ed-2c27ad4b5543")
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/dff2f075-29cf-4b6b-9196-9df00cd59d26"
+					(reference "U302")
 					(unit 1)
 				)
 			)
@@ -2289,7 +2222,7 @@
 	)
 	(sheet
 		(at 146.05 77.47)
-		(size 27.94 13.97)
+		(size 26.67 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2315,7 +2248,7 @@
 			)
 		)
 		(property "Sheetfile" "AFEChannel2.kicad_sch"
-			(at 146.05 92.0246 0)
+			(at 146.05 88.2146 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2325,28 +2258,8 @@
 				(justify left top)
 			)
 		)
-		(pin "+5V0_AFE" input
-			(at 146.05 80.01 180)
-			(uuid "c2e9e2cb-602e-4efd-afca-b9915b7c6d14")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "-5V0_AFE" input
-			(at 146.05 82.55 180)
-			(uuid "ee6f9bee-cd0f-47c4-8221-1c07f54bff50")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "AFE_OUT_P" output
-			(at 173.99 80.01 0)
+			(at 172.72 80.01 0)
 			(uuid "9e87e725-4ce1-4ac0-8855-437f1337b0af")
 			(effects
 				(font
@@ -2356,7 +2269,7 @@
 			)
 		)
 		(pin "AFE_OUT_N" output
-			(at 173.99 82.55 0)
+			(at 172.72 82.55 0)
 			(uuid "77b92fe1-46da-43df-85cd-c31dca387a5b")
 			(effects
 				(font
@@ -2365,9 +2278,9 @@
 				(justify right)
 			)
 		)
-		(pin "+2V048_VREF" input
-			(at 146.05 88.9 180)
-			(uuid "5d25880d-a88f-4f6a-8e04-bee530f1339a")
+		(pin "SIPM_BIAS" input
+			(at 146.05 82.55 180)
+			(uuid "bd80fde8-6cb5-49c9-a840-48c13521faaf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2375,9 +2288,19 @@
 				(justify left)
 			)
 		)
-		(pin "SIPM_BIAS" input
-			(at 146.05 86.36 180)
-			(uuid "bd80fde8-6cb5-49c9-a840-48c13521faaf")
+		(pin "1V5_REF" input
+			(at 146.05 85.09 180)
+			(uuid "4cf68510-2fc6-430f-9309-fbce34dc5f4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+5V0_A" input
+			(at 146.05 80.01 180)
+			(uuid "9c84017b-bcc9-4158-ab3e-8f97ae4bfe21")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2394,8 +2317,8 @@
 		)
 	)
 	(sheet
-		(at 146.05 54.61)
-		(size 27.94 15.24)
+		(at 146.05 59.69)
+		(size 26.67 10.16)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2410,7 +2333,7 @@
 		)
 		(uuid "e8aecbf6-0c13-45ea-b7be-3ecbd091f75b")
 		(property "Sheetname" "AFEChannel1"
-			(at 146.05 53.8984 0)
+			(at 146.05 58.9784 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2432,7 +2355,7 @@
 			)
 		)
 		(pin "AFE_OUT_N" output
-			(at 173.99 59.69 0)
+			(at 172.72 64.77 0)
 			(uuid "dbd9a48f-6800-4f08-860b-568e4fde611e")
 			(effects
 				(font
@@ -2442,7 +2365,7 @@
 			)
 		)
 		(pin "AFE_OUT_P" output
-			(at 173.99 57.15 0)
+			(at 172.72 62.23 0)
 			(uuid "0c5e6558-8f21-43bc-8c86-9d704d314a06")
 			(effects
 				(font
@@ -2471,19 +2394,9 @@
 				(justify left)
 			)
 		)
-		(pin "+3V3_A" input
-			(at 146.05 57.15 180)
-			(uuid "ab5668f1-4fd2-4beb-ab07-dcc5e2006da2")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "-3V3_A" input
-			(at 146.05 59.69 180)
-			(uuid "f5d027ec-392b-4275-9415-6af60cc042e7")
+		(pin "+5V0_A" input
+			(at 146.05 62.23 180)
+			(uuid "9910c399-c9ae-4441-a0f8-1b10eb7af013")
 			(effects
 				(font
 					(size 1.27 1.27)

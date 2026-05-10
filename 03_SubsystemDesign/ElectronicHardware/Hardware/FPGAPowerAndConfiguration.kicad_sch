@@ -5815,7 +5815,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0aec8111-14a8-4be2-919a-f7ac1137b36a")
-		(property "Reference" "U601"
+		(property "Reference" "U101"
 			(at 95.25 110.49 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6304,7 +6304,7 @@
 		(instances
 			(project "GammaSpectrometer"
 				(path "/d6192878-4721-4ef4-99ff-dbbad0502886/15693ce6-b2f2-408a-b00e-10ad93f3b693"
-					(reference "U601")
+					(reference "U101")
 					(unit 5)
 				)
 			)

@@ -26,3 +26,6 @@ try
     pkg load control;
 catch
 end
+
+echo 'addpath("/opt/openEMS/share/openEMS/matlab");
+echo 'addpath("/opt/openEMS/share/CSXCAD/matlab");

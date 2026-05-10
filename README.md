@@ -12,7 +12,8 @@ Sampling data over time and plotting its histogram reveals which radioactive iso
 
 [More info.](./02_SystemArchitecture/SystemTheory/README.md)
 
-## Design rationale
+
+## System Architecture and Technical Decisions
 
 ### Silicon photomultiplier vs traditional PMT
 
@@ -26,6 +27,14 @@ Traditional spectrometers implement CR-RC shaping networks and peak detection en
 
 In this system, pulse shaping and peak detection are performed digitally after high-speed sampling. This increases flexibility and allows signal processing parameters to be modified in firmware without hardware changes. The trade-off is higher performance requirements for the ADC and the need for an FPGA rather than a microcontroller, which increases overall system cost.
 
+
+## Hardware design verification
+
+Hardware design analysis is performed using LTspice for circuit simulation and a Jupyter-based framework for numerical post-processing. These tools are used to validate the interaction between the SiPM, the analog front-end, and the system timing behavior before to PCB design. The goal is to verify theoretical models, evaluate noise and bandwidth limitations, and confirm that design requirements are satisfied.
+
+[More info.](./05_Verification/ElectronicHardware/Simulation/README.md)
+
+
 ## Hardware
 
 ![Architecture Overview](./02_SystemArchitecture/Diagrams/ArchitectureOverview.svg)
@@ -34,11 +43,6 @@ Tools: KiCad.
 
 [More info.](./03_SubsystemDesign/ElectronicHardware/README.md)
 
-## Hardware design verification
-
-Hardware design analysis is performed using LTspice for circuit simulation and a Jupyter-based framework for numerical post-processing. These tools are used to validate the interaction between the SiPM, the analog front-end, and the system timing behavior before to PCB design. The goal is to verify theoretical models, evaluate noise and bandwidth limitations, and confirm that design requirements are satisfied.
-
-[More info.](./Hardware/DesignVerification/README.md)
 
 ## Software
 
@@ -52,7 +56,8 @@ The project is developed using a **completely open-source** FPGA toolchain conta
 * Formal Verification: [SymbiYosys](https://github.com/YosysHQ/sby), PSL assertions
 * Unit Testing Framework: [VUnit](https://vunit.github.io/)
 
-[More info.](./04_Implementation/DigitalLogic/README.md)
+[More info.](./03_SubsystemDesign/DigitalLogic/README.md)
+
 
 ## Mechanical
 
@@ -64,11 +69,11 @@ The crystal and SiPM are optically coupled using optical gel to minimize light p
 
 Tools: OpenSCAD and FreeCAD.
 
-[More info.](./Mechanic/README.md)
+[More info.](./03_SubsystemDesign/DetectorAssembly/README.md)
+
 
 ## DevOps
 
 The development environment is containerized using Docker to avoid polluting the host machine with all the necessary software. The only two software tools that are not containerized are LTspice and KiCad.
 
-[More info.](./DevOps/README.md)
-
+[More info.](./07_DevOps/README.md)

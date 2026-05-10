@@ -20,7 +20,7 @@ Don't use Windows line endings:
 git config --global core.autocrlf input
 ```
 
-### Build image
+## Build image
 
 In the directory where this tutorial is run:
 
@@ -28,7 +28,7 @@ In the directory where this tutorial is run:
 docker-compose build
 ```
 
-### Run the image
+## Run the image
 
 In the directory where this tutorial is run:
 
@@ -36,15 +36,15 @@ In the directory where this tutorial is run:
 docker-compose run --rm --service-ports gammaspec-dev
 ```
 
-### Usage
+## Usage
 
-# Jupyter Notebook
+#### Jupyter Notebook
 
 From host machine access via web browser:
 
 http://localhost:8888/
 
-# Octave
+#### Octave
 
 From host machine access via web browser:
 

@@ -19,19 +19,19 @@ skinparam package {
 ' =====================================================
 package "Data Acquisition Unit" <<analog>> {
 
-    component "Scintillation Crystal\n(NaI(Tl))" as Crystal
+    component "Scintillation Crystal\n(LYSO)" as Crystal
 
     package "AFE" #CFE8FF {
 
         package "AFE Channel 1" #EAF4FF {
-            component "SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_1
-            component "Charge Amplifier\n(OPA690xDBV)" as CA_1
+            component "2 x SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_1
+            component "Charge Amplifier\n(LTC6268-10)" as CA_1
             component "ADC Driver\n(LTC6363)" as Driver_1
         }
 
         package "AFE Channel 2" #EAF4FF {
-            component "SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_2
-            component "Charge Amplifier\n(OPA690xDBV)" as CA_2
+            component "2 x SiPM\n(MICROFC-60035-SMT-TR1)" as SiPM_2
+            component "Charge Amplifier\n(LTC6268-10)" as CA_2
             component "ADC Driver\n(LTC6363)" as Driver_2
         }
 
