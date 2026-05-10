@@ -3,30 +3,48 @@ title: AFE Output Dynamic Range
 category: Analog
 
 description: >
-  The analog front-end (AFE) shall support a minimum differential output
-  swing of 2.4 Vpp without clipping or significant gain compression.
+  The analog front-end (AFE) shall provide sufficient differential output
+  headroom to ensure linear operation within the specified detector input
+  current range, without clipping or excessive gain compression.
 
 rationale: >
-  The ADC full-scale differential input range is 2.0 Vpp. A design margin
-  of 20% is required to accommodate gain variation, temperature effects,
-  supply tolerance, and component variation without entering saturation.
+  The ADC differential full-scale input range is 2.0 Vpp (1.0 V peak).
+  To prevent saturation due to gain variation, temperature drift,
+  supply tolerance, and component variation, the AFE shall support
+  a differential output swing greater than the ADC full-scale range.
 
-  Providing headroom beyond the ADC full-scale ensures that the AFE
-  remains within its linear operating region during nominal operation.
+  A minimum headroom margin of 20 percent above ADC full-scale
+  is required to ensure that nominal full-scale operation does not
+  approach analog saturation limits.
+
+  Dynamic range margin is distinct from linearity (ANA-002).
+  This requirement ensures that the AFE remains within its
+  linear operating region under worst-case signal conditions.
 
 assumptions:
-  - ADC differential full-scale input is 2.0 Vpp
-  - Environmental and process variations affect gain and headroom
+  - ADC differential full-scale input range is 2.0 Vpp.
+  - Maximum specified detector current is defined in system configuration.
+  - Linearity is evaluated separately under ANA-002.
 
 acceptance_criteria:
   differential_output_swing_min_vpp: 2.4
+  adc_utilization_min_percent: 70
+  adc_utilization_max_percent: 95
   gain_compression_max_percent: 1.0
+  clipping_allowed: false
 
 verification_method:
-  - Transient simulation with increasing input amplitude
-  - Measure peak differential output voltage
-  - Verify output swing ≥ 2.4 Vpp
-  - Evaluate gain compression relative to linear region
-  - Confirm absence of waveform clipping or saturation
+  - Perform transient simulation with increasing input current amplitude.
+  - Measure differential peak output voltage.
+  - Verify that maximum differential output swing is at least 2.4 Vpp.
+  - Compute ADC utilization at maximum specified detector current:
+      utilization_percent = (V_peak / V_fs_peak) * 100
+    where V_fs_peak = 1.0 V.
+  - Verify utilization is between 70 percent and 95 percent.
+  - Evaluate gain compression by comparing slope near maximum
+    specified detector current to slope in linear region.
+  - Verify gain compression does not exceed 1.0 percent.
+  - Confirm no waveform clipping occurs within the specified
+    detector input current range.
 
 status: Draft
