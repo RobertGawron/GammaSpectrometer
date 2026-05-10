@@ -105,6 +105,29 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-venv \
     python3-dev \
     python3-pip \
+    # openEMS Build Dependencies
+    cmake \
+    libhdf5-dev \
+    libvtk9-dev \
+    libvtk9-qt-dev \
+    libboost-all-dev \
+    libcgal-dev \
+    libtinyxml-dev \
+    libqt5opengl5-dev \
+    gengetopt \
+    help2man \
+    groff \
+    pod2pdf \
+    bison \
+    flex \
+    libhpdf-dev \
+    libtool \
+    cython3 \
+    paraview \
+    libcgal-dev \
+    libgmp-dev \
+    libmpfr-dev \
+    libboost-all-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -208,7 +231,9 @@ RUN pip install --no-cache-dir \
     cheat \
     # LaTeX Support in Jupyter
     jupyterlab-latex \
-    pylatexenc
+    pylatexenc \
+    # OpenEMS
+    cython 
 
 # ============================================================
 # Install VSG from GitHub (latest version supports Python 3.12)
@@ -218,6 +243,33 @@ RUN pip install --no-cache-dir \
 
 # Verify VSG
 RUN vsg --version
+
+# ============================================================
+# Build and Install openEMS (Full Stack) with STL/CGAL support
+# ============================================================
+RUN mkdir -p /opt && \
+    cd /opt && \
+    git clone --recursive https://github.com/thliebig/openEMS-Project.git && \
+    cd openEMS-Project && \
+    ./update_openEMS.sh /opt/openEMS --with-hyp2mat --with-CTB --python
+
+# Rebuild CSXCAD with CGAL + Polyhedron (STL) support
+RUN cd /opt/openEMS-Project/CSXCAD && \
+    rm -rf build && mkdir build && cd build && \
+    cmake -DCMAKE_INSTALL_PREFIX=/opt/openEMS \
+          -DWITH_CGAL=ON \
+          -DWITH_POLYHEDRON_READER=ON \
+          .. && \
+    make -j$(nproc) && \
+    make install
+
+# ============================================================
+# Configure openEMS Environment
+# ============================================================
+ENV OPENEMS_ROOT=/opt/openEMS
+ENV PATH="${OPENEMS_ROOT}/bin:${PATH}"
+ENV LD_LIBRARY_PATH="${OPENEMS_ROOT}/lib:${LD_LIBRARY_PATH}"
+ENV PYTHONPATH="${OPENEMS_ROOT}/lib/python3/dist-packages:${PYTHONPATH}"
 
 # ============================================================
 # Configure Jupyter

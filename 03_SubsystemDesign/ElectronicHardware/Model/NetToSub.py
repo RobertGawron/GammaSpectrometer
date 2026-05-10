@@ -57,7 +57,7 @@ def net_to_sub(net_file, sub_file):
     print("Updating .sub file...")
     replace_subckt_body(sub_path, net_body)
 
-    print("✅ Subcircuit updated successfully.")
+    print("Subcircuit updated successfully.")
 
 
 # =============================

@@ -229,7 +229,7 @@
           "drill": 0.0
         }
       ],
-      "zones_allow_external_fillets": false
+      "zones_allow_external_fillets": true
     },
     "ipc2581": {
       "bom_rev": "",
@@ -643,8 +643,12 @@
     },
     "bus_aliases": {
       "CLK": [
-        "ADC_CLK",
-        "FPGA_CLK"
+        "ADC_CLK_P",
+        "ADC_CLK_N",
+        "FPGA_CLK_B0_P",
+        "FPGA_CLK_B0_N",
+        "FPGA_CLK_B1_P",
+        "FPGA_CLK_B1_N"
       ],
       "FPGA_CFG_IF": [
         "CFG_SPI_CS",
@@ -722,7 +726,7 @@
         "uuid": "d6192878-4721-4ef4-99ff-dbbad0502886"
       }
     ],
-    "used_designators": "",
+    "used_designators": "U302,U403,U502-503,U802,U1401-1402,U1602,D401,D502-503,D1901,#PWR413-416,#PWR512-523,#PWR801-804,#PWR1402-1403,#PWR1611,#PWR1807-1812,#PWR1901-1903,C408-409,C510-528,C801-802,C1404-1409,C1609-1611,C1804-1809,C1901-1902,R508,R801-808,R1401-1422,R1609-1619,R1901-1903,TP503-507,TP801-802,TP1403-1404,TP1606,RN501-504,JP801",
     "variants": []
   },
   "sheets": [
@@ -781,14 +785,6 @@
     [
       "b16128e5-6398-4e08-86d4-8842ad98ebb1",
       "Analog Power"
-    ],
-    [
-      "77b94cc4-5e4f-48ca-a6e0-c84b7093f221",
-      "Analog Power Negative"
-    ],
-    [
-      "e750a3cb-e2c5-4e50-bcee-30ecfb83cac8",
-      "Analog Power Positive"
     ],
     [
       "42540219-26d7-4d17-b5bd-2b115da83203",
