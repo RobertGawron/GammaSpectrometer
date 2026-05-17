@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.8,
-          "height": 1.27,
-          "width": 2.54
+          "drill": 0.0,
+          "height": 0.4,
+          "width": 1.45
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -50,7 +50,23 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "border_display_style": 2,
+          "border_hatch_pitch": 0.5,
+          "corner_radius": 0.0,
+          "corner_smoothing": 0,
+          "fill_mode": 0,
+          "hatch_gap": 1.5,
+          "hatch_orientation": 0.0,
+          "hatch_smoothing_level": 0,
+          "hatch_smoothing_value": 0.1,
+          "hatch_thickness": 1.0,
+          "min_clearance": 1.0,
+          "min_island_area": 10.0,
+          "min_thickness": 0.25,
+          "pad_connection": 1,
+          "remove_islands": 0,
+          "thermal_relief_gap": 0.5,
+          "thermal_relief_spoke_width": 0.5
         }
       },
       "diff_pair_dimensions": [
@@ -195,6 +211,7 @@
       ],
       "track_widths": [
         0.0,
+        0.2,
         0.35
       ],
       "tuning_pattern_settings": {
@@ -726,7 +743,7 @@
         "uuid": "d6192878-4721-4ef4-99ff-dbbad0502886"
       }
     ],
-    "used_designators": "U302,U403,U502-503,U802,U1401-1402,U1602,D401,D502-503,D1901,#PWR413-416,#PWR512-523,#PWR801-804,#PWR1402-1403,#PWR1611,#PWR1807-1812,#PWR1901-1903,C408-409,C510-528,C801-802,C1404-1409,C1609-1611,C1804-1809,C1901-1902,R508,R801-808,R1401-1422,R1609-1619,R1901-1903,TP503-507,TP801-802,TP1403-1404,TP1606,RN501-504,JP801",
+    "used_designators": "",
     "variants": []
   },
   "sheets": [
