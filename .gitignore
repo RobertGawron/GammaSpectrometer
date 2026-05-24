@@ -1,0 +1,95 @@
+# ==========================================================
+# Global Git Ignore
+# ==========================================================
+
+
+# ==========================================================
+# General
+# ==========================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+.history/
+.vscode/
+.idea/
+
+
+# ==========================================================
+# Python / Jupyter
+# ==========================================================
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+
+# ==========================================================
+# KiCad – Transient / Local Files
+# ==========================================================
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.fp-lib-table.bak
+*.sym-lib-table.bak
+*.legacy_pcb
+*.legacy_sch
+*.lck
+*.kicad_prl
+fp-info-cache
+kicad-pce-settings.json
+workspace.json
+*-backups/
+_autosave-*
+03_SubsystemDesign/ElectronicHardware/Hardware/GammaSpectrometer-*.pdf
+
+# ==========================================================
+# KiCad – Manufacturing Outputs
+# ==========================================================
+*.gbr
+*.drl
+plots/
+gerbers/
+bom/
+production/
+fabrication-toolkit-options.json
+
+
+# ==========================================================
+# LTspice
+# ==========================================================
+*.log
+*.net
+*.raw
+*.op.raw
+*.fft
+*.meas
+*.prb
+*.mrk
+*.sim
+*.opj
+*.DSN
+*.db
+TRAN/
+dc/
+SCHEMATIC1/
+
+
+# ==========================================================
+# FPGA
+# ==========================================================
+build/
+*.rpt
+*.log
+*.json
+
+
+# ==========================================================
+# Diagrams
+# ==========================================================
+02_SystemArchitecture/Diagrams/**
+
+# Allow controlled source diagrams
+!02_SystemArchitecture/Diagrams/**/*.plantuml
+!02_SystemArchitecture/Diagrams/**/*.svg

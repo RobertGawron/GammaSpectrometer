@@ -1,0 +1,183 @@
+# GammaSpectrometer FPGA Implementation
+
+# Project paths
+DESIGN_DIR := "../../03_SubsystemDesign/DigitalLogic"
+VERIFY_DIR := "../../05_Verification/DigitalLogic"
+BUILD_DIR := "Build"
+
+# Report Paths
+VERIFICATION_REPORTS := "../../05_Verification/DigitalLogic/Reports"
+IMPLEMENTATION_REPORTS := BUILD_DIR + "/Reports"
+
+# FPGA target configuration
+FPGA_PART := "hx4k"
+FPGA_PKG := "tq144"
+
+# Default recipe
+default:
+    @just --list
+
+# Build Management
+build-dir:
+    mkdir -p {{BUILD_DIR}}
+    mkdir -p {{BUILD_DIR}}/Formal
+    mkdir -p {{BUILD_DIR}}/Waves
+    mkdir -p {{IMPLEMENTATION_REPORTS}}/Synthesis
+    mkdir -p {{VERIFICATION_REPORTS}}/Quality
+    mkdir -p {{VERIFICATION_REPORTS}}/Formal
+    mkdir -p {{VERIFICATION_REPORTS}}/Testing
+    mkdir -p {{VERIFICATION_REPORTS}}/Documentation
+
+# Synthesize FPGA bitstream
+build: build-dir
+    #!/usr/bin/env bash
+    set -euo pipefail
+    echo "Starting FPGA synthesis..."
+    
+    # Run synthesis
+    yosys -m ghdl synth.ys
+    
+    # Place and route
+    nextpnr-ice40 --{{FPGA_PART}} --package {{FPGA_PKG}} \
+        --json {{BUILD_DIR}}/Top.json \
+        --pcf {{DESIGN_DIR}}/Constraints/Pins.pcf \
+        --asc {{BUILD_DIR}}/Top.asc \
+        --report {{IMPLEMENTATION_REPORTS}}/Synthesis/timing_report.txt
+    
+    # Generate bitstream
+    icepack {{BUILD_DIR}}/Top.asc {{BUILD_DIR}}/Top.bin
+    
+    echo "Build complete: {{BUILD_DIR}}/Top.bin"
+
+# Program FPGA device
+program:
+    @test -f {{BUILD_DIR}}/Top.bin || (echo "No bitstream found. Run 'just build' first." && exit 1)
+    iceprog {{BUILD_DIR}}/Top.bin
+
+# Code Quality and Analysis
+style-check: build-dir
+    vsg --style jcl \
+        -f {{DESIGN_DIR}}/Source/**/*.vhdl \
+        -f {{VERIFY_DIR}}/UnitVerification/**/*.vhdl \
+        2>&1 | tee {{VERIFICATION_REPORTS}}/Quality/StyleCheck.log
+
+style-fix:
+    vsg --style jcl --fix \
+        {{DESIGN_DIR}}/Source/**/*.vhdl \
+        {{VERIFY_DIR}}/UnitVerification/**/*.vhdl
+
+analyze: build-dir
+    mkdir -p {{BUILD_DIR}}/GHDL
+    ghdl -a --std=08 -fsynopsys -frelaxed --warn-error \
+        --workdir={{BUILD_DIR}}/GHDL \
+        {{DESIGN_DIR}}/Source/Packages/*.vhdl \
+        {{DESIGN_DIR}}/Source/Core/*.vhdl \
+        {{DESIGN_DIR}}/Source/Peripherals/**/*.vhdl \
+        {{DESIGN_DIR}}/Source/Top/*.vhdl \
+        2>&1 | tee {{VERIFICATION_REPORTS}}/Quality/AnalysisReport.log
+
+lint: style-check analyze
+
+# Formal Verification
+formal: build-dir
+    #!/usr/bin/env bash
+    set -euo pipefail
+    
+    FAILED=0
+    for sby_file in {{VERIFY_DIR}}/FormalVerification/*.sby; do
+        if [[ -f "$sby_file" ]]; then
+            name=$(basename "$sby_file" .sby)
+            echo "Verifying: $name"
+            
+            # Run prove task
+            if sby -f "$sby_file" prove -d {{BUILD_DIR}}/Formal/$name/prove > {{VERIFICATION_REPORTS}}/Formal/${name}_prove.log 2>&1; then
+                echo "PASS: $name (prove)"
+            else
+                echo "FAIL: $name (prove)"
+                FAILED=1
+            fi
+            
+            # Run cover task
+            if sby -f "$sby_file" cover -d {{BUILD_DIR}}/Formal/$name/cover > {{VERIFICATION_REPORTS}}/Formal/${name}_cover.log 2>&1; then
+                echo "PASS: $name (cover)"
+            else
+                echo "FAIL: $name (cover - may be acceptable)"
+            fi
+        fi
+    done
+    
+    if [[ $FAILED -eq 1 ]]; then
+        echo "Formal verification failed!"
+        exit 1
+    fi
+
+formal-one NAME: build-dir
+    sby -f {{VERIFY_DIR}}/FormalVerification/{{NAME}}.sby prove \
+        -d {{BUILD_DIR}}/Formal/{{NAME}}/prove \
+        2>&1 | tee {{VERIFICATION_REPORTS}}/Formal/{{NAME}}_prove.log
+    sby -f {{VERIFY_DIR}}/FormalVerification/{{NAME}}.sby cover \
+        -d {{BUILD_DIR}}/Formal/{{NAME}}/cover \
+        2>&1 | tee {{VERIFICATION_REPORTS}}/Formal/{{NAME}}_cover.log
+
+# Unit Testing with VUnit
+test: build-dir
+    python run.py -v 2>&1 | tee {{VERIFICATION_REPORTS}}/Testing/UnitTests.log
+
+test-report: build-dir
+    python run.py \
+        --xunit-xml {{VERIFICATION_REPORTS}}/Testing/UnitTestResults.xml \
+        -v > {{VERIFICATION_REPORTS}}/Testing/UnitTestsReport.log 2>&1
+
+test-one NAME:
+    python run.py -v '*{{NAME}}*' 2>&1 | tee {{VERIFICATION_REPORTS}}/Testing/{{NAME}}_test.log
+
+test-list:
+    python run.py --list
+
+test-wave PATTERN: build-dir
+    python run.py --wave -v "*{{PATTERN}}*"
+
+# Documentation Generation
+docs: build-dir
+    mkdir -p {{BUILD_DIR}}/Documentation
+    doxygen ../../07_DevOps/Configs/Doxyfile 2>&1 | tee {{VERIFICATION_REPORTS}}/Documentation/DoxygenBuild.log
+
+# Waveform Viewing
+wave NAME:
+    @test -f {{BUILD_DIR}}/Waves/{{NAME}}.ghw || (echo "Waveform not found: {{NAME}}.ghw" && exit 1)
+    gtkwave {{BUILD_DIR}}/Waves/{{NAME}}.ghw &
+
+formal-wave-prove NAME:
+    @test -f {{BUILD_DIR}}/Formal/{{NAME}}/prove/engine_0/trace.vcd || (echo "Formal prove trace not found for {{NAME}}" && exit 1)
+    gtkwave {{BUILD_DIR}}/Formal/{{NAME}}/prove/engine_0/trace.vcd &
+
+formal-wave-cover NAME:
+    @test -f {{BUILD_DIR}}/Formal/{{NAME}}/cover/engine_0/trace.vcd || (echo "Formal cover trace not found for {{NAME}}" && exit 1)
+    gtkwave {{BUILD_DIR}}/Formal/{{NAME}}/cover/engine_0/trace.vcd &
+
+# Clean Operations
+clean:
+    rm -rf {{BUILD_DIR}}
+
+clean-all: clean
+    find . -name "*.ghw" -delete
+    find . -name "*.vcd" -delete
+
+# Verification Workflows
+verify: analyze test
+
+verify-full: analyze test formal build
+
+# Development Workflows
+all: clean lint test build
+
+# Status and Information
+status:
+    @echo "Project Status:"
+    @echo "Design Directory: {{DESIGN_DIR}}"
+    @echo "Verification Directory: {{VERIFY_DIR}}"
+    @echo "Build Directory: {{BUILD_DIR}}"
+    @echo "Verification Reports: {{VERIFICATION_REPORTS}}"
+    @echo "Implementation Reports: {{IMPLEMENTATION_REPORTS}}"
+    @echo "FPGA Target: {{FPGA_PART}}/{{FPGA_PKG}}"
+    @test -f {{BUILD_DIR}}/Top.bin && echo "Bitstream: Available" || echo "Bitstream: Not built"

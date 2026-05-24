@@ -1,0 +1,2065 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "d6192878-4721-4ef4-99ff-dbbad0502886")
+	(paper "A4")
+	(title_block
+		(title "Top-Level System Architecture")
+		(date "2026-04-11")
+		(rev "0.1")
+		(company "RG")
+		(comment 2 "Schematic Diagram")
+		(comment 3 "DRAFT")
+	)
+	(lib_symbols)
+	(text "System Design Notes:\n\n• Analog and digital grounds joined at single star point under ADC.\n• +3V3_A generated via low-noise LDO (TPS7A47) from +V_IN.\n• +3V3_D derived from digital buck regulator.\n• +3V3_CLKGEN isolated via ferrite bead from +3V3_D.\n• ADC digital IO operates at 3.3V LVCMOS.\n• Clock jitter target < 1ps RMS."
+		(exclude_from_sim no)
+		(at 50.8 133.35 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "07132441-afac-4108-a30c-57b859c9416a")
+	)
+	(junction
+		(at 67.31 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11e38557-b7be-42c6-8f4f-4ba1985082be")
+	)
+	(junction
+		(at 151.13 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27e16a07-3393-43f5-8a1d-d051ab2ae0f1")
+	)
+	(junction
+		(at 171.45 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "623351fd-4d1e-4a67-8bd8-ce979a865e27")
+	)
+	(junction
+		(at 171.45 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9679c818-981d-4c72-b92b-3f6bf075bed7")
+	)
+	(junction
+		(at 105.41 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bcf1f2a2-0e69-49f1-ba62-16ddb3d487f3")
+	)
+	(junction
+		(at 67.31 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bd67b9c1-f3a0-45e7-a152-a1a80ab248d0")
+	)
+	(junction
+		(at 102.87 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c29dd96b-621f-4c56-b8a9-b6ac2c87a7f9")
+	)
+	(junction
+		(at 105.41 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c77253d0-b9cd-487c-bab1-7a406cb907f7")
+	)
+	(junction
+		(at 144.78 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb909a10-2d05-4228-b777-3a76240946a5")
+	)
+	(wire
+		(pts
+			(xy 105.41 38.1) (xy 151.13 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05e98fee-3ae0-4c25-b5b0-6ba369494935")
+	)
+	(wire
+		(pts
+			(xy 158.75 48.26) (xy 151.13 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a12a1f2-93de-41ca-94ba-b79ec75dda53")
+	)
+	(wire
+		(pts
+			(xy 240.03 48.26) (xy 242.57 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bab29c7-e7f8-4d3a-a205-aafa6d10ea40")
+	)
+	(bus
+		(pts
+			(xy 147.32 58.42) (xy 147.32 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d023f81-bcc2-471d-bbfd-d274d19fd509")
+	)
+	(wire
+		(pts
+			(xy 171.45 138.43) (xy 171.45 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0df68b74-f00c-4692-a010-81b520230f39")
+	)
+	(bus
+		(pts
+			(xy 194.31 58.42) (xy 190.5 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff00644-7d81-4ea4-91d8-2efbaf857a59")
+	)
+	(bus
+		(pts
+			(xy 190.5 71.12) (xy 153.67 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ffe5358-be4d-44d1-a048-20544d55c1f1")
+	)
+	(wire
+		(pts
+			(xy 92.71 96.52) (xy 110.49 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13db47f1-0ffa-4cfd-88fd-978e9099e15f")
+	)
+	(wire
+		(pts
+			(xy 67.31 33.02) (xy 67.31 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14fb03b9-ee38-4861-9778-7144184ede3f")
+	)
+	(wire
+		(pts
+			(xy 250.19 82.55) (xy 166.37 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a7cae38-dbf4-4f86-92b5-3a4d281cb8cc")
+	)
+	(wire
+		(pts
+			(xy 105.41 55.88) (xy 105.41 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ff22cdb-d264-494f-a3bc-8111db6c3a61")
+	)
+	(wire
+		(pts
+			(xy 92.71 99.06) (xy 102.87 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23017b6a-513f-4636-8ab3-e5f1a1dbc3dd")
+	)
+	(wire
+		(pts
+			(xy 214.63 99.06) (xy 214.63 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2329bb58-06da-4bb4-9e22-7f43f851a788")
+	)
+	(wire
+		(pts
+			(xy 67.31 53.34) (xy 67.31 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "254a0d31-87a9-4f58-8640-ccf72aed646b")
+	)
+	(bus
+		(pts
+			(xy 173.99 144.78) (xy 147.32 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a69fa0c-b6ed-4fc2-9daa-7ca0c17b6c1a")
+	)
+	(bus
+		(pts
+			(xy 153.67 71.12) (xy 153.67 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c7aff06-cd4e-4967-908e-168f6f4e6cb3")
+	)
+	(wire
+		(pts
+			(xy 151.13 48.26) (xy 151.13 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ddb4e97-d64b-4963-909d-90ab17c2b0d4")
+	)
+	(wire
+		(pts
+			(xy 173.99 138.43) (xy 171.45 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "352effd6-d4bd-47cd-86ad-d1b782cdfb66")
+	)
+	(wire
+		(pts
+			(xy 250.19 40.64) (xy 250.19 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35c09b0f-e690-4ac9-8eb6-b34eccb3ee82")
+	)
+	(bus
+		(pts
+			(xy 144.78 153.67) (xy 173.99 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "39831bb3-d304-43f9-93c7-a297a8040c92")
+	)
+	(wire
+		(pts
+			(xy 68.58 96.52) (xy 67.31 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f1c9334-cc33-4201-b307-797c1faa44bb")
+	)
+	(bus
+		(pts
+			(xy 168.91 111.76) (xy 173.99 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42a3aae6-e714-4582-ad9c-8173a971b522")
+	)
+	(wire
+		(pts
+			(xy 95.25 38.1) (xy 105.41 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43bcfa10-4bd8-4539-9656-93ab170e7d33")
+	)
+	(bus
+		(pts
+			(xy 135.89 58.42) (xy 147.32 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4479a66e-cd92-466e-a2b6-30660db832cf")
+	)
+	(wire
+		(pts
+			(xy 100.33 104.14) (xy 100.33 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44d830c8-e770-4c64-9bea-7e698150c4b4")
+	)
+	(wire
+		(pts
+			(xy 102.87 101.6) (xy 102.87 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "475570d8-a67b-4418-9c78-17daa3a470df")
+	)
+	(wire
+		(pts
+			(xy 187.96 54.61) (xy 194.31 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a35c777-a991-4f4b-ac57-cc2cee85bf90")
+	)
+	(wire
+		(pts
+			(xy 110.49 96.52) (xy 110.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b6c5a8a-4008-4a65-9335-5fc2c903f043")
+	)
+	(wire
+		(pts
+			(xy 242.57 74.93) (xy 157.48 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4efe7c73-3678-4939-853c-6abdd67bf3c9")
+	)
+	(wire
+		(pts
+			(xy 151.13 38.1) (xy 194.31 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fd5b94e-7376-41a7-8124-79a7f62bf451")
+	)
+	(wire
+		(pts
+			(xy 187.96 45.72) (xy 194.31 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "509a10a5-90ef-4661-93c4-f1576cbacf59")
+	)
+	(wire
+		(pts
+			(xy 58.42 33.02) (xy 67.31 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55a8d61c-8553-4938-805b-18a4bcfd8351")
+	)
+	(wire
+		(pts
+			(xy 153.67 45.72) (xy 153.67 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "587e8fe3-1e0e-410c-a56c-ba98db983c2c")
+	)
+	(wire
+		(pts
+			(xy 102.87 40.64) (xy 102.87 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "592a9313-245b-45da-a474-a9fe0ceb4cea")
+	)
+	(wire
+		(pts
+			(xy 67.31 38.1) (xy 69.85 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ec810ba-4c5c-4d64-833e-d632f6d9191e")
+	)
+	(bus
+		(pts
+			(xy 160.02 119.38) (xy 160.02 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f9c9c20-1603-4ed2-b726-cfe97a7968e8")
+	)
+	(wire
+		(pts
+			(xy 135.89 55.88) (xy 149.86 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5faefc1f-6287-4db1-aecd-ef46ae2bda2d")
+	)
+	(wire
+		(pts
+			(xy 92.71 101.6) (xy 102.87 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6053f44b-0ed1-417f-922d-7149fd846a94")
+	)
+	(wire
+		(pts
+			(xy 105.41 137.16) (xy 113.03 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "633e0e94-108b-4954-b080-0b7518d89f64")
+	)
+	(wire
+		(pts
+			(xy 166.37 114.3) (xy 173.99 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67b6a756-a32c-4a2e-bda4-e79328bc5722")
+	)
+	(bus
+		(pts
+			(xy 144.78 125.73) (xy 144.78 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f32c02d-8940-471b-b496-519e83628ffb")
+	)
+	(wire
+		(pts
+			(xy 158.75 45.72) (xy 153.67 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "715805a9-5b1c-4ae9-9265-65987ffc7954")
+	)
+	(wire
+		(pts
+			(xy 157.48 74.93) (xy 157.48 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72ed304e-0266-406a-966a-241443ea2d23")
+	)
+	(wire
+		(pts
+			(xy 171.45 106.68) (xy 171.45 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "734e8864-304d-400f-9015-3d3f2cd9e8e4")
+	)
+	(bus
+		(pts
+			(xy 190.5 58.42) (xy 190.5 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "772d2f0d-0b7b-4371-a318-95e2b1ac743f")
+	)
+	(wire
+		(pts
+			(xy 240.03 40.64) (xy 250.19 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ae571aa-2eed-45ac-a5a9-cf5065eb52d7")
+	)
+	(wire
+		(pts
+			(xy 242.57 48.26) (xy 242.57 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b489a26-739f-4b25-ae25-d20fe19912fb")
+	)
+	(wire
+		(pts
+			(xy 187.96 52.07) (xy 194.31 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "88747404-02a5-4fe1-aa97-a82b7647459d")
+	)
+	(wire
+		(pts
+			(xy 194.31 40.64) (xy 102.87 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ef85d6e-24a3-4afc-895b-580883508f7b")
+	)
+	(bus
+		(pts
+			(xy 144.78 120.65) (xy 144.78 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "901b3d85-6b01-441b-bd23-6bb2a06c2bd8")
+	)
+	(wire
+		(pts
+			(xy 105.41 99.06) (xy 105.41 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90bf26c8-bbc3-4de1-98e8-d1c1ee452e51")
+	)
+	(wire
+		(pts
+			(xy 105.41 55.88) (xy 109.22 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91e807cc-0fdb-4b54-be59-364f3f7d8695")
+	)
+	(wire
+		(pts
+			(xy 100.33 142.24) (xy 113.03 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93ef1cb6-e186-43bd-a33d-9ca0509fd7fe")
+	)
+	(bus
+		(pts
+			(xy 245.11 77.47) (xy 245.11 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95c56527-d7bd-4b65-81e5-748fe84c9bce")
+	)
+	(bus
+		(pts
+			(xy 137.16 120.65) (xy 144.78 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a27c9af-e13e-4a49-9a0d-6a62f948d045")
+	)
+	(bus
+		(pts
+			(xy 153.67 148.59) (xy 173.99 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9aa04fa4-7b18-46d4-bcc9-c75d7dacbeaa")
+	)
+	(wire
+		(pts
+			(xy 219.71 130.81) (xy 214.63 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9eb218dd-de8c-4270-98de-3ca20a240aac")
+	)
+	(wire
+		(pts
+			(xy 109.22 53.34) (xy 67.31 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a325657c-51f4-48a9-8388-72a6d94f8416")
+	)
+	(wire
+		(pts
+			(xy 105.41 58.42) (xy 105.41 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac21e0b6-ef41-40eb-bedb-f7878a9a80b3")
+	)
+	(wire
+		(pts
+			(xy 113.03 120.65) (xy 110.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad9c5070-0559-4d8d-ac6c-e7eefd35adb0")
+	)
+	(wire
+		(pts
+			(xy 67.31 38.1) (xy 67.31 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af9cf9f6-241b-466f-ba4b-c47d4c36faf6")
+	)
+	(wire
+		(pts
+			(xy 105.41 99.06) (xy 171.45 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4e3a0dd-8ac0-44e9-9811-5a745cc105a1")
+	)
+	(wire
+		(pts
+			(xy 205.74 138.43) (xy 219.71 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5a0bb03-0032-4e23-9a75-7c8d3e09fd36")
+	)
+	(bus
+		(pts
+			(xy 245.11 45.72) (xy 240.03 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5c6af32-670d-4875-b01a-275a238254fa")
+	)
+	(wire
+		(pts
+			(xy 95.25 35.56) (xy 153.67 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b89d7569-3939-460d-a0fa-ab98d375ab96")
+	)
+	(wire
+		(pts
+			(xy 92.71 104.14) (xy 100.33 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ba4e8713-2bf3-467a-911f-eeba6769e121")
+	)
+	(wire
+		(pts
+			(xy 205.74 140.97) (xy 219.71 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c37081e8-2444-4bc6-969e-22076f7ab48f")
+	)
+	(wire
+		(pts
+			(xy 102.87 99.06) (xy 105.41 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4ce90bb-4c35-4949-b8dd-2e5b435d9131")
+	)
+	(wire
+		(pts
+			(xy 171.45 99.06) (xy 214.63 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c59c5295-597e-4340-9fe9-04b220ebcd64")
+	)
+	(wire
+		(pts
+			(xy 173.99 142.24) (xy 149.86 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c760ca6a-8700-4ce0-9e56-52d35de49ade")
+	)
+	(wire
+		(pts
+			(xy 166.37 82.55) (xy 166.37 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbe3de56-8416-44df-897f-4915b487ab09")
+	)
+	(bus
+		(pts
+			(xy 173.99 119.38) (xy 160.02 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf13c3fb-a29e-4b2e-961c-46fb55828912")
+	)
+	(wire
+		(pts
+			(xy 157.48 121.92) (xy 173.99 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf2b3c54-02ff-4866-9c81-b988b0ccc426")
+	)
+	(bus
+		(pts
+			(xy 240.03 38.1) (xy 252.73 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf3bc2a0-9065-4a93-b52b-1a000a628172")
+	)
+	(bus
+		(pts
+			(xy 252.73 85.09) (xy 168.91 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfad46c7-bc75-4e24-b2bb-d2c9169aa6ec")
+	)
+	(wire
+		(pts
+			(xy 109.22 58.42) (xy 105.41 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d445fb5b-01a4-45e3-901c-d72be3a00a84")
+	)
+	(wire
+		(pts
+			(xy 187.96 48.26) (xy 194.31 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4614a98-3f0b-4c6f-8d4f-9c759dd14a05")
+	)
+	(wire
+		(pts
+			(xy 102.87 139.7) (xy 113.03 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3d60a4-3d00-4522-8a4c-04ab759d2e96")
+	)
+	(bus
+		(pts
+			(xy 160.02 77.47) (xy 245.11 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e40578c2-f3f2-47fc-9a29-a7ae9ece9b83")
+	)
+	(bus
+		(pts
+			(xy 252.73 38.1) (xy 252.73 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e606f720-1556-442d-93ef-80b09cc3a8aa")
+	)
+	(bus
+		(pts
+			(xy 173.99 125.73) (xy 144.78 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ecff064f-1337-42da-ace7-9100e7a38b41")
+	)
+	(wire
+		(pts
+			(xy 135.89 53.34) (xy 158.75 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef565c16-4c91-4491-975f-4d4049ec96bd")
+	)
+	(bus
+		(pts
+			(xy 168.91 85.09) (xy 168.91 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f27fba90-da43-471b-b7b0-6b8038ad2855")
+	)
+	(wire
+		(pts
+			(xy 173.99 106.68) (xy 171.45 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5bab9e2-efc5-4348-832c-7f1ccac2c668")
+	)
+	(wire
+		(pts
+			(xy 149.86 55.88) (xy 149.86 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcf20a17-4131-4fed-a3f4-3bc38d5f632f")
+	)
+	(sheet
+		(at 113.03 134.62)
+		(size 26.67 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "15693ce6-b2f2-408a-b00e-10ad93f3b693")
+		(property "Sheetname" "FPGA Power And Configuration"
+			(at 113.03 133.9084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAPowerAndConfiguration.kicad_sch"
+			(at 113.03 146.6346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+2V5_FPGA" input
+			(at 113.03 139.7 180)
+			(uuid "a33e0733-397a-4a8b-8798-ff5fde85f5b6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+1V2_FPGA" input
+			(at 113.03 142.24 180)
+			(uuid "18db3f3b-9d3e-4f59-bf09-9f0ee2153222")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_FPGA" input
+			(at 113.03 137.16 180)
+			(uuid "aa17e940-4602-468e-9202-0ed48370b116")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 50.8)
+		(size 26.67 11.43)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "26c85e8f-d7e7-4def-9549-c7a26d210092")
+		(property "Sheetname" "SiPM Bias"
+			(at 109.22 50.0884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "SiPMBias.kicad_sch"
+			(at 109.22 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+V_IN" input
+			(at 109.22 53.34 180)
+			(uuid "3541bd54-0996-4fa3-a795-a7ba3fbeff9c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+V_SIPM_BIAS" output
+			(at 135.89 53.34 0)
+			(uuid "54a8b467-b0a2-4467-90eb-79aca99d4286")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_BIAS_OK" output
+			(at 135.89 55.88 0)
+			(uuid "ba3724e9-ce96-4e6f-ae2b-4e2987405eea")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+3V3_A" input
+			(at 109.22 55.88 180)
+			(uuid "3b5bd285-d4e8-4377-838c-ceb774cc1f6b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{SIPM_BIAS_I2C}" bidirectional
+			(at 135.89 58.42 0)
+			(uuid "7001e413-a307-4c14-8f73-ffec1e25f2d8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+3V3_D" input
+			(at 109.22 58.42 180)
+			(uuid "8b276b7a-dd3b-44a2-9d98-a0c27ca97e24")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 219.71 128.27)
+		(size 30.48 16.51)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "42540219-26d7-4d17-b5bd-2b115da83203")
+		(property "Sheetname" "External Interfaces"
+			(at 219.71 127.5584 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ExternalInterfaces.kicad_sch"
+			(at 219.71 145.3646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "MEAS_UART_RX" input
+			(at 219.71 138.43 180)
+			(uuid "1a7bf90d-0d92-4aed-8435-5dfeb39f7a3f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MEAS_UART_TX" output
+			(at 219.71 140.97 180)
+			(uuid "c3cf9825-d07e-44d3-a809-567a08a4d87e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_D" input
+			(at 219.71 130.81 180)
+			(uuid "ab168400-af88-4153-9585-e6a7c6329ed3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "17")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 113.03 118.11)
+		(size 24.13 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5e927257-5338-4ea8-9ca0-aa5d85a4e135")
+		(property "Sheetname" "Clock Generation"
+			(at 113.03 117.3984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ClockGeneration.kicad_sch"
+			(at 113.03 123.7746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "{CLK}" output
+			(at 137.16 120.65 0)
+			(uuid "7513935c-6cf6-4322-a46d-a0a8a1a99d8d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+3V3_CLKGEN" input
+			(at 113.03 120.65 180)
+			(uuid "66d0370f-c47d-4523-b7c4-6b03911ddad0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 194.31 35.56)
+		(size 45.72 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6466b224-4c49-4157-b92d-85e1a2f108ad")
+		(property "Sheetname" "ADC"
+			(at 194.31 34.8484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 194.31 61.5446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3V3_A" input
+			(at 194.31 38.1 180)
+			(uuid "5419d8ad-1b6e-48d5-acf3-937831f38927")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{SIPM_ADC_CFG_IF}" input
+			(at 194.31 58.42 180)
+			(uuid "f1984cae-ca21-4580-b202-7756f3095a71")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_D" input
+			(at 194.31 40.64 180)
+			(uuid "5a8b0334-7139-4663-8d1a-93ddbc3cf233")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH2_OTR" output
+			(at 240.03 48.26 0)
+			(uuid "5e7c98f6-ef37-4e18-9a18-cb6e91cfd3cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_ADC_CH1_OTR" output
+			(at 240.03 40.64 0)
+			(uuid "2ea7694e-1871-4ade-8159-a4e9850afaf5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_OUT_CH2_P" input
+			(at 194.31 52.07 180)
+			(uuid "00ab2a2a-59d3-4b06-80ee-662067039656")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AFE_OUT_CH2_N" input
+			(at 194.31 54.61 180)
+			(uuid "07f35b7e-e256-4cec-9601-3f16a11b5250")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH1_DATA[1..12]" output
+			(at 240.03 38.1 0)
+			(uuid "c69131d6-759d-48c1-992a-9ac8b275511f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_OUT_CH1_P" input
+			(at 194.31 45.72 180)
+			(uuid "b5b18680-bbd3-481b-a5f0-7d24cac882cc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH2_DATA[1..12]" output
+			(at 240.03 45.72 0)
+			(uuid "0ba227c5-1ff0-418e-963e-fdf29c7730cf")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_OUT_CH1_N" input
+			(at 194.31 48.26 180)
+			(uuid "931ba680-6439-461a-aad1-a826822dd57b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 173.99 135.89)
+		(size 31.75 20.32)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "8216f158-49c4-484b-8a87-71cb98b46f18")
+		(property "Sheetname" "FPGA IO Banks 2-3"
+			(at 173.99 135.1784 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAIOBanks23.kicad_sch"
+			(at 173.99 156.7946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3V3_FPGA" input
+			(at 173.99 138.43 180)
+			(uuid "b2af6385-99a2-461f-bbd3-3ee22f572bf9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MEAS_UART_RX" input
+			(at 205.74 138.43 0)
+			(uuid "97da3cf7-5df8-40c6-8564-5eda3853a49f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "{CLK}" input
+			(at 173.99 153.67 180)
+			(uuid "8499baca-9d68-4be4-ad01-ef0d50e3b06f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{SIPM_BIAS_I2C}" bidirectional
+			(at 173.99 144.78 180)
+			(uuid "07fa9d4b-cfe5-401a-a4d3-f7f9058b9cb9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MEAS_UART_TX" output
+			(at 205.74 140.97 0)
+			(uuid "9065cf2d-bdb2-4e12-b12b-e6a63e424544")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SIPM_BIAS_OK" input
+			(at 173.99 142.24 180)
+			(uuid "05dc5794-78a9-4631-9c53-f76954bcf01e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{SIPM_ADC_CFG_IF}" input
+			(at 173.99 148.59 180)
+			(uuid "81a5b854-9f68-47e2-801b-11fafeaabe99")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "18")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 69.85 33.02)
+		(size 25.4 7.62)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b16128e5-6398-4e08-86d4-8842ad98ebb1")
+		(property "Sheetname" "Analog Power"
+			(at 69.85 32.3084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AnalogPower.kicad_sch"
+			(at 69.85 41.2246 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+V_IN" input
+			(at 69.85 38.1 180)
+			(uuid "0e5d0448-6e49-47a8-b71f-e40c0a380306")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_A" output
+			(at 95.25 38.1 0)
+			(uuid "6a4d040d-32a1-422f-a000-db84a382cc08")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+5V0_A" output
+			(at 95.25 35.56 0)
+			(uuid "791ee4f9-7af4-48f8-84eb-6529efc81e1d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "14")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 68.58 93.98)
+		(size 24.13 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ba90db14-78d5-4d37-a605-27a90511d129")
+		(property "Sheetname" "Digital Power"
+			(at 68.58 93.2684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DigitalPower.kicad_sch"
+			(at 68.58 108.5346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+1V2_D" output
+			(at 92.71 104.14 0)
+			(uuid "fe8dc01c-d344-4ed1-bbf1-231363b82035")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+3V3_D" output
+			(at 92.71 99.06 0)
+			(uuid "7f6bd874-668c-484b-9a2f-8726dd1ccca2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+V_IN" input
+			(at 68.58 96.52 180)
+			(uuid "f7114ae9-78e8-4e35-9136-b0347c7a6484")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_CLKGEN" output
+			(at 92.71 96.52 0)
+			(uuid "952470e7-082d-423b-a20d-68ac004c28b1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+2V5_D" output
+			(at 92.71 101.6 0)
+			(uuid "ff6d2121-f96b-4535-a493-5a9938f71431")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 173.99 104.14)
+		(size 31.75 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d3362f67-e7a2-47f5-8d4d-2679554f64d9")
+		(property "Sheetname" "FPGA IO Banks 0-1"
+			(at 173.99 103.4284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGAIOBanks01.kicad_sch"
+			(at 173.99 128.8546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+3V3_FPGA" input
+			(at 173.99 106.68 180)
+			(uuid "453dfc27-13f1-42f1-a29e-dc564f650548")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH1_DATA[1..12]" output
+			(at 173.99 111.76 180)
+			(uuid "a2188d6d-5e07-4306-acf6-7228af0c4fb9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH2_DATA[1..12]" output
+			(at 173.99 119.38 180)
+			(uuid "882de6f5-e7b5-4351-a70f-7cdfa451c662")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH2_OTR" output
+			(at 173.99 121.92 180)
+			(uuid "58c124c2-6f4d-4901-9877-4a54902ccd03")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIPM_ADC_CH1_OTR" input
+			(at 173.99 114.3 180)
+			(uuid "62597b8e-b103-4f26-842f-36f6f21e411c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "{CLK}" output
+			(at 173.99 125.73 180)
+			(uuid "1e4601aa-7b36-415c-81c8-e63d19700bd4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "19")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 158.75 43.18)
+		(size 29.21 13.97)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "dff2f075-29cf-4b6b-9196-9df00cd59d26")
+		(property "Sheetname" "AFE"
+			(at 158.75 42.4684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AFE.kicad_sch"
+			(at 158.75 57.7346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "SIPM_BIAS" input
+			(at 158.75 53.34 180)
+			(uuid "cb1c3668-5822-43c5-8a2a-bdacb04f1d90")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "AFE_CH2_P" output
+			(at 187.96 52.07 0)
+			(uuid "f014c044-039e-4e59-a860-3ac1abfdb93a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_CH1_N" output
+			(at 187.96 48.26 0)
+			(uuid "72c4a5b8-1eb0-47e0-8c99-6a58f0b7921d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_CH1_P" output
+			(at 187.96 45.72 0)
+			(uuid "1d6b7b29-3905-4f21-922a-d7bd35aea261")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "AFE_CH2_N" output
+			(at 187.96 54.61 0)
+			(uuid "4308edb7-1cff-41e5-9ddb-7cb99d0f625c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "+5V0_A" input
+			(at 158.75 45.72 180)
+			(uuid "5654edd7-f33b-441f-82ff-2df8b4b5628f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+3V3_A" input
+			(at 158.75 48.26 180)
+			(uuid "10e5bb89-739e-4ba9-b208-7cdf03aa8c25")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 40.64 30.48)
+		(size 17.78 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ec244bf6-1193-4eaf-b1ba-fe26d901e8f4")
+		(property "Sheetname" "Power Input"
+			(at 40.64 29.7684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "PowerInput.kicad_sch"
+			(at 40.64 36.1446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "+V_IN" output
+			(at 58.42 33.02 0)
+			(uuid "bf777a76-9c0b-4c35-a694-2907f3ba619b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "GammaSpectrometer"
+				(path "/d6192878-4721-4ef4-99ff-dbbad0502886"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "A2_ISO5457-1999_ISO7200-2004_EN.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WBnLY0mAGYvhCMgcdsc94SmrZOZ/neeBkp8w0v6hzhLQkKSphqAWmEAiUKwCIAAbgB3AO7/
+				ihWr/mdu7tVlbrts9395JztUyu34nx/0PBxsZfKm11T2zscF9Jh8wAfBKBIpXpAROnFi8hEjT+Jg
+				81UciMkYebASxRg5KYqLMXkg81BO6JlAp2IRJY/y8G00MeLFs/Ggh8I8vNl8Hc8UOV5kUrLENzGZ
+				AAHREl0cisWbOBITjOCaHbPb5spMu72zpfzua52vU+vamdV3XXVVteaMaf/7WsrurpRutzPDF6EX
+				yYvkiZMlo5vJCEWShguSc4qkyPEoDnbTRXdVsLkz+O4LekOo3Fub3VdZ273pMn+3/t2p/3b8v075
+				vznmfp1b7BzZflegidK7yEdxzwRF0vQkBFpbtkydFaumz7nOmJlfLbWWLl1fnUytarneeqny83Pq
+				6lTWbFVBhNva8kUnRtCxZuq670NT88LB5BS3IDXiYKFocqG0KoduDcwY+Bd2KaxDXiXARmh26O0G
+				1mbgtrBMYR/yixPYVQABj29W6YIYMJhQ2xqizRR6qZdwXgpRd2bpDXtFsb2Qbtib3uyKgbbxPYwJ
+				b37VJ5DzsKpZpulJSfSs0XgSaz/mBTqPIkmWiSR4lPhQqK/JEtM5XbrEjNCrWCKRQi+lEUFJQnDt
+				i8uLF50HIa/4RaAHn+TBpDiRB8KIPIoHJ7NVHYGkqLF0TEREQZKkkOYxFhGSRZp0UjgQwyAMg/Ec
+				RyIgQ0FOCQghAiIkQkKQIYSo4M4BgGs31ZtcOVv6lkJm6JIISV0Tp3bnoODnHA0uDLSU6VLBBjpr
+				rQVlfWm4qJYjW2oYtsjcxfSJjt0lo6geXGoEbHvrzFoGaLY2Ws9vLYUQMlRYMRdqF+fZM9dcgLKI
+				JVojGsUkXHvIGBdJ7JPe0BheJkgG6CmhGH+9SiZxdPebQt7GgdNA4Lgn5adJeqxE2BIPLGb0apKS
+				xWxr0iAj2r4TJP54UEIo+Ll4lMxAjoDQdBvEWsQG/g0BjEdEBkX3BxcMRn7JKAQLuyelJBWyDIHq
+				LsAMlTEAbHRDqqihQ20Unv0OYls5ODFOBGBbMkibJOiHj0LelcKj9oT5bL+NBLPAwuw3BgMjBZbJ
+				JKRtMevVPVdUkibSF2J6KynuwV78B9LivAiK7kFVPcyy4h9WuAfW6Rml6hi56eUWAoqTPbn0HuZM
+				c/o3csO9Ej6l5lNUSmCGVDDWecqpJcSpErYqQXOjwG0irvS4NqekvEKISIELcY6iZGx4BDRd0XNE
+				/Uz8Q4HYrjgIoojNjjgkgQhtVxwERZlF5o7IbfkFY+gZJvMzDP4Eh0w2dfITieZJEFvkQR4v9+TG
+				x0hTGUyK+mCpq8PJRT8tKRv6lxY/7yeL/AKCYMteTiJhZs8vY/zOD7wCRhGdjRxcmT4H0ssLTfGc
+				ZEQ++l2Yq4V+dHogF4tcdvpALiGO/kOnF4h3PdG8/3D6DZWvrK9d5KcBFckTAZa4mOSJAEtcTOLF
+				27Emzbwx2HLr0yY5IDVEaIYTm97hu10P187QrVl2NLBOt4ODLuL+wMyw77KM/mUfOGgd5PSFffg7
+				q9b9cDkmnqA0/BCJx52A2eqxg86lFSXlPihch3LnpTkBAyGJMPQ5NLZkUMS8qw==|
+			)
+			(checksum "990E2E18A3DB62C1E59F10D0DF2478E0")
+		)
+		(file
+			(name "A3_ISO5457-1999_ISO7200-2004_ASMEY1435-2014_EN.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WBjK10oAIaxjSUQr7YBXFZC1+7EZWRzd+SV/scud64n5qWlTUnluPGrUFXlWwCAhwCEAHUA
+				korEIUIR0IkRJ5yM+fp6f3+zc8vNzY8x13bpstWr11rf7c50vZczl5Dio5CMkpwwU+rqPuuUl1k9
+				CkUpWjjgCk2sNFZcpEejFFVMc06QmiZPaCL5QNsqRRp5qYiYmbiBFjdWJ6ZEdBGlaPNAq8EaM6Jq
+				YsT5KMWZsXpUAQImZ+pcNhFRc6GeLJmUS750Kdvbm53jfebnnNsGGVzwocOG7BCuv7+/99z3d2PM
+				6/2/S9kN58wQbu/j11a3oc0qmJhIOeCJibJ5szgaDBJxmFAaGhzuGSYSS4OE8qhEIO1Pl3NHGCYQ
+				Mk4pYrSTiWbFoXgU6n50SlPGdZtWE/UoNDGi5YAFHigTS0WioAyTjh3v6u9/vHi57u727Nmy5cVc
+				3fNTXs/ZbuvWz1zXueMvmJJ9n8Z5mZOEvarLazG0utrBeLSaXKDbcMDSpOlslst36S7bJbtcd/RL
+				aBfhBmH2YKsRnJ+5O7ohN9yGDzrYGDJmy7F/Y864ezHm52Vnr927QBe7AAFQa/AvYxgwqDw/f6w7
+				iLNvlNVsH7tWu/YWdn64+8PA4xnjRGU1dmmkywL/41RVpJmpuYZFpDBuUzvyEjcUxakoQdzMyLKL
+				VZypqxfVmTqlWMHBTBBnbzFJinKs9Q5UiTgvUT7ad8RIUcZMlLq5YCJpAhMtUGs7ftfXvjGpKKFx
+				A6NKmqgqvscBgYyosWBORkREkpQkhWEM0RUhiDTbpA1SMBTCIBCDwRQLQRzCcBhEREAERBgREGKM
+				cVJQ7WCrGxTIrmvWekplbCgCwpB62hy1IwMFe041J9tAWF1TBQ9bu6VHJleLeC16OKctBwsLUZiO
+				F6owlTTO8U/CQ6U3CDZgmz11EjN3ADPTjBZBrE0CId0XWvWqaWzPUFy8AuR3trLGvbMg89KDp4tw
+				6YuoaGBC4HQgCFSYZPYV9b4sopKSSRAGczgTbRI/meP/wcb/fZBGyJIHZ+wpGQCz2XmuPeD8fa+o
+				bN5cQWH2Al9uhMJwrk3xktQGCAzDVjU0ihMpFJWxDlx0GSYUg3NxlQKX4lbOLP390zhoOOjUEsMV
+				GlF4b2YQ07jv7kskANtm8cqkQL0jiunhy47cT6GnweliPh5dSD4tAm65Aw1ZIDsV+a46XVbsg0dj
+				3FVLKdiwrz1PZ7O6xrgEWPM0cDnvIP28pgHa9dx6mJrbxJ2/0zAC8QxkeO1zgQwUVy9+vTi68TRD
+				XuJ3ZQTxIBUu9ZJi5BFo7CBpX8l0+rrFjC0zGVIW2QJ5KpFNdIz6KmLOQo5RIplVk/4DXwX6Lhxf
+				fgUh/xHM5OBps8I4oo2OGNZBfqJ9B1QM0LUNus6wB1v6T1UHHz6wFJij4oICdW6UVBVWytTCATj7
+				yUhMfMbxoqIJa8HFvZp4bywD8kY3g2y2UjhNXe677oEUylajVS52dEP6p8IBKRPneJAZvMqkU2bn
+				ZCVkyAGImW3Yi3yw2GCAqDRlMk0XNGS+4gQLZJuiP/aMaNlJ+m9ZM35wC97OIjY2nyNArYt6T+ES
+				8psT4NkPy7IOChCdzblbZbHPQLPyOLy4kncf3oYqZVTTmmRrsb9bPK7ClqnujcSu2pAqyM1pmVj6
+				21TQe+Az20bcTaVv4UsltRB0UkYCTcuWQPwqRYFiNyWTmQxhSRSSYwS2XPgkr9U=|
+			)
+			(checksum "0D24DA3BE77818C582D21765726CD6C9")
+		)
+		(file
+			(name "A4_ISO5457-1999_ISO7200-2004-compact_EN.kicad_wks")
+			(type worksheet)
+			(data |KLUv/WBuGT0eAEYlbCMgbd35BTm9/+aOUMk9MO1FC7ZnLMduX3ZF2kalFAaQeJCBAWUAYABbAMs8
+				Xp8ihcVKIG45TeVmuTgmV3KJPkUKeqkL8qPzlpLLQ95YbLrEmZR8yKOE+qeeivqNQKKoLMo5RZDo
+				SCD+4dLSy2hG3hFN+BRJytLMpldE1lP4K1ld75aSCRDwFzVxJAiHOJUSEwolrd+CVIbFThRkIjnd
+				hIUM9xBiKrtn96CbRrm7W9NlrJmj/+RQTh7RW1cEY0r+RD0YZmlRlZLLU7jDYjefwv/5qAxjfLuu
+				aa2f5hxzbp9Hlxk695xzTcfYFLLn4VYmDn/HI8M1dmjy6A+PKTlQNEUgd1g4+W1zQrcCzFfuSJee
+				yJqoyvKGgCaE2u9Bbtxet25O3+Z2o47bsbZtZTBfg9nocnurzXGyt63g4zKF6e88FR/eTN3uXTQ1
+				AwABi2O26cKAQQNbyBjKXgJrmms0w7a5UUZrza85LFsGYxhma5YfBuC+e6ShGW3I5Chsg5dlRfmg
+				0t/RfoyEN9znJDouVdXVkAQufdRaY13vvNXa1eTzJ5dcEJXgmgQVq+qgWTZ5MoEJoNFka2gUJElB
+				Ic0BcREhioBHmwfYYSG3z7HclRtCocuRgruhUefAITVaAOO05ZiIogucHIS7gU/llFPBEjVZYhiz
+				cNSWXV3Z2zNVOKXIDGmfQbGQBrilcKB6mvtwAdZOnk7Os3EA+DQHkjwBfpoDF3NE8c6fdLpwF4+I
+				HYH37XyOIHG8uGQFOgqNIztRkA/c+yIh4ecBOXeEUY9v0jEIdmL6LoWOt1I+9xdFE6lQGQlD9mcL
+				nUcMlJrCk0OsjJLhyEb53HDlM1gD6426snnIQAFBhDBLWZHghIJlulAM82WTBw0UleIBAc4adSi9
+				/wuKAecb0Cx9m8iYiAq2xCAWxcgGOLgALNpivkkM/EhHIOusXWf1mrHjBvWYo/0ydnGNi8gs3wWI
+				Q8MAZrOrNYVK47fRxaNMizfUU1niVDPIL1hNjBkp6PcA18KlJ48akQk4RmLSiWGqneJkINoJXkYy
+				i5wZGIDASvwS0s7IOsfswQgcAnFkMk7i72ETa2VGhCYhmoZbTm3TzRpNscXmXOZS7MInCnB2T2NX
+				G3ifrdsZUZzGM+Y5qYB8kIl9tpZakSc8oOX0bI3OhyzCiWZ98qEkGxVbQEcx0e2a8jNLQrrkcXTM
+				a9hgOTYTBaANVQA5U820NFho2i2o3DUcLz3fWpaNdCU3ofJWHBGVSTsHZcPKjLXeOIJzgYIuEXN1
+				X1tLbYpWpAo=|
+			)
+			(checksum "1689031AE7D54414FB173F7E2BBBF4DB")
+		)
+	)
+)

@@ -1,45 +1,79 @@
-# GammaSpectrometer
+# Silicon Photomultiplier Gamma Spectrometer
 
-[![Docs Generation](https://github.com/RobertGawron/GammaSpectrometer/workflows/Docs%20Generation/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions?query=workflow%3A%22Docs+Generation%22) [![Static Code Analysis](https://github.com/RobertGawron/GammaSpectrometer/workflows/Static%20Code%20Analysis/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions?query=workflow%3A%22Static+Code+Analysis%22)
-
-**This project is unfinished.**
+[![Formal Verification](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/formal-verify.yml/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/formal-verify.yml) [![Unit Tests](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/unit-tests.yml) [![firmware-build](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/firmware-build.yml/badge.svg)](https://github.com/RobertGawron/GammaSpectrometer/actions/workflows/firmware-build.yml)
 
 ## Principle of operation
 
-This device allows to measure in quantitive way amount of different isotopes in analyzed sample.
+Gamma Spectrometer allows for the quantitative measurement of the amount of different isotopes in an analyzed sample.
 
-It consist of scintillator (a material that converts gamma particle into photons) and photomultiplier tube that multiply those photons and converts them into electric current pulses. by measuring amplitude of those pulses, it is possible to calculate back the original energy of gamma ray that produced the pulse.
+It consists of a scintillator (a material that converts gamma particles into photons) and a photomultiplier that multiplies those photons and converts them into electric current pulses. By measuring the amplitude of these pulses, it is possible to calculate the original energy of the gamma ray that produced the pulse.
 
-Sampling data over a time and plotting its histogram shows what radioactive isotopes are present in measured sample and what is their ratio.
+Sampling data over time and plotting its histogram reveals which radioactive isotopes are present in the measured sample and their respective ratios.
 
-## System architecture
-
-It is designed in a way that the device can work remotely, e.g. no connection via USB cable to user's  PC is needed.
-
-<img src="./Documentation/Diagrams/ArchitectureOverview.svg"  width="100%">
+[More info.](./02_SystemArchitecture/SystemTheory/README.md)
 
 
-## Overview of the mechanical design
+## System Architecture and Technical Decisions
 
-![render of the device](./Documentation/Pictures/render_28_10_2020.png)
+### Silicon photomultiplier vs traditional PMT
 
-On a left side of the above image is a shield for photomultiplier tube - it's needed to protect the detector from external sources of light and EMI. 
-The detector is connected to a small PCB, visible in the center, it contains circuit for polarization of the tube and connectors.
-On the right side, on the bottom is visible shield for high voltage generator, on the top is visible shield for data acquisition. 
+Conventional gamma spectrometers commonly use vacuum photomultiplier tubes (PMTs). These require high-voltage supplies in the kilovolt range, are mechanically fragile, and are sensitive to magnetic fields.
 
-Parts for 3D printing and model of the whole device were designed in OpenSCAD [[more info]](./Mechanic/MechanicOverview/README.md). Above renderer was done in Blender.
+In this project, a Silicon Photomultiplier (SiPM) is used instead. The SiPM operates at significantly lower bias voltage (tens of volts rather than kilovolts), is mechanically robust, compact, and insensitive to magnetic fields. These characteristics simplify the power supply design and mechanical integration.
+
+### Digital vs analog processing
+
+Traditional spectrometers implement CR-RC shaping networks and peak detection entirely in analog hardware. This approach is cost-effective but offers limited flexibility, as parameter changes require hardware modification.
+
+In this system, pulse shaping and peak detection are performed digitally after high-speed sampling. This increases flexibility and allows signal processing parameters to be modified in firmware without hardware changes. The trade-off is higher performance requirements for the ADC and the need for an FPGA rather than a microcontroller, which increases overall system cost.
+
+
+## Hardware design verification
+
+Hardware design analysis is performed using LTspice for circuit simulation and a Jupyter-based framework for numerical post-processing. These tools are used to validate the interaction between the SiPM, the analog front-end, and the system timing behavior before to PCB design. The goal is to verify theoretical models, evaluate noise and bandwidth limitations, and confirm that design requirements are satisfied.
+
+[More info.](./05_Verification/ElectronicHardware/Simulation/README.md)
+
 
 ## Hardware
 
-- [Documentation of photomultiplier principles](./Hardware/README.md)
-- [Documentation of acquisition and HV power supply](./Hardware/GammaSpectrometer/README.md). Note: values of elements were calculated using model made in Octave [[more info]](./Simulation/Octave/README.md).
+![Architecture Overview](./02_SystemArchitecture/Diagrams/ArchitectureOverview.svg)
 
-PCBs were designed in KiCAD.
+Tools: KiCad.
+
+[More info.](./03_SubsystemDesign/ElectronicHardware/README.md)
+
 
 ## Software
 
-[Details about software architecture.](./Documentation/UML/README.md)
+Target FPGA: iCE40.
 
-## Hazards
+The project is developed using a **completely open-source** FPGA toolchain containerized in Docker.
 
-* **The device exposes high voltage to user, although maximum current is limited, it still poses health risk.**
+* RTL Language: VHDL-2008
+* Synthesis: [Yosys](https://github.com/YosysHQ/yosys), [GHDL](https://github.com/ghdl/ghdl)
+* Place & Route: [nextpnr](https://github.com/YosysHQ/nextpnr)
+* Formal Verification: [SymbiYosys](https://github.com/YosysHQ/sby), PSL assertions
+* Unit Testing Framework: [VUnit](https://vunit.github.io/)
+
+[More info.](./03_SubsystemDesign/DigitalLogic/README.md)
+
+
+## Mechanical
+
+The analog frontend requires a metal chassis for protection from electromagnetic interference and external light sources.
+
+The scintillator crystal is mounted inside using a 3D-printed stand.
+
+The crystal and SiPM are optically coupled using optical gel to minimize light pulse reflections at the interface
+
+Tools: OpenSCAD and FreeCAD.
+
+[More info.](./03_SubsystemDesign/DetectorAssembly/README.md)
+
+
+## DevOps
+
+The development environment is containerized using Docker to avoid polluting the host machine with all the necessary software. The only two software tools that are not containerized are LTspice and KiCad.
+
+[More info.](./07_DevOps/README.md)

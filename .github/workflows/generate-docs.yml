@@ -1,0 +1,21 @@
+name: generate-docs
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  generate-docs:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: documentation
+      artifact_paths: |
+        04_Implementation/DigitalLogic/Build/Documentation/
+        05_Verification/DigitalLogic/Reports/Documentation/
+      run_script: |
+        just -f ./04_Implementation/DigitalLogic/justfile docs

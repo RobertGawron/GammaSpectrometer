@@ -1,0 +1,39 @@
+id: ANA-002
+title: AFE Pulse Amplitude Linearity
+category: Analog
+
+description: >
+  The analog front-end (AFE) shall exhibit integral non-linearity (INL)
+  not exceeding 0.1% of full-scale over the differential output range
+  from 0 V to 2.0 Vpp.
+
+rationale: >
+  Detector physics analysis establishes an electronics noise budget of
+  0.43% RMS. To ensure non-linearity remains a secondary contributor to
+  total resolution, systematic amplitude error must be significantly
+  lower than this noise floor.
+
+  INL represents a deterministic error that cannot be reduced through
+  averaging and directly impacts energy calibration accuracy and peak
+  positioning in gamma spectroscopy.
+
+  Limiting INL to 0.1% ensures linearity-induced error remains negligible
+  relative to statistical and electronic noise sources.
+
+assumptions:
+  - Differential ADC full-scale input range is 2.0 Vpp
+  - Pulse amplitude is the metric used for energy estimation
+  - AFE operates within its linear region (no saturation)
+
+acceptance_criteria:
+  integral_nonlinearity_max_percent: 0.1
+  full_scale_voltage_vpp: 2.0
+
+verification_method:
+  - Transient pulse simulation or precision pulse injection
+  - Input amplitude swept to cover 0–100% of full-scale output (0–2.0 Vpp)
+  - Peak differential output measured per step
+  - Best-fit linear regression applied
+  - INL computed as maximum deviation from best-fit line
+
+status: Draft

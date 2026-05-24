@@ -1,0 +1,24 @@
+services:
+  gammaspec-dev:
+    build:
+      context: ..
+      dockerfile: 07_DevOps/Dockerfile
+    image: ${DOCKER_IMAGE:-gammaspectrometer:local}
+    container_name: gammaspec-dev
+    hostname: gammaspec-dev
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
+    ports:
+      - "6080:6080"   # noVNC
+      - "8888:8888"   # Jupyter
+    environment:
+      - VNC_RESOLUTION=1920x1080
+      - VNC_COL_DEPTH=24
+      - JUPYTER_PORT=8888
+      - VNC_PORT=5901
+      - NOVNC_PORT=6080
+      - TZ=UTC
+    stdin_open: true
+    tty: true
+    restart: unless-stopped

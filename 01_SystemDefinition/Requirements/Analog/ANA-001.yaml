@@ -1,0 +1,46 @@
+id: ANA-001
+title: AFE Differential Output Noise Contribution
+
+category: Analog
+
+description: >
+  The analog front-end differential RMS noise contribution at the ADC
+  differential input pins, including the complete analog front-end and
+  anti-alias filter, shall not exceed 1.5e-3 V RMS when integrated
+  from DC to the Nyquist frequency (20 MHz) with the ADC operating
+  at 40 MSPS.
+
+rationale: >
+  From detector physics analysis, maximum allowable electronics noise 
+  is 0.43 percent RMS (to maintain resolution degradation below 1.5 percent).
+
+  For 2 Vpp differential full-scale at ADC input:
+  V_signal_rms = 2 / (2 * sqrt(2))
+  = 0.707 V
+
+  Maximum allowable total RMS noise based on physics requirement:
+  V_total_max = 0.707 * 0.0043
+  = 3.04e-3 V RMS
+
+  The ADC intrinsic SNR is approximately 70 dB.
+
+  Solving for maximum AFE contribution:
+  V_afe_max = sqrt( (3.04e-3)^2 - (224e-6)^2 )
+  ≈ 3.03e-3 V RMS
+  
+  A 2x safety factor is applied (1.5 mV vs 3.03 mV) to accommodate:
+  - Component variations across production lots
+  - Aging and long-term drift
+  - Simplified design without complex compensation networks
+
+assumptions:
+- ADC intrinsic SNR approx 70 dB typical
+- Differential full-scale equals 2 Vpp
+- Noise integrated from DC to 20 MHz
+- RSS summation of uncorrelated noise sources
+
+acceptance_criteria:
+  differential_output_noise_rms_max: 1.5e-3
+
+status: Draft
+last_verified_commit: null

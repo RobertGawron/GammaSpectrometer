@@ -1,2 +1,4 @@
-# GitHub's language statistics module can't recognize LTSpice files, so just ignore them.
-Simulation/LTSPice/* linguist-vendored
+# LTspice models are incorrectly marked by GitHub as "AGS Script", exclude them from language statistics
+*.asc linguist-vendored
+
+*.sh text eol=lf

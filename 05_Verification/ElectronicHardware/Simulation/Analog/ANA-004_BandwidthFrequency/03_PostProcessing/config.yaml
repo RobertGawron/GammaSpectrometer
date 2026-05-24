@@ -1,0 +1,4 @@
+# File Paths
+paths:
+  simulation_results: '../02_SimulationModel/Model.raw'
+  report_directory: '../04_Report'

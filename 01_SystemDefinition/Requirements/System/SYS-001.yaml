@@ -1,0 +1,36 @@
+id: SYS-001
+title: System Effective Resolution
+
+category: System
+
+description: >
+  The complete signal acquisition chain (AFE + ADC) shall achieve
+  an effective number of bits (ENOB) of at least 10.5 bits when
+  the ADC is operated at 40 MSPS with 2 Vpp differential full-scale input.
+
+rationale: >
+  The AD9238 datasheet specifies a typical SNR of 70 dB
+  at low input frequency.
+
+  ENOB is calculated as:
+    ENOB = (SNR - 1.76) / 6.02
+
+  Substituting SNR = 70 dB:
+    ENOB = (70 - 1.76) / 6.02
+         = 68.24 / 6.02
+         -> 11.3 bits
+
+  Therefore, the maximum achievable system ENOB is
+  limited by the ADC intrinsic performance to approximately 11.3 bits.
+  The system-level ENOB requirement shall not exceed this physical limit.
+
+assumptions:
+  - ENOB calculated from total RMS noise at ADC differential input
+  - Noise integrated from DC to Nyquist frequency (20 MHz)
+  - ADC intrinsic performance per AD9238 datasheet
+
+acceptance_criteria:
+  enob_min: 10.5
+
+status: Draft
+last_verified_commit: null

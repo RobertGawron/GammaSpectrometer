@@ -1,0 +1,102 @@
+name: docker-postbuild-generic
+
+on:
+  workflow_call:
+    inputs:
+      compose_file:
+        required: false
+        type: string
+        default: 07_DevOps/docker-compose.yml
+
+      service_name:
+        required: false
+        type: string
+        default: gammaspec-dev
+
+      up_args:
+        description: "Extra args for docker compose up"
+        required: false
+        type: string
+        default: "-d"
+
+      run_script:
+        description: "Script executed inside the container (bash -lc)"
+        required: true
+        type: string
+
+      artifact_name:
+        required: false
+        type: string
+        default: results
+
+      artifact_paths:
+        description: "Newline-separated paths/globs to upload"
+        required: false
+        type: string
+        default: ""
+
+      working_directory:
+        description: "Working directory inside container"
+        required: false
+        type: string
+        default: /workspace
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code (exact SHA from triggering workflow)
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ github.event.workflow_run.head_repository.full_name }}
+          ref: ${{ github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Set image name
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
+          echo "Set IMAGE_NAME to: ghcr.io/${GITHUB_REPOSITORY,,}"
+
+      - name: Set full Docker image name  
+        run: |
+          echo "DOCKER_IMAGE=${IMAGE_NAME}:${{ github.event.workflow_run.head_sha }}" >> $GITHUB_ENV
+          echo "Set DOCKER_IMAGE to: ${IMAGE_NAME}:${{ github.event.workflow_run.head_sha }}"
+
+      - name: Set up Docker Compose
+        uses: docker/setup-compose-action@v2
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull Docker Image
+        run: |
+          echo "Pulling image: ${DOCKER_IMAGE}"
+          docker pull ${DOCKER_IMAGE}
+
+      - name: Start stack
+        run: |
+          echo "Starting stack with image: ${DOCKER_IMAGE}"
+          docker compose -f "${{ inputs.compose_file }}" up ${{ inputs.up_args }} --no-build
+
+      - name: Run job script in container
+        run: |
+          echo "Running script in container..."
+          docker compose -f "${{ inputs.compose_file }}" exec -T "${{ inputs.service_name }}" \
+            bash -lc "cd ${{ inputs.working_directory }} && ${{ inputs.run_script }}"
+
+      - name: Upload artifacts
+        if: ${{ always() && inputs.artifact_paths != '' }}
+        uses: actions/upload-artifact@v5
+        with:
+          name: ${{ inputs.artifact_name }}
+          path: ${{ inputs.artifact_paths }}
+
+      - name: Clean up
+        if: always()
+        run: |
+          docker compose -f "${{ inputs.compose_file }}" down

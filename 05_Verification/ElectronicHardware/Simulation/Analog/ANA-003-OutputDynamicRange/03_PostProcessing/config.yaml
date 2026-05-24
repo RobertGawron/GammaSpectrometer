@@ -1,0 +1,106 @@
+verification:
+  ana_003:
+    inl_limit_percent: 0.1
+
+    # Minimum output considered "zero coverage"
+    # Expressed as percent of full-scale peak amplitude.
+    # Allows small residual offset or numerical noise.
+    zero_coverage_tolerance_percent: 5.0
+
+    # Required proximity to full-scale peak for coverage validation.
+    # Ensures sweep reaches near full-scale without requiring exact match.
+    full_scale_coverage_tolerance_percent: 5.0
+    # Dynamic range limits
+    differential_output_swing_min_vpp: 2.4
+
+    # ADC utilization window
+    adc_utilization_min_percent: 70.0
+    adc_utilization_max_percent: 95.0
+
+    # Maximum allowed gain compression
+    gain_compression_max_percent: 1.0
+adc:
+  resolution: 12
+  full_scale_voltage: 2.0   # Full-scale differential input range (Vpp)
+
+sensor:
+  topology: parallel
+  number_of_sipm: 2
+
+  electrical:
+    # Each 6x6 mm SiPM has approximately 3400 pF anode-cathode capacitance.
+    # Total detector capacitance:
+    # C_total = number_of_sipm * capacitance_per_sipm_f
+    #         = 2 * 3.4e-9 F
+    #         = 6.8e-9 F
+    capacitance_per_sipm_f: 3.4e-9
+
+    # current_per_kev_a derivation:
+    #
+    # NaI(Tl) light yield = 38000 photons per MeV
+    # Reference energy = 662 keV = 0.662 MeV
+    #
+    # Photons produced:
+    # N_photons = 38000 * 0.662 = 25156 photons
+    #
+    # Effective optical collection factor (geometry * transport) approx 0.199
+    # SiPM PDE approx 0.35
+    #
+    # Detected photoelectrons:
+    # N_detected approx 25156 * 0.199 * 0.35 approx 878
+    #
+    # SiPM gain approx 3e6
+    # Electron charge q = 1.6e-19 C
+    #
+    # Total charge per 662 keV event:
+    # Q = 878 * 3e6 * 1.6e-19 C approx 0.42e-9 C
+    #
+    # NaI(Tl) decay time constant tau approx 230e-9 s
+    #
+    # Peak current approximation:
+    # I_peak approx Q / tau
+    #       approx 0.42e-9 / 230e-9
+    #       approx 1.8e-3 A
+    #
+    # Current per keV:
+    # current_per_kev_a approx 1.8e-3 A / 662 keV
+    #                   approx 2.7e-6 A per keV
+    current_per_kev_a: 2.7e-6
+
+    # max_current_a derivation:
+    #
+    # Design maximum gamma energy approx 3 MeV = 3000 keV
+    #
+    # I_peak(E) = current_per_kev_a * E_keV
+    #
+    # For 3000 keV:
+    # I_peak approx 2.7e-6 * 3000
+    #        approx 8.1e-3 A
+    #
+    # Rounded design envelope:
+    # max_current_a approx 8e-3 A
+    #
+    # This remains below absolute device current limits.
+    max_current_a: 8e-3
+  
+afe:
+  csa:
+    feedback_capacitance_f: 2.2e-9
+    scint_tau_s: 230e-9
+
+  differential:
+    r_feedback_ohm: 620
+    r_input_ohm: 499
+
+v_ref:
+    voltage: 2.5
+
+simulation:
+  raw_file: ../02_SimulationModel/TbTransientPulseSlow.raw
+  trace:
+    time: time
+    output_positive: V(out_p)
+    output_negative: V(out_n)
+
+paths:
+  report_directory: '../04_Report/'

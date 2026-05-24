@@ -1,0 +1,22 @@
+name: unit-tests
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  unit-tests:
+    name: VUnit Tests
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: unit-test-results
+      artifact_paths: |
+        05_Verification/DigitalLogic/Reports/Testing/UnitTestResults.xml
+        05_Verification/DigitalLogic/Reports/Testing/UnitTestsReport.log
+      run_script: |
+        just -f ./04_Implementation/DigitalLogic/justfile test-report

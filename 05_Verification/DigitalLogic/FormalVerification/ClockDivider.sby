@@ -1,0 +1,26 @@
+[tasks]
+prove
+cover
+
+[options]
+prove: mode prove
+prove: depth 50
+cover: mode cover
+cover: depth 50
+
+[engines]
+smtbmc z3
+
+[script]
+plugin -i ghdl
+ghdl --std=08 -fsynopsys -frelaxed \
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/ConstantsPkg.vhdl \
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/TypesPkg.vhdl \
+    /workspace/03_SubsystemDesign/DigitalLogic/Source/Core/ClockDivider.vhdl \
+    -e CLOCKDIVIDER
+prep -top CLOCKDIVIDER
+
+[files]
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/ConstantsPkg.vhdl
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Packages/TypesPkg.vhdl
+/workspace/03_SubsystemDesign/DigitalLogic/Source/Core/ClockDivider.vhdl

@@ -1,0 +1,34 @@
+name: style-check
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  vhdl-style-check:
+    name: VHDL Style Check
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: vhdl-style-check-results
+      artifact_paths: |
+        05_Verification/DigitalLogic/Reports/Quality/StyleCheck.log
+      run_script: |
+        just -f ./04_Implementation/DigitalLogic/justfile style-check
+
+  python-style-check:
+    name: Python Style Check
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: python-style-check-results
+      artifact_paths: 05_Verification/Reports/Python/PythonStyleCheck.log
+      run_script: |
+        mkdir -p 05_Verification/Reports/Python
+        just -f 05_Verification/justfile check-format 2>&1 | tee -a 05_Verification/Reports/Python/PythonStyleCheck.log

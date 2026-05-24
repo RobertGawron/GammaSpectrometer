@@ -1,0 +1,58 @@
+# ============================================================
+# Formatting
+# ============================================================
+
+# Format notebooks AND python files
+format:
+    # Notebooks
+    nbqa black .
+    nbqa ruff . --fix --select I
+    nbqa ruff . --fix
+    # Python files
+    black .
+    ruff check . --fix --select I
+    ruff check . --fix
+
+# CI check — verify formatting (no modifications)
+check-format:
+    nbqa black --check .
+    black --check .
+
+# ============================================================
+# Linting
+# ============================================================
+
+# Run linters on notebooks AND python files
+lint:
+    # Notebooks
+    nbqa ruff .
+    nbqa mypy .
+    # Python files
+    ruff check .
+    mypy .
+
+# ============================================================
+# Complexity
+# ============================================================
+
+# Cyclomatic complexity & maintainability index
+complexity:
+    @echo "=== Notebooks ==="
+    nbqa --nbqa-shell "radon cc -a -s" .
+    nbqa --nbqa-shell "radon mi -s" .
+    @echo "=== Python files ==="
+    radon cc . -a -s
+    radon mi . -s
+
+# Strict gate (fails if any file/block too complex)
+complexity-gate:
+    nbqa --nbqa-shell "radon cc -a -nc" .
+    nbqa --nbqa-shell "radon mi -nb" .
+    radon cc . -a -nc
+    radon mi . -nb
+
+# ============================================================
+# Combined Quality Gate
+# ============================================================
+
+quality: check-format lint complexity-gate

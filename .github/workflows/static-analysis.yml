@@ -1,0 +1,21 @@
+name: static-analysis
+
+on:
+  workflow_run:
+    workflows: ["docker-build"]
+    types: [completed]
+    branches: [main, "feature/*"]
+
+jobs:
+  static-analysis:
+    name: VHDL Lint (Style + Analysis)
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: ./.github/workflows/docker-postbuild-generic.yml
+    with:
+      service_name: gammaspec-dev
+      working_directory: /workspace
+      artifact_name: static-analysis-results
+      artifact_paths: |
+        05_Verification/DigitalLogic/Reports/Quality/
+      run_script: |
+        just -f ./04_Implementation/DigitalLogic/justfile lint

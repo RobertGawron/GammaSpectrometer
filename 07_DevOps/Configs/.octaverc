@@ -1,0 +1,31 @@
+% Octave Configuration
+
+% Suppress SQL database and other warnings
+warning('off', 'Octave:data-file-in-path');
+warning('off', 'Octave:shadowed-function');
+warning('off', 'Octave:GraphicsMagic-Quantum-Depth');
+
+% Disable doc cache to avoid SQL database issues
+suppress_verbose_help_message(true);
+
+% Use gnuplot for graphics
+graphics_toolkit('gnuplot');
+
+% Pager settings
+PAGER('less');
+PAGER_FLAGS('-e');
+
+% Add workspace to path
+if exist('/workspace', 'dir')
+    addpath('/workspace');
+end
+
+% Load common packages
+try
+    pkg load signal;
+    pkg load control;
+catch
+end
+
+echo 'addpath("/opt/openEMS/share/openEMS/matlab");
+echo 'addpath("/opt/openEMS/share/CSXCAD/matlab");
