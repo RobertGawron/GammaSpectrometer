@@ -1,0 +1,43 @@
+---
+Language:        Cpp
+BasedOnStyle:    Google
+
+# Indentation
+IndentWidth:     2
+TabWidth:        2
+UseTab:          Never
+
+# Line length
+ColumnLimit:     100
+
+# Braces
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+
+# Spacing
+SpaceBeforeParens: ControlStatements
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpaceBeforeAssignmentOperators: true
+SpaceAfterCStyleCast: true
+
+# Alignment
+AlignOperands: true
+AlignConsecutiveAssignments: false
+AlignTrailingComments: true
+
+# Wrapping
+BinPackParameters: false
+BinPackArguments: false
+
+# Keep SCAD-style simple blocks readable
+AllowShortBlocksOnASingleLine: Never
+
+# Don’t try to be too clever with C++ features
+SortIncludes: false
+
+...
