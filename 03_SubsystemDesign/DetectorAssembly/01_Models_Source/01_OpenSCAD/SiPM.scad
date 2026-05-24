@@ -1,4 +1,4 @@
-include<Constants.scad>;
+include <Constants.scad>;
 
 module sipm_single() {
   rotate([ 90, 0, 0 ]) {
@@ -7,15 +7,15 @@ module sipm_single() {
 }
 
 module sipm_array() {
-  // left sipm
+  // left SiPM
   translate([ -SIPM_XY_SIDE, 0, 0 ]) {
     sipm_single();
   }
 
-  // center sipm
+  // center SiPM
   sipm_single();
 
-  // right sipm
+  // right SiPM
   translate([ SIPM_XY_SIDE, 0, 0 ]) {
     sipm_single();
   }

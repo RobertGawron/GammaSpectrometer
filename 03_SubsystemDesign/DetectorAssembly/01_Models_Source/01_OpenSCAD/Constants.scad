@@ -1,32 +1,62 @@
 $fn = 100;
 
 /*
-Crystals are stacked in a grid to create bigger crystal.
-X-Y-Z coordinates are to match:
-    * sipm are placed side by side horizontally
+Detector crystal pack
+- 8 x LYSO bars, each 22 x 4 x 4 mm
+- Arranged as 2 x 4 to form a nominal 22 x 8 x 16 mm pack
 */
-
 CRYSTALS_NUM_Z = 4;
 CRYSTALS_NUM_Y = 2;
-CRYSTAL_XY_SIDE = 4;
 
-// Gap for optical gel
-GEL_GAP = 0.1;
+LYSO_BAR_X = 22;
+LYSO_BAR_SIDE = 4;
 
-CRYSTAL_X = 22;
-CRYSTAL_Y = (CRYSTAL_XY_SIDE + GEL_GAP) * CRYSTALS_NUM_Y;
-CRYSTAL_Z = (CRYSTAL_XY_SIDE + GEL_GAP) * CRYSTALS_NUM_Z;
+// Bare crystal pack dimensions
+CRYSTAL_X = LYSO_BAR_X;
+CRYSTAL_Y = LYSO_BAR_SIDE * CRYSTALS_NUM_Y;   // 8 mm
+CRYSTAL_Z = LYSO_BAR_SIDE * CRYSTALS_NUM_Z;   // 16 mm
 
+// PTFE reflector wrap assumptions
+// Current model assumes 1 mm PTFE on the outer side faces only.
+// The SiPM coupling face is intentionally left free for optical gel.
+PTFE_THICKNESS = 1.0;
+CAVITY_CLEARANCE_XY = 0.2;
+
+WRAPPED_CRYSTAL_X = CRYSTAL_X + 2 * PTFE_THICKNESS;  // 24 mm
+WRAPPED_CRYSTAL_Y = CRYSTAL_Y + 2 * PTFE_THICKNESS;  // 10 mm
+WRAPPED_CRYSTAL_Z = CRYSTAL_Z;                       // unchanged in this open-frame concept
+
+// Holder wall thickness around cavity
 HOLDER_THICKNESS = 2.5;
 
-// Active area is 6x6 mm, but the SIPM has a bit of a border
+// Optical coupling stack between SiPM top and crystal bottom face
+GEL_GAP = 0.1;
 SIPM_XY_SIDE = 7;
 SIPM_Z_SIDE = 0.65;
 
+// Brass threaded insert assumptions (provisional, per user approval)
+// These are heat-set inserts for plastic, not blind rivets.
+INSERT_THREAD = 2.5;
+INSERT_OD = 3.5;
+INSERT_LENGTH = 5.0;
 
-// PCB mounting blocks / rivet holes
-MOUNT_BLOCK_X = 5;       // outward from holder side
-MOUNT_BLOCK_Y = 4;       // block length along Y
-MOUNT_BLOCK_RISE = 3;    // how high the block rises above PCB
-MOUNT_BLOCK_INSET_Y = 1; // distance from holder front/back edge
-RIVET_HOLE_D = 2.2;      // adjust for your rivet diameter + print clearance
+// PROVISIONAL pilot-hole diameter.
+// Final value must be replaced by the exact supplier datasheet recommendation.
+INSERT_PILOT_D = 3.2;
+INSERT_PILOT_DEPTH = INSERT_LENGTH + 0.3;
+INSERT_LEADIN_D = 3.6;
+INSERT_LEADIN_H = 1.0;
+
+// Reinforcement around each insert
+INSERT_BOSS_OD = 7.2;
+INSERT_BOSS_HEIGHT = 6.0;
+
+// Mounting layout
+INSERT_SPACING_Y = 12.0;     // center-to-center spacing on each side flange
+FLANGE_WIDTH = 10.0;         // outward from holder side
+FLANGE_OVERHANG_Y = 3.5;     // flange extends beyond holder in +/-Y
+FLANGE_EDGE_MARGIN_Y = 2.0;  // edge margin beyond boss envelope
+
+// PTFE seam relief pocket inside cavity
+PTFE_SEAM_RELIEF_WIDTH = 3.0;
+PTFE_SEAM_RELIEF_DEPTH = 0.4;
