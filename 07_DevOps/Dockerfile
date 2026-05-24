@@ -128,6 +128,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgmp-dev \
     libmpfr-dev \
     libboost-all-dev \
+    # Openscad formatting
+    clang-format \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
