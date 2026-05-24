@@ -1,1 +1,10 @@
 *.sh text eol=lf
+
+# LTspice models are incorrectly marked by GitHub as "AGS Script", exclude them from language statistics
+03_SubsystemDesign/ElectronicHardware/Model linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-001_OutputNoise/02_SimulationModel linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-002_PulseLinearity/02_SimulationModel linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-003-OutputDynamicRange/02_SimulationModel linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-004_BandwidthFrequency/02_SimulationModel linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-004_TransientRiseTime/02_SimulationModel linguist-vendored
+05_Verification/ElectronicHardware/Simulation/Analog/ANA-005-TransientResponse/02_SimulationModel linguist-vendored

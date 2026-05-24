@@ -1,1 +1,4 @@
-TBD
+# Format all OpenSCAD source files
+format:
+    find ../../03_SubsystemDesign/DetectorAssembly/01_Models_Source/01_OpenSCAD \
+        -type f -name '*.scad' -exec clang-format -i {} +
