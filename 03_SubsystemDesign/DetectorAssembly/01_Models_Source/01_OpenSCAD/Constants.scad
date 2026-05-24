@@ -22,3 +22,11 @@ HOLDER_THICKNESS = 2.5;
 // Active area is 6x6 mm, but the SIPM has a bit of a border
 SIPM_XY_SIDE = 7;
 SIPM_Z_SIDE = 0.65;
+
+
+// PCB mounting blocks / rivet holes
+MOUNT_BLOCK_X = 5;       // outward from holder side
+MOUNT_BLOCK_Y = 4;       // block length along Y
+MOUNT_BLOCK_RISE = 3;    // how high the block rises above PCB
+MOUNT_BLOCK_INSET_Y = 1; // distance from holder front/back edge
+RIVET_HOLE_D = 2.2;      // adjust for your rivet diameter + print clearance
