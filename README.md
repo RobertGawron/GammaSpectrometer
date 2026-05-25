@@ -69,6 +69,10 @@ The crystal and SiPM are optically coupled using optical gel to minimize light p
 
 Tools: OpenSCAD and FreeCAD.
 
+Picture below shows a render of the holder for the scintillator crystal.
+
+![3d printed holder](./00_Reference/Media/render_25_04_2026.png)
+
 [More info.](./03_SubsystemDesign/DetectorAssembly/README.md)
 
 
